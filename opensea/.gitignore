@@ -1,0 +1,7 @@
+# Never commit resolved secrets or local state.
+.env
+.env.local
+node_modules/
+.cache/
+reports/*.local.md
+*.log
