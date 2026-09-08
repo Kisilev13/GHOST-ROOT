@@ -1,0 +1,2 @@
+<?php defined('ABSPATH') || exit; get_header(); ?>
+<section class="gr-section"><?php if(have_posts()): while(have_posts()): the_post(); ?><article class="gr-prose"><h1><?php if(!is_singular()): ?><a href="<?php the_permalink(); ?>"><?php endif; ?><?php the_title(); ?><?php if(!is_singular()): ?></a><?php endif; ?></h1><?php the_content(); ?></article><?php endwhile; gr_pagination(); else: gr_page_head('ROOT / NO SIGNAL','NO RECORD FOUND.'); endif; ?></section><?php get_footer(); ?>

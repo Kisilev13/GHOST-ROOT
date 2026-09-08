@@ -1,0 +1,2 @@
+<?php /* Template Name: Initialize */ defined('ABSPATH') || exit; get_header(); ?>
+<section class="gr-section gr-initialize-layout"><div><?php gr_page_head('RECOVERY / PRE-MINT','INITIALIZE IDENTITY.','The network found you. Initialization is not open yet.'); ?><a class="gr-text-link" href="<?php echo esc_url(home_url('/verify/')); ?>">VERIFY BEFORE YOU CONNECT ↗</a></div><?php echo do_shortcode('[ghost_root_mint]'); ?></section><?php get_footer(); ?>
