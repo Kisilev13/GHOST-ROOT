@@ -1,5 +1,0 @@
-<?php defined('ABSPATH') || exit; get_header(); while(have_posts()): the_post(); ?>
-<article class="gr-section"><a class="gr-back" href="<?php echo esc_url(home_url('/incidents/')); ?>">← INCIDENT REGISTER</a><?php gr_page_head('RECOVERED INCIDENT / ' . gr_meta('severity'), get_the_title()); ?>
-<div class="gr-document-layout"><div class="gr-prose gr-document"><p class="gr-document-stamp">CLASSIFIED / RECOVERED RECORD</p><?php the_content(); ?><h2>Evidence</h2><?php echo wp_kses_post(wpautop(gr_meta('evidence'))); ?></div><dl class="gr-data-list"><?php foreach(['incident_id','incident_date','severity','status','affected_nodes','transmission_id'] as $key): ?><div><dt><?php echo esc_html(gr_label($key)); ?></dt><dd><?php echo esc_html(gr_meta($key) ?: 'REDACTED'); ?></dd></div><?php endforeach; ?></dl></div>
-<?php if((int)gr_meta('incident_id') === 31) echo do_shortcode('[ghost_root_arg]'); ?>
-<p class="gr-caption gr-muted">Fictional incident record / GHOST//ROOT narrative archive.</p></article><?php endwhile; get_footer(); ?>

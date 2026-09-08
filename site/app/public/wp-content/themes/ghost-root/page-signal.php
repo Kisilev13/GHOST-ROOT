@@ -1,2 +1,0 @@
-<?php /* Template Name: Signal */ defined('ABSPATH') || exit; get_header(); ?>
-<section class="gr-section"><?php gr_page_head('ROOT NETWORK / TELEMETRY','NO SIGNAL IS STILL A SIGNAL.','A bounded sample of recovered identities. Status labels reflect the local archive.'); ?><?php echo do_shortcode('[ghost_root_telemetry][ghost_root_network]'); ?><p class="gr-caption gr-muted">Narrative telemetry. This map does not monitor external infrastructure or blockchain activity.</p></section><?php get_footer(); ?>

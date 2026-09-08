@@ -1,1 +1,0 @@
-<?php defined('ABSPATH') || exit; ?><form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>"><label for="gr-search">Search the archive</label><input id="gr-search" type="search" name="s" value="<?php echo esc_attr(get_search_query()); ?>"><button class="gr-button" type="submit">SEARCH →</button></form>
