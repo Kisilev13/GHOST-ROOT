@@ -80,21 +80,31 @@ final class Shortcodes {
     public function incidents($atts = []): string {
         $atts = shortcode_atts(['limit' => 3], $atts);
         $q = new \WP_Query(['post_type' => 'incident', 'post_status' => 'publish', 'posts_per_page' => min(50, max(1, (int)$atts['limit'])), 'no_found_rows' => true]);
-        // Severity is a restrained visual system, not a per-status colour.
-        $rank = ['STANDARD' => 'STANDARD', 'WARNING' => 'WARNING', 'CORRUPTED' => 'CORRUPTED', 'ROOT' => 'ROOT'];
+        // Preserve the canonical severity label while mapping it to a restrained visual tier.
+        $visual_tier = [
+            'LOW' => 'STANDARD',
+            'MODERATE' => 'WARNING',
+            'HIGH' => 'CORRUPTED',
+            'CRITICAL' => 'CORRUPTED',
+            'ROOT' => 'ROOT',
+            // Backward-compatible display values from earlier content.
+            'STANDARD' => 'STANDARD',
+            'WARNING' => 'WARNING',
+            'CORRUPTED' => 'CORRUPTED',
+        ];
         $out = '<ol class="gr-incident-list">';
         foreach ($q->posts as $p) {
-            $id     = get_post_meta($p->ID, 'incident_id', true);
-            $sev    = strtoupper((string) get_post_meta($p->ID, 'severity', true));
-            $sev    = $rank[$sev] ?? 'STANDARD';
-            $status = strtoupper((string) get_post_meta($p->ID, 'status', true)) ?: 'OPEN';
-            $node   = get_post_meta($p->ID, 'affected_nodes', true) ?: '—';
-            $title  = preg_replace('/^INCIDENT \/\/ \d+ — /u', '', $p->post_title);
-            $summary = get_post_meta($p->ID, 'summary', true);
-            $out .= '<li><a class="gr-incident-card" data-severity="' . esc_attr($sev) . '" href="' . esc_url(get_permalink($p)) . '">'
+            $id       = get_post_meta($p->ID, 'incident_id', true);
+            $severity = strtoupper((string) get_post_meta($p->ID, 'severity', true)) ?: 'LOW';
+            $tier     = $visual_tier[$severity] ?? 'STANDARD';
+            $status   = strtoupper((string) get_post_meta($p->ID, 'status', true)) ?: 'OPEN';
+            $node     = get_post_meta($p->ID, 'affected_nodes', true) ?: '—';
+            $title    = preg_replace('/^INCIDENT \/\/ \d+ — /u', '', $p->post_title);
+            $summary  = get_post_meta($p->ID, 'summary', true);
+            $out .= '<li><a class="gr-incident-card" data-severity="' . esc_attr($tier) . '" href="' . esc_url(get_permalink($p)) . '">'
                 . '<span class="gr-incident-number">' . esc_html($id) . '</span>'
                 . '<span class="gr-incident-body">'
-                  . '<span class="gr-incident-cls"><span>NODE // ' . esc_html($node) . '</span><span>SEVERITY // ' . esc_html($sev) . '</span></span>'
+                  . '<span class="gr-incident-cls"><span>NODE // ' . esc_html($node) . '</span><span>SEVERITY // ' . esc_html($severity) . '</span></span>'
                   . '<h3 class="gr-incident-title">' . esc_html($title) . '</h3>'
                   . ($summary ? '<span class="gr-incident-summary">' . esc_html($summary) . '</span>' : '')
                   . '<span class="gr-incident-status">STATUS // ' . esc_html($status) . '</span>'
