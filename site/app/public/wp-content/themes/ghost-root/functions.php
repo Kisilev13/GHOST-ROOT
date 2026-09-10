@@ -60,7 +60,7 @@ function gr_filters(array $filters, string $action): void {
     echo '<details class="gr-filter-disclosure" open><summary>FILTER RECORDS <span class="gr-filter-count">' . ($active ? count($active) . ' ACTIVE' : '') . '</span><span class="gr-filter-glyph" aria-hidden="true"></span></summary>';
     echo '<form class="gr-filters" action="' . esc_url(home_url($action)) . '" method="get">';
     foreach ($filters as $key => $values) {
-        $value = class_exists('\GhostRoot\Frontend\Queries') ? \GhostRoot\Frontend\Queries::param($key) : '';
+        $value = class_exists('\\GhostRoot\\Frontend\\Queries') ? \GhostRoot\Frontend\Queries::param($key) : '';
         echo '<label for="gr-filter-' . esc_attr($key) . '">' . esc_html(gr_label($key)) . '<select name="' . esc_attr($key) . '" id="gr-filter-' . esc_attr($key) . '"><option value="">ALL</option>';
         foreach ($values as $option) { echo '<option value="' . esc_attr($option) . '" ' . selected($value, $option, false) . '>' . esc_html($option) . '</option>'; }
         echo '</select></label>';
@@ -103,9 +103,10 @@ add_filter('document_title_parts', static function ($parts) {
 add_filter('wpseo_title', static function ($title) {
     if (is_front_page()) return 'GHOST//ROOT — Recovered Identities';
     if ($label = gr_archive_label()) return $label . ' — GHOST//ROOT';
-    // Normalise whatever Yoast produced: drop trailing separator + site name, drop stray "Archive", re-append.
-    $base = preg_split('/\s+[-–—|]\s+/u', (string) $title)[0];
-    $base = trim(preg_replace('/\s+Archive$/i', '', wp_strip_all_tags($base)));
+    // Remove only Yoast's trailing separator + site-name suffix; preserve separators inside the real post/page title.
+    $base = wp_strip_all_tags((string) $title);
+    $base = preg_replace('/\s+[-–—|]\s+GHOST\/\/ROOT\s*$/u', '', $base);
+    $base = trim(preg_replace('/\s+Archive$/i', '', $base));
     return ($base === '' ? 'GHOST//ROOT' : $base . ' — GHOST//ROOT');
 }, 20);
 add_filter('wpseo_metadesc', static function ($description) { return $description ?: gr_description(); });
