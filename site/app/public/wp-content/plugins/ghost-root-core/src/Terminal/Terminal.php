@@ -50,7 +50,7 @@ final class Terminal {
 			case 'clear':
 				return [ 'lines' => [], 'clear' => true ];
 			case 'whoami':
-				return $this->out( [ 'guest@ghost-root', 'access: USER', 'you were never supposed to be here.' ] );
+				return $this->out( [ 'archive://guest', 'session: SIMULATED — no account, no system access', 'a fictional visitor to a fictional archive.' ] );
 			case 'status':
 				return $this->out( $this->status() );
 			case 'scan':
@@ -64,7 +64,7 @@ final class Terminal {
 			case 'protocol':
 				return $this->out( $this->protocol() );
 			case 'root':
-				return $this->out( [ 'ROOT ACCESS DENIED', 'this incident has been logged.', 'SOURCE: [REDACTED]' ] );
+				return $this->out( [ 'ROOT ACCESS — DENIED', 'This is a scripted narrative response. No system, account or wallet is involved.', 'SOURCE: [REDACTED]' ] );
 			case 'incident':
 				return $this->out( $this->incident( absint( $arg ) ) );
 			case 'identity':
@@ -85,19 +85,19 @@ final class Terminal {
 	/** @return string[] */
 	private function help(): array {
 		return [
-			'AVAILABLE COMMANDS',
-			str_repeat( '-', 32 ),
+			'AVAILABLE QUERIES  (simulated — nothing is executed on any system)',
+			str_repeat( '-', 48 ),
 			'help              this list',
-			'status            network + system state',
-			'whoami            current session',
-			'scan              probe recovered nodes',
-			'nodes             list responding nodes',
-			'signal            signal telemetry',
+			'status            fictional network + system state',
+			'whoami            current (simulated) session',
+			'scan              narrative node probe',
+			'nodes             list responding nodes (story data)',
+			'signal            signal telemetry (story data)',
 			'incident <n>      open incident record',
 			'identity <n>      open recovered identity',
 			'archive           archive index',
 			'protocol          collection protocol',
-			'root              attempt privilege escalation',
+			'root              scripted narrative response',
 			'clear             clear the screen',
 		];
 	}

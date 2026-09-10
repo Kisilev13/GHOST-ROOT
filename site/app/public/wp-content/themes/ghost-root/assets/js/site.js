@@ -19,4 +19,26 @@
     try {await navigator.clipboard.writeText(button.dataset.copy);status.textContent = 'COPIED TO CLIPBOARD.';}
     catch {status.textContent = 'Clipboard unavailable. Select and copy the displayed value.';}
   }));
+  // Command guide chips run the terminal directly.
+  const terminal = document.querySelector('.gr-terminal');
+  document.querySelectorAll('.gr-command-guide [data-command]').forEach(chip => chip.addEventListener('click', () => {
+    const form = terminal?.querySelector('form'), input = form?.elements.command;
+    if (!form || !input) return;
+    input.value = chip.dataset.command;
+    input.focus();
+    if (typeof form.requestSubmit === 'function') form.requestSubmit();
+    else form.dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));
+  }));
+  // The record filter is a wall on small screens: collapse it there until asked for,
+  // unless a filter is already active. Full-size layout keeps it open (summary is hidden).
+  const filterDisclosure = document.querySelector('.gr-filter-disclosure');
+  if (filterDisclosure) {
+    const small = matchMedia('(max-width:600px)');
+    const hasActiveFilter = !!document.querySelector('.gr-active-filters');
+    let userToggled = false;
+    filterDisclosure.addEventListener('toggle', () => {userToggled = true;});
+    const sync = () => {if (!userToggled) filterDisclosure.open = small.matches ? hasActiveFilter : true;};
+    sync();
+    small.addEventListener('change', sync);
+  }
 })();

@@ -20,21 +20,35 @@
     let points = [];
     let hoverIdx = -1;
 
+    // stable per-node pseudo-random in [0,1)
+    const hash = n => { const x = Math.sin(n) * 43758.5453; return x - Math.floor(x); };
+
     function layout(w, h) {
       const cap = w < 600 ? 24 : 48;
       const visible = nodes.slice(0, cap);
       const R = Math.min(w, h) * 0.46;
+      // squash the spiral only on wide, short canvases (desktop); keep it round on
+      // near-square / portrait mobile canvases so it fills the available height.
+      const squash = h / w < 0.62 ? 0.82 : 1;
       return visible.map((node, i) => {
-        // golden-angle spiral, widened, with a stable per-node jitter
+        // golden-angle spiral, widened, with a stable symmetric per-node jitter
         const t = i * 2.399963;
         const rad = Math.sqrt((i + 1) / visible.length) * R;
-        const jx = (Math.sin(node.ghost_id * 12.9898) * 43758.5453 % 1) * 26 - 13;
-        const jy = (Math.sin(node.ghost_id * 78.233) * 43758.5453 % 1) * 26 - 13;
+        const jx = (hash(node.ghost_id * 12.9898) - 0.5) * 24;
+        const jy = (hash(node.ghost_id * 78.233) - 0.5) * 24;
         return {
           ...node,
           x: w / 2 + Math.cos(t) * rad + jx,
-          y: h / 2 + Math.sin(t) * rad * (h / w < 0.8 ? 0.82 : 1) + jy
+          y: h / 2 + Math.sin(t) * rad * squash + jy
         };
+      });
+    }
+
+    function syncLegend(pts) {
+      const counts = { DORMANT: 0, ACTIVE: 0, COMPROMISED: 0, ROOTED: 0 };
+      pts.forEach(p => { if (counts[p.state] != null) counts[p.state]++; });
+      root.querySelectorAll('[data-state-count]').forEach(el => {
+        el.textContent = String(counts[el.dataset.stateCount] ?? 0);
       });
     }
 
@@ -131,6 +145,8 @@
       if (hoverIdx < 0) {
         status.textContent = points.length + ' OF ' + nodes.length + ' SAMPLED RECORDS';
       }
+      // legend reflects exactly what is drawn (24 on mobile, 48 on desktop)
+      syncLegend(points);
     }
 
     let raf = 0;
