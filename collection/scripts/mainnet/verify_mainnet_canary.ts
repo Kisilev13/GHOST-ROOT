@@ -18,6 +18,43 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const MAINNET_DIR = `${HERE}/../../mainnet`;
 const LOCAL_IMAGE = `${MAINNET_DIR}/assets/0001.png`;
 
+/**
+ * Bounded retries for permanent-storage gateways, with an identifying User-Agent
+ * and an Arweave fallback for Irys transaction IDs. Availability on the fallback
+ * gateway depends on settlement and propagation.
+ */
+async function fetchPermanent(uri: string): Promise<Response> {
+  const headers = {
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) GhostRootVerify/1.0",
+    "Accept": "*/*",
+  };
+
+  const urls = [uri];
+
+  const m = uri.match(/^https:\/\/gateway\.irys\.xyz\/([A-Za-z0-9_-]+)$/);
+  if (m) {
+    urls.push(`https://arweave.net/${m[1]}`);
+  }
+
+  let last: unknown;
+
+  for (const url of urls) {
+    for (let attempt = 0; attempt < 4; attempt++) {
+      try {
+        const res = await fetch(url, { headers, signal: AbortSignal.timeout(20_000) });
+        if (res.ok) return res;
+        last = new Error(`HTTP ${res.status} from ${url}`);
+      } catch (e) {
+        last = e;
+      }
+
+      await new Promise(r => setTimeout(r, 750 * (attempt + 1)));
+    }
+  }
+
+  throw last;
+}
+
 async function main() {
   const argv = process.argv.slice(2);
   const get = (fl: string) => { const i = argv.indexOf(fl); return i >= 0 ? argv[i + 1] : undefined; };
@@ -49,13 +86,13 @@ async function main() {
   chk("asset owner = signer", asset.owner === EXPECTED_SIGNER, asset.owner);
   chk("asset belongs to collection", asset.updateAuthority?.type === "Collection" && asset.updateAuthority.address === receipt.collection.address, JSON.stringify(asset.updateAuthority));
 
-  const metaRes = await fetch(asset.uri);
+  const metaRes = await fetchPermanent(asset.uri);
   chk("metadata HTTP 200", metaRes.ok, `HTTP ${metaRes.status}`);
   const meta = metaRes.ok ? await metaRes.json() : null;
   chk("metadata name matches", meta?.name === "GHOST//0001", meta?.name);
   let imgOk = false, imgHashOk = false;
   if (meta?.image) {
-    const imgRes = await fetch(meta.image);
+    const imgRes = await fetchPermanent(meta.image);
     imgOk = imgRes.ok;
     if (imgRes.ok && existsSync(LOCAL_IMAGE)) {
       const remote = createHash("sha256").update(Buffer.from(await imgRes.arrayBuffer())).digest("hex");

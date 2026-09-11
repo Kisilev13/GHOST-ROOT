@@ -84,8 +84,8 @@ export async function verifyCollection(
   );
 
   // 2. contract / collection address
-  const gotAddr = (ref?.address ?? '').toLowerCase();
-  const wantAddr = cfg.solana.collectionAddress.toLowerCase();
+  const gotAddr = cfg.chain === 'solana' ? (ref?.address ?? '') : (ref?.address ?? '').toLowerCase();
+  const wantAddr = cfg.chain === 'solana' ? cfg.solana.collectionAddress : cfg.solana.collectionAddress.toLowerCase();
   checks.push(check('collection_address', cfg.solana.collectionAddress, ref?.address ?? 'none', gotAddr === wantAddr));
 
   // 3. name

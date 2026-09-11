@@ -80,3 +80,14 @@ test('PARTIAL when collection matches but has no items indexed yet', async () =>
   restore();
   assert.equal(r.state, 'PARTIAL');
 });
+
+test('MISMATCH for a Solana address differing only by case', async () => {
+  const cfg = testConfig({ solana: { ...testConfig().solana, collectionAddress: SOLANA_ADDR } });
+  const { restore } = stubFetch((url) => url.includes('/nfts')
+    ? { body: { nfts: [{ identifier: '1', collection: 'ghost-root-sol' }] } }
+    : { body: collectionBody({ contracts: [{ address: SOLANA_ADDR.toLowerCase(), chain: 'solana' }] }) });
+  try {
+    const report = await verifyCollection(new OpenSeaClient(cfg), cfg, 'ghost-root-sol');
+    assert.equal(report.state, 'MISMATCH');
+  } finally { restore(); }
+});

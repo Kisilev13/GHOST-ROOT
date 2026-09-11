@@ -1,6 +1,6 @@
 # GHOST//ROOT — OpenSea Verification
 
-_Generated 2026-09-08T12:52:37Z · read-only_
+_Generated 2026-09-11T01:50:08Z · read-only_
 
 **State: `AWAITING_SOLANA_COLLECTION_DEPLOYMENT`** · slug `none` · chain `solana`
 
