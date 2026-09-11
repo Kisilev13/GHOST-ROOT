@@ -181,3 +181,10 @@ Exact changes required for the FINAL 2048×2048 production render:
 Both legendaries are now `DIRECTION_APPROVED_ONLY`. Neither is production-ready: both need
 final **2048×2048** single-scene deliveries. Status stays `BLOCKED_ON_AUTHORED_ART_TOOL`
 (also pending: the 31 fitted component layers).
+
+
+---
+
+## Pass 5 FINAL — 1503 & 2803 delivered (Gemini 3 Pro Image, native 2048x2048)
+
+Both scenes generated at native 2K via `scripts/gen_gemini.py` (`gemini-3-pro-image`, imageConfig 2K), matching their locked directions, text-free/opaque/frontal. 1503 = serene upward void-witness (absence via cracked/missing ceramic, not a scream); 2803 = opened winged reliquary (exposed spinal column, central armillary sphere, fractured optics). Promoted to `assets/scenes/legendary/`; both re-rendered; validator exit 0, selftest 9/9, schema PASS, 0 exact dups. Masters in `assets/sources/pass5/gemini/`. FINAL art; full-batch APPROVED verdict still pending fitted layers.
