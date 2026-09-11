@@ -46,6 +46,34 @@ def load_legendary_ids() -> set[int]:
     return {r["token_id"] for r in data["reservations"]}
 
 
+def dhash(img: "Image.Image", size: int = 9) -> int:
+    """Difference hash (Tolliver/Krawetz): resize to (size+1)xsize, compare adjacent
+    pixel brightness left-to-right. Robust to resampling/compression, not to layout
+    changes, so it's a reasonable cheap proxy for 'reads as visually similar at a
+    glance' without adding a third-party dependency."""
+    small = img.convert("L").resize((size + 1, size), resample=1)  # 1 = Image.LANCZOS
+    pixels = list(small.getdata())
+    bits = 0
+    for row in range(size):
+        offset = row * (size + 1)
+        for col in range(size):
+            bits = (bits << 1) | (1 if pixels[offset + col] > pixels[offset + col + 1] else 0)
+    return bits
+
+
+def hamming(a: int, b: int) -> int:
+    return bin(a ^ b).count("1")
+
+
+# Below this Hamming distance (out of an 81-bit dhash), two renders are flagged for
+# human review as possibly over-similar. This never fails the gate by itself —
+# GHOST//ROOT's own art bible calls for a cohesive shared body/background/camera
+# across ordinary tokens, so a low but nonzero distance can be correct, intentional
+# cohesion rather than a bug. It exists so a reviewer notices and judges, not so the
+# validator auto-rejects visually-close-but-legitimately-distinct tokens.
+NEAR_DUPLICATE_THRESHOLD = 4
+
+
 def check_artwork(ids: list[int]) -> dict:
     results = {
         "checked": 0,
@@ -54,7 +82,9 @@ def check_artwork(ids: list[int]) -> dict:
         "issues": [],
         "hashes": {},
         "exact_duplicates": [],
+        "near_duplicates": [],
     }
+    perceptual: dict[int, int] = {}
     for tid in ids:
         path = TEST_BATCH_IMG / f"{tid:04d}.png"
         results["checked"] += 1
@@ -77,6 +107,7 @@ def check_artwork(ids: list[int]) -> dict:
                     results["issues"].append(f"{tid}: {img.size}, expected 2048x2048")
                 if img.mode not in ("RGB", "RGBA"):
                     results["issues"].append(f"{tid}: mode {img.mode}, expected RGB/RGBA")
+                perceptual[tid] = dhash(img)
         except Exception as e:  # noqa: BLE001
             results["issues"].append(f"{tid}: unreadable image ({e})")
             continue
@@ -85,6 +116,15 @@ def check_artwork(ids: list[int]) -> dict:
             results["exact_duplicates"].append([results["hashes"][digest], tid])
         results["hashes"][digest] = tid
     results["hashes"] = len(results["hashes"])  # don't leak full hash map into the report
+
+    # Perceptual near-duplicate scan: every present pair, not just adjacent IDs.
+    present_ids = sorted(perceptual)
+    for i, a in enumerate(present_ids):
+        for b in present_ids[i + 1:]:
+            dist = hamming(perceptual[a], perceptual[b])
+            if dist <= NEAR_DUPLICATE_THRESHOLD:
+                results["near_duplicates"].append({"pair": [a, b], "hamming_distance": dist,
+                                                     "note": "flagged for human review, not auto-failed"})
     return results
 
 
@@ -201,7 +241,10 @@ def main() -> None:
           f"- {report['artwork']['present']}/{report['artwork']['checked']} images present"
           f" ({len(report['artwork']['missing'])} missing; 20 required)",
           f"- issues: {report['artwork']['issues'] or 'none'}",
-          f"- exact duplicates: {report['artwork']['exact_duplicates'] or 'none'}", "",
+          f"- exact duplicates: {report['artwork']['exact_duplicates'] or 'none'}",
+          f"- near-duplicates (perceptual dhash, Hamming <= {NEAR_DUPLICATE_THRESHOLD}/81, "
+          "flagged for human review, not auto-failed): "
+          f"{report['artwork']['near_duplicates'] or 'none'}", "",
           "## Metadata", "",
           f"- {report['metadata']['valid_json']}/{report['metadata']['checked']} valid JSON",
           f"- {report['metadata']['schema_pass']}/{report['metadata']['checked']} pass schema "

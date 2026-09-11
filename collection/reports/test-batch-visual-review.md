@@ -52,10 +52,21 @@ still require real illustration this session cannot produce.
    is unchanged from Pass 2 — same compositor, same trait data, same layer
    files, deterministic output — confirmed via `selftest_generator.py` 9/9
    PASS and `validate_test_batch.py` exit 0.
-4. Re-ran `build_asset_manifest.py` (234 collection paths under the current
-   witness-driven inventory; 77 created for the 20-batch, 0 formally
-   `VALIDATED` by a human reviewer, 157 missing across the full collection —
-   expected, this task renders 20 not 3,333).
+4. Re-ran `build_batch_asset_plan.py` + `build_asset_manifest.py` (226
+   collection paths under the current witness-driven inventory; 72 unique
+   present for the 20-batch / 0 missing, 0 formally `VALIDATED` by a human
+   reviewer, 154 missing across the full collection — expected, this task
+   renders 20 not 3,333).
+5. Added perceptual near-duplicate detection to `validate_test_batch.py`
+   (dhash, Hamming distance over all 190 pairs among the 20 renders — this
+   was Phase 10's explicit ask and was not implemented before this pass).
+   It flags, never hard-fails (cohesive design can legitimately score close).
+   5 pairs flagged at distance <=4/81: `(4, 3333)` and `(166, 1842)` at
+   distance 0, `(49, 366)`, `(10, 97)`, `(49, 836)`. The `(166, 1842)` pair
+   independently confirms Pass 2 finding #2 (DOUBLE PLANE reads as
+   near-identical extra-head silhouettes) with an actual measurement instead
+   of eyeballing it — evidence the detector is catching something real, not
+   noise.
 
 ### Still failing (unchanged from Pass 2, verified still present this pass)
 

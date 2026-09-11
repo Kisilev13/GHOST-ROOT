@@ -7,6 +7,7 @@ _20 token IDs; see `manifests/test-batch-selection.json` for why each was chosen
 - 20/20 images present (0 missing; 20 required)
 - issues: none
 - exact duplicates: none
+- near-duplicates (perceptual dhash, Hamming <= 4/81, flagged for human review, not auto-failed): [{'pair': [4, 3333], 'hamming_distance': 0, 'note': 'flagged for human review, not auto-failed'}, {'pair': [10, 97], 'hamming_distance': 2, 'note': 'flagged for human review, not auto-failed'}, {'pair': [49, 366], 'hamming_distance': 1, 'note': 'flagged for human review, not auto-failed'}, {'pair': [49, 836], 'hamming_distance': 4, 'note': 'flagged for human review, not auto-failed'}, {'pair': [166, 1842], 'hamming_distance': 0, 'note': 'flagged for human review, not auto-failed'}]
 
 ## Metadata
 
