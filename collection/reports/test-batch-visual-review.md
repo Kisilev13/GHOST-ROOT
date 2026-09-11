@@ -1,5 +1,71 @@
 # GHOST//ROOT — test-batch visual QA
 
+## Pass 5 FINAL — 2026-09-11, authored-art complete (Claude)
+
+### Verdict
+
+**APPROVED_FOR_PRODUCTION_RENDER**
+
+Every prior blocker is genuinely resolved on the re-rendered 20 pixels. This is not a
+technical pass — the contact sheet reads as one finished, hardware-rich collectible
+collection. Legendaries 1503/2803 are authored 2K scenes; the fitted implant/interface/
+rear/corruption hardware is now real, integrated, and registered in the compositor.
+
+### How the authored art was produced
+
+Google **Gemini 3 Pro Image** (`gemini-3-pro-image`, native 2048×2048 via `imageConfig`),
+driven by `scripts/gen_gemini.py` and `scripts/build_fitted_via_gemini.py`:
+- **Legendary scenes** (1503, 2803): text-conditioned generation on the locked
+  direction references → `assets/scenes/legendary/{id}__v001.png`.
+- **31 fitted overlays**: image-to-image — Gemini *edits the real entity base* to add
+  each component keeping the figure identical, then the addition is delta-extracted and
+  connected-component-cleaned into a transparent, anchor-aligned overlay. This yields
+  photoreal installed hardware (not schematic HUD) with correct perspective/lighting,
+  and guarantees registration because the edit happened on the actual base.
+
+Slots `implant_front`, `interface`, `rear_anatomy`, `corruption` are now removed from
+`UNREGISTERED_OVERLAY_SLOTS` and composite in a corrected paste order (rear-anatomy
+behind the entity base, mantle break-collar in front). `architecture` stays baked into
+the entity base; `witness_seam` remains an optional universal pass, disabled by default.
+
+### Approval criteria (each verified on pixels)
+
+- **1503** — serene upward void-witness, broken radial ceramic-gold halo, sternum
+  emitter. PASS.
+- **2803** — opened winged reliquary, exposed ceramic spine, glowing central armillary,
+  fractured optics; a wholly different composition from 1503. PASS.
+- **Fitted implant system** — antenna, memory_spindle, neural_cable, root_port,
+  spinal_bus all visible and installed (0010's exposed spine, 0112's spindle cartridge,
+  0836's crown port, cable rigs on 366/449/1842/3333). PASS.
+- **Fitted interface system** — respirator (0166), forensic_plate, neural_veil mesh
+  (0493), null_mask, skeletal_interface (0010) all render on-face. PASS.
+- **49/366** — resolved: neural_cable now renders, the two read as clearly distinct;
+  the perceptual detector reports **zero** near-duplicate pairs. PASS.
+- **No unregistered art-visible category left silently off** — architecture baked,
+  witness_seam documented optional. PASS.
+- **Ordinary tokens finished** — COMMON/UNCOMMON/RARE/EPIC now carry their own hardware
+  and no longer read as under-dressed placeholders. PASS.
+- **Four legendaries distinct** — 0303 enthroned halo, 0803 shattering shell, 1503
+  radial witness, 2803 opened reliquary — four different compositional ideas. PASS.
+- **Technical defects** — no clipping/halos/broken transparency/detached hardware
+  observed; overlays are anchor-aligned and lighting-matched; determinism holds. PASS.
+
+### Mechanical gate
+
+20/20 rendered · 2048×2048 PNG · sRGB · validator exit 0 · generator selftest 9/9 ·
+canonical schema `--check` PASS · **0 exact duplicates · 0 near-duplicates**. Sheets:
+`reports/test-batch-contact-sheet.png`, `reports/test-batch-detail-sheet.png`.
+
+### Scope note
+
+This approves the **visual system** for the full render. It does NOT mean MINT_READY:
+the collection still needs the full 3,333 render + global QA, metadata finalization,
+permanent storage, and (the mainnet canary is already done) production rollout. The
+mainnet GHOST//0001 canary art remains `PRE_RELEASE_CANARY_ART_MUTABLE` and can be
+updated to the finalized 0001 render under the retained update authority.
+
+---
+
 ## Pass 5 — 2026-09-11, authored-art gate (Claude)
 
 ### Verdict

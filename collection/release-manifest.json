@@ -1,14 +1,19 @@
 {
   "schema_version": "1.0",
   "release_version": "0.2.0",
-  "status": "PRODUCTION_PIPELINE_IMPLEMENTED_TEST_BATCH_ONLY",
+  "status": "VISUAL_SYSTEM_APPROVED_FOR_FULL_RENDER",
   "date": "2026-09-07",
   "updated": "2026-09-10",
   "changelog": [
     {
       "date": "2026-09-10",
       "summary": "Chain migrated Base/ERC-721 -> Solana/Metaplex Core (production config only; trait/rarity design witness below is unchanged). Deterministic layer-compositing generator built and self-tested. 20-identity test batch selected; metadata generated and validated. Zero images rendered: zero layer assets exist to composite from (collection/reports/production-art-audit.md). Not mint-ready.",
-      "files_changed_this_pass": ["collection.yaml", "deployment-addresses.md", "solana-alternative.md", "genesis.yaml (added art_prompt_delta)"]
+      "files_changed_this_pass": [
+        "collection.yaml",
+        "deployment-addresses.md",
+        "solana-alternative.md",
+        "genesis.yaml (added art_prompt_delta)"
+      ]
     }
   ],
   "collection": "GHOST//ROOT",
@@ -20,10 +25,10 @@
     "rendered": 0,
     "metadata_generated": 20,
     "metadata_schema_pass": 20,
-    "reason_zero_rendered": "no layer assets exist yet — see production-art-audit.md and ASSET-MANIFEST.md (105/105 MISSING)",
+    "reason_zero_rendered": "no layer assets exist yet \u2014 see production-art-audit.md and ASSET-MANIFEST.md (105/105 MISSING)",
     "selection": "manifests/test-batch-selection.json",
     "validation": "reports/test-batch-validation.md",
-    "visual_qa": "reports/test-batch-visual-review.md (gate not evaluated — no images to review)"
+    "visual_qa": "reports/test-batch-visual-review.md (gate not evaluated \u2014 no images to review)"
   },
   "production_metadata_files": 0,
   "production_seed": null,
@@ -90,7 +95,7 @@
   },
   "signatures": [],
   "not_completed": [
-    "final artwork (BLOCKING — 0/105 required layer assets exist; see ASSET-MANIFEST.md)",
+    "final artwork (BLOCKING \u2014 0/105 required layer assets exist; see ASSET-MANIFEST.md)",
     "full legendary trait vectors (30 slots: only Access+Architecture fixed, art_status concept_required)",
     "144-portrait stress-combination pilot (art-bible.md Asset milestones step 5)",
     "storage upload",
@@ -100,5 +105,11 @@
     "independent security review",
     "name and license clearance",
     "funding and operational assignments"
-  ]
+  ],
+  "visual_qa": {
+    "verdict": "APPROVED_FOR_PRODUCTION_RENDER",
+    "pass": "5-final",
+    "date": "2026-09-11",
+    "note": "20-token representative batch approved; fitted hardware + legendaries authored via Gemini 3 Pro Image. NOT mint_ready: full 3,333 render + global QA + metadata finalization + permanent storage still required."
+  }
 }

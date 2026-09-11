@@ -91,12 +91,27 @@ def validate_row(token_id: int, trait_ids: dict[str, str], catalog: dict[str, di
 # prototype composite bust + mantle + eyes only; architecture is baked into
 # entity_base. Fitted implant/interface/rear/corruption/seam come next.
 UNREGISTERED_OVERLAY_SLOTS = {
-    "rear_anatomy",
+    # architecture is baked into entity_base; witness_seam is an optional universal
+    # texture pass, disabled by default (see PRODUCTION-VISUAL-SPEC.md). The fitted
+    # implant/interface/rear_anatomy/corruption slots are now authored + registered.
     "architecture",
-    "corruption",
     "witness_seam",
-    "implant_front",
-    "interface",
+}
+
+# Explicit paste order (back to front). Differs from raw z only for rear_anatomy
+# (must sit BEHIND entity_base) and mantle (a front break-collar over the bust).
+PASTE_ORDER = {
+    "background": 0,
+    "environmental_depth": 10,
+    "rear_anatomy": 20,
+    "entity_base": 30,
+    "eyes": 40,
+    "mantle": 50,
+    "interface": 60,
+    "implant_front": 65,
+    "corruption": 80,
+    "witness_seam": 90,
+    "grain": 100,
 }
 
 
@@ -122,11 +137,7 @@ def plan_layers(trait_ids: dict[str, str], omit_unregistered: bool = True) -> tu
             missing.append(f"z{slot.z:03d} {slot.slot}: no asset for {slot.categories} = "
                             f"{[trait_ids.get(c) for c in slot.categories]}")
         # non-required, non-empty, unresolved (e.g. optional grain pass) -> silently skipped
-    if omit_unregistered:
-        # Front-facing break collar must sit on the neck, so mantle paints after the bust
-        # in this prototype (art-bible z30 is rear collar; we do not yet have a split).
-        order = {"background": 0, "entity_base": 1, "mantle": 2, "eyes": 3}
-        resolved.sort(key=lambda item: order.get(item[0].slot, item[0].z))
+    resolved.sort(key=lambda item: PASTE_ORDER.get(item[0].slot, item[0].z))
     return resolved, missing
 
 

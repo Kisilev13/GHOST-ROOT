@@ -69,7 +69,8 @@ def main() -> int:
             made += 1
         resolved, missing = gp.plan_layers(trait_ids, omit_unregistered=False)
         check("synthetic assets for every required slot -> nothing missing", len(missing) == 0)
-        check("resolved layers are in ascending z-order", [s.z for s, _ in resolved] == sorted(s.z for s, _ in resolved))
+        order_vals = [gp.PASTE_ORDER.get(s.slot, s.z) for s, _ in resolved]
+        check("resolved layers are in ascending paste order", order_vals == sorted(order_vals))
 
         trait_ids_imp = dict(trait_ids)
         trait_ids_imp["implant"] = "implant.antenna"
