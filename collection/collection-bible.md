@@ -114,7 +114,7 @@ The edition contains **3,300 generative portraits + 30 individually art-directed
 
 The 198 non-Genesis reserves contain 108 common, 54 uncommon, 26 rare, and 10 epic portraits. All 30 legendaries enter paid inventory. Genesis custody is plainly disclosed; community participants can interact with Genesis stories without owning those tokens. Selection and awards must not be sold as investment opportunities.
 
-Paid wallet cap: two lifetime paid mints across all phases, one during allowlist. This limits addresses, not people. No system can infer one-human-one-wallet merely from these rules. Tokens transferred in do not consume mint allowance; tokens transferred out do not restore it.
+Wallet cap: five mints per wallet in each phase — five early and five public, enforced by two independent on-chain counters (10 combined maximum per wallet). This limits addresses, not people. No system can infer one-human-one-wallet merely from these rules. Tokens transferred in do not consume mint allowance; tokens transferred out do not restore it.
 
 The proposed mint is **visible-art, select-an-identity**, with a flat planning price of 0.004 ETH. Selection is first confirmed transaction; display transaction-ordering competition honestly. There is no random-reveal fairness claim. Price is provisional until costs and prefunding are reviewed, then fixed at deployment. Full art and all state variants are inspectable before payment. Narrative revelations remain staged.
 

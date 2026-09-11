@@ -7,7 +7,7 @@
 import {
   pdaUmi, deriveMintCounterPda, assertMintCounterSeedSourceContract, CANDY_GUARD_PROGRAM_ID,
 } from "./mint_counter_pda.js";
-import { COLLECTION_ADDRESS, GHOST_0001_ASSET, TREASURY, SHARED_MINT_LIMIT_ID, MAX_PER_WALLET } from "./launch_config.js";
+import { COLLECTION_ADDRESS, GHOST_0001_ASSET, TREASURY, EARLY_MINT_LIMIT_ID, PUBLIC_MINT_LIMIT_ID, MAX_PER_WALLET } from "./launch_config.js";
 
 let pass = 0, fail = 0;
 function test(name: string, fn: () => void): void {
@@ -32,21 +32,23 @@ test("PDA source contract: seeds exclude group label / price / phase", () => {
   assert(c.programId === CANDY_GUARD_PROGRAM_ID, "unexpected candy guard program id");
 });
 
-// COUNTER ADDRESS EQUALITY — early and public use the SAME id/user/guard/machine, so they
-// derive the IDENTICAL counter PDA. The group label is not a seed, so the phase cannot
-// change the derivation. FAIL HARD if not equal.
-test("earlyCounterPda == publicCounterPda (shared lifetime counter)", () => {
-  const early = deriveMintCounterPda(umi, { id: SHARED_MINT_LIMIT_ID, user: WALLET_A, candyGuard: CANDY_GUARD, candyMachine: CANDY_MACHINE });
-  const pub   = deriveMintCounterPda(umi, { id: SHARED_MINT_LIMIT_ID, user: WALLET_A, candyGuard: CANDY_GUARD, candyMachine: CANDY_MACHINE });
-  assert(early === pub, `earlyCounterPda ${early} != publicCounterPda ${pub} — shared counter broken; retain blocker`);
+// COUNTER ADDRESS INDEPENDENCE — early (id 1) and public (id 2) use DIFFERENT mintLimit ids,
+// so they derive DIFFERENT counter PDAs for the same wallet. This is what gives independent
+// 5+5 caps. FAIL HARD if they collide.
+test("earlyCounterPda != publicCounterPda (independent per-phase counters)", () => {
+  const early = deriveMintCounterPda(umi, { id: EARLY_MINT_LIMIT_ID, user: WALLET_A, candyGuard: CANDY_GUARD, candyMachine: CANDY_MACHINE });
+  const pub   = deriveMintCounterPda(umi, { id: PUBLIC_MINT_LIMIT_ID, user: WALLET_A, candyGuard: CANDY_GUARD, candyMachine: CANDY_MACHINE });
+  assert(early !== pub, `earlyCounterPda ${early} == publicCounterPda ${pub} — phases would share one counter; independence broken`);
 });
 
-// A DIFFERENT id derives a DIFFERENT counter (proves id scoping — why divergent group ids
-// would silently create a second 5-mint allowance).
-test("different mintLimit id => different counter PDA", () => {
-  const id1 = deriveMintCounterPda(umi, { id: 1, user: WALLET_A, candyGuard: CANDY_GUARD, candyMachine: CANDY_MACHINE });
-  const id2 = deriveMintCounterPda(umi, { id: 2, user: WALLET_A, candyGuard: CANDY_GUARD, candyMachine: CANDY_MACHINE });
-  assert(id1 !== id2, "different ids collided onto one counter");
+// The id IS a seed: same id => same counter; different id => different counter. This is the
+// mechanism that makes early (id 1) and public (id 2) independent.
+test("same id => same counter; different id => different counter", () => {
+  const a = deriveMintCounterPda(umi, { id: EARLY_MINT_LIMIT_ID, user: WALLET_A, candyGuard: CANDY_GUARD, candyMachine: CANDY_MACHINE });
+  const aAgain = deriveMintCounterPda(umi, { id: EARLY_MINT_LIMIT_ID, user: WALLET_A, candyGuard: CANDY_GUARD, candyMachine: CANDY_MACHINE });
+  const b = deriveMintCounterPda(umi, { id: PUBLIC_MINT_LIMIT_ID, user: WALLET_A, candyGuard: CANDY_GUARD, candyMachine: CANDY_MACHINE });
+  assert(a === aAgain, "same id derived different counters");
+  assert(a !== b, "different ids collided onto one counter");
 });
 
 // A DIFFERENT wallet derives a DIFFERENT counter (per-wallet cap).
@@ -56,23 +58,25 @@ test("different wallet => different counter PDA (per-wallet cap)", () => {
   assert(a !== b, "distinct wallets collided onto one counter");
 });
 
-// PHASE TRANSITION keyed on the REAL derived PDA: both phases resolve to one counter
-// address, so a wallet's 6th combined mint (early+public) exceeds limit 5 on ONE account.
-test("phase transitions increment ONE derived counter; 6th combined mint exceeds cap", () => {
+// PHASE TRANSITION keyed on the REAL derived PDAs: early (id 1) and public (id 2) resolve
+// to DIFFERENT counter addresses, so each phase independently allows 5 (10 combined) and the
+// 6th mint WITHIN a phase exceeds that phase's own counter.
+test("phase counters are independent; each rejects its own 6th; two distinct PDAs", () => {
   const counters = new Map<string, number>();
-  const mint = (_phase: "early" | "public"): boolean => {
-    // both phases send mintLimit.id = 1 => identical seeds => identical PDA
-    const pda = deriveMintCounterPda(umi, { id: SHARED_MINT_LIMIT_ID, user: WALLET_A, candyGuard: CANDY_GUARD, candyMachine: CANDY_MACHINE });
+  const idFor = (phase: "early" | "public") => (phase === "early" ? EARLY_MINT_LIMIT_ID : PUBLIC_MINT_LIMIT_ID);
+  const mint = (phase: "early" | "public"): boolean => {
+    const pda = deriveMintCounterPda(umi, { id: idFor(phase), user: WALLET_A, candyGuard: CANDY_GUARD, candyMachine: CANDY_MACHINE });
     const n = counters.get(pda) ?? 0;
     if (n >= MAX_PER_WALLET) return false;
     counters.set(pda, n + 1);
     return true;
   };
-  // wallet A: 3 early + 2 public = 5 ok, 6th fails
-  for (let i = 0; i < 3; i++) assert(mint("early"), "early refused within cap");
-  for (let i = 0; i < 2; i++) assert(mint("public"), "public refused within cap");
-  assert(mint("public") === false, "6th combined mint not rejected on the shared counter");
-  assert(counters.size === 1, "phases used more than one counter PDA");
+  // wallet A: 5 early ok, 6th early fails; then 5 public ok (independent), 6th public fails
+  for (let i = 0; i < 5; i++) assert(mint("early"), "early refused within cap");
+  assert(mint("early") === false, "6th early not rejected on the early counter");
+  for (let i = 0; i < 5; i++) assert(mint("public"), "public refused within cap (should be independent of early)");
+  assert(mint("public") === false, "6th public not rejected on the public counter");
+  assert(counters.size === 2, "phases did not use two distinct counter PDAs");
 });
 
 test("no network + no signing during PDA derivation", () => {

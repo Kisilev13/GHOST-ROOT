@@ -14,9 +14,16 @@
  * with no SDK. executeMint is disabled until integration and enforcement are verified.
  */
 import type { GroupLabel } from "./launch_config.js";
-import { EARLY_LAMPORTS, PUBLIC_LAMPORTS, MAX_PER_WALLET, SHARED_MINT_LIMIT_ID, lamportsToSol } from "./launch_config.js";
+import { EARLY_LAMPORTS, PUBLIC_LAMPORTS, MAX_PER_WALLET, EARLY_MINT_LIMIT_ID, PUBLIC_MINT_LIMIT_ID, lamportsToSol } from "./launch_config.js";
 
 export const MINT_PHASES: GroupLabel[] = ["early", "public"];
+
+/** The mintLimit id (independent counter) for a phase: early=1, public=2. */
+export function mintLimitIdFor(label: GroupLabel): number {
+  if (label === "early") return EARLY_MINT_LIMIT_ID;
+  if (label === "public") return PUBLIC_MINT_LIMIT_ID;
+  throw new Error(`ABORT: unknown mint phase '${label}'`);
+}
 
 /** Expected lamports for a phase, from config constants (the reconciliation target). */
 export function expectedLamports(label: GroupLabel): bigint {
@@ -32,9 +39,9 @@ export const EST_NETWORK_FEE_LAMPORTS = 15_000n;  // base sig + a little headroo
 export interface OnChainGroup { label: string; solPaymentLamports: bigint; solPaymentDestination: string; mintLimit?: { id: number; limit: number } | null; }
 
 /**
- * The freshly-fetched Candy Guard, as the buyer path sees it: the DEFAULT guard set
- * (which carries the shared lifetime mintLimit) plus the priced groups. The effective
- * limiter for a group is its own mintLimit if present, else the inherited default one.
+ * The freshly-fetched Candy Guard, as the buyer path sees it: an (empty) DEFAULT guard set
+ * plus the priced groups, each carrying its OWN independent mintLimit. The effective limiter
+ * for a group is its own mintLimit if present, else the (normally absent) default one.
  */
 export interface OnChainGuardConfig {
   defaultMintLimit: { id: number; limit: number } | null;
@@ -61,15 +68,15 @@ export function resolveEffectiveMintLimit(cfg: OnChainGuardConfig, group: OnChai
 }
 
 /**
- * Mint arguments the frontend MUST send for a phase: the shared mintLimit id (so the
- * program derives the ONE shared wallet counter) plus, for the early group, the caller's
- * allowlist proof when required. The group LABEL is passed separately to mintV1 (never as
- * a mintArg) and selects which priced route/guards apply. This is prepared data only — it
- * constructs no transaction and reaches no signer.
+ * Mint arguments the frontend MUST send for a phase: the phase's OWN mintLimit id (early=1,
+ * public=2, so the program derives that phase's independent wallet counter) plus, for the
+ * early group, the caller's allowlist proof when required. The group LABEL is passed
+ * separately to mintV1 (never as a mintArg) and selects which priced route/guards apply.
+ * This is prepared data only — it constructs no transaction and reaches no signer.
  */
 export interface MintArgs { mintLimit: { id: number }; allowListProof?: string[]; }
-export function buildMintArgs(_phase: GroupLabel, allowListProof?: string[]): MintArgs {
-  const args: MintArgs = { mintLimit: { id: SHARED_MINT_LIMIT_ID } };
+export function buildMintArgs(phase: GroupLabel, allowListProof?: string[]): MintArgs {
+  const args: MintArgs = { mintLimit: { id: mintLimitIdFor(phase) } };
   if (allowListProof && allowListProof.length) args.allowListProof = allowListProof;
   return args;
 }
@@ -135,13 +142,17 @@ export interface PreflightResult { quote: BuyerQuote; reconciliation: Reconcilia
  * group is missing; returns reconciliation.ok=false (do not mint) on price drift.
  */
 export function preflight(cfg: OnChainGuardConfig, phase: GroupLabel, treasury: string): PreflightResult {
-  // Every phase must resolve to the SAME shared lifetime limiter (id 1, limit 5), whether
-  // inherited from the default or (defensively) overridden identically by the group.
+  // Each phase must resolve to its OWN independent limiter: early id 1, public id 2, each
+  // limit 5, and the two ids must be DISTINCT (a shared id would collapse to one counter).
+  const seenIds = new Set<number>();
   for (const label of MINT_PHASES) {
     const g = verifyGroupExists(cfg.groups, label);
     const eff = resolveEffectiveMintLimit(cfg, g);
-    if (eff.id !== SHARED_MINT_LIMIT_ID || eff.limit !== MAX_PER_WALLET)
-      throw new Error("ABORT: shared lifetime mintLimit mismatch (resolved limiter is not id 1, limit 5)");
+    if (eff.id !== mintLimitIdFor(label) || eff.limit !== MAX_PER_WALLET)
+      throw new Error(`ABORT: ${label} mintLimit mismatch (resolved ${eff.id}/${eff.limit}, expected ${mintLimitIdFor(label)}/${MAX_PER_WALLET})`);
+    if (seenIds.has(eff.id))
+      throw new Error("ABORT: early/public share a mintLimit id — independent per-phase counters required");
+    seenIds.add(eff.id);
   }
   const group = verifyGroupExists(cfg.groups, phase);        // (3) verify group exists
   if (group.solPaymentDestination !== treasury)             // (11) sol payment -> treasury

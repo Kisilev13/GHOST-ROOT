@@ -6,9 +6,10 @@
  *   findMintCounterPda seeds (generated/accounts/mintCounter.js):
  *     ['mint_limit', id(u8), user(pubkey), candyGuard(pubkey), candyMachine(pubkey)]
  *
- * The GROUP LABEL, the PRICE, and the launch PHASE are NOT seeds. Therefore, for a fixed
- * Candy Guard + Candy Machine + wallet + mintLimit id, the `early` and `public` phases
- * derive the IDENTICAL counter PDA and share one lifetime allowance.
+ * The mintLimit id IS a seed; the GROUP LABEL, the PRICE, and the launch PHASE are NOT.
+ * Therefore, since `early` uses id 1 and `public` uses id 2, the two phases derive
+ * DIFFERENT counter PDAs for the same wallet and enforce INDEPENDENT per-phase allowances
+ * (5 early + 5 public). Two groups sharing one id would instead collapse to one counter.
  *
  * PDA derivation is pure ed25519/sha256 (tweetnacl + hashing) — no RPC, no signing, no
  * SOL. Safe to run under offline_guard.cjs.
@@ -19,7 +20,6 @@ import { fileURLToPath } from "node:url";
 import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
 import { publicKey, type Umi, type PublicKey } from "@metaplex-foundation/umi";
 import { mplCandyMachine, findMintCounterPda } from "@metaplex-foundation/mpl-core-candy-machine";
-import { SHARED_MINT_LIMIT_ID } from "./launch_config.js";
 
 export const CANDY_GUARD_PROGRAM_ID = "CMAGAKJ67e9hRZgfC5SFTbZH8MgEmtqazKXjmkaJjWTJ";
 

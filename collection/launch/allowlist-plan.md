@@ -1,6 +1,6 @@
 # Allowlist — 1,110 paid eligibility slots
 
-The allowlist grants eligibility to mint at 0.10 SOL during the early phase. Public price is 0.15 SOL. Each wallet may mint at most **five total across the entire launch**, using one cumulative allowance across early and public. A wallet that mints N early can mint at most 5 − N public; transfers never restore allowance. Eligibility is not a reserved token or guarantee of availability. Both phases use the same 3,332-item inventory, IDs 0002–3333; the existing GHOST//0001 canary is excluded. Dates remain unset.
+The allowlist grants eligibility to mint at 0.10 SOL during the early phase. Public price is 0.15 SOL. Each wallet may mint at most **five in the early phase and five in the public phase (independent counters, 10 combined)**. The early allowance does not consume the public allowance; transfers never restore either. Eligibility is not a reserved token or guarantee of availability. Both phases use the same 3,332-item inventory, IDs 0002–3333; the existing GHOST//0001 canary is excluded. Dates remain unset.
 
 On-chain enforcement must be authoritative. The prepared shared Mint Limit design and unresolved SDK verification requirements are in [MINT-LIMIT-POLICY.md](MINT-LIMIT-POLICY.md). State remains `PREPARED_NOT_DEPLOYED`.
 

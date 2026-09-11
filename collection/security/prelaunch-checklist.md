@@ -61,3 +61,12 @@ Current status: **NOT READY TO MINT**. Design completion does not satisfy the pr
 - [ ] Launch funding and promised post-mint delivery do not depend on a sellout or royalties.
 
 Production approval: unassigned. Production date: unset. No gate is waived by this specification.
+
+## Current Solana launch gates
+
+- [ ] Five mints per wallet in EACH phase (5 early + 5 public, 10 combined): two independent on-chain counters (early mintLimit id 1, public id 2), fixed guard/machine identity, no reset on phase change or transfer.
+- [ ] SDK source and program tests verify the per-phase mintLimit counter seeds (distinct id → distinct PDA), group-label-required routing / no ungrouped default mint, direct-client and authority paths; the sixth mint in a phase must fail.
+- [ ] SDK broadcast/deployment integration complete and reviewed. Currently incomplete; mint execution disabled.
+- [ ] Approved full 3,333 render, complete final metadata, permanent metadata URIs, both real start dates, finalized allowlist/root, reviewed cost quote, and explicit mainnet authorization exist. All remain unresolved.
+
+Local model tests establish policy expectations only; they do not demonstrate deployed enforcement.

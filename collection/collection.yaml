@@ -28,15 +28,17 @@
     "currency": "SOL",
     "proposed_price_lamports": null,
     "price_status": "not_finalized",
-    "paid_wallet_lifetime_limit": 2,
-    "allowlist_wallet_limit": 1,
+    "early_wallet_limit": 5,
+    "public_wallet_limit": 5,
+    "combined_wallet_limit": 10,
     "max_transaction_quantity": 2,
     "selection": "visible_art_select_id",
     "art_reveal": "pre_mint",
     "narrative_reveal": "staged",
     "allowlist_window_hours": 48,
     "public_window_days": 14,
-    "launch_date": null
+    "launch_date": null,
+    "wallet_limit_scope": "independent_per_phase (early mintLimit id 1, public id 2)"
   },
   "allocations": [
     {

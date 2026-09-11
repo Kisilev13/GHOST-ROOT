@@ -38,7 +38,7 @@ The terminal accepts a small documented set of fictional commands; it is not a r
 
 ## Mint drawer
 
-Display the selected token's actual portrait, token ID, Base network, fixed on-chain price, estimated fee separately, quantity, lifetime paid wallet allowance, current phase allowance, mint close time with timezone, edition maximum, actual minted count, and verified address/explorer link. Separate paid mints from reserve claims in counts. During unsold close say “ARCHIVE CLOSED — X OF 3,333 RECOVERED.”
+Display the selected token's actual portrait, token ID, Base network, fixed on-chain price, estimated fee separately, quantity, remaining per-phase mint allowance (5 minus this phase's prior mints; early and public counted independently), mint close time with timezone, edition maximum, actual minted count, and verified address/explorer link. Separate paid mints from reserve claims in counts. During unsold close say “ARCHIVE CLOSED — X OF 3,333 RECOVERED.”
 
 The mint is exact-art selection. The collection does not hold an ID while a wallet dialog is open. If another transaction wins it, explain the conflict and let the user choose again; do not silently mint a replacement token. Do not auto-resubmit a paid transaction after a timeout.
 
@@ -59,7 +59,7 @@ Error copy:
 - Insufficient funds: “This recovery needs the mint amount plus the network fee.”
 - Wrong network: “This archive is on Base. Review the network switch in your wallet.”
 - ID taken: “Another transaction recovered this identity first. Choose another record.”
-- Wallet cap: “This wallet has used its two paid recoveries. Transfers do not reset that limit.”
+- Wallet cap: “This wallet has used its five mints for this phase. Each phase (early and public) has its own five-mint limit; transfers do not reset it.”
 - RPC failure: “We cannot confirm archive status. Check your transaction before trying again.”
 - State advance: “This changes the character's story state permanently. It does not change Access or rarity.”
 

@@ -7,7 +7,7 @@ Review date: 2026-09-07. Scope: the collection design and planned implementation
 | Risk | Concrete failure mode | Required control | Proof before release |
 | --- | --- | --- | --- |
 | Hidden supply path | Reserve helper or owner mint bypasses paid cap | Single lifetime issuance accounting; fixed ID ranges and reserve commitments | Unit/fuzz/invariant exercise of every external mint path |
-| Mint cap reset | Balance-based check lets transfer-outs restore allowance | Lifetime paid counter, shared across phases | Mint/transfer/mint and AL/public interleavings |
+| Mint cap reset | Balance-based check lets transfer-outs restore allowance | Two independent per-phase paid counters (early + public, 5 each), never balance-derived | Mint/transfer/mint and AL/public interleavings; sixth mint in a phase must fail |
 | Reentrant mint | Receiver callback remints selected IDs or exceeds quantity/cap | Full batch effects before callbacks; nonreentrant external paths | Adversarial receiver tests with last available IDs |
 | Payment redirection | Admin or frontend substitutes treasury | Constructor treasury with no recipient setter; chain-derived transaction details | Verify deployment arguments and receipt accounting |
 | Metadata replacement | Team points holders to arbitrary new media | Constructor-only CID; four committed state paths | ABI/write-path inspection and URI invariant tests |

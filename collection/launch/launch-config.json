@@ -1,12 +1,12 @@
 {
-  "schema_version": "3.0",
+  "schema_version": "4.0",
   "collection": "GHOST//ROOT",
   "symbol": "GHRT",
   "chain": "solana",
   "network": "mainnet-beta",
   "standard": "metaplex-core",
   "state": "PREPARED_NOT_DEPLOYED",
-  "notes": "Two-tier Candy Guard launch config. PRICE/ACCESS structure only — no supply pool split. Both groups draw from the SAME 3332-item Candy Machine inventory. Dates are null and MUST NOT be invented here; they are set once, on-chain, at launch authorization.",
+  "notes": "Two-tier Candy Guard launch config. PRICE/ACCESS structure only — no supply pool split. Both groups draw from the SAME 3332-item Candy Machine inventory. Dates are null and MUST NOT be invented here; they are set once, on-chain, at launch authorization. Per-wallet caps are INDEPENDENT per phase: 5 early + 5 public.",
   "addresses": {
     "collection": "ECfe4r3Xp66qe6dAGgdnc4QAMikdDHHvrGfWPDqkrE1p",
     "authority": "CcgTzAmyog1h3tUnR7zqtQ2bZzQSYL9L9xZHDBvtD94R",
@@ -47,14 +47,15 @@
       "price_sol": 0.1,
       "price_lamports": 100000000,
       "max_per_wallet": 5,
+      "mint_limit_id": 1,
+      "wallet_limit_scope": "independent",
       "destination": "CcgTzAmyog1h3tUnR7zqtQ2bZzQSYL9L9xZHDBvtD94R",
       "start_date": null,
       "end_date": null,
       "status": "NOT_SCHEDULED",
       "allowlist_source": "PENDING_ALLOWLIST",
       "allowlist_required": true,
-      "merkle_root": null,
-      "wallet_limit_scope": "shared_lifetime"
+      "merkle_root": null
     },
     "public": {
       "label": "public",
@@ -62,24 +63,22 @@
       "price_sol": 0.15,
       "price_lamports": 150000000,
       "max_per_wallet": 5,
+      "mint_limit_id": 2,
+      "wallet_limit_scope": "independent",
       "destination": "CcgTzAmyog1h3tUnR7zqtQ2bZzQSYL9L9xZHDBvtD94R",
       "start_date": null,
       "end_date": null,
       "status": "NOT_SCHEDULED",
-      "allowlist_required": false,
-      "wallet_limit_scope": "shared_lifetime"
+      "allowlist_required": false
     }
   },
   "default_guard": {
-    "policy": "SHARED_LIFETIME_MINT_LIMIT_ONLY",
-    "strategy": "mint_limit_only",
+    "policy": "GROUP_LABEL_REQUIRED_NO_DEFAULT_ROUTE",
+    "strategy": "empty",
     "address_gate_to": null,
     "sol_payment": null,
-    "explanation": "The default guard set carries ONLY the shared lifetime Mint Limit (id 1, limit 5). Every group INHERITS this default unless it overrides the same guard type, so both early and public consume one shared per-wallet counter. The default intentionally holds NO solPayment and NO addressGate: any restrictive guard placed in the default set is inherited by early+public and would break ordinary (non-authority) public minting. 'No ungrouped/free default mint route' is provided by the Candy Guard program requiring a valid group label to mint whenever groups are defined (program-level behavior; not executable offline this phase).",
-    "mint_limit": {
-      "id": 1,
-      "limit": 5
-    }
+    "mint_limit": null,
+    "explanation": "The default guard set is EMPTY. Each group carries its OWN mintLimit (early id 1, public id 2) so the two phases resolve to DIFFERENT MintCounter PDAs and enforce INDEPENDENT per-wallet caps (5 early + 5 public = 10 max/wallet). The default is intentionally empty because any guard placed there is inherited by every group: a default solPayment would create a second ungrouped price, a default addressGate would block ordinary buyers, and a default mintLimit would collapse the two phases onto one shared counter. 'No ungrouped/free default mint route' is provided by the Candy Guard program requiring a valid group label to mint whenever groups are defined (program-level behavior; not executable offline this phase)."
   },
   "bot_tax": {
     "enabled": false
@@ -102,19 +101,24 @@
     "program": "@metaplex-foundation/mpl-core-candy-machine",
     "program_id": "CMAGAKJ67e9hRZgfC5SFTbZH8MgEmtqazKXjmkaJjWTJ",
     "sdk_version": "0.3.0",
-    "mint_limit_defined_in": "default",
-    "shared_mint_limit_id": 1,
-    "groups_inherit_default_mint_limit": true,
+    "mint_limit_defined_in": "each_group",
+    "groups_inherit_default_mint_limit": false,
+    "mint_limit_ids": {
+      "early": 1,
+      "public": 2
+    },
     "groups": [
       "early",
       "public"
     ]
   },
   "wallet_limit": {
-    "lifetime_max": 5,
-    "scope": "entire_launch_all_phases",
-    "shared_counter_id": 1,
+    "per_phase_max": 5,
+    "scope": "per_phase_independent",
+    "early_counter_id": 1,
+    "public_counter_id": 2,
+    "combined_max": 10,
     "enforcement_status": "PDA_VERIFIED_PROGRAM_UNTESTED",
-    "mechanism": "One shared on-chain Mint Limit counter. MintCounter PDA seeds (verified from installed mpl-core-candy-machine@0.3.0 source: ['mint_limit', id(u8), user, candyGuard, candyMachine]) do NOT include the group label, price, or phase, so early and public resolve to the SAME counter PDA for a given wallet under the fixed Candy Guard + Candy Machine. Runtime enforcement (inheritance merge, group-required routing, counter decrement/reject-sixth) is a Candy Guard program behavior and remains untested offline this phase."
+    "mechanism": "Two independent on-chain Mint Limit counters. MintCounter PDA seeds (verified from installed mpl-core-candy-machine@0.3.0 source: ['mint_limit', id(u8), user, candyGuard, candyMachine]) include the mintLimit id, so early (id 1) and public (id 2) resolve to DIFFERENT counter PDAs for the same wallet under the fixed Candy Guard + Candy Machine. Each phase independently allows up to 5 mints (10 combined). Runtime enforcement (group-required routing, per-counter decrement/reject-sixth) is a Candy Guard program behavior and remains untested offline this phase."
   }
 }
