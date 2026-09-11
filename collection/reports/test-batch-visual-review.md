@@ -1,5 +1,71 @@
 # GHOST//ROOT — test-batch visual QA
 
+## Pass 5 — 2026-09-11, authored-art gate (Claude)
+
+### Verdict
+
+**REPEAT_VISUAL_PROTOTYPE_STAGE** — pass state: **`BLOCKED_ON_AUTHORED_ART_TOOL`**
+
+Not `APPROVED_FOR_PRODUCTION_RENDER`. The two remaining blocker classes (legendaries
+1503/2803 and fitted implant/interface/rear/corruption hardware) are **authored-art**
+problems, and this session has **no image-generation capability**: no Garden imagegen
+(`OPENAI_API_KEY` unset, `ENABLE_GARDEN_IMAGEGEN` unset, no gateway file) and no
+host-native image tool. Per the task's Phase 26, the missing art is NOT faked. Instead
+this pass produced exact, executable production briefs and left the pipeline (which
+already works) untouched. No pixels changed; the Pass 4 renders stand.
+
+### Why blocked, not approved
+
+The remaining work is illustration, not engineering. Faking it — enabling the existing
+schematic/wireframe overlay assets, or generating unvetted images and dropping them in
+as finished NFTs — is exactly what the brief forbids. The honest outcome is to specify
+the assets precisely and stop.
+
+### Deliverables produced this pass
+
+- `reports/pass5-implant-inventory.md` — every Implant value in the 20-batch, its
+  resolver filename, current state (all schematic), and mount anchor.
+- `reports/pass5-authored-art-briefs.md` — full briefs for all **31** fitted assets
+  (9 implant-front, 9 rear-anatomy, 7 interface, 6 corruption) with canvas, crop,
+  composition, material, perspective, lighting, palette, anchors, occlusion, negative
+  prompt, transparency, and references to the approved Pass 4 sources.
+- `reports/legendary-art-direction.md` — complete scene briefs for 1503 ("The
+  Intermittent Witness", void-as-subject) and 2803 ("The Opened Reliquary", revealed
+  internal machinery), each with a distinct concept/silhouette/architecture/lighting and
+  their exact canonical trait vectors.
+- `PRODUCTION-VISUAL-SPEC.md` — **witness/seam decision recorded**: it is not a trait
+  category (absent from the schema's art-visible and metadata-only lists and from the
+  witness CSV), so it is defined as an optional universal micro-texture pass, disabled
+  by default. No ambiguous art-visible category is left silently unrendered.
+
+### Per-Phase status
+
+- **1503** — UNAUTHORED; brief written. Blocks approval.
+- **2803** — UNAUTHORED; brief written. Blocks approval.
+- **Implant system** — 5 families (antenna, memory_spindle, neural_cable, root_port,
+  spinal_bus) invisible on ordinary tokens; 18 files (9 front + 9 rear) to re-author.
+- **Neural cable** — briefed as priority (temple socket + connector + draped cable +
+  rear neck routing). This is the specific asset that resolves `(49,366)`.
+- **Interface system** — 7 files (forensic_plate ×3, neural_veil, null_mask, respirator,
+  skeletal_interface) to re-author; all currently schematic/invisible.
+- **Rear anatomy** — 9 files briefed (spinal_bus is the main silhouette contributor).
+- **Corruption** — 6 files briefed (absence/checksum_burn/packet_ghosting/scan_shear as
+  masked material alterations, not overlays).
+- **Seam/witness** — resolved as optional-universal, disabled by default (not a blocker).
+- **Compositor slots registered** — none this pass (correct: do not register schematic
+  fallbacks; register only when authored art lands).
+- **Masks added** — none this pass (occlusion requirements specified in the briefs).
+- **49/366** — still flags (dist 1); root cause and fix documented (needs neural_cable).
+  Not resolvable without the art.
+
+### Mechanical state (unchanged from Pass 4, re-confirmed)
+
+20/20 render · 2048×2048 PNG · validator exit 0 · selftest 9/9 · canonical schema PASS ·
+0 exact duplicates · near-dup flags `(49,366)` d1, `(49,836)` d4 (49/836 accepted).
+No regression to the Pass 4 fixes (mantles, 0010, 0303, 0803, 4/3333, 166/1842, 10/97).
+
+---
+
 ## Pass 4 — 2026-09-11, mantle/collar/legendary re-authoring review (Claude)
 
 ### Verdict

@@ -96,13 +96,23 @@ layer. Entity-qualified filenames are mandatory.
 | 60 | interface | straight | Face-mounted. Omitted when `interface.none` |
 | 70 | architecture | straight | Front topology pass and contact shadow; must match the entity_base architecture |
 | 80 | corruption | straight | Bounded stencil. Omitted when `corruption.intact` |
-| 90 | witness_seam | straight | One shared geometric source, clipped to material/negative space |
+| 90 | witness_seam | straight | OPTIONAL universal micro-texture (see decision below), not a trait category. Disabled by default |
 | 100 | grain | optional | Baked into approved sources for this prototype |
 | 100 | authored_scene | opaque | Genesis and legendary complete images; same camera; no generic overlay |
 
 Blend: source-over, opacity 1.0.
 
 `access` and `signal` are metadata-only. They do not get paint layers.
+
+**witness_seam decision (Pass 5):** `witness_seam` is NOT a trait category — it is not
+in the canonical schema's `art_visible_categories` nor `metadata_only_categories`, and
+no witness/seam value exists in `design-witness.csv`. It is a universal compositor slot.
+It is hereby defined as an **optional, global micro-texture pass** (a hairline
+kintsugi-style repair seam applied uniformly, if art-directed), never a per-token trait,
+and is **disabled by default**. This resolves the "ambiguous art-visible category left
+silently unrendered" concern: witness_seam is explicitly optional-universal, not an
+unrendered trait. (The word "witness" elsewhere in this spec refers to the SPECTER
+entity's reconstructed-contour seam, which is baked into the entity_base, not this slot.)
 
 ## Material, eye, implant, interface, corruption
 

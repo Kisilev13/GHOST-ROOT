@@ -25,3 +25,55 @@ human/synthetic solutions, and must differ from each other:
 
 Both require authored illustration assets (as 0303/0803 received). Until they exist,
 the batch cannot be approved.
+
+---
+
+## Pass 5 — full scene briefs for 1503 and 2803 (BLOCKED_ON_AUTHORED_ART_TOOL)
+
+No image tool this session; these are the exact briefs to author. Both are HOLLOW /
+ROOT / severed_halo / signal_crown — they must obey those canonical traits, differ
+from 0303 (human) and 0803 (synthetic), and differ from **each other**. Deliver as one
+complete 2048×2048 sRGB opaque scene PNG at `assets/scenes/legendary/{id}__v001.png`
+(authored scenes bypass the layer stack), matching the collection camera/light.
+
+### GHOST//1503 — "The Intermittent Witness" (the void as subject)
+
+- Canonical traits to show: hollow void head; **forensic_plate** clamped over the lower
+  void; **signal_crown** ring of antennae at the crown; **ceramic_mantle** broken collar;
+  carbon (dark graphite) material; **void eyes**; **rack_shadow** background;
+  intermittent signal.
+- **Concept:** the severed halo is a full broken ceramic **ring suspended around empty
+  space** — the hollow head is small and low, and the composition is built from the
+  *absence* inside the ring. Signal-crown antennae radiate from the crown into the halo
+  gap; cabling from the forensic plate passes *through* the void where a face would be.
+- **Silhouette idea:** dominant off-centre broken ring (upper-left heavy), small dark
+  head at lower third — negative space is the composition, not the figure.
+- **Architecture idea:** severed_halo as a freestanding structure the head hangs within,
+  not a collar behind a bust.
+- **Lighting:** hard rim on the ceramic ring from upper-left; the void interior stays
+  true black with only a faint dust-scatter; server-rack slats faintly behind.
+- **Why Legendary:** scale + negative-space composition unlike any bust; the void reads
+  as intentional, not missing art; intermittent signal implied by broken antenna spacing.
+
+### GHOST//2803 — "The Opened Reliquary" (revealed internal machinery)
+
+- Canonical traits to show: hollow head; **fractured eyes**; **interface.none** (bare
+  face, no plate); **signal_crown**; **archive_coat** mantle; carbon material;
+  **evidence_void** background; locked signal.
+- **Concept:** the hollow shell is **cracked open like a reliquary** to reveal internal
+  archive machinery — a spinal signal-crown column of stacked ceramic vertebrae and
+  antenna spikes rising out of the opened neck cavity, lit faintly from **within**. The
+  opposite of 1503's emptiness: 2803 is full of revealed structure.
+- **Silhouette idea:** vertical, top-heavy — the internal column and crown spikes break
+  the top edge; the archive_coat opens like reliquary doors at the shoulders.
+- **Architecture idea:** severed_halo fragments framing the opened cavity asymmetrically
+  (not a clean ring — a broken vault).
+- **Lighting:** primary key upper-left on the shell; a low internal warm-cool glow from
+  inside the cavity (subsurface, contained — NOT emissive neon); deep evidence-void black
+  around.
+- **Fractured eyes:** broken optical geometry in the fractured face plate, physically
+  integrated, catching the internal light.
+- **Why Legendary:** a distinct "opened machine" idea — different silhouette, different
+  negative-space logic, and different light source (internal) from 0303/0803/1503.
+
+Both remain `UNAUTHORED — blocks approval` until the scene PNGs are produced.
