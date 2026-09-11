@@ -1,0 +1,14 @@
+{
+  "status": "PASS_DESIGN_CONSTRAINTS_ONLY",
+  "supply": 3333,
+  "trait_count": 63,
+  "category_count": 11,
+  "reserved_specials": 33,
+  "duplicate_trait_vectors": 0,
+  "duplicate_repair_swaps": 22,
+  "successful_attempt": 0,
+  "earlier_search_failures": [],
+  "production_images_checked": 0,
+  "production_metadata_checked": 0,
+  "contract_tests_run": 0
+}

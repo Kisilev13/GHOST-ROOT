@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0",
+  "release_version": "0.1.0",
+  "status": "design_only",
+  "name": "GHOST//ROOT",
+  "symbol": "GHRT",
+  "tagline": "You were never supposed to find them.",
+  "supply": 3333,
+  "token_ids": {
+    "first": 1,
+    "last": 3333
+  },
+  "chain": {
+    "recommended": "solana",
+    "network": "mainnet-beta",
+    "testnet": "solana_devnet",
+    "standard": "mpl_core",
+    "superseded": {
+      "note": "Prior design phase targeted Base/ERC-721. Superseded 2026-09-10 — GHOST//ROOT is a Solana / Metaplex Core collection. OpenSea is secondary-market only; no EVM contract, no SeaDrop.",
+      "chain": "base",
+      "chain_id": 8453,
+      "testnet": "base_sepolia",
+      "testnet_chain_id": 84532,
+      "standard": "ERC721"
+    }
+  },
+  "mint": {
+    "currency": "SOL",
+    "proposed_price_lamports": null,
+    "price_status": "not_finalized",
+    "paid_wallet_lifetime_limit": 2,
+    "allowlist_wallet_limit": 1,
+    "max_transaction_quantity": 2,
+    "selection": "visible_art_select_id",
+    "art_reveal": "pre_mint",
+    "narrative_reveal": "staged",
+    "allowlist_window_hours": 48,
+    "public_window_days": 14,
+    "launch_date": null
+  },
+  "allocations": [
+    {
+      "id": "genesis_archive",
+      "count": 3,
+      "first_id": 1,
+      "last_id": 3
+    },
+    {
+      "id": "founders_development",
+      "count": 66,
+      "first_id": 4,
+      "last_id": 69
+    },
+    {
+      "id": "artists_contributors",
+      "count": 99,
+      "first_id": 70,
+      "last_id": 168
+    },
+    {
+      "id": "community_grants",
+      "count": 33,
+      "first_id": 169,
+      "last_id": 201
+    },
+    {
+      "id": "allowlist",
+      "count": 1110
+    },
+    {
+      "id": "public_initial",
+      "count": 2022
+    }
+  ],
+  "reserved_non_genesis_architecture": [
+    {
+      "first_id": 4,
+      "last_id": 111,
+      "trait": "architecture.sealed"
+    },
+    {
+      "first_id": 112,
+      "last_id": 165,
+      "trait": "architecture.inset"
+    },
+    {
+      "first_id": 166,
+      "last_id": 191,
+      "trait": "architecture.double_plane"
+    },
+    {
+      "first_id": 192,
+      "last_id": 201,
+      "trait": "architecture.suspended_core"
+    }
+  ],
+  "rarity_bands": [
+    {
+      "id": "COMMON",
+      "count": 1800,
+      "architecture": "architecture.sealed"
+    },
+    {
+      "id": "UNCOMMON",
+      "count": 900,
+      "architecture": "architecture.inset"
+    },
+    {
+      "id": "RARE",
+      "count": 420,
+      "architecture": "architecture.double_plane"
+    },
+    {
+      "id": "EPIC",
+      "count": 180,
+      "architecture": "architecture.suspended_core"
+    },
+    {
+      "id": "LEGENDARY",
+      "count": 30,
+      "architecture": "architecture.severed_halo"
+    },
+    {
+      "id": "1/1",
+      "count": 3,
+      "architecture": "architecture.singular"
+    }
+  ],
+  "unused_bands": [
+    "MYTHIC"
+  ],
+  "generation": {
+    "design_seed": "GHOST//ROOT::design-v0.1.0::2037-2044",
+    "production_seed": null,
+    "determinism": "sha256-domain-separated-ordering-v1",
+    "render_runtime": null,
+    "canvas": [
+      2048,
+      2048
+    ],
+    "format": "PNG",
+    "colorspace": "sRGB",
+    "generation_status": "not_implemented",
+    "special_ids": [
+      1,
+      2,
+      3,
+      303,
+      403,
+      503,
+      603,
+      703,
+      803,
+      903,
+      1003,
+      1103,
+      1203,
+      1303,
+      1403,
+      1503,
+      1603,
+      1703,
+      1803,
+      1903,
+      2003,
+      2103,
+      2203,
+      2303,
+      2403,
+      2503,
+      2603,
+      2703,
+      2803,
+      2903,
+      3003,
+      3103,
+      3203
+    ],
+    "exact_quota_policy": true
+  },
+  "states": [
+    "DORMANT",
+    "ACTIVE",
+    "COMPROMISED",
+    "ROOTED"
+  ],
+  "storage": {
+    "primary": "IPFS",
+    "pinning_policy": "two_independent_providers_plus_offline_CAR",
+    "archive_backup": "Arweave_optional",
+    "media_cid": null,
+    "metadata_cid": null
+  },
+  "royalty_bps": 500,
+  "canonical_domain": null,
+  "treasury_address": null,
+  "contract_address": null,
+  "license_status": "draft_direction_only"
+}

@@ -1,0 +1,65 @@
+{
+  "token_id": 803,
+  "name": "GHOST//0803",
+  "description": "GHOST//ROOT legendary identity \u2014 archetype FRACTURE, interpretation 3. Recovered from the ROOT network's severed-halo tier.",
+  "image": "pending://not-yet-rendered/collection/assets/test-batch/0803.png",
+  "external_url": "https://ghostroot.site/identity/803/",
+  "collection": {
+    "name": "GHOST//ROOT",
+    "symbol": "GHRT"
+  },
+  "attributes": [
+    {
+      "trait_type": "Entity",
+      "value": "SYNTHETIC"
+    },
+    {
+      "trait_type": "Access",
+      "value": "ROOT"
+    },
+    {
+      "trait_type": "Architecture",
+      "value": "SEVERED HALO"
+    },
+    {
+      "trait_type": "Face Material",
+      "value": "PORCELAIN"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "THERMAL"
+    },
+    {
+      "trait_type": "Interface",
+      "value": "NEURAL VEIL"
+    },
+    {
+      "trait_type": "Implant",
+      "value": "SIGNAL CROWN"
+    },
+    {
+      "trait_type": "Mantle",
+      "value": "SPLIT SHELL"
+    },
+    {
+      "trait_type": "Background",
+      "value": "RELAY WELL"
+    },
+    {
+      "trait_type": "Signal",
+      "value": "CARRIER ECHO"
+    },
+    {
+      "trait_type": "Origin Corruption",
+      "value": "PACKET GHOSTING"
+    },
+    {
+      "trait_type": "State",
+      "value": "DORMANT"
+    },
+    {
+      "trait_type": "Rarity Band",
+      "value": "LEGENDARY"
+    }
+  ]
+}

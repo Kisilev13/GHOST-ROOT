@@ -1,0 +1,557 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GHOST//ROOT ERC-721 metadata",
+  "description": "Structural schema; CID decoding, asset resolution, per-ID truth and cross-state checks are separate production gates.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "token_id",
+    "name",
+    "description",
+    "image",
+    "collection",
+    "attributes"
+  ],
+  "properties": {
+    "token_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3333
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^GHOST//[0-9]{4}$"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 3000
+    },
+    "image": {
+      "type": "string",
+      "pattern": "^ipfs://[A-Za-z0-9]+/[0-3]/[1-9][0-9]{0,3}\\.png$"
+    },
+    "external_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "collection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "symbol"
+      ],
+      "properties": {
+        "name": {
+          "const": "GHOST//ROOT"
+        },
+        "symbol": {
+          "const": "GHRT"
+        }
+      }
+    },
+    "attributes": {
+      "type": "array",
+      "minItems": 13,
+      "maxItems": 13,
+      "uniqueItems": true,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "trait_type",
+              "value"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Entity"
+              },
+              "value": {
+                "enum": [
+                  "HUMAN",
+                  "SYNTHETIC",
+                  "HOLLOW",
+                  "SPECTER"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "trait_type",
+              "value"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Access"
+              },
+              "value": {
+                "enum": [
+                  "USER",
+                  "ADMIN",
+                  "SYSTEM",
+                  "ROOT"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "trait_type",
+              "value"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Architecture"
+              },
+              "value": {
+                "enum": [
+                  "SEALED",
+                  "INSET",
+                  "DOUBLE PLANE",
+                  "SUSPENDED CORE",
+                  "SEVERED HALO",
+                  "SINGULAR"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "trait_type",
+              "value"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Face Material"
+              },
+              "value": {
+                "enum": [
+                  "BIO-SYNTH",
+                  "PORCELAIN",
+                  "CARBON",
+                  "CERAMIC",
+                  "RECONSTRUCTED",
+                  "PHASE GLASS"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "trait_type",
+              "value"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Eyes"
+              },
+              "value": {
+                "enum": [
+                  "BIOMETRIC",
+                  "VOID",
+                  "THERMAL",
+                  "FRACTURED",
+                  "OPTICAL ARRAY",
+                  "SIGNAL-BURN"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "trait_type",
+              "value"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Interface"
+              },
+              "value": {
+                "enum": [
+                  "NONE",
+                  "FORENSIC PLATE",
+                  "RESPIRATOR",
+                  "NEURAL VEIL",
+                  "NULL MASK",
+                  "SKELETAL INTERFACE"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "trait_type",
+              "value"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Implant"
+              },
+              "value": {
+                "enum": [
+                  "NONE",
+                  "NEURAL CABLE",
+                  "SPINAL BUS",
+                  "ANTENNA",
+                  "ROOT PORT",
+                  "MEMORY SPINDLE",
+                  "SIGNAL CROWN"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "trait_type",
+              "value"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Mantle"
+              },
+              "value": {
+                "enum": [
+                  "ARCHIVE COAT",
+                  "CERAMIC MANTLE",
+                  "CABLE SHROUD",
+                  "FIELD COLLAR",
+                  "SPLIT SHELL",
+                  "UNSUPPORTED FRAME"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "trait_type",
+              "value"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Background"
+              },
+              "value": {
+                "enum": [
+                  "EVIDENCE VOID",
+                  "COLD STORAGE",
+                  "RACK SHADOW",
+                  "RELAY WELL",
+                  "SERVICE TUNNEL",
+                  "ANECHOIC ROOM",
+                  "UPLINK BLACK"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "trait_type",
+              "value"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Signal"
+              },
+              "value": {
+                "enum": [
+                  "LOCKED",
+                  "INTERMITTENT",
+                  "CARRIER ECHO",
+                  "SILENT",
+                  "UNCLOCKED"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "trait_type",
+              "value"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Origin Corruption"
+              },
+              "value": {
+                "enum": [
+                  "INTACT",
+                  "SCAN SHEAR",
+                  "CHECKSUM BURN",
+                  "PACKET GHOSTING",
+                  "MEMORY BLEED",
+                  "ABSENCE"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "trait_type",
+              "value"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "State"
+              },
+              "value": {
+                "enum": [
+                  "DORMANT",
+                  "ACTIVE",
+                  "COMPROMISED",
+                  "ROOTED"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "trait_type",
+              "value"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Rarity Band"
+              },
+              "value": {
+                "enum": [
+                  "COMMON",
+                  "UNCOMMON",
+                  "RARE",
+                  "EPIC",
+                  "LEGENDARY",
+                  "1/1"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "allOf": [
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "trait_type"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Entity"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "trait_type"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Access"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "trait_type"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Architecture"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "trait_type"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Face Material"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "trait_type"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Eyes"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "trait_type"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Interface"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "trait_type"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Implant"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "trait_type"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Mantle"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "trait_type"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Background"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "trait_type"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Signal"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "trait_type"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Origin Corruption"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "trait_type"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "State"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "trait_type"
+            ],
+            "properties": {
+              "trait_type": {
+                "const": "Rarity Band"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+status,category,trait_id,display_name,target_percentage,expected_count,max_count,rarity_score_bits,visual_importance
+design_target,entity,entity.human,HUMAN,42.0042,1400,1400,1.25139449,5
+design_target,entity,entity.synthetic,SYNTHETIC,36.0036,1200,1200,1.47378691,5
+design_target,entity,entity.hollow,HOLLOW,18.0018,600,600,2.47378691,5
+design_target,entity,entity.specter,SPECTER,3.990399,133,133,4.64732317,5
+design_target,access,access.user,USER,72.007201,2400,2400,0.47378691,1
+design_target,access,access.admin,ADMIN,21.60216,720,720,2.21075251,1
+design_target,access,access.system,SYSTEM,5.40054,180,180,4.21075251,1
+design_target,access,access.root,ROOT,0.990099,33,33,6.65821148,1
+design_target,architecture,architecture.sealed,SEALED,54.005401,1800,1800,0.88882441,5
+design_target,architecture,architecture.inset,INSET,27.0027,900,900,1.88882441,5
+design_target,architecture,architecture.double_plane,DOUBLE PLANE,12.60126,420,420,2.98836008,5
+design_target,architecture,architecture.suspended_core,SUSPENDED CORE,5.40054,180,180,4.21075251,5
+design_target,architecture,architecture.severed_halo,SEVERED HALO,0.90009,30,30,6.79571501,5
+design_target,architecture,architecture.singular,SINGULAR,0.090009,3,3,10.1176431,5
+design_target,material,material.biosynth,BIO-SYNTH,31.50315,1050,1050,1.66643199,4
+design_target,material,material.porcelain,PORCELAIN,25.50255,850,850,1.97128657,4
+design_target,material,material.carbon,CARBON,21.0021,700,700,2.25139449,4
+design_target,material,material.ceramic,CERAMIC,13.50135,450,450,2.88882441,4
+design_target,material,material.reconstructed,RECONSTRUCTED,7.50075,250,250,3.73682132,4
+design_target,material,material.phase_glass,PHASE GLASS,0.990099,33,33,6.65821148,4
+design_target,eyes,eyes.biometric,BIOMETRIC,30.003,1000,1000,1.73682132,4
+design_target,eyes,eyes.void,VOID,24.0024,800,800,2.05874941,4
+design_target,eyes,eyes.thermal,THERMAL,22.50225,750,750,2.15185882,4
+design_target,eyes,eyes.fractured,FRACTURED,15.0015,500,500,2.73682132,4
+design_target,eyes,eyes.optical_array,OPTICAL ARRAY,7.50075,250,250,3.73682132,4
+design_target,eyes,eyes.signal_burn,SIGNAL-BURN,0.990099,33,33,6.65821148,4
+design_target,interface,interface.none,NONE,36.0036,1200,1200,1.47378691,3
+design_target,interface,interface.forensic_plate,FORENSIC PLATE,27.0027,900,900,1.88882441,3
+design_target,interface,interface.respirator,RESPIRATOR,18.0018,600,600,2.47378691,3
+design_target,interface,interface.neural_veil,NEURAL VEIL,12.0012,400,400,3.05874941,3
+design_target,interface,interface.null_mask,NULL MASK,6.0006,200,200,4.05874941,3
+design_target,interface,interface.skeletal_interface,SKELETAL INTERFACE,0.990099,33,33,6.65821148,3
+design_target,implant,implant.none,NONE,36.0036,1200,1200,1.47378691,3
+design_target,implant,implant.neural_cable,NEURAL CABLE,24.0024,800,800,2.05874941,3
+design_target,implant,implant.spinal_bus,SPINAL BUS,19.50195,650,650,2.35830969,3
+design_target,implant,implant.antenna,ANTENNA,12.0012,400,400,3.05874941,3
+design_target,implant,implant.root_port,ROOT PORT,5.40054,180,180,4.21075251,3
+design_target,implant,implant.memory_spindle,MEMORY SPINDLE,2.190219,73,73,5.51278104,3
+design_target,implant,implant.signal_crown,SIGNAL CROWN,0.90009,30,30,6.79571501,3
+design_target,mantle,mantle.archive_coat,ARCHIVE COAT,33.0033,1100,1100,1.59931779,4
+design_target,mantle,mantle.ceramic_mantle,CERAMIC MANTLE,25.50255,850,850,1.97128657,4
+design_target,mantle,mantle.cable_shroud,CABLE SHROUD,19.50195,650,650,2.35830969,4
+design_target,mantle,mantle.field_collar,FIELD COLLAR,15.0015,500,500,2.73682132,4
+design_target,mantle,mantle.split_shell,SPLIT SHELL,6.0006,200,200,4.05874941,4
+design_target,mantle,mantle.unsupported_frame,UNSUPPORTED FRAME,0.990099,33,33,6.65821148,4
+design_target,background,background.evidence_void,EVIDENCE VOID,30.003,1000,1000,1.73682132,2
+design_target,background,background.cold_storage,COLD STORAGE,21.0021,700,700,2.25139449,2
+design_target,background,background.rack_shadow,RACK SHADOW,18.0018,600,600,2.47378691,2
+design_target,background,background.relay_well,RELAY WELL,13.50135,450,450,2.88882441,2
+design_target,background,background.service_tunnel,SERVICE TUNNEL,10.50105,350,350,3.25139449,2
+design_target,background,background.anechoic_room,ANECHOIC ROOM,6.0006,200,200,4.05874941,2
+design_target,background,background.uplink_black,UPLINK BLACK,0.990099,33,33,6.65821148,2
+design_target,signal,signal.locked,LOCKED,48.0048,1600,1600,1.05874941,1
+design_target,signal,signal.intermittent,INTERMITTENT,27.0027,900,900,1.88882441,1
+design_target,signal,signal.carrier_echo,CARRIER ECHO,18.0018,600,600,2.47378691,1
+design_target,signal,signal.silent,SILENT,6.0006,200,200,4.05874941,1
+design_target,signal,signal.unclocked,UNCLOCKED,0.990099,33,33,6.65821148,1
+design_target,corruption,corruption.intact,INTACT,54.005401,1800,1800,0.88882441,2
+design_target,corruption,corruption.scan_shear,SCAN SHEAR,24.0024,800,800,2.05874941,2
+design_target,corruption,corruption.checksum_burn,CHECKSUM BURN,12.0012,400,400,3.05874941,2
+design_target,corruption,corruption.packet_ghosting,PACKET GHOSTING,7.50075,250,250,3.73682132,2
+design_target,corruption,corruption.memory_bleed,MEMORY BLEED,1.50015,50,50,6.05874941,2
+design_target,corruption,corruption.absence,ABSENCE,0.990099,33,33,6.65821148,2

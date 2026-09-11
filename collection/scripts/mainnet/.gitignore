@@ -1,0 +1,5 @@
+node_modules/
+*.log
+uploaded-uris.json
+deployment-receipt.json
+.private/

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Phase 8 representative 20-identity test batch — selected from design-witness.csv, the authoritative trait-assignment source. Not a random sample: each ID is picked for a specific reason, listed below.",
+  "selected": [
+    { "token_id": 1, "reason": "Genesis — THE WITNESS (bespoke, non-procedural)" },
+    { "token_id": 2, "reason": "Genesis — THE NULL (missing-face signature; the exact case that failed v2 AI-portrait review)" },
+    { "token_id": 3, "reason": "Genesis — THE LAST ADMINISTRATOR (the ADMIN-tier collision case from the v2 review)" },
+    { "token_id": 4, "reason": "COMMON (architecture.sealed), ordinary trait combination — the collectibility floor" },
+    { "token_id": 10, "reason": "SKELETAL INTERFACE — rarest interface value (33/3333), stresses a rare socket/occlusion case" },
+    { "token_id": 49, "reason": "COMMON band with 3 rare-tier traits co-occurring — legal-but-unusual combination at the most common architecture" },
+    { "token_id": 97, "reason": "HOLLOW entity + ABSENCE corruption — a real-missing-volume case at procedural (non-Genesis) tier, directly comparable to Genesis ghost-0002" },
+    { "token_id": 112, "reason": "UNCOMMON (architecture.inset), ordinary trait combination" },
+    { "token_id": 166, "reason": "RARE (architecture.double_plane), ordinary trait combination" },
+    { "token_id": 192, "reason": "EPIC (architecture.suspended_core), ordinary trait combination" },
+    { "token_id": 303, "reason": "LEGENDARY special ID — archetype 'observer' interpretation 1; trait vector is feasibility-only, art_status concept_required" },
+    { "token_id": 366, "reason": "SPECTER entity + PHASE GLASS material — both rarest-in-category (133/3333, 33/3333) at COMMON architecture; extreme rarity intersection at the most common band" },
+    { "token_id": 449, "reason": "UNCOMMON band with 3 rare-tier traits co-occurring" },
+    { "token_id": 493, "reason": "RARE band with 2 rare-tier traits co-occurring" },
+    { "token_id": 803, "reason": "LEGENDARY special ID — archetype 'fracture' interpretation 3" },
+    { "token_id": 836, "reason": "EPIC band with 3 rare-tier traits co-occurring" },
+    { "token_id": 1503, "reason": "LEGENDARY special ID — archetype 'signal' interpretation 1" },
+    { "token_id": 1842, "reason": "Already referenced live on ghostroot.site (front-page.php's featured-identity fallback) — continuity with the deployed site" },
+    { "token_id": 2803, "reason": "LEGENDARY special ID — archetype 'witness' interpretation 2" },
+    { "token_id": 3333, "reason": "Last token ID — boundary/edge case" }
+  ],
+  "band_coverage": {
+    "1/1_genesis": [1, 2, 3],
+    "legendary": [303, 803, 1503, 2803],
+    "common": [4, 49, 366],
+    "uncommon": [112, 449],
+    "rare": [166, 493],
+    "epic": [192, 836],
+    "boundary_or_site_continuity": [1842, 3333]
+  },
+  "not_selected_but_notable": "27 of the 30 legendary slots and 10 of the archetype/interpretation combinations are not in this batch; all 30 share the same art_status (concept_required) and full_trait_vector_status (pending), so 4 spanning distinct archetypes was judged sufficient for a code/pipeline validation batch. A real art-direction review batch should likely cover more of them."
+}

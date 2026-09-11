@@ -1,0 +1,15 @@
+{
+  "token_id": 1503,
+  "design_witness_status": "feasibility_only_not_final_art",
+  "provenance": {
+    "kind": "legendary",
+    "archetype": "signal",
+    "interpretation": 1,
+    "art_status": "concept_required",
+    "full_trait_vector_status": "pending"
+  },
+  "chain": "solana",
+  "standard": "mpl_core",
+  "media_status": "not_rendered",
+  "metadata_status": "test_batch_not_production"
+}

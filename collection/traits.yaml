@@ -1,0 +1,1326 @@
+{
+  "schema_version": "1.0",
+  "description": "Exact edition-wide design quotas including reserved assets. JSON syntax is valid YAML 1.2.",
+  "supply": 3333,
+  "category_order": [
+    "entity",
+    "access",
+    "architecture",
+    "material",
+    "eyes",
+    "interface",
+    "implant",
+    "mantle",
+    "background",
+    "signal",
+    "corruption"
+  ],
+  "categories": [
+    {
+      "id": "entity",
+      "display_name": "Entity",
+      "visual_importance": 5,
+      "cardinality": "exactly_one"
+    },
+    {
+      "id": "access",
+      "display_name": "Access",
+      "visual_importance": 1,
+      "cardinality": "exactly_one"
+    },
+    {
+      "id": "architecture",
+      "display_name": "Architecture",
+      "visual_importance": 5,
+      "cardinality": "exactly_one"
+    },
+    {
+      "id": "material",
+      "display_name": "Face Material",
+      "visual_importance": 4,
+      "cardinality": "exactly_one"
+    },
+    {
+      "id": "eyes",
+      "display_name": "Eyes",
+      "visual_importance": 4,
+      "cardinality": "exactly_one"
+    },
+    {
+      "id": "interface",
+      "display_name": "Interface",
+      "visual_importance": 3,
+      "cardinality": "exactly_one"
+    },
+    {
+      "id": "implant",
+      "display_name": "Implant",
+      "visual_importance": 3,
+      "cardinality": "exactly_one"
+    },
+    {
+      "id": "mantle",
+      "display_name": "Mantle",
+      "visual_importance": 4,
+      "cardinality": "exactly_one"
+    },
+    {
+      "id": "background",
+      "display_name": "Background",
+      "visual_importance": 2,
+      "cardinality": "exactly_one"
+    },
+    {
+      "id": "signal",
+      "display_name": "Signal",
+      "visual_importance": 1,
+      "cardinality": "exactly_one"
+    },
+    {
+      "id": "corruption",
+      "display_name": "Origin Corruption",
+      "visual_importance": 2,
+      "cardinality": "exactly_one"
+    }
+  ],
+  "rule_semantics": {
+    "requires": "AND of groups, OR within any_of; IDs in each group must share a category",
+    "excludes": "No co-occurrence in either direction",
+    "max_count": "Hard edition-wide cap; target_count is exact in this release",
+    "weight": "Relative planning preference, not an independent probability; exact quotas dominate",
+    "reserved_genesis": "architecture.singular allowed only IDs 1-3",
+    "reserved_legendary": "architecture.severed_halo allowed only explicit legendary IDs"
+  },
+  "traits": [
+    {
+      "id": "entity.human",
+      "display_name": "HUMAN",
+      "category": "entity",
+      "weight": 1400,
+      "max_count": 1400,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "entity"
+      ],
+      "target_count": 1400,
+      "target_percentage": 42.0042,
+      "expected_count": 1400,
+      "rarity_score_bits": 1.25139449,
+      "visual_importance": 5
+    },
+    {
+      "id": "entity.synthetic",
+      "display_name": "SYNTHETIC",
+      "category": "entity",
+      "weight": 1200,
+      "max_count": 1200,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "entity"
+      ],
+      "target_count": 1200,
+      "target_percentage": 36.0036,
+      "expected_count": 1200,
+      "rarity_score_bits": 1.47378691,
+      "visual_importance": 5
+    },
+    {
+      "id": "entity.hollow",
+      "display_name": "HOLLOW",
+      "category": "entity",
+      "weight": 600,
+      "max_count": 600,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "entity"
+      ],
+      "target_count": 600,
+      "target_percentage": 18.0018,
+      "expected_count": 600,
+      "rarity_score_bits": 2.47378691,
+      "visual_importance": 5
+    },
+    {
+      "id": "entity.specter",
+      "display_name": "SPECTER",
+      "category": "entity",
+      "weight": 133,
+      "max_count": 133,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "entity"
+      ],
+      "target_count": 133,
+      "target_percentage": 3.990399,
+      "expected_count": 133,
+      "rarity_score_bits": 4.64732317,
+      "visual_importance": 5
+    },
+    {
+      "id": "access.user",
+      "display_name": "USER",
+      "category": "access",
+      "weight": 2400,
+      "max_count": 2400,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "access"
+      ],
+      "target_count": 2400,
+      "target_percentage": 72.007201,
+      "expected_count": 2400,
+      "rarity_score_bits": 0.47378691,
+      "visual_importance": 1
+    },
+    {
+      "id": "access.admin",
+      "display_name": "ADMIN",
+      "category": "access",
+      "weight": 720,
+      "max_count": 720,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "access"
+      ],
+      "target_count": 720,
+      "target_percentage": 21.60216,
+      "expected_count": 720,
+      "rarity_score_bits": 2.21075251,
+      "visual_importance": 1
+    },
+    {
+      "id": "access.system",
+      "display_name": "SYSTEM",
+      "category": "access",
+      "weight": 180,
+      "max_count": 180,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "access"
+      ],
+      "target_count": 180,
+      "target_percentage": 5.40054,
+      "expected_count": 180,
+      "rarity_score_bits": 4.21075251,
+      "visual_importance": 1
+    },
+    {
+      "id": "access.root",
+      "display_name": "ROOT",
+      "category": "access",
+      "weight": 33,
+      "max_count": 33,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "access"
+      ],
+      "target_count": 33,
+      "target_percentage": 0.990099,
+      "expected_count": 33,
+      "rarity_score_bits": 6.65821148,
+      "visual_importance": 1
+    },
+    {
+      "id": "architecture.sealed",
+      "display_name": "SEALED",
+      "category": "architecture",
+      "weight": 1800,
+      "max_count": 1800,
+      "requires": [
+        {
+          "any_of": [
+            "access.user"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "architecture"
+      ],
+      "target_count": 1800,
+      "target_percentage": 54.005401,
+      "expected_count": 1800,
+      "rarity_score_bits": 0.88882441,
+      "visual_importance": 5
+    },
+    {
+      "id": "architecture.inset",
+      "display_name": "INSET",
+      "category": "architecture",
+      "weight": 900,
+      "max_count": 900,
+      "requires": [
+        {
+          "any_of": [
+            "access.user",
+            "access.admin"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "architecture"
+      ],
+      "target_count": 900,
+      "target_percentage": 27.0027,
+      "expected_count": 900,
+      "rarity_score_bits": 1.88882441,
+      "visual_importance": 5
+    },
+    {
+      "id": "architecture.double_plane",
+      "display_name": "DOUBLE PLANE",
+      "category": "architecture",
+      "weight": 420,
+      "max_count": 420,
+      "requires": [
+        {
+          "any_of": [
+            "access.admin"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "architecture"
+      ],
+      "target_count": 420,
+      "target_percentage": 12.60126,
+      "expected_count": 420,
+      "rarity_score_bits": 2.98836008,
+      "visual_importance": 5
+    },
+    {
+      "id": "architecture.suspended_core",
+      "display_name": "SUSPENDED CORE",
+      "category": "architecture",
+      "weight": 180,
+      "max_count": 180,
+      "requires": [
+        {
+          "any_of": [
+            "access.system"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "architecture"
+      ],
+      "target_count": 180,
+      "target_percentage": 5.40054,
+      "expected_count": 180,
+      "rarity_score_bits": 4.21075251,
+      "visual_importance": 5
+    },
+    {
+      "id": "architecture.severed_halo",
+      "display_name": "SEVERED HALO",
+      "category": "architecture",
+      "weight": 30,
+      "max_count": 30,
+      "requires": [
+        {
+          "any_of": [
+            "access.root"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "architecture",
+        "reserved_legendary"
+      ],
+      "target_count": 30,
+      "target_percentage": 0.90009,
+      "expected_count": 30,
+      "rarity_score_bits": 6.79571501,
+      "visual_importance": 5
+    },
+    {
+      "id": "architecture.singular",
+      "display_name": "SINGULAR",
+      "category": "architecture",
+      "weight": 0,
+      "max_count": 3,
+      "requires": [
+        {
+          "any_of": [
+            "access.root"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "architecture",
+        "reserved_genesis"
+      ],
+      "target_count": 3,
+      "target_percentage": 0.090009,
+      "expected_count": 3,
+      "rarity_score_bits": 10.1176431,
+      "visual_importance": 5
+    },
+    {
+      "id": "material.biosynth",
+      "display_name": "BIO-SYNTH",
+      "category": "material",
+      "weight": 1050,
+      "max_count": 1050,
+      "requires": [
+        {
+          "any_of": [
+            "entity.human",
+            "entity.synthetic"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "material"
+      ],
+      "target_count": 1050,
+      "target_percentage": 31.50315,
+      "expected_count": 1050,
+      "rarity_score_bits": 1.66643199,
+      "visual_importance": 4
+    },
+    {
+      "id": "material.porcelain",
+      "display_name": "PORCELAIN",
+      "category": "material",
+      "weight": 850,
+      "max_count": 850,
+      "requires": [
+        {
+          "any_of": [
+            "entity.human",
+            "entity.synthetic",
+            "entity.hollow"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "material"
+      ],
+      "target_count": 850,
+      "target_percentage": 25.50255,
+      "expected_count": 850,
+      "rarity_score_bits": 1.97128657,
+      "visual_importance": 4
+    },
+    {
+      "id": "material.carbon",
+      "display_name": "CARBON",
+      "category": "material",
+      "weight": 700,
+      "max_count": 700,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "material"
+      ],
+      "target_count": 700,
+      "target_percentage": 21.0021,
+      "expected_count": 700,
+      "rarity_score_bits": 2.25139449,
+      "visual_importance": 4
+    },
+    {
+      "id": "material.ceramic",
+      "display_name": "CERAMIC",
+      "category": "material",
+      "weight": 450,
+      "max_count": 450,
+      "requires": [
+        {
+          "any_of": [
+            "entity.human",
+            "entity.synthetic",
+            "entity.hollow"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "material"
+      ],
+      "target_count": 450,
+      "target_percentage": 13.50135,
+      "expected_count": 450,
+      "rarity_score_bits": 2.88882441,
+      "visual_importance": 4
+    },
+    {
+      "id": "material.reconstructed",
+      "display_name": "RECONSTRUCTED",
+      "category": "material",
+      "weight": 250,
+      "max_count": 250,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "material"
+      ],
+      "target_count": 250,
+      "target_percentage": 7.50075,
+      "expected_count": 250,
+      "rarity_score_bits": 3.73682132,
+      "visual_importance": 4
+    },
+    {
+      "id": "material.phase_glass",
+      "display_name": "PHASE GLASS",
+      "category": "material",
+      "weight": 33,
+      "max_count": 33,
+      "requires": [
+        {
+          "any_of": [
+            "entity.specter"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "material"
+      ],
+      "target_count": 33,
+      "target_percentage": 0.990099,
+      "expected_count": 33,
+      "rarity_score_bits": 6.65821148,
+      "visual_importance": 4
+    },
+    {
+      "id": "eyes.biometric",
+      "display_name": "BIOMETRIC",
+      "category": "eyes",
+      "weight": 1000,
+      "max_count": 1000,
+      "requires": [
+        {
+          "any_of": [
+            "entity.human",
+            "entity.synthetic"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "eyes"
+      ],
+      "target_count": 1000,
+      "target_percentage": 30.003,
+      "expected_count": 1000,
+      "rarity_score_bits": 1.73682132,
+      "visual_importance": 4
+    },
+    {
+      "id": "eyes.void",
+      "display_name": "VOID",
+      "category": "eyes",
+      "weight": 800,
+      "max_count": 800,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "eyes"
+      ],
+      "target_count": 800,
+      "target_percentage": 24.0024,
+      "expected_count": 800,
+      "rarity_score_bits": 2.05874941,
+      "visual_importance": 4
+    },
+    {
+      "id": "eyes.thermal",
+      "display_name": "THERMAL",
+      "category": "eyes",
+      "weight": 750,
+      "max_count": 750,
+      "requires": [
+        {
+          "any_of": [
+            "entity.human",
+            "entity.synthetic"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "eyes"
+      ],
+      "target_count": 750,
+      "target_percentage": 22.50225,
+      "expected_count": 750,
+      "rarity_score_bits": 2.15185882,
+      "visual_importance": 4
+    },
+    {
+      "id": "eyes.fractured",
+      "display_name": "FRACTURED",
+      "category": "eyes",
+      "weight": 500,
+      "max_count": 500,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "eyes"
+      ],
+      "target_count": 500,
+      "target_percentage": 15.0015,
+      "expected_count": 500,
+      "rarity_score_bits": 2.73682132,
+      "visual_importance": 4
+    },
+    {
+      "id": "eyes.optical_array",
+      "display_name": "OPTICAL ARRAY",
+      "category": "eyes",
+      "weight": 250,
+      "max_count": 250,
+      "requires": [
+        {
+          "any_of": [
+            "entity.synthetic",
+            "entity.hollow"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "eyes"
+      ],
+      "target_count": 250,
+      "target_percentage": 7.50075,
+      "expected_count": 250,
+      "rarity_score_bits": 3.73682132,
+      "visual_importance": 4
+    },
+    {
+      "id": "eyes.signal_burn",
+      "display_name": "SIGNAL-BURN",
+      "category": "eyes",
+      "weight": 33,
+      "max_count": 33,
+      "requires": [
+        {
+          "any_of": [
+            "entity.specter"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "eyes"
+      ],
+      "target_count": 33,
+      "target_percentage": 0.990099,
+      "expected_count": 33,
+      "rarity_score_bits": 6.65821148,
+      "visual_importance": 4
+    },
+    {
+      "id": "interface.none",
+      "display_name": "NONE",
+      "category": "interface",
+      "weight": 1200,
+      "max_count": 1200,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "interface"
+      ],
+      "target_count": 1200,
+      "target_percentage": 36.0036,
+      "expected_count": 1200,
+      "rarity_score_bits": 1.47378691,
+      "visual_importance": 3
+    },
+    {
+      "id": "interface.forensic_plate",
+      "display_name": "FORENSIC PLATE",
+      "category": "interface",
+      "weight": 900,
+      "max_count": 900,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "interface"
+      ],
+      "target_count": 900,
+      "target_percentage": 27.0027,
+      "expected_count": 900,
+      "rarity_score_bits": 1.88882441,
+      "visual_importance": 3
+    },
+    {
+      "id": "interface.respirator",
+      "display_name": "RESPIRATOR",
+      "category": "interface",
+      "weight": 600,
+      "max_count": 600,
+      "requires": [
+        {
+          "any_of": [
+            "entity.human",
+            "entity.synthetic"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "interface"
+      ],
+      "target_count": 600,
+      "target_percentage": 18.0018,
+      "expected_count": 600,
+      "rarity_score_bits": 2.47378691,
+      "visual_importance": 3
+    },
+    {
+      "id": "interface.neural_veil",
+      "display_name": "NEURAL VEIL",
+      "category": "interface",
+      "weight": 400,
+      "max_count": 400,
+      "requires": [
+        {
+          "any_of": [
+            "entity.synthetic",
+            "entity.hollow",
+            "entity.specter"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "interface"
+      ],
+      "target_count": 400,
+      "target_percentage": 12.0012,
+      "expected_count": 400,
+      "rarity_score_bits": 3.05874941,
+      "visual_importance": 3
+    },
+    {
+      "id": "interface.null_mask",
+      "display_name": "NULL MASK",
+      "category": "interface",
+      "weight": 200,
+      "max_count": 200,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "interface"
+      ],
+      "target_count": 200,
+      "target_percentage": 6.0006,
+      "expected_count": 200,
+      "rarity_score_bits": 4.05874941,
+      "visual_importance": 3
+    },
+    {
+      "id": "interface.skeletal_interface",
+      "display_name": "SKELETAL INTERFACE",
+      "category": "interface",
+      "weight": 33,
+      "max_count": 33,
+      "requires": [
+        {
+          "any_of": [
+            "entity.hollow",
+            "entity.specter"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "interface"
+      ],
+      "target_count": 33,
+      "target_percentage": 0.990099,
+      "expected_count": 33,
+      "rarity_score_bits": 6.65821148,
+      "visual_importance": 3
+    },
+    {
+      "id": "implant.none",
+      "display_name": "NONE",
+      "category": "implant",
+      "weight": 1200,
+      "max_count": 1200,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "implant"
+      ],
+      "target_count": 1200,
+      "target_percentage": 36.0036,
+      "expected_count": 1200,
+      "rarity_score_bits": 1.47378691,
+      "visual_importance": 3
+    },
+    {
+      "id": "implant.neural_cable",
+      "display_name": "NEURAL CABLE",
+      "category": "implant",
+      "weight": 800,
+      "max_count": 800,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "implant"
+      ],
+      "target_count": 800,
+      "target_percentage": 24.0024,
+      "expected_count": 800,
+      "rarity_score_bits": 2.05874941,
+      "visual_importance": 3
+    },
+    {
+      "id": "implant.spinal_bus",
+      "display_name": "SPINAL BUS",
+      "category": "implant",
+      "weight": 650,
+      "max_count": 650,
+      "requires": [],
+      "excludes": [
+        "interface.null_mask"
+      ],
+      "tags": [
+        "implant"
+      ],
+      "target_count": 650,
+      "target_percentage": 19.50195,
+      "expected_count": 650,
+      "rarity_score_bits": 2.35830969,
+      "visual_importance": 3
+    },
+    {
+      "id": "implant.antenna",
+      "display_name": "ANTENNA",
+      "category": "implant",
+      "weight": 400,
+      "max_count": 400,
+      "requires": [],
+      "excludes": [
+        "eyes.optical_array"
+      ],
+      "tags": [
+        "implant"
+      ],
+      "target_count": 400,
+      "target_percentage": 12.0012,
+      "expected_count": 400,
+      "rarity_score_bits": 3.05874941,
+      "visual_importance": 3
+    },
+    {
+      "id": "implant.root_port",
+      "display_name": "ROOT PORT",
+      "category": "implant",
+      "weight": 180,
+      "max_count": 180,
+      "requires": [
+        {
+          "any_of": [
+            "access.system",
+            "access.root"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "implant"
+      ],
+      "target_count": 180,
+      "target_percentage": 5.40054,
+      "expected_count": 180,
+      "rarity_score_bits": 4.21075251,
+      "visual_importance": 3
+    },
+    {
+      "id": "implant.memory_spindle",
+      "display_name": "MEMORY SPINDLE",
+      "category": "implant",
+      "weight": 73,
+      "max_count": 73,
+      "requires": [
+        {
+          "any_of": [
+            "access.admin",
+            "access.system",
+            "access.root"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "implant"
+      ],
+      "target_count": 73,
+      "target_percentage": 2.190219,
+      "expected_count": 73,
+      "rarity_score_bits": 5.51278104,
+      "visual_importance": 3
+    },
+    {
+      "id": "implant.signal_crown",
+      "display_name": "SIGNAL CROWN",
+      "category": "implant",
+      "weight": 30,
+      "max_count": 30,
+      "requires": [
+        {
+          "any_of": [
+            "access.root"
+          ]
+        }
+      ],
+      "excludes": [
+        "interface.skeletal_interface"
+      ],
+      "tags": [
+        "implant"
+      ],
+      "target_count": 30,
+      "target_percentage": 0.90009,
+      "expected_count": 30,
+      "rarity_score_bits": 6.79571501,
+      "visual_importance": 3
+    },
+    {
+      "id": "mantle.archive_coat",
+      "display_name": "ARCHIVE COAT",
+      "category": "mantle",
+      "weight": 1100,
+      "max_count": 1100,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "mantle"
+      ],
+      "target_count": 1100,
+      "target_percentage": 33.0033,
+      "expected_count": 1100,
+      "rarity_score_bits": 1.59931779,
+      "visual_importance": 4
+    },
+    {
+      "id": "mantle.ceramic_mantle",
+      "display_name": "CERAMIC MANTLE",
+      "category": "mantle",
+      "weight": 850,
+      "max_count": 850,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "mantle"
+      ],
+      "target_count": 850,
+      "target_percentage": 25.50255,
+      "expected_count": 850,
+      "rarity_score_bits": 1.97128657,
+      "visual_importance": 4
+    },
+    {
+      "id": "mantle.cable_shroud",
+      "display_name": "CABLE SHROUD",
+      "category": "mantle",
+      "weight": 650,
+      "max_count": 650,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "mantle"
+      ],
+      "target_count": 650,
+      "target_percentage": 19.50195,
+      "expected_count": 650,
+      "rarity_score_bits": 2.35830969,
+      "visual_importance": 4
+    },
+    {
+      "id": "mantle.field_collar",
+      "display_name": "FIELD COLLAR",
+      "category": "mantle",
+      "weight": 500,
+      "max_count": 500,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "mantle"
+      ],
+      "target_count": 500,
+      "target_percentage": 15.0015,
+      "expected_count": 500,
+      "rarity_score_bits": 2.73682132,
+      "visual_importance": 4
+    },
+    {
+      "id": "mantle.split_shell",
+      "display_name": "SPLIT SHELL",
+      "category": "mantle",
+      "weight": 200,
+      "max_count": 200,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "mantle"
+      ],
+      "target_count": 200,
+      "target_percentage": 6.0006,
+      "expected_count": 200,
+      "rarity_score_bits": 4.05874941,
+      "visual_importance": 4
+    },
+    {
+      "id": "mantle.unsupported_frame",
+      "display_name": "UNSUPPORTED FRAME",
+      "category": "mantle",
+      "weight": 33,
+      "max_count": 33,
+      "requires": [
+        {
+          "any_of": [
+            "entity.specter"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "mantle"
+      ],
+      "target_count": 33,
+      "target_percentage": 0.990099,
+      "expected_count": 33,
+      "rarity_score_bits": 6.65821148,
+      "visual_importance": 4
+    },
+    {
+      "id": "background.evidence_void",
+      "display_name": "EVIDENCE VOID",
+      "category": "background",
+      "weight": 1000,
+      "max_count": 1000,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "background"
+      ],
+      "target_count": 1000,
+      "target_percentage": 30.003,
+      "expected_count": 1000,
+      "rarity_score_bits": 1.73682132,
+      "visual_importance": 2
+    },
+    {
+      "id": "background.cold_storage",
+      "display_name": "COLD STORAGE",
+      "category": "background",
+      "weight": 700,
+      "max_count": 700,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "background"
+      ],
+      "target_count": 700,
+      "target_percentage": 21.0021,
+      "expected_count": 700,
+      "rarity_score_bits": 2.25139449,
+      "visual_importance": 2
+    },
+    {
+      "id": "background.rack_shadow",
+      "display_name": "RACK SHADOW",
+      "category": "background",
+      "weight": 600,
+      "max_count": 600,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "background"
+      ],
+      "target_count": 600,
+      "target_percentage": 18.0018,
+      "expected_count": 600,
+      "rarity_score_bits": 2.47378691,
+      "visual_importance": 2
+    },
+    {
+      "id": "background.relay_well",
+      "display_name": "RELAY WELL",
+      "category": "background",
+      "weight": 450,
+      "max_count": 450,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "background"
+      ],
+      "target_count": 450,
+      "target_percentage": 13.50135,
+      "expected_count": 450,
+      "rarity_score_bits": 2.88882441,
+      "visual_importance": 2
+    },
+    {
+      "id": "background.service_tunnel",
+      "display_name": "SERVICE TUNNEL",
+      "category": "background",
+      "weight": 350,
+      "max_count": 350,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "background"
+      ],
+      "target_count": 350,
+      "target_percentage": 10.50105,
+      "expected_count": 350,
+      "rarity_score_bits": 3.25139449,
+      "visual_importance": 2
+    },
+    {
+      "id": "background.anechoic_room",
+      "display_name": "ANECHOIC ROOM",
+      "category": "background",
+      "weight": 200,
+      "max_count": 200,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "background"
+      ],
+      "target_count": 200,
+      "target_percentage": 6.0006,
+      "expected_count": 200,
+      "rarity_score_bits": 4.05874941,
+      "visual_importance": 2
+    },
+    {
+      "id": "background.uplink_black",
+      "display_name": "UPLINK BLACK",
+      "category": "background",
+      "weight": 33,
+      "max_count": 33,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "background"
+      ],
+      "target_count": 33,
+      "target_percentage": 0.990099,
+      "expected_count": 33,
+      "rarity_score_bits": 6.65821148,
+      "visual_importance": 2
+    },
+    {
+      "id": "signal.locked",
+      "display_name": "LOCKED",
+      "category": "signal",
+      "weight": 1600,
+      "max_count": 1600,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "signal"
+      ],
+      "target_count": 1600,
+      "target_percentage": 48.0048,
+      "expected_count": 1600,
+      "rarity_score_bits": 1.05874941,
+      "visual_importance": 1
+    },
+    {
+      "id": "signal.intermittent",
+      "display_name": "INTERMITTENT",
+      "category": "signal",
+      "weight": 900,
+      "max_count": 900,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "signal"
+      ],
+      "target_count": 900,
+      "target_percentage": 27.0027,
+      "expected_count": 900,
+      "rarity_score_bits": 1.88882441,
+      "visual_importance": 1
+    },
+    {
+      "id": "signal.carrier_echo",
+      "display_name": "CARRIER ECHO",
+      "category": "signal",
+      "weight": 600,
+      "max_count": 600,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "signal"
+      ],
+      "target_count": 600,
+      "target_percentage": 18.0018,
+      "expected_count": 600,
+      "rarity_score_bits": 2.47378691,
+      "visual_importance": 1
+    },
+    {
+      "id": "signal.silent",
+      "display_name": "SILENT",
+      "category": "signal",
+      "weight": 200,
+      "max_count": 200,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "signal"
+      ],
+      "target_count": 200,
+      "target_percentage": 6.0006,
+      "expected_count": 200,
+      "rarity_score_bits": 4.05874941,
+      "visual_importance": 1
+    },
+    {
+      "id": "signal.unclocked",
+      "display_name": "UNCLOCKED",
+      "category": "signal",
+      "weight": 33,
+      "max_count": 33,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "signal"
+      ],
+      "target_count": 33,
+      "target_percentage": 0.990099,
+      "expected_count": 33,
+      "rarity_score_bits": 6.65821148,
+      "visual_importance": 1
+    },
+    {
+      "id": "corruption.intact",
+      "display_name": "INTACT",
+      "category": "corruption",
+      "weight": 1800,
+      "max_count": 1800,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "corruption"
+      ],
+      "target_count": 1800,
+      "target_percentage": 54.005401,
+      "expected_count": 1800,
+      "rarity_score_bits": 0.88882441,
+      "visual_importance": 2
+    },
+    {
+      "id": "corruption.scan_shear",
+      "display_name": "SCAN SHEAR",
+      "category": "corruption",
+      "weight": 800,
+      "max_count": 800,
+      "requires": [],
+      "excludes": [
+        "eyes.fractured"
+      ],
+      "tags": [
+        "corruption"
+      ],
+      "target_count": 800,
+      "target_percentage": 24.0024,
+      "expected_count": 800,
+      "rarity_score_bits": 2.05874941,
+      "visual_importance": 2
+    },
+    {
+      "id": "corruption.checksum_burn",
+      "display_name": "CHECKSUM BURN",
+      "category": "corruption",
+      "weight": 400,
+      "max_count": 400,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "corruption"
+      ],
+      "target_count": 400,
+      "target_percentage": 12.0012,
+      "expected_count": 400,
+      "rarity_score_bits": 3.05874941,
+      "visual_importance": 2
+    },
+    {
+      "id": "corruption.packet_ghosting",
+      "display_name": "PACKET GHOSTING",
+      "category": "corruption",
+      "weight": 250,
+      "max_count": 250,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "corruption"
+      ],
+      "target_count": 250,
+      "target_percentage": 7.50075,
+      "expected_count": 250,
+      "rarity_score_bits": 3.73682132,
+      "visual_importance": 2
+    },
+    {
+      "id": "corruption.memory_bleed",
+      "display_name": "MEMORY BLEED",
+      "category": "corruption",
+      "weight": 50,
+      "max_count": 50,
+      "requires": [],
+      "excludes": [],
+      "tags": [
+        "corruption"
+      ],
+      "target_count": 50,
+      "target_percentage": 1.50015,
+      "expected_count": 50,
+      "rarity_score_bits": 6.05874941,
+      "visual_importance": 2
+    },
+    {
+      "id": "corruption.absence",
+      "display_name": "ABSENCE",
+      "category": "corruption",
+      "weight": 33,
+      "max_count": 33,
+      "requires": [
+        {
+          "any_of": [
+            "entity.hollow",
+            "entity.specter"
+          ]
+        }
+      ],
+      "excludes": [],
+      "tags": [
+        "corruption"
+      ],
+      "target_count": 33,
+      "target_percentage": 0.990099,
+      "expected_count": 33,
+      "rarity_score_bits": 6.65821148,
+      "visual_importance": 2
+    }
+  ]
+}

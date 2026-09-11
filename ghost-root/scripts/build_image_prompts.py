@@ -164,12 +164,19 @@ def build(traits: dict, dest_root: Path) -> str:
             f"fine manufactured microtexture, not structural cracking; {mask_clause}."
         )
 
-    # sentence 3 — tier signature (G3) or bespoke Genesis (GEN1..GEN3)
+    # sentence 3 — tier signature (G3) or bespoke Genesis (GEN1..GEN3). `art_prompt_delta`
+    # is the dossier's specific art-direction text (collection/genesis.md) — distinct from
+    # `visual_signature`'s terser identity statement, and the actual source of the
+    # distinguishing detail the v2 review found missing (e.g. ghost-0003's silhouette vs
+    # ADMIN). Optional: falls back to visual_signature alone if a traits.json predates
+    # the field, so the frozen v1/v2 batches still build.
     if is_genesis:
+        delta = genesis.get("art_prompt_delta", "")
         s3 = (
             "This is a GENESIS character — unique, hand-authored, outside the procedural trait system. "
-            f"Signature, exclusive to this entity and used by no other GHOST: {genesis['visual_signature']} "
-            "This signature is the sole authority on the head/face, even where it describes an absent "
+            f"Signature, exclusive to this entity and used by no other GHOST: {genesis['visual_signature']}"
+            + (f" Art direction: {delta}" if delta else "")
+            + " This signature is the sole authority on the head/face, even where it describes an absent "
             "or reconfigured face. Do not fall back on a plain circular ear disc or the standard "
             "segmented-skull kit."
         )

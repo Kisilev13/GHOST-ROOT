@@ -1,6 +1,6 @@
 # GHOST//ROOT — OpenSea Health Check
 
-_Generated 2026-09-08T12:52:35Z_
+_Generated 2026-09-11T01:50:09Z_
 
 | Check | Result | Detail |
 | --- | --- | --- |
@@ -12,7 +12,7 @@ _Generated 2026-09-08T12:52:35Z_
 | Collection slug resolved | SKIP |  |
 | Collection metadata correct | SKIP | no slug |
 | Sample NFTs resolve | SKIP | no slug |
-| API rate limit healthy | OK | 116 / 120 remaining |
+| API rate limit healthy | OK | 115 / 120 remaining |
 | Cache operational | OK | /home/hacker/NFT/Ghost/opensea/.cache |
 | Creator profile detected | WARN | PAT present — run opensea:profile-sync --account <addr> |
 | Verification data matches | WARN | SKIPPED |

@@ -1,0 +1,81 @@
+{
+  "batch_size": 20,
+  "token_ids": [
+    1,
+    2,
+    3,
+    4,
+    10,
+    49,
+    97,
+    112,
+    166,
+    192,
+    303,
+    366,
+    449,
+    493,
+    803,
+    836,
+    1503,
+    1842,
+    2803,
+    3333
+  ],
+  "artwork": {
+    "checked": 20,
+    "present": 20,
+    "missing": [],
+    "issues": [],
+    "hashes": 20,
+    "exact_duplicates": [],
+    "near_duplicates": []
+  },
+  "metadata": {
+    "checked": 20,
+    "valid_json": 20,
+    "schema_pass": 20,
+    "schema_expected_fail": 20,
+    "trait_mismatches": [],
+    "duplicate_categories": [],
+    "null_required": [],
+    "unexpected_categories": [],
+    "filesystem_or_secret_leaks": [],
+    "name_mismatches": [],
+    "id_mismatches": [],
+    "band_mismatches": [],
+    "issues": []
+  },
+  "rarity": {
+    "band_by_id": {
+      "1": "1/1",
+      "2": "1/1",
+      "3": "1/1",
+      "4": "COMMON",
+      "10": "COMMON",
+      "49": "COMMON",
+      "97": "COMMON",
+      "112": "UNCOMMON",
+      "166": "RARE",
+      "192": "EPIC",
+      "303": "LEGENDARY",
+      "366": "COMMON",
+      "449": "UNCOMMON",
+      "493": "RARE",
+      "803": "LEGENDARY",
+      "836": "EPIC",
+      "1503": "LEGENDARY",
+      "1842": "RARE",
+      "2803": "LEGENDARY",
+      "3333": "COMMON"
+    },
+    "legendary_ids_in_batch": [
+      303,
+      803,
+      1503,
+      2803
+    ],
+    "legendary_reservation_ok": true,
+    "issues": []
+  }
+}

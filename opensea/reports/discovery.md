@@ -1,34 +1,23 @@
 # GHOST//ROOT — OpenSea Discovery
 
-_Generated 2026-09-08T14:38:34Z · read-only_
+Checked 2026-09-11T12:55:06.784Z using read-only OpenSea API v2 requests.
 
-| Field | Value |
-| --- | --- |
-| OpenSea API | authenticated |
-| Target chain | solana |
-| Chain supported by OpenSea | yes |
-| Authoritative Solana collection address | _not deployed_ |
-| Candy Machine address | _not deployed_ |
-| Update authority | _not deployed_ |
-| Resolved OpenSea slug | _none_ |
-| Resolution method | search |
-| Verification state | **AWAITING_SOLANA_COLLECTION_DEPLOYMENT** |
+- Collection: `ECfe4r3Xp66qe6dAGgdnc4QAMikdDHHvrGfWPDqkrE1p`
+- Canary: `GUhpsP3cHvtJ5JJzKDnfcr83tvHJPn3kA2ib17MtM9B4`
+- State: **AWAITING_OPENSEA_INDEXING** (no verified identity match in these queries)
+- Resolved slug: none
 
-## Candidates considered
+| Query | HTTP | Result |
+| --- | --- | --- |
+| Canary by Solana asset address | 404 | No result |
+| Collection address as Solana NFT | 404 | No result |
+| Owned wallet Solana NFTs | 200 | 0 NFTs; no next page |
+| GHOST//ROOT name search, Solana | 200 | 0 results; no next page |
 
-- `ghost-root` — "GHOST_ROOT" — chain `ethereum` — name-candidate slug exists
+These queries do not establish why the collection is absent or whether OpenSea supports indexing this particular asset. No indexing delay or automatic future availability is assumed. A name match alone would not establish ownership or collection identity.
 
-> A candidate is the GHOST//ROOT collection **only** if `chain === solana`
-> **and** its contract address equals `SOLANA_COLLECTION_ADDRESS`. Name matches
-> are ignored.
+The canary verifier separately passed **17/17** checks, including collection/asset ownership and association, 500-bps royalties, metadata resolution and remote/local image SHA-256 equality. Finalized wallet balance: **0.195783509 SOL**.
 
-## Verification checks
+Evidence: `evidence/canary-resume/20260911T125317Z/discovery-run/summary.json` and `verified-run/verifier.txt`.
 
-_none run_
-
-## Notes
-
-- SOLANA_COLLECTION_ADDRESS is not set — the collection has not been deployed, so OpenSea cannot have indexed it. Status: AWAITING_SOLANA_COLLECTION_DEPLOYMENT.
-- Name-based candidates found but NOT confirmed. A candidate is only the GHOST//ROOT collection if chain === solana AND contract address === SOLANA_COLLECTION_ADDRESS. Do not mutate any of these.
-- SOLANA_COLLECTION_ADDRESS is empty. The Metaplex Core collection has not been deployed, so there is nothing for OpenSea to index yet.
-- All API scaffolding is in place; verification will run automatically once the address is set and the collection is live.
+Next: repeat these bounded read-only queries after indexing status changes; verify chain and collection address before recording a slug or preparing collection sync. Do not use the unrelated Ethereum `ghost-root` slug. No sync, mint or metadata update was performed.

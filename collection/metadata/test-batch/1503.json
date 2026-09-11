@@ -1,0 +1,65 @@
+{
+  "token_id": 1503,
+  "name": "GHOST//1503",
+  "description": "GHOST//ROOT legendary identity \u2014 archetype SIGNAL, interpretation 1. Recovered from the ROOT network's severed-halo tier.",
+  "image": "pending://not-yet-rendered/collection/assets/test-batch/1503.png",
+  "external_url": "https://ghostroot.site/identity/1503/",
+  "collection": {
+    "name": "GHOST//ROOT",
+    "symbol": "GHRT"
+  },
+  "attributes": [
+    {
+      "trait_type": "Entity",
+      "value": "HOLLOW"
+    },
+    {
+      "trait_type": "Access",
+      "value": "ROOT"
+    },
+    {
+      "trait_type": "Architecture",
+      "value": "SEVERED HALO"
+    },
+    {
+      "trait_type": "Face Material",
+      "value": "CARBON"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "VOID"
+    },
+    {
+      "trait_type": "Interface",
+      "value": "FORENSIC PLATE"
+    },
+    {
+      "trait_type": "Implant",
+      "value": "SIGNAL CROWN"
+    },
+    {
+      "trait_type": "Mantle",
+      "value": "CERAMIC MANTLE"
+    },
+    {
+      "trait_type": "Background",
+      "value": "RACK SHADOW"
+    },
+    {
+      "trait_type": "Signal",
+      "value": "INTERMITTENT"
+    },
+    {
+      "trait_type": "Origin Corruption",
+      "value": "INTACT"
+    },
+    {
+      "trait_type": "State",
+      "value": "DORMANT"
+    },
+    {
+      "trait_type": "Rarity Band",
+      "value": "LEGENDARY"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "token_id": 2803,
+  "name": "GHOST//2803",
+  "description": "GHOST//ROOT legendary identity \u2014 archetype WITNESS, interpretation 2. Recovered from the ROOT network's severed-halo tier.",
+  "image": "pending://not-yet-rendered/collection/assets/test-batch/2803.png",
+  "external_url": "https://ghostroot.site/identity/2803/",
+  "collection": {
+    "name": "GHOST//ROOT",
+    "symbol": "GHRT"
+  },
+  "attributes": [
+    {
+      "trait_type": "Entity",
+      "value": "HOLLOW"
+    },
+    {
+      "trait_type": "Access",
+      "value": "ROOT"
+    },
+    {
+      "trait_type": "Architecture",
+      "value": "SEVERED HALO"
+    },
+    {
+      "trait_type": "Face Material",
+      "value": "CARBON"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "FRACTURED"
+    },
+    {
+      "trait_type": "Interface",
+      "value": "NONE"
+    },
+    {
+      "trait_type": "Implant",
+      "value": "SIGNAL CROWN"
+    },
+    {
+      "trait_type": "Mantle",
+      "value": "ARCHIVE COAT"
+    },
+    {
+      "trait_type": "Background",
+      "value": "EVIDENCE VOID"
+    },
+    {
+      "trait_type": "Signal",
+      "value": "LOCKED"
+    },
+    {
+      "trait_type": "Origin Corruption",
+      "value": "INTACT"
+    },
+    {
+      "trait_type": "State",
+      "value": "DORMANT"
+    },
+    {
+      "trait_type": "Rarity Band",
+      "value": "LEGENDARY"
+    }
+  ]
+}

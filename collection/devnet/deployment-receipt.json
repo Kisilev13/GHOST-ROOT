@@ -1,0 +1,36 @@
+{
+  "label": "DEVNET ONLY — holds no value, disposable rehearsal",
+  "generated_at_utc": "2026-09-11T07:25:58.956Z",
+  "cluster": "local-devnet-clone",
+  "rpc_url": "http://127.0.0.1:8899",
+  "explorer_note": "Local solana-test-validator that cloned the real mpl-core program live from public devnet (public devnet's own faucet was confirmed dry at rehearsal time). Same program, same behavior, but this ledger is private to this machine — explorer.solana.com cannot resolve these addresses. Use the local RPC (http://127.0.0.1:8899) with a Solana Explorer instance pointed at a custom RPC, or `solana confirm -v <sig> --url http://127.0.0.1:8899`, to inspect it.",
+  "devnet_signer_public_key": "ARWTv4NkEdcoTzg4SyoiDqcoHMDtB8Kcw7PXNsrJfJvy",
+  "collection": {
+    "address": "5Cd1TTYVm9Z3rviKREP4iWRcrPVRgad9Jdmk3gghyRSc",
+    "name": "GHOST//ROOT DEVNET",
+    "uri": "https://raw.githubusercontent.com/Kisilev13/GHOST-ROOT/b4e4258fcad3b1ede358448c39a9eb7dbb29c854/collection/devnet/metadata/collection.json",
+    "update_authority": "ARWTv4NkEdcoTzg4SyoiDqcoHMDtB8Kcw7PXNsrJfJvy",
+    "royalty_basis_points": 500,
+    "royalty_recipient": "ARWTv4NkEdcoTzg4SyoiDqcoHMDtB8Kcw7PXNsrJfJvy",
+    "creation_transaction_signature": "SXFjsPUEiJ4odoQ4wgHUrL6Fk8MPbbpuaD3KYd2MbNNxcTaU4VKMpU5pVrUgn8dVKwPXyvyTGZxaMeSUyPEoL1S",
+    "explorer_address_url": "https://explorer.solana.com/address/5Cd1TTYVm9Z3rviKREP4iWRcrPVRgad9Jdmk3gghyRSc?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899",
+    "explorer_tx_url": "https://explorer.solana.com/tx/SXFjsPUEiJ4odoQ4wgHUrL6Fk8MPbbpuaD3KYd2MbNNxcTaU4VKMpU5pVrUgn8dVKwPXyvyTGZxaMeSUyPEoL1S?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+  },
+  "canary": {
+    "asset_address": "CL1uGYY47uGMibazR6PfFKjj7eqaF9VJjpk7VcvL7yfR",
+    "name": "GHOST//0001",
+    "uri": "https://raw.githubusercontent.com/Kisilev13/GHOST-ROOT/a60303f6829977d3a90ca13a234b202d9a6aa271/collection/devnet/metadata/0001.json",
+    "owner": "ARWTv4NkEdcoTzg4SyoiDqcoHMDtB8Kcw7PXNsrJfJvy",
+    "collection_address": "5Cd1TTYVm9Z3rviKREP4iWRcrPVRgad9Jdmk3gghyRSc",
+    "mint_transaction_signature": "ULsfLeGomS8JW5fLoLgFqjHcn5pz5eihywZK17mfwNPr8wDFKHnkWcUXKJ8xEZ4wJVS6KKDgXK1foRu9aoULERY",
+    "explorer_address_url": "https://explorer.solana.com/address/CL1uGYY47uGMibazR6PfFKjj7eqaF9VJjpk7VcvL7yfR?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899",
+    "explorer_tx_url": "https://explorer.solana.com/tx/ULsfLeGomS8JW5fLoLgFqjHcn5pz5eihywZK17mfwNPr8wDFKHnkWcUXKJ8xEZ4wJVS6KKDgXK1foRu9aoULERY?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+  },
+  "transfer_test": {
+    "label": "DEVNET ONLY — optional Phase 13 transfer rehearsal",
+    "from_owner": "ARWTv4NkEdcoTzg4SyoiDqcoHMDtB8Kcw7PXNsrJfJvy",
+    "to_owner": "DAYR8dzFKv8Q2epVmCqH2SVXHfTzjRQVfAix6bgZWZYP",
+    "transaction_signature": "pftbBxhT5fSQDEWsfmHgtGnnsnsZrm3McxWuHocv4M4E8RRpoAAq6dMgi51PGwnYUgDSDDvpkNzZDbn9SP9Gukd",
+    "verified": true
+  }
+}

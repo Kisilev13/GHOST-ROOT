@@ -1,0 +1,12 @@
+{
+  "name": "GHOST//ROOT DEVNET",
+  "symbol": "GHRT-DEVNET",
+  "description": "[DEVNET REHEARSAL — TEST ONLY, NOT PRODUCTION, HOLDS NO VALUE] Disposable devnet-only rehearsal of the GHOST//ROOT Metaplex Core collection, used solely to prove the on-chain deployment path (collection creation, 500 bps royalty plugin, single canary mint, membership verification) independent of the still-open visual-QA blocker. Not the production GHOST//ROOT collection. See collection/devnet/README.md in the GHOST-ROOT repository.",
+  "image": "https://raw.githubusercontent.com/Kisilev13/GHOST-ROOT/8bd80a8a7b49735b9f50ddec7dada8a69bd682fb/collection/devnet/assets/0001.png",
+  "external_url": "https://github.com/Kisilev13/GHOST-ROOT/blob/main/collection/devnet/README.md",
+  "devnet_rehearsal": true,
+  "seller_fee_basis_points": 500,
+  "properties": {
+    "category": "image"
+  }
+}
