@@ -77,3 +77,79 @@ complete 2048×2048 sRGB opaque scene PNG at `assets/scenes/legendary/{id}__v001
   negative-space logic, and different light source (internal) from 0303/0803/1503.
 
 Both remain `UNAUTHORED — blocks approval` until the scene PNGs are produced.
+
+---
+
+## Pass 5 iteration — direction locks & generation briefs
+
+### GHOST//1503 — direction LOCKED (`DIRECTION_APPROVED_ONLY`)
+
+Approved visual-direction reference: `assets/sources/pass5/candidates/ea09_left.png`
+(887×887, reference only — **NOT** production art; do not install, upscale-and-finalize,
+or rename to `1503__v001.png`).
+
+Final `1503__v001.png` must preserve from the reference:
+- quiet, symmetrical, upward-gaze witness composition
+- clean broken spike-halo language
+- restrained cabling (not a dense nest)
+- frontal camera
+- GHOST//ROOT ceramic / gunmetal / aged-gold material
+…and must strengthen: **absence/void as the subject**. No text, no metadata labels,
+no crosshairs, no invented trait claims. Single square scene, delivered 2048×2048.
+
+Canonical traits it must remain consistent with (design-witness): hollow · access.root ·
+severed_halo · carbon · void eyes · forensic_plate · signal_crown · ceramic_mantle ·
+rack_shadow · intermittent signal. (Note: ceramic_mantle collar + a forensic lower-face
+plate are canonical — the reference reads more bare; keep the witness calm but the
+lower-face plate / broken ceramic collar may be honored subtly.)
+
+### GHOST//2803 — "The Opened Reliquary" — generation brief (distinct from 1503)
+
+Dominant idea: **THE BODY HAS OPENED TO REVEAL WHAT WAS SEALED INSIDE.** It must NOT be
+a circular halo portrait, 1503-with-more-machinery, or the same face with a new crown.
+
+Canonical traits (design-witness): hollow · access.root · severed_halo · carbon ·
+**fractured** eyes · **interface.none (bare face)** · signal_crown · **archive_coat** ·
+**evidence_void** background · locked signal.
+
+Composition:
+- The hollow ceramic torso/shell is **cracked open down the sternum and neck**, the
+  archive-coat plates swinging outward **like reliquary doors** on visible hinges.
+- Rising from the opened neck cavity: an **exposed spinal signal-crown column** — stacked
+  ceramic vertebrae + antenna spikes + an **armillary / mechanical ring structure** turning
+  around it, lit faintly **from within** (contained subsurface glow, not neon).
+- Face: bare (interface.none), **fractured optics physically integrated** into a broken
+  face plate catching the internal light.
+- severed_halo present but **broken and asymmetric — a shattered vault framing the opened
+  cavity**, NOT a clean radial halo.
+- Frontal camera, evidence-void black surround, carbon-dark material with aged-gold seams.
+
+Silhouette: **vertical and top-heavy** (internal column + spikes break the top edge; coat
+doors break the shoulders outward) — deliberately different from 1503's radial-symmetry.
+
+Lighting: key upper-left on the shell; the reveal is lit by a low internal glow from inside
+the cavity (warm-cool, contained). Deep black elsewhere.
+
+Why Legendary: an "opened machine" idea with its own silhouette, negative-space logic, and
+an **internal** light source — unlike 0303 (enthroned halo), 0803 (shattering body),
+1503 (radial witness).
+
+**Paste-ready prompt (frontal single square, 2048×2048, no text):**
+> Frontal centered bust of a hollow ceramic figure whose chest and neck have cracked
+> OPEN like a reliquary, aged white ceramic archive-coat plates swinging outward on
+> hinges to reveal internal machinery; rising from the opened neck cavity an exposed
+> spinal column of stacked ceramic vertebrae and slender antenna spikes wrapped by a
+> turning brass armillary ring, glowing faintly from within with a contained warm-cool
+> light; bare fractured face plate with physically broken optical lenses catching the
+> inner glow; a shattered asymmetric halo of broken ceramic-and-gold fragments framing
+> the opening (not a clean ring); carbon-dark gunmetal and cracked ivory ceramic with
+> fine gold kintsugi seams; deep matte black evidence-void background; single dramatic
+> key light from upper-left plus internal cavity glow; hyperreal sculptural render,
+> museum archival object, GHOST//ROOT aesthetic; vertical top-heavy silhouette.
+>
+> Negative: no text, no letters, no labels, no watermark, no crosshairs, no UI, no
+> circular halo portrait, no serene upward-gaze saint, no neon, no RGB glow, no Tron
+> lines, no cyberpunk city, no anime, no second diptych panel, no border.
+
+Delivery: single square PNG, **2048×2048**, opaque, frontal, text-free →
+`assets/scenes/legendary/2803__v001.png` (after review as a candidate first).
