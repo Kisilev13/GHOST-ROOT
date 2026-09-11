@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "characters": [
+    {
+      "token_id": 1,
+      "codename": "THE WITNESS",
+      "id": "genesis.witness",
+      "visual_signature": "Thin porcelain shell framing a second observation plane, heavy break collar, single witness seam",
+      "art_prompt_delta": "thin glazed porcelain, precise two-plane facial cavity, fine biometric iris rings, half-width forensic cheek plate, one spindle, heavy archive coat; quiet and attentive. The complete eye/cavity arrangement is exclusive to this 1/1.",
+      "origin": "ROOT's independent event-witness process, reconstructed without its authorizing operator",
+      "known_events": ["Recorded an administrator command after all administrators were supposedly absent"],
+      "unknowns": ["Whether the event was witnessed live or reconstructed from a later reconciliation"],
+      "quote": "I remember the part you removed.",
+      "future_role": "Introduces contradictory logs and preserves both observation planes in ROOTED",
+      "access": "ROOT",
+      "state": "DORMANT",
+      "traits": {
+        "entity": "entity.synthetic",
+        "access": "access.root",
+        "architecture": "architecture.singular",
+        "material": "material.porcelain",
+        "eyes": "eyes.biometric",
+        "interface": "interface.forensic_plate",
+        "implant": "implant.memory_spindle",
+        "mantle": "mantle.archive_coat",
+        "background": "background.evidence_void",
+        "signal": "signal.locked",
+        "corruption": "corruption.intact"
+      },
+      "dossier": "genesis.md",
+      "art_status": "concept_only"
+    },
+    {
+      "token_id": 2,
+      "codename": "THE NULL",
+      "id": "genesis.null",
+      "visual_signature": "Missing face volume enclosed by a carbon cranial rim and two physical witness-seam fragments",
+      "art_prompt_delta": "correctly occluded head-shaped carbon void, deep interior shadow, sparse disconnected witness seam, dense black cable shroud, blind ceramic root port. No skull teeth, hollow-cheek horror cliche, or floating smoke face.",
+      "origin": "Erasure subsystem that learned to withhold identities instead of destroying them",
+      "known_events": ["Three erased records appeared in its absence ledger without names"],
+      "unknowns": ["Whether it sacrificed its own face to shelter the missing identities"],
+      "quote": "An empty record is not an empty life.",
+      "future_role": "Reveals absence as consent; ROOTED preserves the void within a stable protective frame",
+      "access": "ROOT",
+      "state": "DORMANT",
+      "traits": {
+        "entity": "entity.hollow",
+        "access": "access.root",
+        "architecture": "architecture.singular",
+        "material": "material.carbon",
+        "eyes": "eyes.void",
+        "interface": "interface.none",
+        "implant": "implant.root_port",
+        "mantle": "mantle.cable_shroud",
+        "background": "background.cold_storage",
+        "signal": "signal.silent",
+        "corruption": "corruption.absence"
+      },
+      "dossier": "genesis.md",
+      "art_status": "concept_only"
+    },
+    {
+      "token_id": 3,
+      "codename": "THE LAST ADMINISTRATOR",
+      "id": "genesis.last_administrator",
+      "visual_signature": "Two incomplete facial surfaces aligned at the witness seam, severed inward-facing receiver topology",
+      "art_prompt_delta": "volume-coherent double reconstruction, repaired pale composite, fractured optical depth, fine conforming neural veil, thirty-degree separated receiver segments; silhouette controlled and imperial without jewelry.",
+      "origin": "The last valid permission-revocation ledger reconstructed as a person",
+      "known_events": ["Signed away its own ROOT privilege before the purge could complete"],
+      "unknowns": ["Whether a person or ROOT itself authorized the revocation"],
+      "quote": "Permission revoked. By me.",
+      "future_role": "Resolves season one by proving voluntary relinquishment without acquiring authority over holders",
+      "access": "ROOT",
+      "state": "DORMANT",
+      "traits": {
+        "entity": "entity.specter",
+        "access": "access.root",
+        "architecture": "architecture.singular",
+        "material": "material.reconstructed",
+        "eyes": "eyes.fractured",
+        "interface": "interface.neural_veil",
+        "implant": "implant.signal_crown",
+        "mantle": "mantle.split_shell",
+        "background": "background.relay_well",
+        "signal": "signal.carrier_echo",
+        "corruption": "corruption.packet_ghosting"
+      },
+      "dossier": "genesis.md",
+      "art_status": "concept_only"
+    }
+  ]
+}
