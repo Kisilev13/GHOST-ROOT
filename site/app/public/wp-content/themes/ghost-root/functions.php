@@ -1,5 +1,22 @@
 <?php
 defined('ABSPATH') || exit;
+
+// --- Hardening / footprint reduction ---------------------------------------
+// XML-RPC is not used by this site (no remote publishing, no Jetpack).
+add_filter('xmlrpc_enabled', '__return_false');
+add_filter('wp_headers', static function ($headers) { unset($headers['X-Pingback']); return $headers; });
+// Drop the wp-emoji script + its s.w.org fallback requests — nothing here needs it.
+add_action('init', static function () {
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('wp_print_styles', 'print_emoji_styles');
+    remove_action('admin_print_scripts', 'print_emoji_detection_script');
+    remove_action('admin_print_styles', 'print_emoji_styles');
+});
+// Trim generator fingerprints and the RSD/WLW manifest links.
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+
 add_action('after_setup_theme', static function () {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
@@ -9,7 +26,7 @@ add_action('after_setup_theme', static function () {
 });
 add_action('wp_enqueue_scripts', static function () {
     wp_enqueue_style('ghost-root', get_theme_file_uri('assets/css/site.css'), [], (string) filemtime(get_theme_file_path('assets/css/site.css')));
-    wp_enqueue_script('ghost-root-site', get_theme_file_uri('assets/js/site.js'), [], '1.0.0', ['in_footer' => true, 'strategy' => 'defer']);
+    wp_enqueue_script('ghost-root-site', get_theme_file_uri('assets/js/site.js'), [], (string) filemtime(get_theme_file_path('assets/js/site.js')), ['in_footer' => true, 'strategy' => 'defer']);
 });
 // Preload the two above-the-fold webfonts (subset WOFF2) so the display face
 // swaps in fast. No other fonts are preloaded.
@@ -31,15 +48,33 @@ function gr_page_head(string $eyebrow, string $title, string $description = ''):
     echo '</div>';
 }
 function gr_filters(array $filters, string $action): void {
+    $active = [];
+    foreach ($filters as $key => $values) {
+        $value = class_exists('\\GhostRoot\\Frontend\\Queries') ? \GhostRoot\Frontend\Queries::param($key) : '';
+        if (in_array($value, $values, true)) $active[$key] = $value;
+    }
+    if ($action === '/archive/' && class_exists('\\GhostRoot\\Frontend\\Queries')) {
+        $date = \GhostRoot\Frontend\Queries::param('date');
+        if (preg_match('/^\d{4}-\d{2}-\d{2}$/D', $date)) $active['date'] = $date;
+    }
+    echo '<details class="gr-filter-disclosure" open><summary>FILTER RECORDS <span class="gr-filter-count">' . ($active ? count($active) . ' ACTIVE' : '') . '</span><span class="gr-filter-glyph" aria-hidden="true"></span></summary>';
     echo '<form class="gr-filters" action="' . esc_url(home_url($action)) . '" method="get">';
     foreach ($filters as $key => $values) {
-        $value = class_exists('\GhostRoot\Frontend\Queries') ? \GhostRoot\Frontend\Queries::param($key) : '';
+        $value = class_exists('\\GhostRoot\\Frontend\\Queries') ? \GhostRoot\Frontend\Queries::param($key) : '';
         echo '<label for="gr-filter-' . esc_attr($key) . '">' . esc_html(gr_label($key)) . '<select name="' . esc_attr($key) . '" id="gr-filter-' . esc_attr($key) . '"><option value="">ALL</option>';
         foreach ($values as $option) { echo '<option value="' . esc_attr($option) . '" ' . selected($value, $option, false) . '>' . esc_html($option) . '</option>'; }
         echo '</select></label>';
     }
     if ($action === '/archive/') echo '<label for="gr-filter-date">DATE<input type="date" id="gr-filter-date" name="date" value="' . esc_attr(\GhostRoot\Frontend\Queries::param('date')) . '"></label>';
-    echo '<button class="gr-button" type="submit">FILTER ↓</button><a class="gr-filter-reset" href="' . esc_url(home_url($action)) . '">RESET</a></form>';
+    echo '<button class="gr-button" type="submit">APPLY FILTERS ↓</button><a class="gr-filter-reset" href="' . esc_url(home_url($action)) . '">RESET</a></form></details>';
+    if ($active) {
+        echo '<nav class="gr-active-filters" aria-label="Active filters">';
+        foreach ($active as $key => $value) {
+            $remaining = $active; unset($remaining[$key]);
+            echo '<a href="' . esc_url(add_query_arg($remaining, home_url($action))) . '" aria-label="' . esc_attr('Remove ' . gr_label($key) . ' filter: ' . $value) . '">' . esc_html(gr_label($key) . ' / ' . $value) . ' <span aria-hidden="true">×</span></a>';
+        }
+        echo '<a class="gr-filter-reset" href="' . esc_url(home_url($action)) . '">RESET ALL</a></nav>';
+    }
 }
 function gr_pagination(): void {
     $links = paginate_links(['type' => 'list', 'prev_text' => '← PREVIOUS', 'next_text' => 'NEXT →']);
@@ -49,12 +84,31 @@ function gr_description(): string {
     if (is_front_page()) return 'You were never supposed to find them. Explore recovered identities, incident logs and fragments from the ROOT network.';
     return wp_strip_all_tags(is_singular() ? get_the_excerpt() : 'Recovered identities and classified records from the GHOST//ROOT network.');
 }
+// --- Titles: one consistent "<Name> — GHOST//ROOT" format, no "Archive Archive" ----------
+add_filter('document_title_separator', static fn() => '—');
+function gr_archive_label(): ?string {
+    $map = ['ghost_identity' => 'Identities', 'incident' => 'Incidents', 'archive_record' => 'Archive', 'transmission' => 'Transmissions'];
+    if (is_post_type_archive(array_keys($map))) {
+        $pt = get_query_var('post_type');
+        return $map[is_array($pt) ? reset($pt) : $pt] ?? null;
+    }
+    return null;
+}
 add_filter('document_title_parts', static function ($parts) {
     $parts['site'] = 'GHOST//ROOT';
-    if (is_front_page()) $parts['title'] = 'GHOST//ROOT — Recovered Identities';
+    if (is_front_page()) { $parts['title'] = 'GHOST//ROOT — Recovered Identities'; unset($parts['site']); }
+    elseif ($label = gr_archive_label()) $parts['title'] = $label;
     return $parts;
 });
-add_filter('wpseo_title', static function ($title) { return is_front_page() ? 'GHOST//ROOT — Recovered Identities' : str_replace(get_bloginfo('name'), 'GHOST//ROOT', $title); });
+add_filter('wpseo_title', static function ($title) {
+    if (is_front_page()) return 'GHOST//ROOT — Recovered Identities';
+    if ($label = gr_archive_label()) return $label . ' — GHOST//ROOT';
+    // Remove only Yoast's trailing separator + site-name suffix; preserve separators inside the real post/page title.
+    $base = wp_strip_all_tags((string) $title);
+    $base = preg_replace('/\s+[-–—|]\s+GHOST\/\/ROOT\s*$/u', '', $base);
+    $base = trim(preg_replace('/\s+Archive$/i', '', $base));
+    return ($base === '' ? 'GHOST//ROOT' : $base . ' — GHOST//ROOT');
+}, 20);
 add_filter('wpseo_metadesc', static function ($description) { return $description ?: gr_description(); });
 add_action('wp_head', static function () {
     if (defined('WPSEO_VERSION')) return;

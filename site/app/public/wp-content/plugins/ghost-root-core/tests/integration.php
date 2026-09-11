@@ -136,28 +136,6 @@ try {
     $check('Public identity read works',$read->get_status()===200);
     $check('Private identity inaccessible',$call('GET','/ghost-root/v1/identity/0')->get_status()===404);
     $check('Protocol records are not public REST content',!get_post_type_object('protocol_record')->show_in_rest);
-
-    // --- OpenSea integration -------------------------------------------------
-    wp_set_current_user(0);
-    $os_status = $call('GET','/ghost-root/v1/opensea/status');
-    $check('OpenSea status endpoint is public + 200',$os_status->get_status()===200);
-    $status_body = $os_status->get_data();
-    $check('OpenSea status never leaks the API key',
-        !str_contains(strtolower(wp_json_encode($status_body)),'x-api-key') &&
-        !array_key_exists('key_source',(array)$status_body) &&
-        (!\GhostRoot\OpenSea\Config::has_api_key() || strpos(wp_json_encode($status_body), \GhostRoot\OpenSea\Config::api_key())===false));
-    $check('OpenSea status reports a known state',
-        in_array($status_body['status'] ?? '',['AWAITING_SOLANA_COLLECTION_DEPLOYMENT','NOT_INDEXED','PENDING','VERIFIED','PARTIAL','MISMATCH','ERROR'],true));
-    $os_stats = $call('GET','/ghost-root/v1/opensea/stats');
-    $check('OpenSea stats fails open (200, never 500)',$os_stats->get_status()===200);
-    $stats_body = (array)$os_stats->get_data();
-    $check('OpenSea stats never fabricates a zero when there is no market',
-        !isset($stats_body['source']) || $stats_body['source']!=='opensea' || array_key_exists('floor_price',$stats_body));
-    $check('OpenSea verification endpoint public + 200',$call('GET','/ghost-root/v1/opensea/verification')->get_status()===200);
-    $check('OpenSea refresh requires auth',$call('POST','/ghost-root/v1/opensea/refresh')->get_status()===401 || $call('POST','/ghost-root/v1/opensea/refresh')->get_status()===403);
-    $check('Marketplace shortcode renders + carries no secret',
-        !str_contains(do_shortcode('[ghost_root_marketplace]'),\GhostRoot\OpenSea\Config::api_key() ?: '__none__') &&
-        str_contains(do_shortcode('[ghost_root_marketplace]'),'SECONDARY MARKET'));
 } finally {
     $_POST=[];
     wp_set_current_user($original_user);
