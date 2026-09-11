@@ -60,16 +60,24 @@ def main() -> int:
         colors = [(255, 0, 0, 255), (0, 255, 0, 255), (0, 0, 255, 255), (255, 255, 0, 255)]
         made = 0
         for i, slot in enumerate(am.LAYER_STACK):
-            if not slot.required:
+            if not slot.required or am.skip_reason(slot, trait_ids) is not None:
                 continue
             candidates = am.candidate_paths(slot, trait_ids)
             if not candidates:
                 continue
             make_layer(candidates[-1], (gp.CANVAS, gp.CANVAS), colors[made % len(colors)])
             made += 1
-        resolved, missing = gp.plan_layers(trait_ids)
+        resolved, missing = gp.plan_layers(trait_ids, omit_unregistered=False)
         check("synthetic assets for every required slot -> nothing missing", len(missing) == 0)
         check("resolved layers are in ascending z-order", [s.z for s, _ in resolved] == sorted(s.z for s, _ in resolved))
+
+        trait_ids_imp = dict(trait_ids)
+        trait_ids_imp["implant"] = "implant.antenna"
+        _, missing_imp = gp.plan_layers(trait_ids_imp, omit_unregistered=False)
+        check(
+            "non-empty implant without asset is reported missing",
+            any("implant" in m or "rear_anatomy" in m for m in missing_imp),
+        )
 
         # 3. Composite, and prove determinism: identical inputs -> byte-identical output.
         img1 = gp.composite(resolved)
@@ -91,6 +99,16 @@ def main() -> int:
             check("wrong-sized layer is rejected", True)
         finally:
             make_layer(bad_path, (gp.CANVAS, gp.CANVAS), colors[0])  # restore for cleanliness
+
+        make_layer(bad_path, (gp.CANVAS, gp.CANVAS), (0, 0, 0, 0))
+        resolved_blank, _ = gp.plan_layers(trait_ids)
+        try:
+            gp.composite(resolved_blank)
+            check("blank transparent asset is rejected", False)
+        except gp.GenerationError:
+            check("blank transparent asset is rejected", True)
+        finally:
+            make_layer(bad_path, (gp.CANVAS, gp.CANVAS), colors[0])
 
     finally:
         am.LAYERS_DIR = real_layers_dir

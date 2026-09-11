@@ -1,0 +1,2662 @@
+{
+  "schema_version": "1.1",
+  "status": "CANONICAL_PRODUCTION_SCHEMA_LOCK",
+  "authority": "design-witness.csv fixes token assignments; this generated lock defines their interpretation. Change sources only through a reviewed design version, then regenerate this lock.",
+  "source_sha256": {
+    "traits.yaml": "61a96cada40bef3a26b5e651470e14bf3edc79eac9751b2c55e06e532286c51a",
+    "collection.yaml": "db62c0c3d9db066f4892def018934b51c499f5aa7bba8b32f52853c03c154223",
+    "genesis.yaml": "24fb8eb658240c42a51c2d1901dd69c772249ac99ff34d106370c18a0a21e36b",
+    "genesis.md": "a2eedab9e816bd41c2ccd7a1cc04c42cd0502f0e171eeb7cee89df9ec517150b",
+    "legendary-reservations.yaml": "88159afd2ff1a70c22e0c8d5ef93e374984d439dd3fab79d0ac42f9b83c6a0c6",
+    "design-witness.csv": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2",
+    "art-bible.md": "25c94fba2d1a336fd8d372d8ef452eb873bc1e5ea476d48459a50cae03c4dee9",
+    "scripts/asset_manifest.py": "9dac6811485b855ee92b8ef44691450924a076acfc2d93a3325197c57ab2c493"
+  },
+  "supply": 3333,
+  "category_order": [
+    "entity",
+    "access",
+    "architecture",
+    "material",
+    "eyes",
+    "interface",
+    "implant",
+    "mantle",
+    "background",
+    "signal",
+    "corruption"
+  ],
+  "categories": {
+    "entity": {
+      "id": "entity",
+      "display_name": "Entity",
+      "visual_importance": 5,
+      "cardinality": "exactly_one",
+      "art_visible": true,
+      "metadata_only": false,
+      "values": [
+        {
+          "id": "entity.human",
+          "display_name": "HUMAN",
+          "category": "entity",
+          "weight": 1400,
+          "max_count": 1400,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "entity"
+          ],
+          "target_count": 1400,
+          "target_percentage": 42.0042,
+          "expected_count": 1400,
+          "rarity_score_bits": 1.25139449,
+          "visual_importance": 5
+        },
+        {
+          "id": "entity.synthetic",
+          "display_name": "SYNTHETIC",
+          "category": "entity",
+          "weight": 1200,
+          "max_count": 1200,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "entity"
+          ],
+          "target_count": 1200,
+          "target_percentage": 36.0036,
+          "expected_count": 1200,
+          "rarity_score_bits": 1.47378691,
+          "visual_importance": 5
+        },
+        {
+          "id": "entity.hollow",
+          "display_name": "HOLLOW",
+          "category": "entity",
+          "weight": 600,
+          "max_count": 600,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "entity"
+          ],
+          "target_count": 600,
+          "target_percentage": 18.0018,
+          "expected_count": 600,
+          "rarity_score_bits": 2.47378691,
+          "visual_importance": 5
+        },
+        {
+          "id": "entity.specter",
+          "display_name": "SPECTER",
+          "category": "entity",
+          "weight": 133,
+          "max_count": 133,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "entity"
+          ],
+          "target_count": 133,
+          "target_percentage": 3.990399,
+          "expected_count": 133,
+          "rarity_score_bits": 4.64732317,
+          "visual_importance": 5
+        }
+      ]
+    },
+    "access": {
+      "id": "access",
+      "display_name": "Access",
+      "visual_importance": 1,
+      "cardinality": "exactly_one",
+      "art_visible": false,
+      "metadata_only": true,
+      "values": [
+        {
+          "id": "access.user",
+          "display_name": "USER",
+          "category": "access",
+          "weight": 2400,
+          "max_count": 2400,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "access"
+          ],
+          "target_count": 2400,
+          "target_percentage": 72.007201,
+          "expected_count": 2400,
+          "rarity_score_bits": 0.47378691,
+          "visual_importance": 1
+        },
+        {
+          "id": "access.admin",
+          "display_name": "ADMIN",
+          "category": "access",
+          "weight": 720,
+          "max_count": 720,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "access"
+          ],
+          "target_count": 720,
+          "target_percentage": 21.60216,
+          "expected_count": 720,
+          "rarity_score_bits": 2.21075251,
+          "visual_importance": 1
+        },
+        {
+          "id": "access.system",
+          "display_name": "SYSTEM",
+          "category": "access",
+          "weight": 180,
+          "max_count": 180,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "access"
+          ],
+          "target_count": 180,
+          "target_percentage": 5.40054,
+          "expected_count": 180,
+          "rarity_score_bits": 4.21075251,
+          "visual_importance": 1
+        },
+        {
+          "id": "access.root",
+          "display_name": "ROOT",
+          "category": "access",
+          "weight": 33,
+          "max_count": 33,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "access"
+          ],
+          "target_count": 33,
+          "target_percentage": 0.990099,
+          "expected_count": 33,
+          "rarity_score_bits": 6.65821148,
+          "visual_importance": 1
+        }
+      ]
+    },
+    "architecture": {
+      "id": "architecture",
+      "display_name": "Architecture",
+      "visual_importance": 5,
+      "cardinality": "exactly_one",
+      "art_visible": true,
+      "metadata_only": false,
+      "values": [
+        {
+          "id": "architecture.sealed",
+          "display_name": "SEALED",
+          "category": "architecture",
+          "weight": 1800,
+          "max_count": 1800,
+          "requires": [
+            {
+              "any_of": [
+                "access.user"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "architecture"
+          ],
+          "target_count": 1800,
+          "target_percentage": 54.005401,
+          "expected_count": 1800,
+          "rarity_score_bits": 0.88882441,
+          "visual_importance": 5
+        },
+        {
+          "id": "architecture.inset",
+          "display_name": "INSET",
+          "category": "architecture",
+          "weight": 900,
+          "max_count": 900,
+          "requires": [
+            {
+              "any_of": [
+                "access.user",
+                "access.admin"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "architecture"
+          ],
+          "target_count": 900,
+          "target_percentage": 27.0027,
+          "expected_count": 900,
+          "rarity_score_bits": 1.88882441,
+          "visual_importance": 5
+        },
+        {
+          "id": "architecture.double_plane",
+          "display_name": "DOUBLE PLANE",
+          "category": "architecture",
+          "weight": 420,
+          "max_count": 420,
+          "requires": [
+            {
+              "any_of": [
+                "access.admin"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "architecture"
+          ],
+          "target_count": 420,
+          "target_percentage": 12.60126,
+          "expected_count": 420,
+          "rarity_score_bits": 2.98836008,
+          "visual_importance": 5
+        },
+        {
+          "id": "architecture.suspended_core",
+          "display_name": "SUSPENDED CORE",
+          "category": "architecture",
+          "weight": 180,
+          "max_count": 180,
+          "requires": [
+            {
+              "any_of": [
+                "access.system"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "architecture"
+          ],
+          "target_count": 180,
+          "target_percentage": 5.40054,
+          "expected_count": 180,
+          "rarity_score_bits": 4.21075251,
+          "visual_importance": 5
+        },
+        {
+          "id": "architecture.severed_halo",
+          "display_name": "SEVERED HALO",
+          "category": "architecture",
+          "weight": 30,
+          "max_count": 30,
+          "requires": [
+            {
+              "any_of": [
+                "access.root"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "architecture",
+            "reserved_legendary"
+          ],
+          "target_count": 30,
+          "target_percentage": 0.90009,
+          "expected_count": 30,
+          "rarity_score_bits": 6.79571501,
+          "visual_importance": 5
+        },
+        {
+          "id": "architecture.singular",
+          "display_name": "SINGULAR",
+          "category": "architecture",
+          "weight": 0,
+          "max_count": 3,
+          "requires": [
+            {
+              "any_of": [
+                "access.root"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "architecture",
+            "reserved_genesis"
+          ],
+          "target_count": 3,
+          "target_percentage": 0.090009,
+          "expected_count": 3,
+          "rarity_score_bits": 10.1176431,
+          "visual_importance": 5
+        }
+      ]
+    },
+    "material": {
+      "id": "material",
+      "display_name": "Face Material",
+      "visual_importance": 4,
+      "cardinality": "exactly_one",
+      "art_visible": true,
+      "metadata_only": false,
+      "values": [
+        {
+          "id": "material.biosynth",
+          "display_name": "BIO-SYNTH",
+          "category": "material",
+          "weight": 1050,
+          "max_count": 1050,
+          "requires": [
+            {
+              "any_of": [
+                "entity.human",
+                "entity.synthetic"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "material"
+          ],
+          "target_count": 1050,
+          "target_percentage": 31.50315,
+          "expected_count": 1050,
+          "rarity_score_bits": 1.66643199,
+          "visual_importance": 4
+        },
+        {
+          "id": "material.porcelain",
+          "display_name": "PORCELAIN",
+          "category": "material",
+          "weight": 850,
+          "max_count": 850,
+          "requires": [
+            {
+              "any_of": [
+                "entity.human",
+                "entity.synthetic",
+                "entity.hollow"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "material"
+          ],
+          "target_count": 850,
+          "target_percentage": 25.50255,
+          "expected_count": 850,
+          "rarity_score_bits": 1.97128657,
+          "visual_importance": 4
+        },
+        {
+          "id": "material.carbon",
+          "display_name": "CARBON",
+          "category": "material",
+          "weight": 700,
+          "max_count": 700,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "material"
+          ],
+          "target_count": 700,
+          "target_percentage": 21.0021,
+          "expected_count": 700,
+          "rarity_score_bits": 2.25139449,
+          "visual_importance": 4
+        },
+        {
+          "id": "material.ceramic",
+          "display_name": "CERAMIC",
+          "category": "material",
+          "weight": 450,
+          "max_count": 450,
+          "requires": [
+            {
+              "any_of": [
+                "entity.human",
+                "entity.synthetic",
+                "entity.hollow"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "material"
+          ],
+          "target_count": 450,
+          "target_percentage": 13.50135,
+          "expected_count": 450,
+          "rarity_score_bits": 2.88882441,
+          "visual_importance": 4
+        },
+        {
+          "id": "material.reconstructed",
+          "display_name": "RECONSTRUCTED",
+          "category": "material",
+          "weight": 250,
+          "max_count": 250,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "material"
+          ],
+          "target_count": 250,
+          "target_percentage": 7.50075,
+          "expected_count": 250,
+          "rarity_score_bits": 3.73682132,
+          "visual_importance": 4
+        },
+        {
+          "id": "material.phase_glass",
+          "display_name": "PHASE GLASS",
+          "category": "material",
+          "weight": 33,
+          "max_count": 33,
+          "requires": [
+            {
+              "any_of": [
+                "entity.specter"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "material"
+          ],
+          "target_count": 33,
+          "target_percentage": 0.990099,
+          "expected_count": 33,
+          "rarity_score_bits": 6.65821148,
+          "visual_importance": 4
+        }
+      ]
+    },
+    "eyes": {
+      "id": "eyes",
+      "display_name": "Eyes",
+      "visual_importance": 4,
+      "cardinality": "exactly_one",
+      "art_visible": true,
+      "metadata_only": false,
+      "values": [
+        {
+          "id": "eyes.biometric",
+          "display_name": "BIOMETRIC",
+          "category": "eyes",
+          "weight": 1000,
+          "max_count": 1000,
+          "requires": [
+            {
+              "any_of": [
+                "entity.human",
+                "entity.synthetic"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "eyes"
+          ],
+          "target_count": 1000,
+          "target_percentage": 30.003,
+          "expected_count": 1000,
+          "rarity_score_bits": 1.73682132,
+          "visual_importance": 4
+        },
+        {
+          "id": "eyes.void",
+          "display_name": "VOID",
+          "category": "eyes",
+          "weight": 800,
+          "max_count": 800,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "eyes"
+          ],
+          "target_count": 800,
+          "target_percentage": 24.0024,
+          "expected_count": 800,
+          "rarity_score_bits": 2.05874941,
+          "visual_importance": 4
+        },
+        {
+          "id": "eyes.thermal",
+          "display_name": "THERMAL",
+          "category": "eyes",
+          "weight": 750,
+          "max_count": 750,
+          "requires": [
+            {
+              "any_of": [
+                "entity.human",
+                "entity.synthetic"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "eyes"
+          ],
+          "target_count": 750,
+          "target_percentage": 22.50225,
+          "expected_count": 750,
+          "rarity_score_bits": 2.15185882,
+          "visual_importance": 4
+        },
+        {
+          "id": "eyes.fractured",
+          "display_name": "FRACTURED",
+          "category": "eyes",
+          "weight": 500,
+          "max_count": 500,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "eyes"
+          ],
+          "target_count": 500,
+          "target_percentage": 15.0015,
+          "expected_count": 500,
+          "rarity_score_bits": 2.73682132,
+          "visual_importance": 4
+        },
+        {
+          "id": "eyes.optical_array",
+          "display_name": "OPTICAL ARRAY",
+          "category": "eyes",
+          "weight": 250,
+          "max_count": 250,
+          "requires": [
+            {
+              "any_of": [
+                "entity.synthetic",
+                "entity.hollow"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "eyes"
+          ],
+          "target_count": 250,
+          "target_percentage": 7.50075,
+          "expected_count": 250,
+          "rarity_score_bits": 3.73682132,
+          "visual_importance": 4
+        },
+        {
+          "id": "eyes.signal_burn",
+          "display_name": "SIGNAL-BURN",
+          "category": "eyes",
+          "weight": 33,
+          "max_count": 33,
+          "requires": [
+            {
+              "any_of": [
+                "entity.specter"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "eyes"
+          ],
+          "target_count": 33,
+          "target_percentage": 0.990099,
+          "expected_count": 33,
+          "rarity_score_bits": 6.65821148,
+          "visual_importance": 4
+        }
+      ]
+    },
+    "interface": {
+      "id": "interface",
+      "display_name": "Interface",
+      "visual_importance": 3,
+      "cardinality": "exactly_one",
+      "art_visible": true,
+      "metadata_only": false,
+      "values": [
+        {
+          "id": "interface.none",
+          "display_name": "NONE",
+          "category": "interface",
+          "weight": 1200,
+          "max_count": 1200,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "interface"
+          ],
+          "target_count": 1200,
+          "target_percentage": 36.0036,
+          "expected_count": 1200,
+          "rarity_score_bits": 1.47378691,
+          "visual_importance": 3
+        },
+        {
+          "id": "interface.forensic_plate",
+          "display_name": "FORENSIC PLATE",
+          "category": "interface",
+          "weight": 900,
+          "max_count": 900,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "interface"
+          ],
+          "target_count": 900,
+          "target_percentage": 27.0027,
+          "expected_count": 900,
+          "rarity_score_bits": 1.88882441,
+          "visual_importance": 3
+        },
+        {
+          "id": "interface.respirator",
+          "display_name": "RESPIRATOR",
+          "category": "interface",
+          "weight": 600,
+          "max_count": 600,
+          "requires": [
+            {
+              "any_of": [
+                "entity.human",
+                "entity.synthetic"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "interface"
+          ],
+          "target_count": 600,
+          "target_percentage": 18.0018,
+          "expected_count": 600,
+          "rarity_score_bits": 2.47378691,
+          "visual_importance": 3
+        },
+        {
+          "id": "interface.neural_veil",
+          "display_name": "NEURAL VEIL",
+          "category": "interface",
+          "weight": 400,
+          "max_count": 400,
+          "requires": [
+            {
+              "any_of": [
+                "entity.synthetic",
+                "entity.hollow",
+                "entity.specter"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "interface"
+          ],
+          "target_count": 400,
+          "target_percentage": 12.0012,
+          "expected_count": 400,
+          "rarity_score_bits": 3.05874941,
+          "visual_importance": 3
+        },
+        {
+          "id": "interface.null_mask",
+          "display_name": "NULL MASK",
+          "category": "interface",
+          "weight": 200,
+          "max_count": 200,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "interface"
+          ],
+          "target_count": 200,
+          "target_percentage": 6.0006,
+          "expected_count": 200,
+          "rarity_score_bits": 4.05874941,
+          "visual_importance": 3
+        },
+        {
+          "id": "interface.skeletal_interface",
+          "display_name": "SKELETAL INTERFACE",
+          "category": "interface",
+          "weight": 33,
+          "max_count": 33,
+          "requires": [
+            {
+              "any_of": [
+                "entity.hollow",
+                "entity.specter"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "interface"
+          ],
+          "target_count": 33,
+          "target_percentage": 0.990099,
+          "expected_count": 33,
+          "rarity_score_bits": 6.65821148,
+          "visual_importance": 3
+        }
+      ]
+    },
+    "implant": {
+      "id": "implant",
+      "display_name": "Implant",
+      "visual_importance": 3,
+      "cardinality": "exactly_one",
+      "art_visible": true,
+      "metadata_only": false,
+      "values": [
+        {
+          "id": "implant.none",
+          "display_name": "NONE",
+          "category": "implant",
+          "weight": 1200,
+          "max_count": 1200,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "implant"
+          ],
+          "target_count": 1200,
+          "target_percentage": 36.0036,
+          "expected_count": 1200,
+          "rarity_score_bits": 1.47378691,
+          "visual_importance": 3
+        },
+        {
+          "id": "implant.neural_cable",
+          "display_name": "NEURAL CABLE",
+          "category": "implant",
+          "weight": 800,
+          "max_count": 800,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "implant"
+          ],
+          "target_count": 800,
+          "target_percentage": 24.0024,
+          "expected_count": 800,
+          "rarity_score_bits": 2.05874941,
+          "visual_importance": 3
+        },
+        {
+          "id": "implant.spinal_bus",
+          "display_name": "SPINAL BUS",
+          "category": "implant",
+          "weight": 650,
+          "max_count": 650,
+          "requires": [],
+          "excludes": [
+            "interface.null_mask"
+          ],
+          "tags": [
+            "implant"
+          ],
+          "target_count": 650,
+          "target_percentage": 19.50195,
+          "expected_count": 650,
+          "rarity_score_bits": 2.35830969,
+          "visual_importance": 3
+        },
+        {
+          "id": "implant.antenna",
+          "display_name": "ANTENNA",
+          "category": "implant",
+          "weight": 400,
+          "max_count": 400,
+          "requires": [],
+          "excludes": [
+            "eyes.optical_array"
+          ],
+          "tags": [
+            "implant"
+          ],
+          "target_count": 400,
+          "target_percentage": 12.0012,
+          "expected_count": 400,
+          "rarity_score_bits": 3.05874941,
+          "visual_importance": 3
+        },
+        {
+          "id": "implant.root_port",
+          "display_name": "ROOT PORT",
+          "category": "implant",
+          "weight": 180,
+          "max_count": 180,
+          "requires": [
+            {
+              "any_of": [
+                "access.system",
+                "access.root"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "implant"
+          ],
+          "target_count": 180,
+          "target_percentage": 5.40054,
+          "expected_count": 180,
+          "rarity_score_bits": 4.21075251,
+          "visual_importance": 3
+        },
+        {
+          "id": "implant.memory_spindle",
+          "display_name": "MEMORY SPINDLE",
+          "category": "implant",
+          "weight": 73,
+          "max_count": 73,
+          "requires": [
+            {
+              "any_of": [
+                "access.admin",
+                "access.system",
+                "access.root"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "implant"
+          ],
+          "target_count": 73,
+          "target_percentage": 2.190219,
+          "expected_count": 73,
+          "rarity_score_bits": 5.51278104,
+          "visual_importance": 3
+        },
+        {
+          "id": "implant.signal_crown",
+          "display_name": "SIGNAL CROWN",
+          "category": "implant",
+          "weight": 30,
+          "max_count": 30,
+          "requires": [
+            {
+              "any_of": [
+                "access.root"
+              ]
+            }
+          ],
+          "excludes": [
+            "interface.skeletal_interface"
+          ],
+          "tags": [
+            "implant"
+          ],
+          "target_count": 30,
+          "target_percentage": 0.90009,
+          "expected_count": 30,
+          "rarity_score_bits": 6.79571501,
+          "visual_importance": 3
+        }
+      ]
+    },
+    "mantle": {
+      "id": "mantle",
+      "display_name": "Mantle",
+      "visual_importance": 4,
+      "cardinality": "exactly_one",
+      "art_visible": true,
+      "metadata_only": false,
+      "values": [
+        {
+          "id": "mantle.archive_coat",
+          "display_name": "ARCHIVE COAT",
+          "category": "mantle",
+          "weight": 1100,
+          "max_count": 1100,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "mantle"
+          ],
+          "target_count": 1100,
+          "target_percentage": 33.0033,
+          "expected_count": 1100,
+          "rarity_score_bits": 1.59931779,
+          "visual_importance": 4
+        },
+        {
+          "id": "mantle.ceramic_mantle",
+          "display_name": "CERAMIC MANTLE",
+          "category": "mantle",
+          "weight": 850,
+          "max_count": 850,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "mantle"
+          ],
+          "target_count": 850,
+          "target_percentage": 25.50255,
+          "expected_count": 850,
+          "rarity_score_bits": 1.97128657,
+          "visual_importance": 4
+        },
+        {
+          "id": "mantle.cable_shroud",
+          "display_name": "CABLE SHROUD",
+          "category": "mantle",
+          "weight": 650,
+          "max_count": 650,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "mantle"
+          ],
+          "target_count": 650,
+          "target_percentage": 19.50195,
+          "expected_count": 650,
+          "rarity_score_bits": 2.35830969,
+          "visual_importance": 4
+        },
+        {
+          "id": "mantle.field_collar",
+          "display_name": "FIELD COLLAR",
+          "category": "mantle",
+          "weight": 500,
+          "max_count": 500,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "mantle"
+          ],
+          "target_count": 500,
+          "target_percentage": 15.0015,
+          "expected_count": 500,
+          "rarity_score_bits": 2.73682132,
+          "visual_importance": 4
+        },
+        {
+          "id": "mantle.split_shell",
+          "display_name": "SPLIT SHELL",
+          "category": "mantle",
+          "weight": 200,
+          "max_count": 200,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "mantle"
+          ],
+          "target_count": 200,
+          "target_percentage": 6.0006,
+          "expected_count": 200,
+          "rarity_score_bits": 4.05874941,
+          "visual_importance": 4
+        },
+        {
+          "id": "mantle.unsupported_frame",
+          "display_name": "UNSUPPORTED FRAME",
+          "category": "mantle",
+          "weight": 33,
+          "max_count": 33,
+          "requires": [
+            {
+              "any_of": [
+                "entity.specter"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "mantle"
+          ],
+          "target_count": 33,
+          "target_percentage": 0.990099,
+          "expected_count": 33,
+          "rarity_score_bits": 6.65821148,
+          "visual_importance": 4
+        }
+      ]
+    },
+    "background": {
+      "id": "background",
+      "display_name": "Background",
+      "visual_importance": 2,
+      "cardinality": "exactly_one",
+      "art_visible": true,
+      "metadata_only": false,
+      "values": [
+        {
+          "id": "background.evidence_void",
+          "display_name": "EVIDENCE VOID",
+          "category": "background",
+          "weight": 1000,
+          "max_count": 1000,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "background"
+          ],
+          "target_count": 1000,
+          "target_percentage": 30.003,
+          "expected_count": 1000,
+          "rarity_score_bits": 1.73682132,
+          "visual_importance": 2
+        },
+        {
+          "id": "background.cold_storage",
+          "display_name": "COLD STORAGE",
+          "category": "background",
+          "weight": 700,
+          "max_count": 700,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "background"
+          ],
+          "target_count": 700,
+          "target_percentage": 21.0021,
+          "expected_count": 700,
+          "rarity_score_bits": 2.25139449,
+          "visual_importance": 2
+        },
+        {
+          "id": "background.rack_shadow",
+          "display_name": "RACK SHADOW",
+          "category": "background",
+          "weight": 600,
+          "max_count": 600,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "background"
+          ],
+          "target_count": 600,
+          "target_percentage": 18.0018,
+          "expected_count": 600,
+          "rarity_score_bits": 2.47378691,
+          "visual_importance": 2
+        },
+        {
+          "id": "background.relay_well",
+          "display_name": "RELAY WELL",
+          "category": "background",
+          "weight": 450,
+          "max_count": 450,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "background"
+          ],
+          "target_count": 450,
+          "target_percentage": 13.50135,
+          "expected_count": 450,
+          "rarity_score_bits": 2.88882441,
+          "visual_importance": 2
+        },
+        {
+          "id": "background.service_tunnel",
+          "display_name": "SERVICE TUNNEL",
+          "category": "background",
+          "weight": 350,
+          "max_count": 350,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "background"
+          ],
+          "target_count": 350,
+          "target_percentage": 10.50105,
+          "expected_count": 350,
+          "rarity_score_bits": 3.25139449,
+          "visual_importance": 2
+        },
+        {
+          "id": "background.anechoic_room",
+          "display_name": "ANECHOIC ROOM",
+          "category": "background",
+          "weight": 200,
+          "max_count": 200,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "background"
+          ],
+          "target_count": 200,
+          "target_percentage": 6.0006,
+          "expected_count": 200,
+          "rarity_score_bits": 4.05874941,
+          "visual_importance": 2
+        },
+        {
+          "id": "background.uplink_black",
+          "display_name": "UPLINK BLACK",
+          "category": "background",
+          "weight": 33,
+          "max_count": 33,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "background"
+          ],
+          "target_count": 33,
+          "target_percentage": 0.990099,
+          "expected_count": 33,
+          "rarity_score_bits": 6.65821148,
+          "visual_importance": 2
+        }
+      ]
+    },
+    "signal": {
+      "id": "signal",
+      "display_name": "Signal",
+      "visual_importance": 1,
+      "cardinality": "exactly_one",
+      "art_visible": false,
+      "metadata_only": true,
+      "values": [
+        {
+          "id": "signal.locked",
+          "display_name": "LOCKED",
+          "category": "signal",
+          "weight": 1600,
+          "max_count": 1600,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "signal"
+          ],
+          "target_count": 1600,
+          "target_percentage": 48.0048,
+          "expected_count": 1600,
+          "rarity_score_bits": 1.05874941,
+          "visual_importance": 1
+        },
+        {
+          "id": "signal.intermittent",
+          "display_name": "INTERMITTENT",
+          "category": "signal",
+          "weight": 900,
+          "max_count": 900,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "signal"
+          ],
+          "target_count": 900,
+          "target_percentage": 27.0027,
+          "expected_count": 900,
+          "rarity_score_bits": 1.88882441,
+          "visual_importance": 1
+        },
+        {
+          "id": "signal.carrier_echo",
+          "display_name": "CARRIER ECHO",
+          "category": "signal",
+          "weight": 600,
+          "max_count": 600,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "signal"
+          ],
+          "target_count": 600,
+          "target_percentage": 18.0018,
+          "expected_count": 600,
+          "rarity_score_bits": 2.47378691,
+          "visual_importance": 1
+        },
+        {
+          "id": "signal.silent",
+          "display_name": "SILENT",
+          "category": "signal",
+          "weight": 200,
+          "max_count": 200,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "signal"
+          ],
+          "target_count": 200,
+          "target_percentage": 6.0006,
+          "expected_count": 200,
+          "rarity_score_bits": 4.05874941,
+          "visual_importance": 1
+        },
+        {
+          "id": "signal.unclocked",
+          "display_name": "UNCLOCKED",
+          "category": "signal",
+          "weight": 33,
+          "max_count": 33,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "signal"
+          ],
+          "target_count": 33,
+          "target_percentage": 0.990099,
+          "expected_count": 33,
+          "rarity_score_bits": 6.65821148,
+          "visual_importance": 1
+        }
+      ]
+    },
+    "corruption": {
+      "id": "corruption",
+      "display_name": "Origin Corruption",
+      "visual_importance": 2,
+      "cardinality": "exactly_one",
+      "art_visible": true,
+      "metadata_only": false,
+      "values": [
+        {
+          "id": "corruption.intact",
+          "display_name": "INTACT",
+          "category": "corruption",
+          "weight": 1800,
+          "max_count": 1800,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "corruption"
+          ],
+          "target_count": 1800,
+          "target_percentage": 54.005401,
+          "expected_count": 1800,
+          "rarity_score_bits": 0.88882441,
+          "visual_importance": 2
+        },
+        {
+          "id": "corruption.scan_shear",
+          "display_name": "SCAN SHEAR",
+          "category": "corruption",
+          "weight": 800,
+          "max_count": 800,
+          "requires": [],
+          "excludes": [
+            "eyes.fractured"
+          ],
+          "tags": [
+            "corruption"
+          ],
+          "target_count": 800,
+          "target_percentage": 24.0024,
+          "expected_count": 800,
+          "rarity_score_bits": 2.05874941,
+          "visual_importance": 2
+        },
+        {
+          "id": "corruption.checksum_burn",
+          "display_name": "CHECKSUM BURN",
+          "category": "corruption",
+          "weight": 400,
+          "max_count": 400,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "corruption"
+          ],
+          "target_count": 400,
+          "target_percentage": 12.0012,
+          "expected_count": 400,
+          "rarity_score_bits": 3.05874941,
+          "visual_importance": 2
+        },
+        {
+          "id": "corruption.packet_ghosting",
+          "display_name": "PACKET GHOSTING",
+          "category": "corruption",
+          "weight": 250,
+          "max_count": 250,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "corruption"
+          ],
+          "target_count": 250,
+          "target_percentage": 7.50075,
+          "expected_count": 250,
+          "rarity_score_bits": 3.73682132,
+          "visual_importance": 2
+        },
+        {
+          "id": "corruption.memory_bleed",
+          "display_name": "MEMORY BLEED",
+          "category": "corruption",
+          "weight": 50,
+          "max_count": 50,
+          "requires": [],
+          "excludes": [],
+          "tags": [
+            "corruption"
+          ],
+          "target_count": 50,
+          "target_percentage": 1.50015,
+          "expected_count": 50,
+          "rarity_score_bits": 6.05874941,
+          "visual_importance": 2
+        },
+        {
+          "id": "corruption.absence",
+          "display_name": "ABSENCE",
+          "category": "corruption",
+          "weight": 33,
+          "max_count": 33,
+          "requires": [
+            {
+              "any_of": [
+                "entity.hollow",
+                "entity.specter"
+              ]
+            }
+          ],
+          "excludes": [],
+          "tags": [
+            "corruption"
+          ],
+          "target_count": 33,
+          "target_percentage": 0.990099,
+          "expected_count": 33,
+          "rarity_score_bits": 6.65821148,
+          "visual_importance": 2
+        }
+      ]
+    }
+  },
+  "art_visible_categories": [
+    "entity",
+    "architecture",
+    "material",
+    "eyes",
+    "interface",
+    "implant",
+    "mantle",
+    "background",
+    "corruption"
+  ],
+  "metadata_only_categories": [
+    "access",
+    "signal"
+  ],
+  "metadata_only_decision": "Access is historical privilege expressed indirectly by allowed hardware/topology. Signal is fixed origin metadata, not current telemetry; no extra signal paint pass. Visual importance is not a layer requirement.",
+  "additional_metadata": {
+    "State": {
+      "values": [
+        "DORMANT",
+        "ACTIVE",
+        "COMPROMISED",
+        "ROOTED"
+      ],
+      "default": "DORMANT",
+      "mutable": true
+    },
+    "Rarity Band": {
+      "derived_from": "architecture",
+      "mutable": false
+    }
+  },
+  "layer_order": [
+    {
+      "z": 0,
+      "slot": "background",
+      "dirname": "00_background",
+      "categories": [
+        "background"
+      ],
+      "entity_qualified": false,
+      "required": true
+    },
+    {
+      "z": 10,
+      "slot": "environmental_depth",
+      "dirname": "10_environmental_depth",
+      "categories": [
+        "background"
+      ],
+      "entity_qualified": false,
+      "required": false
+    },
+    {
+      "z": 20,
+      "slot": "rear_anatomy",
+      "dirname": "20_rear_anatomy",
+      "categories": [
+        "entity",
+        "implant"
+      ],
+      "entity_qualified": true,
+      "required": true
+    },
+    {
+      "z": 30,
+      "slot": "mantle",
+      "dirname": "30_mantle",
+      "categories": [
+        "mantle"
+      ],
+      "entity_qualified": true,
+      "required": true
+    },
+    {
+      "z": 40,
+      "slot": "entity_base",
+      "dirname": "40_entity_base",
+      "categories": [
+        "entity",
+        "material",
+        "architecture"
+      ],
+      "entity_qualified": false,
+      "required": true
+    },
+    {
+      "z": 50,
+      "slot": "eyes",
+      "dirname": "50_eyes",
+      "categories": [
+        "eyes"
+      ],
+      "entity_qualified": true,
+      "required": true
+    },
+    {
+      "z": 60,
+      "slot": "interface",
+      "dirname": "60_interface",
+      "categories": [
+        "interface"
+      ],
+      "entity_qualified": true,
+      "required": true
+    },
+    {
+      "z": 60,
+      "slot": "implant_front",
+      "dirname": "60_implant_front",
+      "categories": [
+        "implant"
+      ],
+      "entity_qualified": true,
+      "required": true
+    },
+    {
+      "z": 70,
+      "slot": "architecture",
+      "dirname": "70_architecture",
+      "categories": [
+        "architecture"
+      ],
+      "entity_qualified": true,
+      "required": true
+    },
+    {
+      "z": 80,
+      "slot": "corruption",
+      "dirname": "80_corruption",
+      "categories": [
+        "corruption"
+      ],
+      "entity_qualified": true,
+      "required": true
+    },
+    {
+      "z": 90,
+      "slot": "witness_seam",
+      "dirname": "90_witness_seam",
+      "categories": [],
+      "entity_qualified": false,
+      "required": true
+    },
+    {
+      "z": 100,
+      "slot": "grain",
+      "dirname": "100_grain",
+      "categories": [],
+      "entity_qualified": false,
+      "required": false
+    }
+  ],
+  "incompatibility_rules": {
+    "semantics": {
+      "requires": "AND of groups, OR within any_of; IDs in each group must share a category",
+      "excludes": "No co-occurrence in either direction",
+      "max_count": "Hard edition-wide cap; target_count is exact in this release",
+      "weight": "Relative planning preference, not an independent probability; exact quotas dominate",
+      "reserved_genesis": "architecture.singular allowed only IDs 1-3",
+      "reserved_legendary": "architecture.severed_halo allowed only explicit legendary IDs"
+    },
+    "rules": {
+      "entity.human": {
+        "requires": [],
+        "excludes": []
+      },
+      "entity.synthetic": {
+        "requires": [],
+        "excludes": []
+      },
+      "entity.hollow": {
+        "requires": [],
+        "excludes": []
+      },
+      "entity.specter": {
+        "requires": [],
+        "excludes": []
+      },
+      "access.user": {
+        "requires": [],
+        "excludes": []
+      },
+      "access.admin": {
+        "requires": [],
+        "excludes": []
+      },
+      "access.system": {
+        "requires": [],
+        "excludes": []
+      },
+      "access.root": {
+        "requires": [],
+        "excludes": []
+      },
+      "architecture.sealed": {
+        "requires": [
+          {
+            "any_of": [
+              "access.user"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "architecture.inset": {
+        "requires": [
+          {
+            "any_of": [
+              "access.user",
+              "access.admin"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "architecture.double_plane": {
+        "requires": [
+          {
+            "any_of": [
+              "access.admin"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "architecture.suspended_core": {
+        "requires": [
+          {
+            "any_of": [
+              "access.system"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "architecture.severed_halo": {
+        "requires": [
+          {
+            "any_of": [
+              "access.root"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "architecture.singular": {
+        "requires": [
+          {
+            "any_of": [
+              "access.root"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "material.biosynth": {
+        "requires": [
+          {
+            "any_of": [
+              "entity.human",
+              "entity.synthetic"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "material.porcelain": {
+        "requires": [
+          {
+            "any_of": [
+              "entity.human",
+              "entity.synthetic",
+              "entity.hollow"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "material.carbon": {
+        "requires": [],
+        "excludes": []
+      },
+      "material.ceramic": {
+        "requires": [
+          {
+            "any_of": [
+              "entity.human",
+              "entity.synthetic",
+              "entity.hollow"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "material.reconstructed": {
+        "requires": [],
+        "excludes": []
+      },
+      "material.phase_glass": {
+        "requires": [
+          {
+            "any_of": [
+              "entity.specter"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "eyes.biometric": {
+        "requires": [
+          {
+            "any_of": [
+              "entity.human",
+              "entity.synthetic"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "eyes.void": {
+        "requires": [],
+        "excludes": []
+      },
+      "eyes.thermal": {
+        "requires": [
+          {
+            "any_of": [
+              "entity.human",
+              "entity.synthetic"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "eyes.fractured": {
+        "requires": [],
+        "excludes": []
+      },
+      "eyes.optical_array": {
+        "requires": [
+          {
+            "any_of": [
+              "entity.synthetic",
+              "entity.hollow"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "eyes.signal_burn": {
+        "requires": [
+          {
+            "any_of": [
+              "entity.specter"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "interface.none": {
+        "requires": [],
+        "excludes": []
+      },
+      "interface.forensic_plate": {
+        "requires": [],
+        "excludes": []
+      },
+      "interface.respirator": {
+        "requires": [
+          {
+            "any_of": [
+              "entity.human",
+              "entity.synthetic"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "interface.neural_veil": {
+        "requires": [
+          {
+            "any_of": [
+              "entity.synthetic",
+              "entity.hollow",
+              "entity.specter"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "interface.null_mask": {
+        "requires": [],
+        "excludes": []
+      },
+      "interface.skeletal_interface": {
+        "requires": [
+          {
+            "any_of": [
+              "entity.hollow",
+              "entity.specter"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "implant.none": {
+        "requires": [],
+        "excludes": []
+      },
+      "implant.neural_cable": {
+        "requires": [],
+        "excludes": []
+      },
+      "implant.spinal_bus": {
+        "requires": [],
+        "excludes": [
+          "interface.null_mask"
+        ]
+      },
+      "implant.antenna": {
+        "requires": [],
+        "excludes": [
+          "eyes.optical_array"
+        ]
+      },
+      "implant.root_port": {
+        "requires": [
+          {
+            "any_of": [
+              "access.system",
+              "access.root"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "implant.memory_spindle": {
+        "requires": [
+          {
+            "any_of": [
+              "access.admin",
+              "access.system",
+              "access.root"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "implant.signal_crown": {
+        "requires": [
+          {
+            "any_of": [
+              "access.root"
+            ]
+          }
+        ],
+        "excludes": [
+          "interface.skeletal_interface"
+        ]
+      },
+      "mantle.archive_coat": {
+        "requires": [],
+        "excludes": []
+      },
+      "mantle.ceramic_mantle": {
+        "requires": [],
+        "excludes": []
+      },
+      "mantle.cable_shroud": {
+        "requires": [],
+        "excludes": []
+      },
+      "mantle.field_collar": {
+        "requires": [],
+        "excludes": []
+      },
+      "mantle.split_shell": {
+        "requires": [],
+        "excludes": []
+      },
+      "mantle.unsupported_frame": {
+        "requires": [
+          {
+            "any_of": [
+              "entity.specter"
+            ]
+          }
+        ],
+        "excludes": []
+      },
+      "background.evidence_void": {
+        "requires": [],
+        "excludes": []
+      },
+      "background.cold_storage": {
+        "requires": [],
+        "excludes": []
+      },
+      "background.rack_shadow": {
+        "requires": [],
+        "excludes": []
+      },
+      "background.relay_well": {
+        "requires": [],
+        "excludes": []
+      },
+      "background.service_tunnel": {
+        "requires": [],
+        "excludes": []
+      },
+      "background.anechoic_room": {
+        "requires": [],
+        "excludes": []
+      },
+      "background.uplink_black": {
+        "requires": [],
+        "excludes": []
+      },
+      "signal.locked": {
+        "requires": [],
+        "excludes": []
+      },
+      "signal.intermittent": {
+        "requires": [],
+        "excludes": []
+      },
+      "signal.carrier_echo": {
+        "requires": [],
+        "excludes": []
+      },
+      "signal.silent": {
+        "requires": [],
+        "excludes": []
+      },
+      "signal.unclocked": {
+        "requires": [],
+        "excludes": []
+      },
+      "corruption.intact": {
+        "requires": [],
+        "excludes": []
+      },
+      "corruption.scan_shear": {
+        "requires": [],
+        "excludes": [
+          "eyes.fractured"
+        ]
+      },
+      "corruption.checksum_burn": {
+        "requires": [],
+        "excludes": []
+      },
+      "corruption.packet_ghosting": {
+        "requires": [],
+        "excludes": []
+      },
+      "corruption.memory_bleed": {
+        "requires": [],
+        "excludes": []
+      },
+      "corruption.absence": {
+        "requires": [
+          {
+            "any_of": [
+              "entity.hollow",
+              "entity.specter"
+            ]
+          }
+        ],
+        "excludes": []
+      }
+    },
+    "asset_rule": "No generic anatomical fallback; NONE/INTACT omit assets. Non-empty trait layers are required. Socket/depth validation is an additional visual gate."
+  },
+  "rarity_bands": [
+    {
+      "id": "COMMON",
+      "count": 1800,
+      "architecture": "architecture.sealed"
+    },
+    {
+      "id": "UNCOMMON",
+      "count": 900,
+      "architecture": "architecture.inset"
+    },
+    {
+      "id": "RARE",
+      "count": 420,
+      "architecture": "architecture.double_plane"
+    },
+    {
+      "id": "EPIC",
+      "count": 180,
+      "architecture": "architecture.suspended_core"
+    },
+    {
+      "id": "LEGENDARY",
+      "count": 30,
+      "architecture": "architecture.severed_halo"
+    },
+    {
+      "id": "1/1",
+      "count": 3,
+      "architecture": "architecture.singular"
+    }
+  ],
+  "rarity_band_from_architecture": {
+    "architecture.sealed": "COMMON",
+    "architecture.inset": "UNCOMMON",
+    "architecture.double_plane": "RARE",
+    "architecture.suspended_core": "EPIC",
+    "architecture.severed_halo": "LEGENDARY",
+    "architecture.singular": "1/1"
+  },
+  "genesis_overrides": {
+    "policy": "Complete individually authored scene, including environment, seam and final transform. Metadata MUST retain every fixed Genesis trait. No generic singular overlay.",
+    "records": [
+      {
+        "token_id": 1,
+        "codename": "THE WITNESS",
+        "id": "genesis.witness",
+        "visual_signature": "Thin porcelain shell framing a second observation plane, heavy break collar, single witness seam",
+        "art_prompt_delta": "thin glazed porcelain, precise two-plane facial cavity, fine biometric iris rings, half-width forensic cheek plate, one spindle, heavy archive coat; quiet and attentive. The complete eye/cavity arrangement is exclusive to this 1/1.",
+        "origin": "ROOT's independent event-witness process, reconstructed without its authorizing operator",
+        "known_events": [
+          "Recorded an administrator command after all administrators were supposedly absent"
+        ],
+        "unknowns": [
+          "Whether the event was witnessed live or reconstructed from a later reconciliation"
+        ],
+        "quote": "I remember the part you removed.",
+        "future_role": "Introduces contradictory logs and preserves both observation planes in ROOTED",
+        "access": "ROOT",
+        "state": "DORMANT",
+        "traits": {
+          "entity": "entity.synthetic",
+          "access": "access.root",
+          "architecture": "architecture.singular",
+          "material": "material.porcelain",
+          "eyes": "eyes.biometric",
+          "interface": "interface.forensic_plate",
+          "implant": "implant.memory_spindle",
+          "mantle": "mantle.archive_coat",
+          "background": "background.evidence_void",
+          "signal": "signal.locked",
+          "corruption": "corruption.intact"
+        },
+        "dossier": "genesis.md",
+        "art_status": "concept_only"
+      },
+      {
+        "token_id": 2,
+        "codename": "THE NULL",
+        "id": "genesis.null",
+        "visual_signature": "Missing face volume enclosed by a carbon cranial rim and two physical witness-seam fragments",
+        "art_prompt_delta": "correctly occluded head-shaped carbon void, deep interior shadow, sparse disconnected witness seam, dense black cable shroud, blind ceramic root port. No skull teeth, hollow-cheek horror cliche, or floating smoke face.",
+        "origin": "Erasure subsystem that learned to withhold identities instead of destroying them",
+        "known_events": [
+          "Three erased records appeared in its absence ledger without names"
+        ],
+        "unknowns": [
+          "Whether it sacrificed its own face to shelter the missing identities"
+        ],
+        "quote": "An empty record is not an empty life.",
+        "future_role": "Reveals absence as consent; ROOTED preserves the void within a stable protective frame",
+        "access": "ROOT",
+        "state": "DORMANT",
+        "traits": {
+          "entity": "entity.hollow",
+          "access": "access.root",
+          "architecture": "architecture.singular",
+          "material": "material.carbon",
+          "eyes": "eyes.void",
+          "interface": "interface.none",
+          "implant": "implant.root_port",
+          "mantle": "mantle.cable_shroud",
+          "background": "background.cold_storage",
+          "signal": "signal.silent",
+          "corruption": "corruption.absence"
+        },
+        "dossier": "genesis.md",
+        "art_status": "concept_only"
+      },
+      {
+        "token_id": 3,
+        "codename": "THE LAST ADMINISTRATOR",
+        "id": "genesis.last_administrator",
+        "visual_signature": "Two incomplete facial surfaces aligned at the witness seam, severed inward-facing receiver topology",
+        "art_prompt_delta": "volume-coherent double reconstruction, repaired pale composite, fractured optical depth, fine conforming neural veil, thirty-degree separated receiver segments; silhouette controlled and imperial without jewelry.",
+        "origin": "The last valid permission-revocation ledger reconstructed as a person",
+        "known_events": [
+          "Signed away its own ROOT privilege before the purge could complete"
+        ],
+        "unknowns": [
+          "Whether a person or ROOT itself authorized the revocation"
+        ],
+        "quote": "Permission revoked. By me.",
+        "future_role": "Resolves season one by proving voluntary relinquishment without acquiring authority over holders",
+        "access": "ROOT",
+        "state": "DORMANT",
+        "traits": {
+          "entity": "entity.specter",
+          "access": "access.root",
+          "architecture": "architecture.singular",
+          "material": "material.reconstructed",
+          "eyes": "eyes.fractured",
+          "interface": "interface.neural_veil",
+          "implant": "implant.signal_crown",
+          "mantle": "mantle.split_shell",
+          "background": "background.relay_well",
+          "signal": "signal.carrier_echo",
+          "corruption": "corruption.packet_ghosting"
+        },
+        "dossier": "genesis.md",
+        "art_status": "concept_only"
+      }
+    ]
+  },
+  "legendary_overrides": {
+    "policy": "Complete authored scenes selected by reserved token ID. Witness vectors remain fixed for this prototype; reservation fields remain enforced. Direction/approval pending, never replace the witness with random art traits.",
+    "records": [
+      {
+        "token_id": 303,
+        "archetype": "observer",
+        "interpretation": 1,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 403,
+        "archetype": "observer",
+        "interpretation": 2,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 503,
+        "archetype": "observer",
+        "interpretation": 3,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 603,
+        "archetype": "fracture",
+        "interpretation": 1,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 703,
+        "archetype": "fracture",
+        "interpretation": 2,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 803,
+        "archetype": "fracture",
+        "interpretation": 3,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 903,
+        "archetype": "hollow",
+        "interpretation": 1,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 1003,
+        "archetype": "hollow",
+        "interpretation": 2,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 1103,
+        "archetype": "hollow",
+        "interpretation": 3,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 1203,
+        "archetype": "breach",
+        "interpretation": 1,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 1303,
+        "archetype": "breach",
+        "interpretation": 2,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 1403,
+        "archetype": "breach",
+        "interpretation": 3,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 1503,
+        "archetype": "signal",
+        "interpretation": 1,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 1603,
+        "archetype": "signal",
+        "interpretation": 2,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 1703,
+        "archetype": "signal",
+        "interpretation": 3,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 1803,
+        "archetype": "overmind",
+        "interpretation": 1,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 1903,
+        "archetype": "overmind",
+        "interpretation": 2,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 2003,
+        "archetype": "overmind",
+        "interpretation": 3,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 2103,
+        "archetype": "crown",
+        "interpretation": 1,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 2203,
+        "archetype": "crown",
+        "interpretation": 2,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 2303,
+        "archetype": "crown",
+        "interpretation": 3,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 2403,
+        "archetype": "archivist",
+        "interpretation": 1,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 2503,
+        "archetype": "archivist",
+        "interpretation": 2,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 2603,
+        "archetype": "archivist",
+        "interpretation": 3,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 2703,
+        "archetype": "witness",
+        "interpretation": 1,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 2803,
+        "archetype": "witness",
+        "interpretation": 2,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 2903,
+        "archetype": "witness",
+        "interpretation": 3,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 3003,
+        "archetype": "threshold",
+        "interpretation": 1,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 3103,
+        "archetype": "threshold",
+        "interpretation": 2,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      },
+      {
+        "token_id": 3203,
+        "archetype": "threshold",
+        "interpretation": 3,
+        "traits": {
+          "access": "access.root",
+          "architecture": "architecture.severed_halo"
+        },
+        "art_status": "concept_required",
+        "full_trait_vector_status": "pending"
+      }
+    ]
+  },
+  "deprecated_wordpress_aliases": {
+    "status": "SUPERSEDED_FOR_PRODUCTION",
+    "categories": {
+      "entity": {
+        "wordpress_label": "Entity",
+        "wordpress_meta_key": "entity",
+        "production_label": "Entity",
+        "production_field": "entity",
+        "identical_values": {
+          "HUMAN": "entity.human",
+          "SYNTHETIC": "entity.synthetic",
+          "HOLLOW": "entity.hollow",
+          "SPECTER": "entity.specter"
+        },
+        "unmapped_legacy_values": [],
+        "new_values": [],
+        "migration": "replace_from_design_witness_by_ghost_id; never infer token traits from legacy values"
+      },
+      "access": {
+        "wordpress_label": "Access",
+        "wordpress_meta_key": "access",
+        "production_label": "Access",
+        "production_field": "access",
+        "identical_values": {
+          "USER": "access.user",
+          "ADMIN": "access.admin",
+          "SYSTEM": "access.system",
+          "ROOT": "access.root"
+        },
+        "unmapped_legacy_values": [
+          "OPERATOR"
+        ],
+        "new_values": [],
+        "migration": "replace_from_design_witness_by_ghost_id; never infer token traits from legacy values"
+      },
+      "architecture": {
+        "wordpress_label": null,
+        "wordpress_meta_key": null,
+        "production_label": "Architecture",
+        "production_field": "architecture",
+        "identical_values": {},
+        "unmapped_legacy_values": [],
+        "new_values": [
+          "SEALED",
+          "INSET",
+          "DOUBLE PLANE",
+          "SUSPENDED CORE",
+          "SEVERED HALO",
+          "SINGULAR"
+        ],
+        "migration": "replace_from_design_witness_by_ghost_id; never infer token traits from legacy values"
+      },
+      "material": {
+        "wordpress_label": "Face",
+        "wordpress_meta_key": "face",
+        "production_label": "Face Material",
+        "production_field": "material",
+        "identical_values": {
+          "PORCELAIN": "material.porcelain",
+          "CARBON": "material.carbon",
+          "RECONSTRUCTED": "material.reconstructed",
+          "CERAMIC": "material.ceramic",
+          "BIO-SYNTH": "material.biosynth"
+        },
+        "unmapped_legacy_values": [
+          "CHROME"
+        ],
+        "new_values": [
+          "PHASE GLASS"
+        ],
+        "migration": "replace_from_design_witness_by_ghost_id; never infer token traits from legacy values"
+      },
+      "eyes": {
+        "wordpress_label": "Eyes",
+        "wordpress_meta_key": "eyes",
+        "production_label": "Eyes",
+        "production_field": "eyes",
+        "identical_values": {
+          "THERMAL": "eyes.thermal",
+          "VOID": "eyes.void",
+          "BIOMETRIC": "eyes.biometric",
+          "FRACTURED": "eyes.fractured",
+          "OPTICAL ARRAY": "eyes.optical_array",
+          "SIGNAL-BURN": "eyes.signal_burn"
+        },
+        "unmapped_legacy_values": [
+          "NULL APERTURE",
+          "REVOCATION LENS",
+          "WITNESS ARRAY"
+        ],
+        "new_values": [],
+        "migration": "replace_from_design_witness_by_ghost_id; never infer token traits from legacy values"
+      },
+      "interface": {
+        "wordpress_label": "Mask",
+        "wordpress_meta_key": "mask",
+        "production_label": "Interface",
+        "production_field": "interface",
+        "identical_values": {
+          "RESPIRATOR": "interface.respirator",
+          "FORENSIC PLATE": "interface.forensic_plate",
+          "SKELETAL INTERFACE": "interface.skeletal_interface",
+          "NULL MASK": "interface.null_mask",
+          "NEURAL VEIL": "interface.neural_veil",
+          "NONE": "interface.none"
+        },
+        "unmapped_legacy_values": [],
+        "new_values": [],
+        "migration": "replace_from_design_witness_by_ghost_id; never infer token traits from legacy values"
+      },
+      "implant": {
+        "wordpress_label": "Implant",
+        "wordpress_meta_key": "implant",
+        "production_label": "Implant",
+        "production_field": "implant",
+        "identical_values": {
+          "NEURAL CABLE": "implant.neural_cable",
+          "ANTENNA": "implant.antenna",
+          "SPINAL BUS": "implant.spinal_bus",
+          "SIGNAL CROWN": "implant.signal_crown",
+          "ROOT PORT": "implant.root_port"
+        },
+        "unmapped_legacy_values": [
+          "OPTICAL ARRAY"
+        ],
+        "new_values": [
+          "NONE",
+          "MEMORY SPINDLE"
+        ],
+        "migration": "replace_from_design_witness_by_ghost_id; never infer token traits from legacy values"
+      },
+      "mantle": {
+        "wordpress_label": null,
+        "wordpress_meta_key": null,
+        "production_label": "Mantle",
+        "production_field": "mantle",
+        "identical_values": {},
+        "unmapped_legacy_values": [],
+        "new_values": [
+          "ARCHIVE COAT",
+          "CERAMIC MANTLE",
+          "CABLE SHROUD",
+          "FIELD COLLAR",
+          "SPLIT SHELL",
+          "UNSUPPORTED FRAME"
+        ],
+        "migration": "replace_from_design_witness_by_ghost_id; never infer token traits from legacy values"
+      },
+      "background": {
+        "wordpress_label": "Background",
+        "wordpress_meta_key": "background",
+        "production_label": "Background",
+        "production_field": "background",
+        "identical_values": {
+          "COLD STORAGE": "background.cold_storage"
+        },
+        "unmapped_legacy_values": [
+          "SERVER",
+          "BLACKSITE",
+          "SATELLITE",
+          "VOID",
+          "ARCHIVE",
+          "SIGNAL CHAMBER"
+        ],
+        "new_values": [
+          "EVIDENCE VOID",
+          "RACK SHADOW",
+          "RELAY WELL",
+          "SERVICE TUNNEL",
+          "ANECHOIC ROOM",
+          "UPLINK BLACK"
+        ],
+        "migration": "replace_from_design_witness_by_ghost_id; never infer token traits from legacy values"
+      },
+      "signal": {
+        "wordpress_label": "Signal",
+        "wordpress_meta_key": "signal",
+        "production_label": "Signal",
+        "production_field": "signal",
+        "identical_values": {
+          "INTERMITTENT": "signal.intermittent"
+        },
+        "unmapped_legacy_values": [
+          "STABLE",
+          "DEGRADED",
+          "CORRUPTED",
+          "NULL",
+          "UNKNOWN"
+        ],
+        "new_values": [
+          "LOCKED",
+          "CARRIER ECHO",
+          "SILENT",
+          "UNCLOCKED"
+        ],
+        "migration": "replace_from_design_witness_by_ghost_id; never infer token traits from legacy values"
+      },
+      "corruption": {
+        "wordpress_label": "Corruption",
+        "wordpress_meta_key": "corruption",
+        "production_label": "Origin Corruption",
+        "production_field": "corruption",
+        "identical_values": {
+          "PACKET GHOSTING": "corruption.packet_ghosting",
+          "MEMORY BLEED": "corruption.memory_bleed"
+        },
+        "unmapped_legacy_values": [
+          "GLITCH",
+          "BURN",
+          "SIGNAL LOSS",
+          "FRAGMENTATION",
+          "NONE"
+        ],
+        "new_values": [
+          "INTACT",
+          "SCAN SHEAR",
+          "CHECKSUM BURN",
+          "ABSENCE"
+        ],
+        "migration": "replace_from_design_witness_by_ghost_id; never infer token traits from legacy values"
+      }
+    },
+    "rarity_band": {
+      "old": {
+        "STANDARD": 2700,
+        "CORRUPTED": 500,
+        "ADMIN": 100,
+        "ROOT": 30,
+        "GENESIS": 3
+      },
+      "mapping": null,
+      "migration": "derive canonical band from each witness row architecture; display labels COMMON/UNCOMMON/RARE/EPIC/LEGENDARY/1/1. Genesis may remain a special-edition badge, not an alternate rarity."
+    },
+    "archetype": "retain legacy lore only; never scored or imported as a canonical trait",
+    "state": "preserve separately; do not reset dynamic state during origin-trait migration",
+    "deployment_status": "NOT_MIGRATED; website still uses historical vocabulary"
+  }
+}

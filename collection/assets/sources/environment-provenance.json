@@ -1,0 +1,70 @@
+[
+  {
+    "path": "collection/assets/layers/00_background/background__cold_storage__v001.png",
+    "trait_id": "background.cold_storage",
+    "sha256": "3b53fff829c58089a2d2806c136ee5ad9f233c237dd9dbf6050d281f5d793ae8",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "original deterministic procedural environment",
+    "source": "collection/scripts/build_environment_layers.py",
+    "source_sha256": "8d6ca592079eb3f4ceec88affea8f988a241cf5b86b14061059041a8eb86d099",
+    "external_textures": false,
+    "python": "3.14.7",
+    "pillow": "12.3.0",
+    "generation_settings": "native 2048 geometry; continuous key; fixed material grain; no token seed"
+  },
+  {
+    "path": "collection/assets/layers/00_background/background__evidence_void__v001.png",
+    "trait_id": "background.evidence_void",
+    "sha256": "9cc84183f91f759b9124083cfb6b782b53b55a9c50f7696378785f949c15a657",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "original deterministic procedural environment",
+    "source": "collection/scripts/build_environment_layers.py",
+    "source_sha256": "8d6ca592079eb3f4ceec88affea8f988a241cf5b86b14061059041a8eb86d099",
+    "external_textures": false,
+    "python": "3.14.7",
+    "pillow": "12.3.0",
+    "generation_settings": "native 2048 geometry; continuous key; fixed material grain; no token seed"
+  },
+  {
+    "path": "collection/assets/layers/00_background/background__rack_shadow__v001.png",
+    "trait_id": "background.rack_shadow",
+    "sha256": "d2ef2f8dc75fe1ec50015c9b80dcaf44928df87d8efa5cdb510e8587b87b4764",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "original deterministic procedural environment",
+    "source": "collection/scripts/build_environment_layers.py",
+    "source_sha256": "8d6ca592079eb3f4ceec88affea8f988a241cf5b86b14061059041a8eb86d099",
+    "external_textures": false,
+    "python": "3.14.7",
+    "pillow": "12.3.0",
+    "generation_settings": "native 2048 geometry; continuous key; fixed material grain; no token seed"
+  },
+  {
+    "path": "collection/assets/layers/00_background/background__relay_well__v001.png",
+    "trait_id": "background.relay_well",
+    "sha256": "345d9365149386d2bf01b3820dc7d3040e76cf3852ec3dbe9a1e5bef541c6200",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "original deterministic procedural environment",
+    "source": "collection/scripts/build_environment_layers.py",
+    "source_sha256": "8d6ca592079eb3f4ceec88affea8f988a241cf5b86b14061059041a8eb86d099",
+    "external_textures": false,
+    "python": "3.14.7",
+    "pillow": "12.3.0",
+    "generation_settings": "native 2048 geometry; continuous key; fixed material grain; no token seed"
+  }
+]

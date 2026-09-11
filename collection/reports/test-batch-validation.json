@@ -24,9 +24,10 @@
   ],
   "artwork": {
     "checked": 20,
-    "present": 0,
+    "present": 20,
+    "missing": [],
     "issues": [],
-    "hashes": 0,
+    "hashes": 20,
     "exact_duplicates": []
   },
   "metadata": {

@@ -1,0 +1,201 @@
+{
+  "generator": "collection/scripts/measure_anchors.py",
+  "canvas": 2048,
+  "bases": {
+    "hollow__material__carbon__architecture__suspended_core": {
+      "crown": 172,
+      "bottom": 2047,
+      "neck_y": 1120,
+      "neck_hw": 220.5,
+      "shoulder_y": 1992,
+      "shoulder_hw": 904.5,
+      "method": {
+        "eyes": "void-cavity-geometry"
+      },
+      "void_bbox": [
+        666,
+        204,
+        1391,
+        1268
+      ],
+      "eye_l": [
+        876,
+        736
+      ],
+      "eye_r": [
+        1181,
+        736
+      ],
+      "face_cx": 1028
+    },
+    "hollow__material__porcelain__architecture__sealed": {
+      "crown": 172,
+      "bottom": 2047,
+      "neck_y": 1114,
+      "neck_hw": 222.5,
+      "shoulder_y": 1986,
+      "shoulder_hw": 905.5,
+      "method": {
+        "eyes": "supervised-grid-read"
+      },
+      "void_bbox": [
+        640,
+        330,
+        1250,
+        1080
+      ],
+      "eye_l": [
+        817,
+        705
+      ],
+      "eye_r": [
+        1073,
+        705
+      ],
+      "face_cx": 945
+    },
+    "human__material__biosynth__architecture__double_plane": {
+      "crown": 96,
+      "bottom": 2047,
+      "neck_y": 1208,
+      "neck_hw": 231.5,
+      "shoulder_y": 1528,
+      "shoulder_hw": 965.5,
+      "method": {
+        "eyes": "supervised-grid-read"
+      },
+      "eye_l": [
+        808,
+        576
+      ],
+      "eye_r": [
+        1116,
+        576
+      ],
+      "face_cx": 962
+    },
+    "human__material__porcelain__architecture__sealed": {
+      "crown": 14,
+      "bottom": 2047,
+      "neck_y": 1182,
+      "neck_hw": 234,
+      "shoulder_y": 1556,
+      "shoulder_hw": 973.5,
+      "method": {
+        "eyes": "supervised-grid-read",
+        "neck": "proportional-fallback"
+      },
+      "eye_l": [
+        735,
+        585
+      ],
+      "eye_r": [
+        1010,
+        580
+      ],
+      "face_cx": 872
+    },
+    "specter__material__phase_glass__architecture__inset": {
+      "crown": 82,
+      "bottom": 2047,
+      "neck_y": 1208,
+      "neck_hw": 246.5,
+      "shoulder_y": 1570,
+      "shoulder_hw": 956.5,
+      "method": {
+        "eyes": "supervised-grid-read"
+      },
+      "eye_l": [
+        855,
+        575
+      ],
+      "eye_r": [
+        1100,
+        575
+      ],
+      "face_cx": 975
+    },
+    "specter__material__phase_glass__architecture__sealed": {
+      "crown": 14,
+      "bottom": 2047,
+      "neck_y": 1172,
+      "neck_hw": 272,
+      "shoulder_y": 1584,
+      "shoulder_hw": 976.5,
+      "method": {
+        "eyes": "supervised-grid-read",
+        "neck": "proportional-fallback"
+      },
+      "eye_l": [
+        730,
+        570
+      ],
+      "eye_r": [
+        1050,
+        575
+      ],
+      "face_cx": 890
+    },
+    "specter__material__phase_glass__architecture__suspended_core": {
+      "crown": 0,
+      "bottom": 2047,
+      "neck_y": 1170,
+      "neck_hw": 191,
+      "shoulder_y": 1452,
+      "shoulder_hw": 1002.5,
+      "method": {
+        "eyes": "supervised-grid-read",
+        "neck": "proportional-fallback"
+      },
+      "eye_l": [
+        845,
+        570
+      ],
+      "eye_r": [
+        1070,
+        570
+      ],
+      "face_cx": 958
+    },
+    "specter__material__reconstructed__architecture__double_plane": {
+      "crown": 104,
+      "bottom": 2047,
+      "neck_y": 1096,
+      "neck_hw": 366.5,
+      "shoulder_y": 1536,
+      "shoulder_hw": 951.5,
+      "method": {
+        "eyes": "supervised-grid-read"
+      },
+      "eye_l": [
+        730,
+        585
+      ],
+      "eye_r": [
+        990,
+        580
+      ],
+      "face_cx": 860
+    },
+    "synthetic__material__reconstructed__architecture__inset": {
+      "crown": 170,
+      "bottom": 2047,
+      "neck_y": 1230,
+      "neck_hw": 243.5,
+      "shoulder_y": 1906,
+      "shoulder_hw": 1023.5,
+      "method": {
+        "eyes": "supervised-grid-read"
+      },
+      "eye_l": [
+        846,
+        714
+      ],
+      "eye_r": [
+        1160,
+        715
+      ],
+      "face_cx": 1005
+    }
+  }
+}

@@ -8,81 +8,603 @@
   "results": [
     {
       "token_id": 1,
-      "status": "MISSING_ASSETS",
-      "missing": [
-        "z000 background: no asset for ('background',) = ['background.evidence_void']",
-        "z030 mantle: no asset for ('mantle',) = ['mantle.archive_coat']",
-        "z040 entity_base: no asset for ('entity', 'material') = ['entity.synthetic', 'material.porcelain']",
-        "z050 eyes: no asset for ('eyes',) = ['eyes.biometric']",
-        "z070 architecture: no asset for ('architecture',) = ['architecture.singular']",
-        "z090 witness_seam: no asset for () = []"
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0001.png",
+      "sha256": "364fcba479fb0494dc4d1a19d66b9c045696c6e543b7a414c1c8f5b7bacd211f",
+      "bytes": 2220230,
+      "layers_used": [
+        "collection/assets/scenes/genesis/0001__v001.png"
       ],
-      "resolved_count": 0
+      "source_sha256": {
+        "collection/assets/scenes/genesis/0001__v001.png": "9b4691634e8567798411335abd0df0f409ae36aeb3e23124a7f4e71512d65239"
+      },
+      "trait_ids": {
+        "entity": "entity.synthetic",
+        "access": "access.root",
+        "architecture": "architecture.singular",
+        "material": "material.porcelain",
+        "eyes": "eyes.biometric",
+        "interface": "interface.forensic_plate",
+        "implant": "implant.memory_spindle",
+        "mantle": "mantle.archive_coat",
+        "background": "background.evidence_void",
+        "signal": "signal.locked",
+        "corruption": "corruption.intact"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
     },
     {
       "token_id": 2,
-      "status": "MISSING_ASSETS",
-      "missing": [
-        "z000 background: no asset for ('background',) = ['background.cold_storage']",
-        "z030 mantle: no asset for ('mantle',) = ['mantle.cable_shroud']",
-        "z040 entity_base: no asset for ('entity', 'material') = ['entity.hollow', 'material.carbon']",
-        "z050 eyes: no asset for ('eyes',) = ['eyes.void']",
-        "z070 architecture: no asset for ('architecture',) = ['architecture.singular']",
-        "z090 witness_seam: no asset for () = []"
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0002.png",
+      "sha256": "58f9e1f1dd533df8440501cd87e087272f35d3558eb536318ebfc195cfdd5677",
+      "bytes": 2977693,
+      "layers_used": [
+        "collection/assets/scenes/genesis/0002__v001.png"
       ],
-      "resolved_count": 0
+      "source_sha256": {
+        "collection/assets/scenes/genesis/0002__v001.png": "d0844280a6a1a9c9933de2abdae5599cf69ae830d6d1090e7db5601ff0ddfd43"
+      },
+      "trait_ids": {
+        "entity": "entity.hollow",
+        "access": "access.root",
+        "architecture": "architecture.singular",
+        "material": "material.carbon",
+        "eyes": "eyes.void",
+        "interface": "interface.none",
+        "implant": "implant.root_port",
+        "mantle": "mantle.cable_shroud",
+        "background": "background.cold_storage",
+        "signal": "signal.silent",
+        "corruption": "corruption.absence"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
     },
     {
       "token_id": 3,
-      "status": "MISSING_ASSETS",
-      "missing": [
-        "z000 background: no asset for ('background',) = ['background.relay_well']",
-        "z030 mantle: no asset for ('mantle',) = ['mantle.split_shell']",
-        "z040 entity_base: no asset for ('entity', 'material') = ['entity.specter', 'material.reconstructed']",
-        "z050 eyes: no asset for ('eyes',) = ['eyes.fractured']",
-        "z070 architecture: no asset for ('architecture',) = ['architecture.singular']",
-        "z090 witness_seam: no asset for () = []"
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0003.png",
+      "sha256": "653d938663deb9c807dbadda729bb16b8503c4774984e56a2134952e2489c0d3",
+      "bytes": 3532316,
+      "layers_used": [
+        "collection/assets/scenes/genesis/0003__v001.png"
       ],
-      "resolved_count": 0
+      "source_sha256": {
+        "collection/assets/scenes/genesis/0003__v001.png": "d21ad524e50b46030eacef41ea7eab996e3e1e4b77e1a3ae69c73a764c18b706"
+      },
+      "trait_ids": {
+        "entity": "entity.specter",
+        "access": "access.root",
+        "architecture": "architecture.singular",
+        "material": "material.reconstructed",
+        "eyes": "eyes.fractured",
+        "interface": "interface.neural_veil",
+        "implant": "implant.signal_crown",
+        "mantle": "mantle.split_shell",
+        "background": "background.relay_well",
+        "signal": "signal.carrier_echo",
+        "corruption": "corruption.packet_ghosting"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
+    },
+    {
+      "token_id": 4,
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0004.png",
+      "sha256": "c459ea6ae645681573bb333cfc7b0073a8461cb4a95555f8b7b185d8df9f8463",
+      "bytes": 2553960,
+      "layers_used": [
+        "collection/assets/layers/00_background/background__rack_shadow__v001.png",
+        "collection/assets/layers/40_entity_base/entity__human__material__porcelain__architecture__sealed__v001.png",
+        "collection/assets/layers/30_mantle/mantle__archive_coat__entity__human__v001.png",
+        "collection/assets/layers/50_eyes/eyes__biometric__entity__human__v001.png"
+      ],
+      "source_sha256": {
+        "collection/assets/layers/00_background/background__rack_shadow__v001.png": "d2ef2f8dc75fe1ec50015c9b80dcaf44928df87d8efa5cdb510e8587b87b4764",
+        "collection/assets/layers/40_entity_base/entity__human__material__porcelain__architecture__sealed__v001.png": "09e05dfca3955b1dd03fa8f4a7eb06e02cdb44142e999caa837e478b1822cc66",
+        "collection/assets/layers/30_mantle/mantle__archive_coat__entity__human__v001.png": "7e9e86f24e4223ece04e0499159396e988e95503b24c84172df662ba861e5299",
+        "collection/assets/layers/50_eyes/eyes__biometric__entity__human__v001.png": "18f2182106128163a2ac6638a340731d5056a23d18b686177765d63db6ef0550"
+      },
+      "trait_ids": {
+        "entity": "entity.human",
+        "access": "access.user",
+        "architecture": "architecture.sealed",
+        "material": "material.porcelain",
+        "eyes": "eyes.biometric",
+        "interface": "interface.null_mask",
+        "implant": "implant.antenna",
+        "mantle": "mantle.archive_coat",
+        "background": "background.rack_shadow",
+        "signal": "signal.locked",
+        "corruption": "corruption.intact"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
+    },
+    {
+      "token_id": 10,
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0010.png",
+      "sha256": "bf41aa7a6905f156df4a9e5f43d910013be9c3c5121f355b716406f6ca315aa5",
+      "bytes": 2218213,
+      "layers_used": [
+        "collection/assets/layers/00_background/background__evidence_void__v001.png",
+        "collection/assets/layers/40_entity_base/entity__hollow__material__porcelain__architecture__sealed__v001.png",
+        "collection/assets/layers/30_mantle/mantle__ceramic_mantle__entity__hollow__v001.png"
+      ],
+      "source_sha256": {
+        "collection/assets/layers/00_background/background__evidence_void__v001.png": "9cc84183f91f759b9124083cfb6b782b53b55a9c50f7696378785f949c15a657",
+        "collection/assets/layers/40_entity_base/entity__hollow__material__porcelain__architecture__sealed__v001.png": "ad0c22dc8427a8300a08c332a1b8448043ef8759606478adf07489a6ffe40be1",
+        "collection/assets/layers/30_mantle/mantle__ceramic_mantle__entity__hollow__v001.png": "ae309f00cc4063944ddb420e7d1d026e8be35c45f1e2ca5abc6bdc50e5c1d6d9"
+      },
+      "trait_ids": {
+        "entity": "entity.hollow",
+        "access": "access.user",
+        "architecture": "architecture.sealed",
+        "material": "material.porcelain",
+        "eyes": "eyes.fractured",
+        "interface": "interface.skeletal_interface",
+        "implant": "implant.spinal_bus",
+        "mantle": "mantle.ceramic_mantle",
+        "background": "background.evidence_void",
+        "signal": "signal.intermittent",
+        "corruption": "corruption.intact"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
+    },
+    {
+      "token_id": 49,
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0049.png",
+      "sha256": "e963bf92c83bfc52ae9166afc626e18c92003229de07466bda0ba56feb565658",
+      "bytes": 2700013,
+      "layers_used": [
+        "collection/assets/layers/00_background/background__cold_storage__v001.png",
+        "collection/assets/layers/40_entity_base/entity__specter__material__phase_glass__architecture__sealed__v001.png",
+        "collection/assets/layers/30_mantle/mantle__unsupported_frame__entity__specter__v001.png"
+      ],
+      "source_sha256": {
+        "collection/assets/layers/00_background/background__cold_storage__v001.png": "3b53fff829c58089a2d2806c136ee5ad9f233c237dd9dbf6050d281f5d793ae8",
+        "collection/assets/layers/40_entity_base/entity__specter__material__phase_glass__architecture__sealed__v001.png": "66a1902b87e3ecf12dba9466a8f417f1b3803d182fa27d57e018629062814b32",
+        "collection/assets/layers/30_mantle/mantle__unsupported_frame__entity__specter__v001.png": "3bef8a1e75e4d44103fcab874787a6488456ccf162afc7a807187a1cc12ada93"
+      },
+      "trait_ids": {
+        "entity": "entity.specter",
+        "access": "access.user",
+        "architecture": "architecture.sealed",
+        "material": "material.phase_glass",
+        "eyes": "eyes.fractured",
+        "interface": "interface.none",
+        "implant": "implant.none",
+        "mantle": "mantle.unsupported_frame",
+        "background": "background.cold_storage",
+        "signal": "signal.locked",
+        "corruption": "corruption.intact"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
+    },
+    {
+      "token_id": 97,
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0097.png",
+      "sha256": "1fc3702168645cef48ee0b0d4adae6b0080064a918f518fa54afa7936e6a2103",
+      "bytes": 2124726,
+      "layers_used": [
+        "collection/assets/layers/00_background/background__evidence_void__v001.png",
+        "collection/assets/layers/40_entity_base/entity__hollow__material__porcelain__architecture__sealed__v001.png",
+        "collection/assets/layers/30_mantle/mantle__field_collar__entity__hollow__v001.png"
+      ],
+      "source_sha256": {
+        "collection/assets/layers/00_background/background__evidence_void__v001.png": "9cc84183f91f759b9124083cfb6b782b53b55a9c50f7696378785f949c15a657",
+        "collection/assets/layers/40_entity_base/entity__hollow__material__porcelain__architecture__sealed__v001.png": "ad0c22dc8427a8300a08c332a1b8448043ef8759606478adf07489a6ffe40be1",
+        "collection/assets/layers/30_mantle/mantle__field_collar__entity__hollow__v001.png": "f99d74dfbe690217bc563f3acf8f6a58625f27e8592e0a97c02f5b287edd5472"
+      },
+      "trait_ids": {
+        "entity": "entity.hollow",
+        "access": "access.user",
+        "architecture": "architecture.sealed",
+        "material": "material.porcelain",
+        "eyes": "eyes.void",
+        "interface": "interface.forensic_plate",
+        "implant": "implant.antenna",
+        "mantle": "mantle.field_collar",
+        "background": "background.evidence_void",
+        "signal": "signal.silent",
+        "corruption": "corruption.absence"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
+    },
+    {
+      "token_id": 112,
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0112.png",
+      "sha256": "cf06938bfb6d0d0233c0cd827d1153163ecb8b7730c6c5c05c6679d629c0a3a4",
+      "bytes": 2685057,
+      "layers_used": [
+        "collection/assets/layers/00_background/background__rack_shadow__v001.png",
+        "collection/assets/layers/40_entity_base/entity__synthetic__material__reconstructed__architecture__inset__v001.png",
+        "collection/assets/layers/30_mantle/mantle__archive_coat__entity__synthetic__v001.png",
+        "collection/assets/layers/50_eyes/eyes__optical_array__entity__synthetic__v001.png"
+      ],
+      "source_sha256": {
+        "collection/assets/layers/00_background/background__rack_shadow__v001.png": "d2ef2f8dc75fe1ec50015c9b80dcaf44928df87d8efa5cdb510e8587b87b4764",
+        "collection/assets/layers/40_entity_base/entity__synthetic__material__reconstructed__architecture__inset__v001.png": "6281a0546d1fe6adbb289a171cf8cc34d0019fc193d4598632f9dbd83cda90e1",
+        "collection/assets/layers/30_mantle/mantle__archive_coat__entity__synthetic__v001.png": "c6a13c8815f4d56e820c882e75dda695a7f6985e7ed3b67421c326ff71b6740c",
+        "collection/assets/layers/50_eyes/eyes__optical_array__entity__synthetic__v001.png": "405760b7c1d90f3db0bd81f0ecb65f7ba3c0f7adf1dc4379da42e23a2eef7e0d"
+      },
+      "trait_ids": {
+        "entity": "entity.synthetic",
+        "access": "access.admin",
+        "architecture": "architecture.inset",
+        "material": "material.reconstructed",
+        "eyes": "eyes.optical_array",
+        "interface": "interface.forensic_plate",
+        "implant": "implant.memory_spindle",
+        "mantle": "mantle.archive_coat",
+        "background": "background.rack_shadow",
+        "signal": "signal.intermittent",
+        "corruption": "corruption.intact"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
+    },
+    {
+      "token_id": 166,
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0166.png",
+      "sha256": "d1b2f6c1235feb5c6402a75d3f6ee83eb005c363013757ab1c8393ac6a657cfb",
+      "bytes": 2453397,
+      "layers_used": [
+        "collection/assets/layers/00_background/background__evidence_void__v001.png",
+        "collection/assets/layers/40_entity_base/entity__human__material__biosynth__architecture__double_plane__v001.png",
+        "collection/assets/layers/30_mantle/mantle__archive_coat__entity__human__v001.png",
+        "collection/assets/layers/50_eyes/eyes__thermal__entity__human__v001.png"
+      ],
+      "source_sha256": {
+        "collection/assets/layers/00_background/background__evidence_void__v001.png": "9cc84183f91f759b9124083cfb6b782b53b55a9c50f7696378785f949c15a657",
+        "collection/assets/layers/40_entity_base/entity__human__material__biosynth__architecture__double_plane__v001.png": "6d8005db659d97f74ab1dd08119b23c448411218ffb3183c813670d01970ba90",
+        "collection/assets/layers/30_mantle/mantle__archive_coat__entity__human__v001.png": "7e9e86f24e4223ece04e0499159396e988e95503b24c84172df662ba861e5299",
+        "collection/assets/layers/50_eyes/eyes__thermal__entity__human__v001.png": "88a9a76c82193ec8bf7c84ec2f2c900ff3e660c97527406619caf9e610206147"
+      },
+      "trait_ids": {
+        "entity": "entity.human",
+        "access": "access.admin",
+        "architecture": "architecture.double_plane",
+        "material": "material.biosynth",
+        "eyes": "eyes.thermal",
+        "interface": "interface.respirator",
+        "implant": "implant.none",
+        "mantle": "mantle.archive_coat",
+        "background": "background.evidence_void",
+        "signal": "signal.locked",
+        "corruption": "corruption.scan_shear"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
+    },
+    {
+      "token_id": 192,
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0192.png",
+      "sha256": "a0336a358f71469d205cd6c33f2f345e65c34e179946c194f183a004c490443e",
+      "bytes": 2223724,
+      "layers_used": [
+        "collection/assets/layers/00_background/background__cold_storage__v001.png",
+        "collection/assets/layers/40_entity_base/entity__hollow__material__carbon__architecture__suspended_core__v001.png",
+        "collection/assets/layers/30_mantle/mantle__archive_coat__entity__hollow__v001.png"
+      ],
+      "source_sha256": {
+        "collection/assets/layers/00_background/background__cold_storage__v001.png": "3b53fff829c58089a2d2806c136ee5ad9f233c237dd9dbf6050d281f5d793ae8",
+        "collection/assets/layers/40_entity_base/entity__hollow__material__carbon__architecture__suspended_core__v001.png": "20bddfa2c5df944d031e58b4d2dcfc4d7f950a259ef93b6a38f7bd45aa7530e3",
+        "collection/assets/layers/30_mantle/mantle__archive_coat__entity__hollow__v001.png": "ae309f00cc4063944ddb420e7d1d026e8be35c45f1e2ca5abc6bdc50e5c1d6d9"
+      },
+      "trait_ids": {
+        "entity": "entity.hollow",
+        "access": "access.system",
+        "architecture": "architecture.suspended_core",
+        "material": "material.carbon",
+        "eyes": "eyes.fractured",
+        "interface": "interface.forensic_plate",
+        "implant": "implant.root_port",
+        "mantle": "mantle.archive_coat",
+        "background": "background.cold_storage",
+        "signal": "signal.locked",
+        "corruption": "corruption.packet_ghosting"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
     },
     {
       "token_id": 303,
-      "status": "MISSING_ASSETS",
-      "missing": [
-        "z000 background: no asset for ('background',) = ['background.rack_shadow']",
-        "z030 mantle: no asset for ('mantle',) = ['mantle.cable_shroud']",
-        "z040 entity_base: no asset for ('entity', 'material') = ['entity.human', 'material.biosynth']",
-        "z050 eyes: no asset for ('eyes',) = ['eyes.thermal']",
-        "z070 architecture: no asset for ('architecture',) = ['architecture.severed_halo']",
-        "z090 witness_seam: no asset for () = []"
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0303.png",
+      "sha256": "837a911c6b7d192bae63dbf386e801d51cd5c3d388a2742958f252e346e9a8d5",
+      "bytes": 2893860,
+      "layers_used": [
+        "collection/assets/scenes/legendary/0303__v001.png"
       ],
-      "resolved_count": 0
+      "source_sha256": {
+        "collection/assets/scenes/legendary/0303__v001.png": "9c946725e9552c63e80a040522bb54eab535e63352b7cda9c03c58fac3c75ffd"
+      },
+      "trait_ids": {
+        "entity": "entity.human",
+        "access": "access.root",
+        "architecture": "architecture.severed_halo",
+        "material": "material.biosynth",
+        "eyes": "eyes.thermal",
+        "interface": "interface.respirator",
+        "implant": "implant.signal_crown",
+        "mantle": "mantle.cable_shroud",
+        "background": "background.rack_shadow",
+        "signal": "signal.locked",
+        "corruption": "corruption.intact"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
+    },
+    {
+      "token_id": 366,
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0366.png",
+      "sha256": "57eb4e9ebd28ee1f00af7de3f59708dfc3ecf2d9b5bb284c0dc991ad0836743a",
+      "bytes": 2707109,
+      "layers_used": [
+        "collection/assets/layers/00_background/background__cold_storage__v001.png",
+        "collection/assets/layers/40_entity_base/entity__specter__material__phase_glass__architecture__sealed__v001.png",
+        "collection/assets/layers/30_mantle/mantle__cable_shroud__entity__specter__v001.png"
+      ],
+      "source_sha256": {
+        "collection/assets/layers/00_background/background__cold_storage__v001.png": "3b53fff829c58089a2d2806c136ee5ad9f233c237dd9dbf6050d281f5d793ae8",
+        "collection/assets/layers/40_entity_base/entity__specter__material__phase_glass__architecture__sealed__v001.png": "66a1902b87e3ecf12dba9466a8f417f1b3803d182fa27d57e018629062814b32",
+        "collection/assets/layers/30_mantle/mantle__cable_shroud__entity__specter__v001.png": "a07281f97b55869ccefd5954bdccdbb3787422cb97eedccb2414a61137f820af"
+      },
+      "trait_ids": {
+        "entity": "entity.specter",
+        "access": "access.user",
+        "architecture": "architecture.sealed",
+        "material": "material.phase_glass",
+        "eyes": "eyes.void",
+        "interface": "interface.none",
+        "implant": "implant.neural_cable",
+        "mantle": "mantle.cable_shroud",
+        "background": "background.cold_storage",
+        "signal": "signal.locked",
+        "corruption": "corruption.absence"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
+    },
+    {
+      "token_id": 449,
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0449.png",
+      "sha256": "ad30b7693c610f143f9d112c876ccc4d34e77b00a49bdaf370f0e38e7bcd3698",
+      "bytes": 2605322,
+      "layers_used": [
+        "collection/assets/layers/00_background/background__evidence_void__v001.png",
+        "collection/assets/layers/40_entity_base/entity__specter__material__phase_glass__architecture__inset__v001.png",
+        "collection/assets/layers/30_mantle/mantle__unsupported_frame__entity__specter__v001.png"
+      ],
+      "source_sha256": {
+        "collection/assets/layers/00_background/background__evidence_void__v001.png": "9cc84183f91f759b9124083cfb6b782b53b55a9c50f7696378785f949c15a657",
+        "collection/assets/layers/40_entity_base/entity__specter__material__phase_glass__architecture__inset__v001.png": "2f1da229deb668ece0da7f8e7da24e8e4b4af7c096d28aa3bafce7d4680e8bcc",
+        "collection/assets/layers/30_mantle/mantle__unsupported_frame__entity__specter__v001.png": "3bef8a1e75e4d44103fcab874787a6488456ccf162afc7a807187a1cc12ada93"
+      },
+      "trait_ids": {
+        "entity": "entity.specter",
+        "access": "access.admin",
+        "architecture": "architecture.inset",
+        "material": "material.phase_glass",
+        "eyes": "eyes.void",
+        "interface": "interface.forensic_plate",
+        "implant": "implant.neural_cable",
+        "mantle": "mantle.unsupported_frame",
+        "background": "background.evidence_void",
+        "signal": "signal.intermittent",
+        "corruption": "corruption.scan_shear"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
+    },
+    {
+      "token_id": 493,
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0493.png",
+      "sha256": "82f514da295ccc24f5522f6a76ee303519f456b969a166d155097115acd65d35",
+      "bytes": 2601756,
+      "layers_used": [
+        "collection/assets/layers/00_background/background__evidence_void__v001.png",
+        "collection/assets/layers/40_entity_base/entity__specter__material__reconstructed__architecture__double_plane__v001.png",
+        "collection/assets/layers/30_mantle/mantle__cable_shroud__entity__specter__v001.png"
+      ],
+      "source_sha256": {
+        "collection/assets/layers/00_background/background__evidence_void__v001.png": "9cc84183f91f759b9124083cfb6b782b53b55a9c50f7696378785f949c15a657",
+        "collection/assets/layers/40_entity_base/entity__specter__material__reconstructed__architecture__double_plane__v001.png": "fb2fc4b1f9957663a1e177c57de1706f97399fc4c62c6ea3fc1d8eb52ee4a2fc",
+        "collection/assets/layers/30_mantle/mantle__cable_shroud__entity__specter__v001.png": "a07281f97b55869ccefd5954bdccdbb3787422cb97eedccb2414a61137f820af"
+      },
+      "trait_ids": {
+        "entity": "entity.specter",
+        "access": "access.admin",
+        "architecture": "architecture.double_plane",
+        "material": "material.reconstructed",
+        "eyes": "eyes.void",
+        "interface": "interface.neural_veil",
+        "implant": "implant.spinal_bus",
+        "mantle": "mantle.cable_shroud",
+        "background": "background.evidence_void",
+        "signal": "signal.locked",
+        "corruption": "corruption.absence"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
+    },
+    {
+      "token_id": 803,
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0803.png",
+      "sha256": "01129a7899afb4aba93e35e89600da5099378dac2ff142ac9ed979473b9e98a6",
+      "bytes": 2104633,
+      "layers_used": [
+        "collection/assets/scenes/legendary/0803__v001.png"
+      ],
+      "source_sha256": {
+        "collection/assets/scenes/legendary/0803__v001.png": "b70cbad303462053c50d3b177cd300ecdafb1589f2ef517d53583a86691b0c9e"
+      },
+      "trait_ids": {
+        "entity": "entity.synthetic",
+        "access": "access.root",
+        "architecture": "architecture.severed_halo",
+        "material": "material.porcelain",
+        "eyes": "eyes.thermal",
+        "interface": "interface.neural_veil",
+        "implant": "implant.signal_crown",
+        "mantle": "mantle.split_shell",
+        "background": "background.relay_well",
+        "signal": "signal.carrier_echo",
+        "corruption": "corruption.packet_ghosting"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
+    },
+    {
+      "token_id": 836,
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/0836.png",
+      "sha256": "33abddc1e80f1be804ea5c38b0556213a5ec2b3dec810abd340976499bb59c14",
+      "bytes": 2752962,
+      "layers_used": [
+        "collection/assets/layers/00_background/background__cold_storage__v001.png",
+        "collection/assets/layers/40_entity_base/entity__specter__material__phase_glass__architecture__suspended_core__v001.png",
+        "collection/assets/layers/30_mantle/mantle__unsupported_frame__entity__specter__v001.png"
+      ],
+      "source_sha256": {
+        "collection/assets/layers/00_background/background__cold_storage__v001.png": "3b53fff829c58089a2d2806c136ee5ad9f233c237dd9dbf6050d281f5d793ae8",
+        "collection/assets/layers/40_entity_base/entity__specter__material__phase_glass__architecture__suspended_core__v001.png": "5ed642d1c8bdddb33b466446b4cc45dee4c485798c33b6f547e285ecee23d061",
+        "collection/assets/layers/30_mantle/mantle__unsupported_frame__entity__specter__v001.png": "3bef8a1e75e4d44103fcab874787a6488456ccf162afc7a807187a1cc12ada93"
+      },
+      "trait_ids": {
+        "entity": "entity.specter",
+        "access": "access.system",
+        "architecture": "architecture.suspended_core",
+        "material": "material.phase_glass",
+        "eyes": "eyes.void",
+        "interface": "interface.forensic_plate",
+        "implant": "implant.root_port",
+        "mantle": "mantle.unsupported_frame",
+        "background": "background.cold_storage",
+        "signal": "signal.locked",
+        "corruption": "corruption.intact"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
+    },
+    {
+      "token_id": 1503,
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/1503.png",
+      "sha256": "dab1ee6f72854201c88bd56ee04fc8d4ddbf5e2455525d9d51db38cc9f684bf0",
+      "bytes": 2764706,
+      "layers_used": [
+        "collection/assets/scenes/legendary/1503__v001.png"
+      ],
+      "source_sha256": {
+        "collection/assets/scenes/legendary/1503__v001.png": "674d59d79ceb23130151861c0b534d607fddd03916179a6ea7f0280ebd948377"
+      },
+      "trait_ids": {
+        "entity": "entity.hollow",
+        "access": "access.root",
+        "architecture": "architecture.severed_halo",
+        "material": "material.carbon",
+        "eyes": "eyes.void",
+        "interface": "interface.forensic_plate",
+        "implant": "implant.signal_crown",
+        "mantle": "mantle.ceramic_mantle",
+        "background": "background.rack_shadow",
+        "signal": "signal.intermittent",
+        "corruption": "corruption.intact"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
     },
     {
       "token_id": 1842,
-      "status": "MISSING_ASSETS",
-      "missing": [
-        "z000 background: no asset for ('background',) = ['background.evidence_void']",
-        "z030 mantle: no asset for ('mantle',) = ['mantle.cable_shroud']",
-        "z040 entity_base: no asset for ('entity', 'material') = ['entity.human', 'material.biosynth']",
-        "z050 eyes: no asset for ('eyes',) = ['eyes.biometric']",
-        "z070 architecture: no asset for ('architecture',) = ['architecture.double_plane']",
-        "z090 witness_seam: no asset for () = []"
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/1842.png",
+      "sha256": "71aa9d59bf8137e5283212e60b96573506a63ff3a0a772367e373809f1b881f4",
+      "bytes": 2497877,
+      "layers_used": [
+        "collection/assets/layers/00_background/background__evidence_void__v001.png",
+        "collection/assets/layers/40_entity_base/entity__human__material__biosynth__architecture__double_plane__v001.png",
+        "collection/assets/layers/30_mantle/mantle__cable_shroud__entity__human__v001.png",
+        "collection/assets/layers/50_eyes/eyes__biometric__entity__human__v001.png"
       ],
-      "resolved_count": 0
+      "source_sha256": {
+        "collection/assets/layers/00_background/background__evidence_void__v001.png": "9cc84183f91f759b9124083cfb6b782b53b55a9c50f7696378785f949c15a657",
+        "collection/assets/layers/40_entity_base/entity__human__material__biosynth__architecture__double_plane__v001.png": "6d8005db659d97f74ab1dd08119b23c448411218ffb3183c813670d01970ba90",
+        "collection/assets/layers/30_mantle/mantle__cable_shroud__entity__human__v001.png": "7e9e86f24e4223ece04e0499159396e988e95503b24c84172df662ba861e5299",
+        "collection/assets/layers/50_eyes/eyes__biometric__entity__human__v001.png": "18f2182106128163a2ac6638a340731d5056a23d18b686177765d63db6ef0550"
+      },
+      "trait_ids": {
+        "entity": "entity.human",
+        "access": "access.admin",
+        "architecture": "architecture.double_plane",
+        "material": "material.biosynth",
+        "eyes": "eyes.biometric",
+        "interface": "interface.none",
+        "implant": "implant.neural_cable",
+        "mantle": "mantle.cable_shroud",
+        "background": "background.evidence_void",
+        "signal": "signal.locked",
+        "corruption": "corruption.checksum_burn"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
+    },
+    {
+      "token_id": 2803,
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/2803.png",
+      "sha256": "4fefc42b8f47bc937603add95440a5d392e6a2e1bf0becbd493753bd2829b4fa",
+      "bytes": 2008882,
+      "layers_used": [
+        "collection/assets/scenes/legendary/2803__v001.png"
+      ],
+      "source_sha256": {
+        "collection/assets/scenes/legendary/2803__v001.png": "e7ce32b3c6bc97f7067cb39324d81abf4801c73658f1e9f1c2cc3b4e261c17bc"
+      },
+      "trait_ids": {
+        "entity": "entity.hollow",
+        "access": "access.root",
+        "architecture": "architecture.severed_halo",
+        "material": "material.carbon",
+        "eyes": "eyes.fractured",
+        "interface": "interface.none",
+        "implant": "implant.signal_crown",
+        "mantle": "mantle.archive_coat",
+        "background": "background.evidence_void",
+        "signal": "signal.locked",
+        "corruption": "corruption.intact"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
     },
     {
       "token_id": 3333,
-      "status": "MISSING_ASSETS",
-      "missing": [
-        "z000 background: no asset for ('background',) = ['background.relay_well']",
-        "z030 mantle: no asset for ('mantle',) = ['mantle.cable_shroud']",
-        "z040 entity_base: no asset for ('entity', 'material') = ['entity.human', 'material.porcelain']",
-        "z050 eyes: no asset for ('eyes',) = ['eyes.void']",
-        "z070 architecture: no asset for ('architecture',) = ['architecture.sealed']",
-        "z090 witness_seam: no asset for () = []"
+      "status": "RENDERED",
+      "path": "collection/assets/test-batch/3333.png",
+      "sha256": "7798360c6ee602e8c877b64d5e5e21f7d11414847c1e8ff88605e4b267cef178",
+      "bytes": 2352580,
+      "layers_used": [
+        "collection/assets/layers/00_background/background__relay_well__v001.png",
+        "collection/assets/layers/40_entity_base/entity__human__material__porcelain__architecture__sealed__v001.png",
+        "collection/assets/layers/30_mantle/mantle__cable_shroud__entity__human__v001.png"
       ],
-      "resolved_count": 0
+      "source_sha256": {
+        "collection/assets/layers/00_background/background__relay_well__v001.png": "345d9365149386d2bf01b3820dc7d3040e76cf3852ec3dbe9a1e5bef541c6200",
+        "collection/assets/layers/40_entity_base/entity__human__material__porcelain__architecture__sealed__v001.png": "09e05dfca3955b1dd03fa8f4a7eb06e02cdb44142e999caa837e478b1822cc66",
+        "collection/assets/layers/30_mantle/mantle__cable_shroud__entity__human__v001.png": "7e9e86f24e4223ece04e0499159396e988e95503b24c84172df662ba861e5299"
+      },
+      "trait_ids": {
+        "entity": "entity.human",
+        "access": "access.user",
+        "architecture": "architecture.sealed",
+        "material": "material.porcelain",
+        "eyes": "eyes.void",
+        "interface": "interface.null_mask",
+        "implant": "implant.neural_cable",
+        "mantle": "mantle.cable_shroud",
+        "background": "background.relay_well",
+        "signal": "signal.silent",
+        "corruption": "corruption.intact"
+      },
+      "witness_sha256": "47796ae444caecd0c69365c87dea2d7dae47cd4ae7964d6d74f565e042e1f4b2"
     }
   ]
 }

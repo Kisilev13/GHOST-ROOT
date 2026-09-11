@@ -4,7 +4,7 @@ _20 token IDs; see `manifests/test-batch-selection.json` for why each was chosen
 
 ## Artwork
 
-- 0/20 images present (0 expected — see production-art-audit.md Finding 2: no layer assets exist to render from)
+- 20/20 images present (0 missing; 20 required)
 - issues: none
 - exact duplicates: none
 

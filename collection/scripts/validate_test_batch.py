@@ -2,9 +2,9 @@
 """Phase 10 — validate the 20-identity test batch: artwork, metadata, rarity.
 
 Writes collection/reports/test-batch-validation.json (machine-readable) and
-.md (human-readable). Every check is a real check against real files — a
-category with nothing to check (e.g. artwork, since none is rendered yet)
-reports that honestly rather than being silently skipped or faked as passing.
+.md (human-readable). Artwork validation is active: all 20 selected images
+must exist, be readable 2048×2048 PNGs, and not be exact duplicates. Missing
+images fail the gate; they are not an expected skip.
 """
 from __future__ import annotations
 
@@ -47,11 +47,20 @@ def load_legendary_ids() -> set[int]:
 
 
 def check_artwork(ids: list[int]) -> dict:
-    results = {"checked": 0, "present": 0, "issues": [], "hashes": {}, "exact_duplicates": []}
+    results = {
+        "checked": 0,
+        "present": 0,
+        "missing": [],
+        "issues": [],
+        "hashes": {},
+        "exact_duplicates": [],
+    }
     for tid in ids:
         path = TEST_BATCH_IMG / f"{tid:04d}.png"
         results["checked"] += 1
         if not path.is_file():
+            results["missing"].append(tid)
+            results["issues"].append(f"{tid}: image missing")
             continue
         results["present"] += 1
         data = path.read_bytes()
@@ -62,6 +71,8 @@ def check_artwork(ids: list[int]) -> dict:
             from PIL import Image
 
             with Image.open(path) as img:
+                if img.format != "PNG":
+                    results["issues"].append(f"{tid}: {img.format}, expected PNG")
                 if img.size != (2048, 2048):
                     results["issues"].append(f"{tid}: {img.size}, expected 2048x2048")
                 if img.mode not in ("RGB", "RGBA"):
@@ -188,7 +199,7 @@ def main() -> None:
           "`manifests/test-batch-selection.json` for why each was chosen._", "",
           "## Artwork", "",
           f"- {report['artwork']['present']}/{report['artwork']['checked']} images present"
-          f" (0 expected — see production-art-audit.md Finding 2: no layer assets exist to render from)",
+          f" ({len(report['artwork']['missing'])} missing; 20 required)",
           f"- issues: {report['artwork']['issues'] or 'none'}",
           f"- exact duplicates: {report['artwork']['exact_duplicates'] or 'none'}", "",
           "## Metadata", "",
@@ -212,11 +223,22 @@ def main() -> None:
     (COLLECTION / "reports" / "test-batch-validation.md").write_text("\n".join(md))
 
     print(f"wrote {out_json.relative_to(ROOT)} and .md")
-    hard_fail = (report["metadata"]["id_mismatches"] or report["metadata"]["name_mismatches"]
-                 or report["metadata"]["trait_mismatches"] or report["metadata"]["duplicate_categories"]
-                 or report["metadata"]["null_required"] or report["metadata"]["unexpected_categories"]
-                 or report["metadata"]["filesystem_or_secret_leaks"] or report["metadata"]["band_mismatches"]
-                 or not report["rarity"]["legendary_reservation_ok"] or report["artwork"]["exact_duplicates"])
+    art = report["artwork"]
+    hard_fail = (
+        art["present"] != art["checked"]
+        or art["missing"]
+        or art["issues"]
+        or art["exact_duplicates"]
+        or report["metadata"]["id_mismatches"]
+        or report["metadata"]["name_mismatches"]
+        or report["metadata"]["trait_mismatches"]
+        or report["metadata"]["duplicate_categories"]
+        or report["metadata"]["null_required"]
+        or report["metadata"]["unexpected_categories"]
+        or report["metadata"]["filesystem_or_secret_leaks"]
+        or report["metadata"]["band_mismatches"]
+        or not report["rarity"]["legendary_reservation_ok"]
+    )
     raise SystemExit(1 if hard_fail else 0)
 
 
