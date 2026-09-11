@@ -1,0 +1,15 @@
+wallet
+# GHOST//ROOT EARLY / ALLOWLIST wallet source.
+#
+# One Solana base58 wallet address per line, in the `wallet` column.
+# Lines starting with '#' are ignored. Do NOT commit fabricated addresses.
+#
+# This file is intentionally empty of wallets. While empty, the allowlist builder
+# reports PENDING_ALLOWLIST, no merkle root is produced, and the early group cannot
+# be activated (see launch_blockers.ts -> allowlist_required_but_pending).
+#
+# When real, reviewed wallets exist:
+#   1. paste the frozen, deduplicated addresses below (one per line)
+#   2. run:  npx tsx allowlist_cli.ts --build-merkle
+#   3. record the printed source hash + merkle root in the release manifest
+#   4. set pricing.early.merkle_root in launch-config.json to that root

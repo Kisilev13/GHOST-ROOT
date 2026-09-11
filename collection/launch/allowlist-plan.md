@@ -1,6 +1,8 @@
 # Allowlist — 1,110 paid eligibility slots
 
-The allowlist grants one paid mint during a 48-hour phase from nonreserved inventory. It does not guarantee a particular identity, a legendary, a discount, or financial advantage. A wallet may later make one more paid mint in public, for a lifetime total of two.
+The allowlist grants eligibility to mint at 0.10 SOL during the early phase. Public price is 0.15 SOL. Each wallet may mint at most **five total across the entire launch**, using one cumulative allowance across early and public. A wallet that mints N early can mint at most 5 − N public; transfers never restore allowance. Eligibility is not a reserved token or guarantee of availability. Both phases use the same 3,332-item inventory, IDs 0002–3333; the existing GHOST//0001 canary is excluded. Dates remain unset.
+
+On-chain enforcement must be authoritative. The prepared shared Mint Limit design and unresolved SDK verification requirements are in [MINT-LIMIT-POLICY.md](MINT-LIMIT-POLICY.md). State remains `PREPARED_NOT_DEPLOYED`.
 
 | Route | Slots | Evidence of participation |
 | --- | ---: | --- |
@@ -10,7 +12,7 @@ The allowlist grants one paid mint during a 48-hour phase from nonreserved inven
 | Juried creative responses | 111 | Original response to “I was here,” judged on concept and craft rather than likes |
 | Total | 1,110 | Initial slots; all unused mint capacity rolls into public inventory |
 
-No route requires paying for another collection, inviting users, daily posting, solving a real intrusion, or buying a physical card. Do not conflate these 333 contribution-based paid slots with the separate 99 compensation tokens reserved for artists/contributors.
+No route requires paying for another collection, inviting users, daily posting, solving a real intrusion, or buying a physical card. Eligibility slots do not create a separate reserve pool or increase the five-mint allowance.
 
 ## Selection and abuse controls
 
@@ -22,6 +24,6 @@ Wallet signatures bind canonical domain, chain, action `bind-allowlist`, one-use
 
 Publish allocation counts and rubric results using consented pseudonyms. Keep application contact data and unnecessary wallet links out of public CSVs. Deliver Merkle proofs only to the eligible wallet through authenticated retrieval or a downloadable signed record; an unprotected address enumeration API is unnecessary. The root and smart-contract claims are publicly verifiable, but a full applicant database is not part of the NFT metadata.
 
-Before deployment, finalize selected wallets and 201 reserve recipients, freeze and review both roots, and reproduce them from signed source records. If Merkle leaves bind the contract address, compute the ordinary CREATE address from the dedicated deployer's fixed nonce before building the trees, verify it on rehearsal, and abort deployment if the nonce changes. Do not create a CREATE2 init-code/root circular dependency. Record leaf encoding, hash scheme, sorted-pair policy, and root in the release manifest.
+Before deployment, finalize selected wallets, freeze and review the Core Candy Guard allowlist root, and reproduce it using the verified SDK helpers. Record the source digest, encoding, hash scheme, root, and proof verification in the release manifest. The earlier EVM reserve-root and CREATE-address workflow does not apply to this prepared Solana launch.
 
 Use exact, nonoverlapping sale timestamps and fixed root verification on-chain. The frontend is an aid; calling the contract directly must enforce the same limits. Test repeated claims, incorrect leaf parameters, replay after transfer, AL/public combined caps, and competing transactions for the final ID and final allowlist slot.
