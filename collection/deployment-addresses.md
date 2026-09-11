@@ -1,6 +1,9 @@
 # Deployment record
 
-No contracts have been deployed. No wallets, treasury, domain, storage identifiers, or production dates have been created by this design phase.
+No production contracts have been deployed. No production wallets, treasury, domain, storage
+identifiers, or production dates have been created. A disposable **devnet-only** rehearsal has
+been deployed (below); it proves the deployment path, not production readiness — visual QA
+remains `REPEAT_VISUAL_PROTOTYPE_STAGE`.
 
 | Item | Value / status |
 | --- | --- |
@@ -8,7 +11,7 @@ No contracts have been deployed. No wallets, treasury, domain, storage identifie
 | Standard | Metaplex Core (mpl_core) |
 | Rehearsal chain | Solana devnet |
 | Royalty | 500 bps (5%) |
-| Testnet collection | UNDEPLOYED |
+| Testnet collection | **DEPLOYED, DEVNET ONLY, DISPOSABLE** — `5Cd1TTYVm9Z3rviKREP4iWRcrPVRgad9Jdmk3gghyRSc` ("GHOST//ROOT DEVNET"), one canary asset (`GHOST//0001`, `CL1uGYY47uGMibazR6PfFKjj7eqaF9VJjpk7VcvL7yfR`) minted and independently verified as a collection member; royalty read back at 500 bps. Rehearsal ran on a local `solana-test-validator` that cloned the real `mpl-core` program from public devnet (its faucet was confirmed dry at rehearsal time — see `collection/devnet/deployment-receipt.md` for the full explanation and all addresses/signatures). Holds no value; never confuse with the production line below. |
 | Production collection (Core collection asset) | UNDEPLOYED |
 | Candy Machine | UNDEPLOYED |
 | Dedicated deployer wallet | UNASSIGNED |
