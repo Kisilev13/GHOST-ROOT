@@ -53,21 +53,20 @@ export interface GuardData {
 }
 
 /**
- * Build the SDK guard arguments from validated config: the shared lifetime mintLimit lives
- * ONLY in the default set (both groups inherit it); each group carries its own solPayment
- * and — when a real value exists — its startDate / allowList. Dates and roots that are null
- * are OMITTED, never invented.
+ * Build the SDK guard arguments from validated config: the default set is EMPTY, and each
+ * group carries its OWN independent mintLimit (early id 1, public id 2) plus its own
+ * solPayment and — when a real value exists — its startDate / allowList. Dates and roots
+ * that are null are OMITTED, never invented.
  */
 export function buildGuardData(cfg: LaunchConfig): GuardData {
-  const guards: Partial<DefaultGuardSetArgs> = {
-    mintLimit: some({ id: cfg.default_guard.mint_limit.id, limit: cfg.default_guard.mint_limit.limit }),
-  };
+  const guards: Partial<DefaultGuardSetArgs> = {}; // empty default — nothing inherited into groups
 
   const early: Partial<DefaultGuardSetArgs> = {
     solPayment: some({
       lamports: lamports(BigInt(cfg.pricing.early.price_lamports)),
       destination: publicKey(cfg.pricing.early.destination),
     }),
+    mintLimit: some({ id: cfg.candy_guard.mint_limit_ids.early, limit: cfg.pricing.early.max_per_wallet }),
   };
   if (cfg.pricing.early.start_date) early.startDate = some({ date: dateTime(cfg.pricing.early.start_date) });
   if (cfg.pricing.early.end_date) early.endDate = some({ date: dateTime(cfg.pricing.early.end_date) });
@@ -78,6 +77,7 @@ export function buildGuardData(cfg: LaunchConfig): GuardData {
       lamports: lamports(BigInt(cfg.pricing.public.price_lamports)),
       destination: publicKey(cfg.pricing.public.destination),
     }),
+    mintLimit: some({ id: cfg.candy_guard.mint_limit_ids.public, limit: cfg.pricing.public.max_per_wallet }),
   };
   if (cfg.pricing.public.start_date) pub.startDate = some({ date: dateTime(cfg.pricing.public.start_date) });
   if (cfg.pricing.public.end_date) pub.endDate = some({ date: dateTime(cfg.pricing.public.end_date) });

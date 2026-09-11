@@ -52,16 +52,15 @@ async function main() {
   console.log(`candy machine        ${cfg.addresses.candy_machine ?? "NOT DEPLOYED"}`);
   console.log(`items available      ${CANDY_MACHINE_SUPPLY}  (IDs ${ID_FIRST}-${ID_LAST}; GHOST//0001 excluded)`);
   console.log(`treasury             ${TREASURY}`);
-  console.log("lifetime wallet cap  5 TOTAL across all launch phases; enforcement not yet verified");
+  console.log("per-wallet cap       5 early + 5 public — INDEPENDENT counters (10 max/wallet); enforcement not yet verified");
   console.log(`royalty              ${cfg.royalty.basis_points} bps`);
-  console.log("groups (inherit the default shared mintLimit):");
+  console.log("groups (each carries its own mintLimit):");
   for (const g of layout.groups) {
     const sp = g.guards.solPayment!;
-    const ml = effectiveMintLimit(layout, g.label); // resolved (inherited) limiter
-    console.log(`  - ${g.label.padEnd(7)} ${lamportsToSol(BigInt(sp.lamports))} SOL (${sp.lamports}) -> ${sp.destination}  shared-lifetime-cap=${ml.limit} (inherited mintLimit id ${ml.id})  startDate=${g.guards.startDate?.date ?? "null (NOT_SCHEDULED)"}  allowList=${g.guards.allowList ? "SET" : (g.label === "early" ? "PENDING_ALLOWLIST" : "n/a")}`);
+    const ml = effectiveMintLimit(layout, g.label); // the group's own limiter
+    console.log(`  - ${g.label.padEnd(7)} ${lamportsToSol(BigInt(sp.lamports))} SOL (${sp.lamports}) -> ${sp.destination}  cap=${ml.limit} (own mintLimit id ${ml.id})  startDate=${g.guards.startDate?.date ?? "null (NOT_SCHEDULED)"}  allowList=${g.guards.allowList ? "SET" : (g.label === "early" ? "PENDING_ALLOWLIST" : "n/a")}`);
   }
-  const dml = layout.default.mintLimit!;
-  console.log(`default guard         mintLimit id ${dml.id}, limit ${dml.limit} ONLY (inherited by every group; no addressGate, no solPayment)`);
+  console.log(`default guard         EMPTY (no mintLimit, no addressGate, no solPayment — nothing inherited into groups)`);
   console.log("no default route      ungrouped/free default mint blocked by program group-label requirement (UNTESTED offline)");
   console.log(`bot tax               ${cfg.bot_tax.enabled ? "ENABLED" : "disabled"}`);
 
@@ -75,7 +74,7 @@ async function main() {
   // updateCandyGuard). They are constructed and sent ONLY at authorized deploy time with a
   // live connection — never here. This script signs and sends NOTHING.
   console.log(`\ndeploy transaction plan (builders in tx_builders.ts — NOT executed here):`);
-  console.log("  1-5. create Core Candy Machine + create/wrap Candy Guard + configure default mintLimit + early/public groups  (buildCreateMachineAndGuardTx)");
+  console.log("  1-5. create Core Candy Machine + create/wrap Candy Guard + configure early/public groups (each with its own solPayment + mintLimit)  (buildCreateMachineAndGuardTx)");
   console.log(`  6.   load ${CANDY_MACHINE_SUPPLY} config lines resumably in ${costs.addConfigLinesTxCount} txs @ ${costs.linesPerTx}/tx  (buildAddConfigLinesTxs)`);
   console.log("  7.   set launch dates once scheduled  (buildUpdateGuardDatesTx)");
   console.log("  8.   read-back verify machine + guard (fetchCandyMachine / fetchCandyGuard) — live-rpc step");

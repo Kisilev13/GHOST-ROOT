@@ -27,7 +27,7 @@ function groupFromConfigForDisplay(label: "early" | "public"): OnChainGroup {
     label,
     solPaymentLamports: label === "early" ? EARLY_LAMPORTS : PUBLIC_LAMPORTS,
     solPaymentDestination: TREASURY,
-    mintLimit: { id: 1, limit: 5 },
+    mintLimit: { id: label === "early" ? 1 : 2, limit: 5 },
   };
 }
 
@@ -60,18 +60,18 @@ async function main() {
   L("early exact lamports", `${early.guards.solPayment!.lamports}`);
   L("public exact lamports", `${pub.guards.solPayment!.lamports}`);
   L("treasury", TREASURY);
-  L("lifetime wallet cap", "5 TOTAL across early + public (one shared counter; defined once in default, inherited by groups)");
+  L("per-wallet cap", "5 early + 5 public — INDEPENDENT counters (10 combined; each group defines its own mintLimit)");
   const earlyEff = effectiveMintLimit(layout, "early");
   const pubEff = effectiveMintLimit(layout, "public");
-  L("early shared limiter", `${earlyEff.limit} (inherited mintLimit id ${earlyEff.id})`);
-  L("public shared limiter", `${pubEff.limit} (inherited mintLimit id ${pubEff.id})`);
+  L("early limiter", `${earlyEff.limit} (own mintLimit id ${earlyEff.id})`);
+  L("public limiter", `${pubEff.limit} (own mintLimit id ${pubEff.id})`);
   L("enforcement status", cfg.wallet_limit.enforcement_status);
-  L("shared counter", "id 1; PDA seeds ['mint_limit',id,user,candyGuard,candyMachine] (source-verified; no group label); same counter across phases");
+  L("counters", "early id 1, public id 2; PDA seeds ['mint_limit',id,user,candyGuard,candyMachine] (source-verified) include the id => DISTINCT counters per phase");
   L("allowlist readiness", isEarlyAllowlistBlocking(cfg) ? "PENDING_ALLOWLIST (no merkle root; early blocked)" : "READY");
   L("early launch date status", `${cfg.pricing.early.start_date ?? "null"} (${cfg.pricing.early.status})`);
   L("public launch date status", `${cfg.pricing.public.start_date ?? "null"} (${cfg.pricing.public.status})`);
   L("buyer-pays status", `minter+payer+rent+fees = connected buyer; creator sponsors buyer costs = ${cfg.buyer_pays.creator_sponsors_buyer_costs}`);
-  L("default guard", `mintLimit id ${layout.default.mintLimit!.id}/limit ${layout.default.mintLimit!.limit} ONLY (inherited by all groups; no addressGate, no solPayment)`);
+  L("default guard", `EMPTY (no mintLimit, no addressGate, no solPayment — nothing inherited into groups)`);
   L("bot tax", cfg.bot_tax.enabled ? "ENABLED" : "disabled (not yet enabled)");
   const costs = estimateCreatorCosts();
   L("est creator launch cost", `~${costs.recommendedReserveSol} SOL reserve (ESTIMATE from serialized sizes — pending reviewed on-chain quote)`);

@@ -51,11 +51,12 @@ export function computeBlockers(cfg: LaunchConfig, r: LaunchReadiness): Blocker[
   // localnet/devnet rehearsal remain — so integration is still incomplete.
   b.push({ code: "sdk_broadcast_integration_incomplete", reason: "Broadcast tx builders exist but the signed deployment path, on-chain resumable config-line loading, and a localnet/devnet rehearsal are not complete." });
   // The MintCounter PDA derivation IS now source-verified (installed mpl-core-candy-machine@0.3.0:
-  // seeds ['mint_limit', id, user, candyGuard, candyMachine] — no group label; early==public PDA).
-  // What remains is PROGRAM runtime behavior, not observable offline: guard inheritance merge,
-  // the "valid group label required to mint when groups exist" routing, and the counter
-  // decrement/reject-sixth. These need a validator (localnet/devnet), forbidden this phase.
-  b.push({ code: "onchain_program_enforcement_untested", reason: "Candy Guard runtime behavior (default→group inheritance merge, group-label-required routing / no ungrouped default mint, and counter decrement rejecting the sixth) is not executable offline; needs a localnet/devnet rehearsal." });
+  // seeds ['mint_limit', id, user, candyGuard, candyMachine] — includes the id, so early id 1 and
+  // public id 2 derive DIFFERENT counter PDAs => independent 5+5 caps). What remains is PROGRAM
+  // runtime behavior, not observable offline: the "valid group label required to mint when groups
+  // exist" routing and each counter's decrement/reject-sixth. These need a validator
+  // (localnet/devnet), forbidden this phase.
+  b.push({ code: "onchain_program_enforcement_untested", reason: "Candy Guard runtime behavior (group-label-required routing / no ungrouped default mint, and each independent per-phase counter decrement rejecting the sixth) is not executable offline; needs a localnet/devnet rehearsal." });
   return b;
 }
 

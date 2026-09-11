@@ -1,6 +1,6 @@
 # GhostRoot contract implementation specification
 
-No deployable smart contract is supplied in this phase. This document is the engineering interface and test plan.
+Historical EVM design reference; this is not the production deployment specification. The current Solana Core launch uses the independent per-phase five-mint policy (5 early + 5 public) in [MINT-LIMIT-POLICY.md](../launch/MINT-LIMIT-POLICY.md). No deployable smart contract is supplied here.
 
 ## Primitives and layout
 
@@ -14,15 +14,15 @@ Constructor inputs: treasury, chapter attestor, final metadata base URI, public 
 
 `mintAllowlist(uint256[] ids, bytes32[] proof)`:
 
-- IDs must be >201 and <=3333, not already minted; quantity exactly one in this phase.
+- IDs must be >201 and <=3333, not already minted; quantity at least one and within the remaining early-phase five-mint allowance.
 - Sender must prove the fixed allowlist leaf for this contract/release/chain; use an audited Merkle helper and unambiguous ABI encoding.
-- Enforce one allowlist claim per wallet and global allowlist counter <=1110.
-- Enforce `paidMintedBy[sender] + quantity <= 2` across both phases.
+- Enforce the early-phase per-wallet cap independently of the public cap.
+- Enforce `earlyMintedBy[sender] + quantity <= 5` (a counter separate from the public one).
 - Require the fixed allowlist time window and `msg.value == price * quantity`.
 
 `mintPublic(uint256[] ids)`:
 
-- Same allowed ID set and lifetime counter; quantity one or two; reject duplicate IDs within a batch.
+- Same allowed ID set; a SEPARATE public counter — `publicMintedBy[sender] + quantity <= 5` — independent of the early allowance; reject duplicate IDs within a batch.
 - Require the nonoverlapping public window.
 - Paid supply <=3132; unused allowlist capacity is automatically available because all unminted nonreserve IDs share this pool. No mutable cap increase is required.
 
@@ -69,8 +69,8 @@ totalMinted <= 3333
 paidMinted <= 3132 and reservedMinted <= 201
 totalMinted == paidMinted + reservedMinted
 each token ID is issued at most once
-paidMintedBy[wallet] <= 2, even after transfer
-allowlistMintedBy[wallet] <= 1 and allowlistMinted <= 1110
+paidMintedBy[wallet] <= 5, even after transfer
+allowlistMintedBy[wallet] + publicMintedBy[wallet] <= 5
 grossMintReceipts == price * paidMinted
 balance + successfulWithdrawals >= grossMintReceipts  # forced ETH allowed
 state[id] never decreases and is in [0,3]

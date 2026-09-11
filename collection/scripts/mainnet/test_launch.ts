@@ -1,20 +1,22 @@
 #!/usr/bin/env -S npx tsx
 /**
  * Two-tier launch test suite. Pure: no chain access, no SOL, no mint, no SDK.
- * Checks prepared descriptors and a specification model of the inheritance design; does
- * NOT prove the Candy Guard program itself (that needs a validator — see the retained
- * onchain_program_enforcement_untested blocker). SDK-backed PDA proofs live in test_pda.ts.
+ * Checks prepared descriptors and a specification model of the INDEPENDENT per-phase
+ * cap design (5 early + 5 public); does NOT prove the Candy Guard program itself (that
+ * needs a validator — see the retained onchain_program_enforcement_untested blocker).
+ * SDK-backed PDA proofs live in test_pda.ts.
  */
 import {
   loadLaunchConfig, assertConfig, EARLY_LAMPORTS, PUBLIC_LAMPORTS, TREASURY,
-  CANDY_MACHINE_SUPPLY, ID_FIRST, ID_LAST, SHARED_MINT_LIMIT_ID, MAX_PER_WALLET, type LaunchConfig,
+  CANDY_MACHINE_SUPPLY, ID_FIRST, ID_LAST, EARLY_MINT_LIMIT_ID, PUBLIC_MINT_LIMIT_ID,
+  MAX_PER_WALLET, type LaunchConfig, type GroupLabel,
 } from "./launch_config.js";
 import {
-  buildGuardLayout, assertNoCheapDefaultPath, assertSharedLifetimeLayout, getGroup,
+  buildGuardLayout, assertNoCheapDefaultPath, assertIndependentLimitLayout, getGroup,
   effectiveMintLimit, resolveGuardSet, type CandyGuardLayout,
 } from "./guard_groups.js";
 import { computeBlockers, deploymentPermitted, isEarlyAllowlistBlocking, type LaunchReadiness } from "./launch_blockers.js";
-import { executeMint, buildBuyerQuote, buildMintArgs, preflight, reconcilePrice, type OnChainGroup, type OnChainGuardConfig } from "./mint_helper.js";
+import { executeMint, buildBuyerQuote, buildMintArgs, mintLimitIdFor, preflight, reconcilePrice, type OnChainGroup, type OnChainGuardConfig } from "./mint_helper.js";
 import { buildAllowlist, isValidSolanaPubkey } from "./allowlist_builder.js";
 
 let pass = 0, fail = 0;
@@ -32,8 +34,7 @@ function aborts(fn: () => unknown, re: RegExp): void {
 
 const cfg: LaunchConfig = loadLaunchConfig();
 const layout: CandyGuardLayout = buildGuardLayout(cfg);
-// On-chain view: groups carry only their own guards (no mintLimit — it is inherited); the
-// default carries the shared mintLimit.
+// On-chain view: each group carries its OWN mintLimit; the default is empty.
 const onchain = (label: "early" | "public"): OnChainGroup => {
   const g = getGroup(layout, label);
   return { label, solPaymentLamports: BigInt(g.guards.solPayment!.lamports), solPaymentDestination: g.guards.solPayment!.destination, mintLimit: g.guards.mintLimit ?? null };
@@ -45,12 +46,13 @@ const BLOCKING_READINESS: LaunchReadiness = {
   costQuoteReviewed: true, mainnetDeployAuthorized: true,
 }; // Artifact flags cannot clear the permanent integration/verification blockers.
 
-/** Shared-counter model: ONE counter per (resolved) mintLimit id; both phases increment it. */
-function sharedCounterModel() {
+/** Independent-counter model: ONE counter per mintLimit id; each phase increments its own. */
+function independentCounterModel() {
   const counters = new Map<number, number>();
   return {
-    mint(phase: "early" | "public"): boolean {
-      const ml = effectiveMintLimit(layout, phase); // resolved via inheritance
+    counters,
+    mint(phase: GroupLabel): boolean {
+      const ml = effectiveMintLimit(layout, phase); // the group's own limiter (early id 1 / public id 2)
       const n = counters.get(ml.id) ?? 0;
       if (n >= ml.limit) return false;
       counters.set(ml.id, n + 1);
@@ -76,14 +78,16 @@ async function run() {
     assert(getGroup(layout, "public").guards.solPayment!.destination === TREASURY, "public dest != treasury");
   });
 
-  // Effective (inherited) limiter is 5 for each phase.
-  await test("6. early effective cap == 5 (inherited)", () => {
-    assert(effectiveMintLimit(layout, "early").limit === 5, "early cap != 5");
-    assert(getGroup(layout, "early").guards.mintLimit === undefined, "early should NOT define its own mintLimit (must inherit)");
+  // Each group defines its OWN mintLimit, limit 5, with a distinct id.
+  await test("6. early max per wallet == 5 (own mintLimit id 1)", () => {
+    const ml = getGroup(layout, "early").guards.mintLimit;
+    assert(!!ml && ml.limit === 5 && ml.id === EARLY_MINT_LIMIT_ID, "early own mintLimit not id 1/limit 5");
+    assert(effectiveMintLimit(layout, "early").limit === 5, "early effective cap != 5");
   });
-  await test("7. public effective cap == 5 (inherited)", () => {
-    assert(effectiveMintLimit(layout, "public").limit === 5, "public cap != 5");
-    assert(getGroup(layout, "public").guards.mintLimit === undefined, "public should NOT define its own mintLimit (must inherit)");
+  await test("7. public max per wallet == 5 (own mintLimit id 2)", () => {
+    const ml = getGroup(layout, "public").guards.mintLimit;
+    assert(!!ml && ml.limit === 5 && ml.id === PUBLIC_MINT_LIMIT_ID, "public own mintLimit not id 2/limit 5");
+    assert(effectiveMintLimit(layout, "public").limit === 5, "public effective cap != 5");
   });
 
   await test("8. null launch dates block deployment", () => {
@@ -110,18 +114,17 @@ async function run() {
     aborts(() => assertConfig({ ...cfg, pricing: { ...cfg.pricing, public: { ...cfg.pricing.public, price_lamports: 100_000_000, price_sol: 0.10 } } } as LaunchConfig), /must be strictly greater|must differ|public price 100000000/);
   });
 
-  // Under inheritance, the default carries ONLY the shared mintLimit. It must NOT carry a
-  // solPayment or an addressGate — either would be inherited by every group.
-  await test("11. default carries ONLY the shared mintLimit (nothing inherited-breaking)", () => {
+  // The default set is EMPTY: any guard there is inherited by every group.
+  await test("11. no unrestricted default mint route (empty default)", () => {
     assertNoCheapDefaultPath(layout, TREASURY); // real layout is safe
-    assert(!!layout.default.mintLimit && !layout.default.solPayment && !layout.default.addressGate,
-      "default must carry mintLimit only (no solPayment, no addressGate)");
+    assert(!layout.default.mintLimit && !layout.default.solPayment && !layout.default.addressGate,
+      "default must be empty (no mintLimit, solPayment, or addressGate)");
     // default carrying a solPayment => inherited ungrouped price => must throw
-    aborts(() => assertNoCheapDefaultPath({ default: { mintLimit: { id: 1, limit: 5 }, solPayment: { lamports: "1", destination: TREASURY } }, groups: layout.groups }, TREASURY), /solPayment/);
+    aborts(() => assertNoCheapDefaultPath({ default: { solPayment: { lamports: "1", destination: TREASURY } }, groups: layout.groups }, TREASURY), /solPayment/);
     // default carrying an addressGate => inherited by groups, blocks buyers => must throw
-    aborts(() => assertNoCheapDefaultPath({ default: { mintLimit: { id: 1, limit: 5 }, addressGate: { address: TREASURY } }, groups: layout.groups }, TREASURY), /addressGate/);
-    // default missing the shared mintLimit => no shared limiter => must throw
-    aborts(() => assertNoCheapDefaultPath({ default: {}, groups: layout.groups }, TREASURY), /shared lifetime mintLimit/);
+    aborts(() => assertNoCheapDefaultPath({ default: { addressGate: { address: TREASURY } }, groups: layout.groups }, TREASURY), /addressGate/);
+    // default carrying a mintLimit => inherited, collapses to one shared counter => must throw
+    aborts(() => assertNoCheapDefaultPath({ default: { mintLimit: { id: 1, limit: 5 } }, groups: layout.groups }, TREASURY), /mintLimit/);
   });
 
   await test("12. buyer remains payer", () => {
@@ -163,87 +166,92 @@ async function run() {
     assert(!drift.ok, "price drift not refused");
   });
 
-  // --- inheritance model (the new architecture) ---
-  await test("INH-1. shared mintLimit is defined ONCE, in default (id 1, limit 5)", () => {
-    const d = layout.default.mintLimit!;
-    assert(d.id === SHARED_MINT_LIMIT_ID && d.limit === MAX_PER_WALLET, "default mintLimit not id 1/limit 5");
-    assert(cfg.candy_guard.mint_limit_defined_in === "default", "config: mintLimit not defined in default");
-    assert(cfg.candy_guard.groups_inherit_default_mint_limit === true, "config: groups do not inherit default");
+  // --- independent-counter model (the reconciled architecture) ---
+  await test("IND-1. each group defines its OWN mintLimit; ids distinct (early 1, public 2)", () => {
+    const e = getGroup(layout, "early").guards.mintLimit!;
+    const p = getGroup(layout, "public").guards.mintLimit!;
+    assert(e.id === EARLY_MINT_LIMIT_ID && p.id === PUBLIC_MINT_LIMIT_ID, "group ids not 1/2");
+    assert(e.id !== p.id, "early/public ids collide");
+    assert(cfg.candy_guard.mint_limit_defined_in === "each_group", "config: mintLimit not defined per group");
+    assert(cfg.candy_guard.groups_inherit_default_mint_limit === false, "config: groups still inherit default");
+    assertIndependentLimitLayout(layout); // full structural proof
   });
-  await test("INH-2. both groups resolve (inherit) to the shared limiter", () => {
-    for (const label of ["early", "public"] as const) {
-      const eff = resolveGuardSet(layout, label).mintLimit!;
-      assert(eff.id === SHARED_MINT_LIMIT_ID && eff.limit === MAX_PER_WALLET, `${label} does not resolve to shared limiter`);
-    }
+  await test("IND-2. each group resolves to its own limiter (not a shared one)", () => {
+    assert(resolveGuardSet(layout, "early").mintLimit!.id === EARLY_MINT_LIMIT_ID, "early resolves wrong id");
+    assert(resolveGuardSet(layout, "public").mintLimit!.id === PUBLIC_MINT_LIMIT_ID, "public resolves wrong id");
   });
-  await test("INH-3. a group that overrides the shared mintLimit id is rejected (independent counter)", () => {
+  await test("IND-3. a group sharing the other's id is rejected (would collapse to one counter)", () => {
     const bad = structuredClone(layout);
-    bad.groups[1].guards.mintLimit = { id: 2, limit: 5 };
-    aborts(() => assertSharedLifetimeLayout(bad), /overrides the shared mintLimit|independent counter/);
+    bad.groups[1].guards.mintLimit = { id: EARLY_MINT_LIMIT_ID, limit: 5 }; // public grabs early's id
+    aborts(() => assertIndependentLimitLayout(bad), /!= expected|shared across groups/);
   });
-  await test("INH-4. a group that raises the cap is rejected (cap drift)", () => {
+  await test("IND-4. a group that raises its cap is rejected (cap drift)", () => {
     const bad = structuredClone(layout);
-    bad.groups[0].guards.mintLimit = { id: 1, limit: 6 };
-    aborts(() => assertSharedLifetimeLayout(bad), /overrides the shared mintLimit|drift/);
+    bad.groups[0].guards.mintLimit = { id: EARLY_MINT_LIMIT_ID, limit: 6 };
+    aborts(() => assertIndependentLimitLayout(bad), /cap drift|limit 6/);
   });
 
   // --- group-bypass / no default route ---
   await test("BYPASS-1. no default-group mint bypass: default has no priced/free mintable route", () => {
-    // The default set is not itself a priced route (no solPayment) and not an open free
-    // route beyond the shared cap; only labeled groups carry solPayment. On-chain, minting
-    // requires a valid group label when groups exist (program-level; untested offline).
     assert(!layout.default.solPayment, "default must not carry a solPayment (would be an ungrouped price)");
+    assert(!layout.default.mintLimit, "default must not carry a mintLimit (would be inherited/shared)");
     for (const g of layout.groups) assert(!!g.guards.solPayment, `group ${g.label} missing solPayment`);
     const codes = computeBlockers(cfg, BLOCKING_READINESS).map(b => b.code);
     assert(codes.includes("onchain_program_enforcement_untested"), "program-enforcement blocker (incl. no-default-bypass) missing");
   });
 
-  // --- phase-transition wallets A-E (shared lifetime counter) ---
-  await test("PT-A. 5 early then public#1 FAILS", () => {
-    const m = sharedCounterModel();
-    for (let i = 0; i < 5; i++) assert(m.mint("early"), "early allowance refused early");
-    assert(m.mint("public") === false, "6th (public) mint was not rejected");
+  // --- phase-transition wallets (independent per-phase counters) ---
+  await test("IPT-A. 5 early pass, 6th early FAILS", () => {
+    const m = independentCounterModel();
+    for (let i = 0; i < 5; i++) assert(m.mint("early"), "early refused within cap");
+    assert(m.mint("early") === false, "6th early not rejected");
   });
-  await test("PT-B. 3 early then public #1,#2 PASS, #3 FAILS", () => {
-    const m = sharedCounterModel();
-    for (let i = 0; i < 3; i++) assert(m.mint("early"), "early refused");
-    assert(m.mint("public"), "public #1 refused"); // total 4
-    assert(m.mint("public"), "public #2 refused"); // total 5
-    assert(m.mint("public") === false, "public #3 (total 6) not rejected");
-  });
-  await test("PT-C. 0 early then 5 public pass, 6th FAILS", () => {
-    const m = sharedCounterModel();
+  await test("IPT-B. 5 public pass, 6th public FAILS", () => {
+    const m = independentCounterModel();
     for (let i = 0; i < 5; i++) assert(m.mint("public"), "public refused within cap");
     assert(m.mint("public") === false, "6th public not rejected");
   });
-  await test("PT-D. 1 early then 4 public pass, 5th public FAILS", () => {
-    const m = sharedCounterModel();
-    assert(m.mint("early"), "early refused");
-    for (let i = 0; i < 4; i++) assert(m.mint("public"), "public refused within cap");
-    assert(m.mint("public") === false, "5th public (total 6) not rejected");
+  await test("IPT-C. 5 early + 5 public all pass (10 total), 11th of either FAILS; two counters", () => {
+    const m = independentCounterModel();
+    for (let i = 0; i < 5; i++) assert(m.mint("early"), "early refused within cap");
+    for (let i = 0; i < 5; i++) assert(m.mint("public"), "public refused within cap");
+    assert(m.mint("early") === false, "extra early not rejected");
+    assert(m.mint("public") === false, "extra public not rejected");
+    assert(m.counters.size === 2, "phases did not use two distinct counters");
   });
-  await test("PT-E. every 6-length early/public interleaving admits exactly 5", () => {
+  await test("IPT-D. early cap does not consume public allowance (independence)", () => {
+    const m = independentCounterModel();
+    for (let i = 0; i < 5; i++) assert(m.mint("early"), "early refused within cap");
+    assert(m.mint("early") === false, "6th early not rejected");
+    // public untouched: full 5 still available
+    for (let i = 0; i < 5; i++) assert(m.mint("public"), "public wrongly limited by early counter");
+    assert(m.mint("public") === false, "6th public not rejected");
+  });
+  await test("IPT-E. every 6-length early/public interleaving admits min(#early,5)+min(#public,5)", () => {
     for (let bits = 0; bits < 64; bits++) {
-      const m = sharedCounterModel();
-      let accepted = 0;
-      for (let i = 0; i < 6; i++) if (m.mint(bits & (1 << i) ? "early" : "public")) accepted++;
-      assert(accepted === 5, "an interleaving admitted != 5 mints");
+      const m = independentCounterModel();
+      let e = 0, p = 0, accepted = 0;
+      for (let i = 0; i < 6; i++) {
+        const phase: GroupLabel = (bits & (1 << i)) ? "early" : "public";
+        if (phase === "early") e++; else p++;
+        if (m.mint(phase)) accepted++;
+      }
+      assert(accepted === Math.min(e, 5) + Math.min(p, 5), "interleaving admitted wrong count");
     }
   });
 
   // --- mint args the frontend sends ---
-  await test("MA-1. buildMintArgs sends mintLimit.id = 1 for each phase", () => {
-    for (const label of ["early", "public"] as const) {
-      const args = buildMintArgs(label);
-      assert(args.mintLimit.id === SHARED_MINT_LIMIT_ID, `${label} mintArgs.mintLimit.id != 1`);
-    }
+  await test("MA-1. buildMintArgs sends the phase's own mintLimit id (early 1, public 2)", () => {
+    assert(buildMintArgs("early").mintLimit.id === EARLY_MINT_LIMIT_ID, "early mintArgs id != 1");
+    assert(buildMintArgs("public").mintLimit.id === PUBLIC_MINT_LIMIT_ID, "public mintArgs id != 2");
+    assert(mintLimitIdFor("early") !== mintLimitIdFor("public"), "phase ids collide");
     const withProof = buildMintArgs("early", ["aa", "bb"]);
     assert(!!withProof.allowListProof && withProof.allowListProof.length === 2, "early allowlist proof not carried");
   });
-  await test("MA-2. frontend guard-ID drift rejected before mint", () => {
+  await test("MA-2. on-chain id collision rejected before mint (independence enforced)", () => {
     const bad = onchainCfg();
-    bad.groups[1].mintLimit = { id: 2, limit: 5 }; // an on-chain group overriding to a 2nd counter
-    aborts(() => preflight(bad, "public", TREASURY), /shared lifetime mintLimit mismatch/);
+    bad.groups[1].mintLimit = { id: EARLY_MINT_LIMIT_ID, limit: 5 }; // public collides onto early's counter
+    aborts(() => preflight(bad, "public", TREASURY), /mintLimit mismatch|share a mintLimit id/);
   });
 
   // --- supporting negative cases ---
@@ -292,7 +300,6 @@ async function run() {
     const codes = computeBlockers(cfg, { fullRenderApproved: false, finalMetadataComplete: false,
       permanentUrisAvailable: false, costQuoteReviewed: false, mainnetDeployAuthorized: false }).map(b => b.code);
     assert(codes.length === 10, `expected 10 blockers, got ${codes.length}`);
-    // The stale wording is gone; the precise program-enforcement blocker is present.
     assert(!codes.includes("shared_counter_enforcement_unverified"), "stale shared-counter blocker still present");
     assert(codes.includes("onchain_program_enforcement_untested"), "precise program-enforcement blocker missing");
   });

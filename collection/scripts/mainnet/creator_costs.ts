@@ -56,9 +56,9 @@ export function candyMachineAccountBytes(items: number): bigint {
 
 /**
  * Candy Guard account bytes = fixed base (discriminator + base + bump + authority) plus
- * the serialized guard data. The guard data length is estimated (default mintLimit + two
- * priced groups w/ startDate + one allowList root); the exact length is confirmed by the
- * reviewed on-chain quote.
+ * the serialized guard data. The guard data length is estimated (empty default + two priced
+ * groups each w/ its own solPayment + mintLimit, plus startDate + one allowList root); the
+ * exact length is confirmed by the reviewed on-chain quote.
  */
 export const EST_GUARD_DATA_BYTES = 512n; // conservative headroom for default + 2 groups
 export function candyGuardAccountBytes(): bigint {
