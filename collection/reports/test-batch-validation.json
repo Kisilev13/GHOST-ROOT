@@ -32,22 +32,6 @@
     "near_duplicates": [
       {
         "pair": [
-          4,
-          3333
-        ],
-        "hamming_distance": 0,
-        "note": "flagged for human review, not auto-failed"
-      },
-      {
-        "pair": [
-          10,
-          97
-        ],
-        "hamming_distance": 2,
-        "note": "flagged for human review, not auto-failed"
-      },
-      {
-        "pair": [
           49,
           366
         ],
@@ -60,14 +44,6 @@
           836
         ],
         "hamming_distance": 4,
-        "note": "flagged for human review, not auto-failed"
-      },
-      {
-        "pair": [
-          166,
-          1842
-        ],
-        "hamming_distance": 0,
         "note": "flagged for human review, not auto-failed"
       }
     ]

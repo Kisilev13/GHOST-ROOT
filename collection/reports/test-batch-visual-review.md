@@ -1,5 +1,86 @@
 # GHOST//ROOT — test-batch visual QA
 
+## Pass 4 — 2026-09-11, mantle/collar/legendary re-authoring review (Claude)
+
+### Verdict
+
+**REPEAT_VISUAL_PROTOTYPE_STAGE**
+
+Not `APPROVED_FOR_PRODUCTION_RENDER`. Real, substantial progress this pass — five
+of the seven prior blockers are genuinely fixed on the re-rendered pixels — but two
+blockers remain that would embarrass the collection at 3,333 scale, and both need
+authored art that does not yet exist. No fake approval.
+
+### What Pass 4 genuinely fixed (verified on re-rendered 20)
+
+- **Duplicate mantles resolved.** All 8 mantle layer files now hash uniquely.
+  `cable_shroud__human` re-authored as a black conduit shoulder rig with metal
+  clamps; `ceramic_mantle__hollow` re-authored as a clean fitted break collar.
+- **0010 collar fixed.** The ragged gray floating collar is gone; 0010 now wears the
+  clean ceramic break collar, correctly seated on the shoulders (detail sheet).
+- **Legendary 0303 authored.** Cracked archive severed-halo arc + signal-crown spikes
+  + respirator + cabling. Reads as a deliberate high-rarity scene before metadata.
+- **Legendary 0803 authored.** Shattering porcelain body + mesh mask + halo cradle.
+  A whole-body destruction motif distinct from any bust.
+- **Near-duplicates: the three worst pairs gone.** `(4,3333)` and `(166,1842)` were
+  distance 0; both 3333 and 1842 now carry the authored cable-shroud shoulder rig and
+  are no longer flagged. `(10,97)` (dist 2) resolved by the 0010 collar re-author.
+  Detector now flags only `(49,366)` dist 1 and `(49,836)` dist 4.
+
+### What still blocks approval
+
+1. **Legendary 1503 and 2803 are unauthored.** Both are HOLLOW severed_halo IDs that
+   route through near-empty scene files: 1503 is a void hood + broken collar; **2803
+   is a bare void mannequin with no collar and no hardware — the plainest image in the
+   entire batch, plainer than ordinary hollow tokens 0097/0192.** Two of the four
+   legendaries in the roster do not justify their rarity. See
+   `legendary-art-direction.md` for the required direction.
+2. **Fitted hardware still omitted.** `implant_front`, `interface`, `rear_anatomy`,
+   `corruption`, and `witness_seam` remain in `UNREGISTERED_OVERLAY_SLOTS`. The
+   consequence is visible, not theoretical: the `interface` trait (respirator,
+   null_mask, forensic_plate, skeletal, neural_veil) and `implant` trait are invisible
+   on every ordinary token, so tokens that differ *only* in those traits collapse to
+   the same image. The remaining `(49,366)` near-duplicate is exactly this — two
+   specter tokens whose sole difference (`implant.neural_cable`) is unrendered.
+
+### Human-level QA (fresh, on Pass 4 pixels)
+
+- **A. Cohesion** — Strong. One material world (porcelain/phase-glass/ceramic on dark
+  archive grounds), consistent camera and light. PASS.
+- **B. Entity integration** — Good. Subjects sit in the archive environment with
+  matched key light and contact shadow. PASS.
+- **C. Hardware realism** — Mixed. The authored mantles (cable-shroud rigs on 1842/
+  3333, break collars) and legendary halos (0303/0803) read as real installed
+  hardware. But `interface`/`implant`/`corruption` hardware is absent on ordinary
+  tokens. FAIL (blocker 2).
+- **D. Silhouette diversity** — Improved (cable rigs, halos, suspended-core shards give
+  real outline variety) but undercut by 5 near-identical specter phase-glass faces
+  (49/366/449/493/836 share one face) because their differentiators are unrendered.
+  PARTIAL.
+- **E. Trait readability** — FAIL for `interface`/`implant` (invisible); PASS for
+  entity/material/architecture/mantle/eyes/background.
+- **F. Ordinary token quality** — Genesis/legendary aside, the strongest ordinary
+  tokens (0001-adjacent porcelain, 0166 thermal, 1842/3333 cable rigs) look finished;
+  the weakest (bare void hollows, under-dressed specters) look under-specified because
+  their hardware traits don't render. PARTIAL.
+- **G. Genesis** — 0001 (glowing biometric iris), 0002 (cable-nest void), 0003
+  (split-shell veil) are intentionally authored. PASS.
+- **H. Legendary** — 0303/0803 PASS; 1503/2803 FAIL (blocker 1).
+- **I. Near-duplicates** — `(49,366)` a collector would call the same piece: FAIL until
+  hardware renders. `(49,836)` acceptable (suspended-core shards differ). Others fixed.
+- **J. Technical defects** — No exact duplicates, no clipping/halo/broken-transparency
+  defects observed on the re-render; 0010 collar seam clean; determinism holds
+  (selftest 9/9, validator exit 0). PASS.
+
+### Delta from Pass 3
+
+Pass 3 kept fitted overlays disabled and had duplicate mantles, a broken 0010 collar,
+class-master legendaries, and two distance-0 near-dup pairs. Pass 4 cleared the
+mantles, the collar, two legendaries, and the distance-0 pairs. The residual is now
+concentrated in exactly two authored-art gaps rather than spread across the batch.
+
+---
+
 ## Pass 3 — 2026-09-10, schema-drift fix + fitted-overlay evaluation (Claude)
 
 ### Verdict

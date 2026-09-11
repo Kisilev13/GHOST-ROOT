@@ -124,8 +124,8 @@
       "token_id": 10,
       "status": "RENDERED",
       "path": "collection/assets/test-batch/0010.png",
-      "sha256": "bf41aa7a6905f156df4a9e5f43d910013be9c3c5121f355b716406f6ca315aa5",
-      "bytes": 2218213,
+      "sha256": "f1d06742c3dcddb05ce423f75248475b88985366f29db41ab4811802ca3b9b9c",
+      "bytes": 2455569,
       "layers_used": [
         "collection/assets/layers/00_background/background__evidence_void__v001.png",
         "collection/assets/layers/40_entity_base/entity__hollow__material__porcelain__architecture__sealed__v001.png",
@@ -134,7 +134,7 @@
       "source_sha256": {
         "collection/assets/layers/00_background/background__evidence_void__v001.png": "9cc84183f91f759b9124083cfb6b782b53b55a9c50f7696378785f949c15a657",
         "collection/assets/layers/40_entity_base/entity__hollow__material__porcelain__architecture__sealed__v001.png": "ad0c22dc8427a8300a08c332a1b8448043ef8759606478adf07489a6ffe40be1",
-        "collection/assets/layers/30_mantle/mantle__ceramic_mantle__entity__hollow__v001.png": "ae309f00cc4063944ddb420e7d1d026e8be35c45f1e2ca5abc6bdc50e5c1d6d9"
+        "collection/assets/layers/30_mantle/mantle__ceramic_mantle__entity__hollow__v001.png": "ec6ad5646c6db4f1158775b064f2d2fc70cdabf8a5172f2e444907dd36a888b9"
       },
       "trait_ids": {
         "entity": "entity.hollow",
@@ -314,13 +314,13 @@
       "token_id": 303,
       "status": "RENDERED",
       "path": "collection/assets/test-batch/0303.png",
-      "sha256": "837a911c6b7d192bae63dbf386e801d51cd5c3d388a2742958f252e346e9a8d5",
-      "bytes": 2893860,
+      "sha256": "77deb738a06c1de66d8fa4bee6ad01b05f52f94a8a0c9fd203d7f85c1d8fc59b",
+      "bytes": 4000762,
       "layers_used": [
         "collection/assets/scenes/legendary/0303__v001.png"
       ],
       "source_sha256": {
-        "collection/assets/scenes/legendary/0303__v001.png": "9c946725e9552c63e80a040522bb54eab535e63352b7cda9c03c58fac3c75ffd"
+        "collection/assets/scenes/legendary/0303__v001.png": "a6feb1de1b23d565d3058531e9f8f2beeb0e17dd07f0adf32f92e52208de95d3"
       },
       "trait_ids": {
         "entity": "entity.human",
@@ -434,13 +434,13 @@
       "token_id": 803,
       "status": "RENDERED",
       "path": "collection/assets/test-batch/0803.png",
-      "sha256": "01129a7899afb4aba93e35e89600da5099378dac2ff142ac9ed979473b9e98a6",
-      "bytes": 2104633,
+      "sha256": "8233660b740629bc70ee64c48eb1fd2e7176e0e30ff27fbb82c990a228deca1f",
+      "bytes": 4137978,
       "layers_used": [
         "collection/assets/scenes/legendary/0803__v001.png"
       ],
       "source_sha256": {
-        "collection/assets/scenes/legendary/0803__v001.png": "b70cbad303462053c50d3b177cd300ecdafb1589f2ef517d53583a86691b0c9e"
+        "collection/assets/scenes/legendary/0803__v001.png": "84dea27b1f8306d4c1d2cb358caa9e4458656df7cabdcb06136ab8411a681bc2"
       },
       "trait_ids": {
         "entity": "entity.synthetic",
@@ -519,8 +519,8 @@
       "token_id": 1842,
       "status": "RENDERED",
       "path": "collection/assets/test-batch/1842.png",
-      "sha256": "71aa9d59bf8137e5283212e60b96573506a63ff3a0a772367e373809f1b881f4",
-      "bytes": 2497877,
+      "sha256": "4835b27362b28424edb171e1ca82bfd515d49da8d5bedace00f343354ce07580",
+      "bytes": 3664582,
       "layers_used": [
         "collection/assets/layers/00_background/background__evidence_void__v001.png",
         "collection/assets/layers/40_entity_base/entity__human__material__biosynth__architecture__double_plane__v001.png",
@@ -530,7 +530,7 @@
       "source_sha256": {
         "collection/assets/layers/00_background/background__evidence_void__v001.png": "9cc84183f91f759b9124083cfb6b782b53b55a9c50f7696378785f949c15a657",
         "collection/assets/layers/40_entity_base/entity__human__material__biosynth__architecture__double_plane__v001.png": "6d8005db659d97f74ab1dd08119b23c448411218ffb3183c813670d01970ba90",
-        "collection/assets/layers/30_mantle/mantle__cable_shroud__entity__human__v001.png": "7e9e86f24e4223ece04e0499159396e988e95503b24c84172df662ba861e5299",
+        "collection/assets/layers/30_mantle/mantle__cable_shroud__entity__human__v001.png": "cd42284924f63d7eb4e1f25417011975ba95e208e33353289281fb3176602b48",
         "collection/assets/layers/50_eyes/eyes__biometric__entity__human__v001.png": "18f2182106128163a2ac6638a340731d5056a23d18b686177765d63db6ef0550"
       },
       "trait_ids": {
@@ -579,8 +579,8 @@
       "token_id": 3333,
       "status": "RENDERED",
       "path": "collection/assets/test-batch/3333.png",
-      "sha256": "7798360c6ee602e8c877b64d5e5e21f7d11414847c1e8ff88605e4b267cef178",
-      "bytes": 2352580,
+      "sha256": "6611452df56d1f5ed1cd7e895298d7262ec08ea2b4b164f0175e0a7384ad9f73",
+      "bytes": 3532673,
       "layers_used": [
         "collection/assets/layers/00_background/background__relay_well__v001.png",
         "collection/assets/layers/40_entity_base/entity__human__material__porcelain__architecture__sealed__v001.png",
@@ -589,7 +589,7 @@
       "source_sha256": {
         "collection/assets/layers/00_background/background__relay_well__v001.png": "345d9365149386d2bf01b3820dc7d3040e76cf3852ec3dbe9a1e5bef541c6200",
         "collection/assets/layers/40_entity_base/entity__human__material__porcelain__architecture__sealed__v001.png": "09e05dfca3955b1dd03fa8f4a7eb06e02cdb44142e999caa837e478b1822cc66",
-        "collection/assets/layers/30_mantle/mantle__cable_shroud__entity__human__v001.png": "7e9e86f24e4223ece04e0499159396e988e95503b24c84172df662ba861e5299"
+        "collection/assets/layers/30_mantle/mantle__cable_shroud__entity__human__v001.png": "cd42284924f63d7eb4e1f25417011975ba95e208e33353289281fb3176602b48"
       },
       "trait_ids": {
         "entity": "entity.human",
