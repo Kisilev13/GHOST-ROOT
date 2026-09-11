@@ -2,3 +2,4 @@
 
 # Plaintext credential dumps — real values belong only in .secrets/*.env
 API.txt
+/Opensea API.txt
