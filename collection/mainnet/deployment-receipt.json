@@ -1,0 +1,26 @@
+{
+  "network": "mainnet-beta",
+  "genesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+  "signer": "CcgTzAmyog1h3tUnR7zqtQ2bZzQSYL9L9xZHDBvtD94R",
+  "media_status": "PRE_RELEASE_CANARY_ART_MUTABLE",
+  "collection": {
+    "address": "ECfe4r3Xp66qe6dAGgdnc4QAMikdDHHvrGfWPDqkrE1p",
+    "name": "GHOST//ROOT",
+    "uri": "https://gateway.irys.xyz/6n5rdx2aAC7e3SvfeEqmdW2gBLn9ReXL6zzQmiEb3rGs",
+    "update_authority": "CcgTzAmyog1h3tUnR7zqtQ2bZzQSYL9L9xZHDBvtD94R",
+    "royalty_basis_points": 500,
+    "royalty_recipient": "CcgTzAmyog1h3tUnR7zqtQ2bZzQSYL9L9xZHDBvtD94R",
+    "creation_signature": "2WSEUtJpZqkMwWy2z34QjAVJjgVES3QgU5u6AdkzrBnWMTtvRMXqSLHuSorek85dTh3X37ncttHzf9s8hzMqCoEf",
+    "explorer": "https://explorer.solana.com/address/ECfe4r3Xp66qe6dAGgdnc4QAMikdDHHvrGfWPDqkrE1p"
+  },
+  "canary": {
+    "asset_address": "GUhpsP3cHvtJ5JJzKDnfcr83tvHJPn3kA2ib17MtM9B4",
+    "name": "GHOST//0001",
+    "uri": "https://gateway.irys.xyz/FJ7usKYkBwz1Zxpdau8QmAqpoF9YQM6YopPT9ZigC2i4",
+    "owner": "CcgTzAmyog1h3tUnR7zqtQ2bZzQSYL9L9xZHDBvtD94R",
+    "collection_address": "ECfe4r3Xp66qe6dAGgdnc4QAMikdDHHvrGfWPDqkrE1p",
+    "mint_signature": "3BGkD2VZciRr67hcGt3hmRt5fCfyv2HDJBFARMyv9DTYNm87kVWULL3GDfF5LF1AZRbtJaq5WQhxAApWzi2y2yAL",
+    "explorer": "https://explorer.solana.com/address/GUhpsP3cHvtJ5JJzKDnfcr83tvHJPn3kA2ib17MtM9B4"
+  },
+  "balance_after_sol": "0.195783509"
+}

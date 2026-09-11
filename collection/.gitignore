@@ -2,3 +2,7 @@
 .venv/
 __pycache__/
 *.pyc
+
+# Mainnet deploy runtime: never commit signer state or machine-local run outputs.
+mainnet/.private/
+mainnet/uploaded-uris.json
