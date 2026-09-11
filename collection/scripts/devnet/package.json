@@ -1,0 +1,23 @@
+{
+  "name": "ghost-root-devnet-rehearsal",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Isolated, disposable Solana devnet rehearsal for the GHOST//ROOT Metaplex Core deployment path. Never touches mainnet.",
+  "type": "module",
+  "scripts": {
+    "deploy": "tsx deploy_devnet_canary.ts",
+    "verify": "tsx verify_devnet_canary.ts"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@metaplex-foundation/mpl-core": "1.10.0",
+    "@metaplex-foundation/umi": "1.5.1",
+    "@metaplex-foundation/umi-bundle-defaults": "1.5.1",
+    "@metaplex-foundation/umi-signer-wallet-adapters": "1.5.1",
+    "@solana/web3.js": "1.98.4"
+  },
+  "devDependencies": {
+    "tsx": "4.19.2",
+    "typescript": "5.6.3"
+  }
+}
