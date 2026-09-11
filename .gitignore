@@ -3,3 +3,16 @@
 # Plaintext credential dumps — real values belong only in .secrets/*.env
 API.txt
 /Opensea API.txt
+
+# Defensive: no Solana keypair/wallet JSON is ever committed, wherever one might
+# land by accident. The real signers (mainnet wallet-1.json, the devnet-only
+# signer) live outside this repo entirely; this is a backstop, not the primary
+# control. Token/NFT metadata files are named by id (e.g. 0001.json) and never
+# match these patterns.
+**/*wallet*.json
+**/*keypair*.json
+**/*signer*.json
+**/id.json
+.env
+.env.local
+*.env
