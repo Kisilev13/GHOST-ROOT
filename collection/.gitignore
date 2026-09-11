@@ -1,0 +1,4 @@
+# Local Python environment for collection/scripts/ — not committed.
+.venv/
+__pycache__/
+*.pyc

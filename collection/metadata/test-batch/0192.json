@@ -1,0 +1,65 @@
+{
+  "token_id": 192,
+  "name": "GHOST//0192",
+  "description": "GHOST//ROOT \u2014 one of 3,333 identities recovered from a distributed autonomous security network that disappeared without explanation.",
+  "image": "pending://not-yet-rendered/collection/assets/test-batch/0192.png",
+  "external_url": "https://ghostroot.site/identity/192/",
+  "collection": {
+    "name": "GHOST//ROOT",
+    "symbol": "GHRT"
+  },
+  "attributes": [
+    {
+      "trait_type": "Entity",
+      "value": "HOLLOW"
+    },
+    {
+      "trait_type": "Access",
+      "value": "SYSTEM"
+    },
+    {
+      "trait_type": "Architecture",
+      "value": "SUSPENDED CORE"
+    },
+    {
+      "trait_type": "Face Material",
+      "value": "CARBON"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "FRACTURED"
+    },
+    {
+      "trait_type": "Interface",
+      "value": "FORENSIC PLATE"
+    },
+    {
+      "trait_type": "Implant",
+      "value": "ROOT PORT"
+    },
+    {
+      "trait_type": "Mantle",
+      "value": "ARCHIVE COAT"
+    },
+    {
+      "trait_type": "Background",
+      "value": "COLD STORAGE"
+    },
+    {
+      "trait_type": "Signal",
+      "value": "LOCKED"
+    },
+    {
+      "trait_type": "Origin Corruption",
+      "value": "PACKET GHOSTING"
+    },
+    {
+      "trait_type": "State",
+      "value": "DORMANT"
+    },
+    {
+      "trait_type": "Rarity Band",
+      "value": "EPIC"
+    }
+  ]
+}

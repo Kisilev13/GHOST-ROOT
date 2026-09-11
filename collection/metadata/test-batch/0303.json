@@ -1,0 +1,65 @@
+{
+  "token_id": 303,
+  "name": "GHOST//0303",
+  "description": "GHOST//ROOT legendary identity \u2014 archetype OBSERVER, interpretation 1. Recovered from the ROOT network's severed-halo tier.",
+  "image": "pending://not-yet-rendered/collection/assets/test-batch/0303.png",
+  "external_url": "https://ghostroot.site/identity/303/",
+  "collection": {
+    "name": "GHOST//ROOT",
+    "symbol": "GHRT"
+  },
+  "attributes": [
+    {
+      "trait_type": "Entity",
+      "value": "HUMAN"
+    },
+    {
+      "trait_type": "Access",
+      "value": "ROOT"
+    },
+    {
+      "trait_type": "Architecture",
+      "value": "SEVERED HALO"
+    },
+    {
+      "trait_type": "Face Material",
+      "value": "BIO-SYNTH"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "THERMAL"
+    },
+    {
+      "trait_type": "Interface",
+      "value": "RESPIRATOR"
+    },
+    {
+      "trait_type": "Implant",
+      "value": "SIGNAL CROWN"
+    },
+    {
+      "trait_type": "Mantle",
+      "value": "CABLE SHROUD"
+    },
+    {
+      "trait_type": "Background",
+      "value": "RACK SHADOW"
+    },
+    {
+      "trait_type": "Signal",
+      "value": "LOCKED"
+    },
+    {
+      "trait_type": "Origin Corruption",
+      "value": "INTACT"
+    },
+    {
+      "trait_type": "State",
+      "value": "DORMANT"
+    },
+    {
+      "trait_type": "Rarity Band",
+      "value": "LEGENDARY"
+    }
+  ]
+}

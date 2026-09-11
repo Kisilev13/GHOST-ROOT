@@ -1,0 +1,65 @@
+{
+  "token_id": 112,
+  "name": "GHOST//0112",
+  "description": "GHOST//ROOT \u2014 one of 3,333 identities recovered from a distributed autonomous security network that disappeared without explanation.",
+  "image": "pending://not-yet-rendered/collection/assets/test-batch/0112.png",
+  "external_url": "https://ghostroot.site/identity/112/",
+  "collection": {
+    "name": "GHOST//ROOT",
+    "symbol": "GHRT"
+  },
+  "attributes": [
+    {
+      "trait_type": "Entity",
+      "value": "SYNTHETIC"
+    },
+    {
+      "trait_type": "Access",
+      "value": "ADMIN"
+    },
+    {
+      "trait_type": "Architecture",
+      "value": "INSET"
+    },
+    {
+      "trait_type": "Face Material",
+      "value": "RECONSTRUCTED"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "OPTICAL ARRAY"
+    },
+    {
+      "trait_type": "Interface",
+      "value": "FORENSIC PLATE"
+    },
+    {
+      "trait_type": "Implant",
+      "value": "MEMORY SPINDLE"
+    },
+    {
+      "trait_type": "Mantle",
+      "value": "ARCHIVE COAT"
+    },
+    {
+      "trait_type": "Background",
+      "value": "RACK SHADOW"
+    },
+    {
+      "trait_type": "Signal",
+      "value": "INTERMITTENT"
+    },
+    {
+      "trait_type": "Origin Corruption",
+      "value": "INTACT"
+    },
+    {
+      "trait_type": "State",
+      "value": "DORMANT"
+    },
+    {
+      "trait_type": "Rarity Band",
+      "value": "UNCOMMON"
+    }
+  ]
+}

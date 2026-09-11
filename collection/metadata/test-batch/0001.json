@@ -1,0 +1,65 @@
+{
+  "token_id": 1,
+  "name": "GHOST//0001",
+  "description": "I remember the part you removed. \u2014 GHOST//ROOT Genesis identity THE WITNESS. One of exactly three hand-authored 1/1 origin records. Origin: ROOT's independent event-witness process, reconstructed without its authorizing operator",
+  "image": "pending://not-yet-rendered/collection/assets/test-batch/0001.png",
+  "external_url": "https://ghostroot.site/identity/1/",
+  "collection": {
+    "name": "GHOST//ROOT",
+    "symbol": "GHRT"
+  },
+  "attributes": [
+    {
+      "trait_type": "Entity",
+      "value": "SYNTHETIC"
+    },
+    {
+      "trait_type": "Access",
+      "value": "ROOT"
+    },
+    {
+      "trait_type": "Architecture",
+      "value": "SINGULAR"
+    },
+    {
+      "trait_type": "Face Material",
+      "value": "PORCELAIN"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "BIOMETRIC"
+    },
+    {
+      "trait_type": "Interface",
+      "value": "FORENSIC PLATE"
+    },
+    {
+      "trait_type": "Implant",
+      "value": "MEMORY SPINDLE"
+    },
+    {
+      "trait_type": "Mantle",
+      "value": "ARCHIVE COAT"
+    },
+    {
+      "trait_type": "Background",
+      "value": "EVIDENCE VOID"
+    },
+    {
+      "trait_type": "Signal",
+      "value": "LOCKED"
+    },
+    {
+      "trait_type": "Origin Corruption",
+      "value": "INTACT"
+    },
+    {
+      "trait_type": "State",
+      "value": "DORMANT"
+    },
+    {
+      "trait_type": "Rarity Band",
+      "value": "1/1"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "token_id": 3333,
+  "name": "GHOST//3333",
+  "description": "GHOST//ROOT \u2014 one of 3,333 identities recovered from a distributed autonomous security network that disappeared without explanation.",
+  "image": "pending://not-yet-rendered/collection/assets/test-batch/3333.png",
+  "external_url": "https://ghostroot.site/identity/3333/",
+  "collection": {
+    "name": "GHOST//ROOT",
+    "symbol": "GHRT"
+  },
+  "attributes": [
+    {
+      "trait_type": "Entity",
+      "value": "HUMAN"
+    },
+    {
+      "trait_type": "Access",
+      "value": "USER"
+    },
+    {
+      "trait_type": "Architecture",
+      "value": "SEALED"
+    },
+    {
+      "trait_type": "Face Material",
+      "value": "PORCELAIN"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "VOID"
+    },
+    {
+      "trait_type": "Interface",
+      "value": "NULL MASK"
+    },
+    {
+      "trait_type": "Implant",
+      "value": "NEURAL CABLE"
+    },
+    {
+      "trait_type": "Mantle",
+      "value": "CABLE SHROUD"
+    },
+    {
+      "trait_type": "Background",
+      "value": "RELAY WELL"
+    },
+    {
+      "trait_type": "Signal",
+      "value": "SILENT"
+    },
+    {
+      "trait_type": "Origin Corruption",
+      "value": "INTACT"
+    },
+    {
+      "trait_type": "State",
+      "value": "DORMANT"
+    },
+    {
+      "trait_type": "Rarity Band",
+      "value": "COMMON"
+    }
+  ]
+}

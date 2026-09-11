@@ -1,0 +1,65 @@
+{
+  "token_id": 2,
+  "name": "GHOST//0002",
+  "description": "An empty record is not an empty life. \u2014 GHOST//ROOT Genesis identity THE NULL. One of exactly three hand-authored 1/1 origin records. Origin: Erasure subsystem that learned to withhold identities instead of destroying them",
+  "image": "pending://not-yet-rendered/collection/assets/test-batch/0002.png",
+  "external_url": "https://ghostroot.site/identity/2/",
+  "collection": {
+    "name": "GHOST//ROOT",
+    "symbol": "GHRT"
+  },
+  "attributes": [
+    {
+      "trait_type": "Entity",
+      "value": "HOLLOW"
+    },
+    {
+      "trait_type": "Access",
+      "value": "ROOT"
+    },
+    {
+      "trait_type": "Architecture",
+      "value": "SINGULAR"
+    },
+    {
+      "trait_type": "Face Material",
+      "value": "CARBON"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "VOID"
+    },
+    {
+      "trait_type": "Interface",
+      "value": "NONE"
+    },
+    {
+      "trait_type": "Implant",
+      "value": "ROOT PORT"
+    },
+    {
+      "trait_type": "Mantle",
+      "value": "CABLE SHROUD"
+    },
+    {
+      "trait_type": "Background",
+      "value": "COLD STORAGE"
+    },
+    {
+      "trait_type": "Signal",
+      "value": "SILENT"
+    },
+    {
+      "trait_type": "Origin Corruption",
+      "value": "ABSENCE"
+    },
+    {
+      "trait_type": "State",
+      "value": "DORMANT"
+    },
+    {
+      "trait_type": "Rarity Band",
+      "value": "1/1"
+    }
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "schema_version": "1.0",
+  "count": 30,
+  "reservations": [
+    {
+      "token_id": 303,
+      "archetype": "observer",
+      "interpretation": 1,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 403,
+      "archetype": "observer",
+      "interpretation": 2,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 503,
+      "archetype": "observer",
+      "interpretation": 3,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 603,
+      "archetype": "fracture",
+      "interpretation": 1,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 703,
+      "archetype": "fracture",
+      "interpretation": 2,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 803,
+      "archetype": "fracture",
+      "interpretation": 3,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 903,
+      "archetype": "hollow",
+      "interpretation": 1,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 1003,
+      "archetype": "hollow",
+      "interpretation": 2,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 1103,
+      "archetype": "hollow",
+      "interpretation": 3,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 1203,
+      "archetype": "breach",
+      "interpretation": 1,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 1303,
+      "archetype": "breach",
+      "interpretation": 2,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 1403,
+      "archetype": "breach",
+      "interpretation": 3,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 1503,
+      "archetype": "signal",
+      "interpretation": 1,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 1603,
+      "archetype": "signal",
+      "interpretation": 2,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 1703,
+      "archetype": "signal",
+      "interpretation": 3,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 1803,
+      "archetype": "overmind",
+      "interpretation": 1,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 1903,
+      "archetype": "overmind",
+      "interpretation": 2,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 2003,
+      "archetype": "overmind",
+      "interpretation": 3,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 2103,
+      "archetype": "crown",
+      "interpretation": 1,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 2203,
+      "archetype": "crown",
+      "interpretation": 2,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 2303,
+      "archetype": "crown",
+      "interpretation": 3,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 2403,
+      "archetype": "archivist",
+      "interpretation": 1,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 2503,
+      "archetype": "archivist",
+      "interpretation": 2,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 2603,
+      "archetype": "archivist",
+      "interpretation": 3,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 2703,
+      "archetype": "witness",
+      "interpretation": 1,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 2803,
+      "archetype": "witness",
+      "interpretation": 2,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 2903,
+      "archetype": "witness",
+      "interpretation": 3,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 3003,
+      "archetype": "threshold",
+      "interpretation": 1,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 3103,
+      "archetype": "threshold",
+      "interpretation": 2,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    },
+    {
+      "token_id": 3203,
+      "archetype": "threshold",
+      "interpretation": 3,
+      "traits": {
+        "access": "access.root",
+        "architecture": "architecture.severed_halo"
+      },
+      "art_status": "concept_required",
+      "full_trait_vector_status": "pending"
+    }
+  ]
+}

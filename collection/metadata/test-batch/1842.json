@@ -1,0 +1,65 @@
+{
+  "token_id": 1842,
+  "name": "GHOST//1842",
+  "description": "GHOST//ROOT \u2014 one of 3,333 identities recovered from a distributed autonomous security network that disappeared without explanation.",
+  "image": "pending://not-yet-rendered/collection/assets/test-batch/1842.png",
+  "external_url": "https://ghostroot.site/identity/1842/",
+  "collection": {
+    "name": "GHOST//ROOT",
+    "symbol": "GHRT"
+  },
+  "attributes": [
+    {
+      "trait_type": "Entity",
+      "value": "HUMAN"
+    },
+    {
+      "trait_type": "Access",
+      "value": "ADMIN"
+    },
+    {
+      "trait_type": "Architecture",
+      "value": "DOUBLE PLANE"
+    },
+    {
+      "trait_type": "Face Material",
+      "value": "BIO-SYNTH"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "BIOMETRIC"
+    },
+    {
+      "trait_type": "Interface",
+      "value": "NONE"
+    },
+    {
+      "trait_type": "Implant",
+      "value": "NEURAL CABLE"
+    },
+    {
+      "trait_type": "Mantle",
+      "value": "CABLE SHROUD"
+    },
+    {
+      "trait_type": "Background",
+      "value": "EVIDENCE VOID"
+    },
+    {
+      "trait_type": "Signal",
+      "value": "LOCKED"
+    },
+    {
+      "trait_type": "Origin Corruption",
+      "value": "CHECKSUM BURN"
+    },
+    {
+      "trait_type": "State",
+      "value": "DORMANT"
+    },
+    {
+      "trait_type": "Rarity Band",
+      "value": "RARE"
+    }
+  ]
+}

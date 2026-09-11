@@ -1,0 +1,88 @@
+{
+  "generator": "collection/scripts/generate_production.py",
+  "canvas": "2048x2048",
+  "metadata_only_categories": [
+    "access",
+    "signal"
+  ],
+  "results": [
+    {
+      "token_id": 1,
+      "status": "MISSING_ASSETS",
+      "missing": [
+        "z000 background: no asset for ('background',) = ['background.evidence_void']",
+        "z030 mantle: no asset for ('mantle',) = ['mantle.archive_coat']",
+        "z040 entity_base: no asset for ('entity', 'material') = ['entity.synthetic', 'material.porcelain']",
+        "z050 eyes: no asset for ('eyes',) = ['eyes.biometric']",
+        "z070 architecture: no asset for ('architecture',) = ['architecture.singular']",
+        "z090 witness_seam: no asset for () = []"
+      ],
+      "resolved_count": 0
+    },
+    {
+      "token_id": 2,
+      "status": "MISSING_ASSETS",
+      "missing": [
+        "z000 background: no asset for ('background',) = ['background.cold_storage']",
+        "z030 mantle: no asset for ('mantle',) = ['mantle.cable_shroud']",
+        "z040 entity_base: no asset for ('entity', 'material') = ['entity.hollow', 'material.carbon']",
+        "z050 eyes: no asset for ('eyes',) = ['eyes.void']",
+        "z070 architecture: no asset for ('architecture',) = ['architecture.singular']",
+        "z090 witness_seam: no asset for () = []"
+      ],
+      "resolved_count": 0
+    },
+    {
+      "token_id": 3,
+      "status": "MISSING_ASSETS",
+      "missing": [
+        "z000 background: no asset for ('background',) = ['background.relay_well']",
+        "z030 mantle: no asset for ('mantle',) = ['mantle.split_shell']",
+        "z040 entity_base: no asset for ('entity', 'material') = ['entity.specter', 'material.reconstructed']",
+        "z050 eyes: no asset for ('eyes',) = ['eyes.fractured']",
+        "z070 architecture: no asset for ('architecture',) = ['architecture.singular']",
+        "z090 witness_seam: no asset for () = []"
+      ],
+      "resolved_count": 0
+    },
+    {
+      "token_id": 303,
+      "status": "MISSING_ASSETS",
+      "missing": [
+        "z000 background: no asset for ('background',) = ['background.rack_shadow']",
+        "z030 mantle: no asset for ('mantle',) = ['mantle.cable_shroud']",
+        "z040 entity_base: no asset for ('entity', 'material') = ['entity.human', 'material.biosynth']",
+        "z050 eyes: no asset for ('eyes',) = ['eyes.thermal']",
+        "z070 architecture: no asset for ('architecture',) = ['architecture.severed_halo']",
+        "z090 witness_seam: no asset for () = []"
+      ],
+      "resolved_count": 0
+    },
+    {
+      "token_id": 1842,
+      "status": "MISSING_ASSETS",
+      "missing": [
+        "z000 background: no asset for ('background',) = ['background.evidence_void']",
+        "z030 mantle: no asset for ('mantle',) = ['mantle.cable_shroud']",
+        "z040 entity_base: no asset for ('entity', 'material') = ['entity.human', 'material.biosynth']",
+        "z050 eyes: no asset for ('eyes',) = ['eyes.biometric']",
+        "z070 architecture: no asset for ('architecture',) = ['architecture.double_plane']",
+        "z090 witness_seam: no asset for () = []"
+      ],
+      "resolved_count": 0
+    },
+    {
+      "token_id": 3333,
+      "status": "MISSING_ASSETS",
+      "missing": [
+        "z000 background: no asset for ('background',) = ['background.relay_well']",
+        "z030 mantle: no asset for ('mantle',) = ['mantle.cable_shroud']",
+        "z040 entity_base: no asset for ('entity', 'material') = ['entity.human', 'material.porcelain']",
+        "z050 eyes: no asset for ('eyes',) = ['eyes.void']",
+        "z070 architecture: no asset for ('architecture',) = ['architecture.sealed']",
+        "z090 witness_seam: no asset for () = []"
+      ],
+      "resolved_count": 0
+    }
+  ]
+}

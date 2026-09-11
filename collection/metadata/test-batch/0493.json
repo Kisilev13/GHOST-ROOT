@@ -1,0 +1,65 @@
+{
+  "token_id": 493,
+  "name": "GHOST//0493",
+  "description": "GHOST//ROOT \u2014 one of 3,333 identities recovered from a distributed autonomous security network that disappeared without explanation.",
+  "image": "pending://not-yet-rendered/collection/assets/test-batch/0493.png",
+  "external_url": "https://ghostroot.site/identity/493/",
+  "collection": {
+    "name": "GHOST//ROOT",
+    "symbol": "GHRT"
+  },
+  "attributes": [
+    {
+      "trait_type": "Entity",
+      "value": "SPECTER"
+    },
+    {
+      "trait_type": "Access",
+      "value": "ADMIN"
+    },
+    {
+      "trait_type": "Architecture",
+      "value": "DOUBLE PLANE"
+    },
+    {
+      "trait_type": "Face Material",
+      "value": "RECONSTRUCTED"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "VOID"
+    },
+    {
+      "trait_type": "Interface",
+      "value": "NEURAL VEIL"
+    },
+    {
+      "trait_type": "Implant",
+      "value": "SPINAL BUS"
+    },
+    {
+      "trait_type": "Mantle",
+      "value": "CABLE SHROUD"
+    },
+    {
+      "trait_type": "Background",
+      "value": "EVIDENCE VOID"
+    },
+    {
+      "trait_type": "Signal",
+      "value": "LOCKED"
+    },
+    {
+      "trait_type": "Origin Corruption",
+      "value": "ABSENCE"
+    },
+    {
+      "trait_type": "State",
+      "value": "DORMANT"
+    },
+    {
+      "trait_type": "Rarity Band",
+      "value": "RARE"
+    }
+  ]
+}
