@@ -34,5 +34,15 @@
 .gr-arg label{display:block;font:12px monospace;margin:20px 0 10px}.gr-input-row{display:flex;gap:12px}.gr-arg details{border-bottom:1px solid #252525}.gr-arg summary{cursor:pointer;padding:14px 0;min-height:44px;font:11px monospace}
 .gr-mint button{min-height:48px}.gr-mint [data-mint-notice],.gr-arg [data-arg-message]{font:12px/1.8 monospace;color:#c6b381}
 .gr-mint button:disabled{opacity:.5;cursor:not-allowed}.gr-mint .gr-muted,.gr-arg .gr-muted{font-size:13px;color:#aaa9a0}
+.gr-market,.gr-market-state{background:#0a0a0a;color:#e8e8e3;border:1px solid #30302d;box-sizing:border-box;padding:clamp(20px,4vw,40px);font:16px/1.6 Arial,sans-serif}
+.gr-market .gr-eyebrow,.gr-market-state .gr-eyebrow{margin:0 0 20px}
+.gr-market .gr-data-list,.gr-market-state .gr-data-list{margin:0 0 20px}
+.gr-market .gr-button{margin-top:4px}
+.gr-market-attr{margin:16px 0 0;font:9px/1.5 monospace;letter-spacing:.1em;color:#8f8f86}
+.gr-market [data-market-notice]{margin:0;font:12px/1.8 monospace;color:#c6b381}
+.gr-market-state .gr-muted{margin:0;font-size:13px;color:#aaa9a0}
+.gr-market-state .gr-text-link{margin-top:4px}
+.gr-market[data-state="verified"] [data-market-status]{color:#8fae87}
+.gr-market[data-state="mismatch"] [data-market-status],.gr-market[data-state="error"] [data-market-status]{color:#c23c44}
 [hidden]{display:none!important}
-@media(max-width:600px){.gr-window-bar{padding:14px;gap:10px;font-size:9px}.gr-terminal-form{flex-wrap:wrap;padding:14px;gap:8px}.gr-terminal-form label{width:100%}.gr-terminal-form input{flex-basis:60%}.gr-terminal-form button{padding:10px;font-size:10px}.gr-terminal-output{padding:16px;font-size:12px}.gr-network-map canvas{height:300px}.gr-network-legend{gap:14px}.gr-node-list ul{columns:2}.gr-input-row{flex-direction:column}}
+@media(max-width:600px){.gr-window-bar{padding:14px;gap:10px;font-size:9px}.gr-terminal-form{flex-wrap:wrap;padding:14px;gap:8px}.gr-terminal-form label{width:100%}.gr-terminal-form input{flex-basis:60%}.gr-terminal-form button{padding:10px;font-size:10px}.gr-terminal-output{padding:16px;font-size:12px}.gr-network-map canvas{height:300px}.gr-network-legend{gap:14px}.gr-node-list ul{columns:2}.gr-input-row{flex-direction:column}.gr-market,.gr-market-state{padding:18px}.gr-market .gr-eyebrow,.gr-market-state .gr-eyebrow{margin-bottom:14px}}
