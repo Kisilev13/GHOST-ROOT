@@ -153,3 +153,31 @@ an **internal** light source — unlike 0303 (enthroned halo), 0803 (shattering 
 
 Delivery: single square PNG, **2048×2048**, opaque, frontal, text-free →
 `assets/scenes/legendary/2803__v001.png` (after review as a candidate first).
+
+#### GHOST//2803 — direction APPROVED (`DIRECTION_APPROVED_ONLY`)
+
+Approved visual-direction reference: `assets/sources/pass5/5c8bc122-693f-4ae9-b92d-b1e312e52e2b.png`
+(1254×1254, square, opaque, frontal, text-free — **reference only, NOT production art**;
+do not install, upscale-and-finalize, or rename to `2803__v001.png`). Note: an
+identical duplicate `a_dramatic_dark_sci_fi_fantasy_portrait_scene_a.png` (same sha) was
+also dropped and can be discarded.
+
+Passes the Opened-Reliquary brief: opened archive-coat doors, exposed vertebral spinal
+column, central armillary core + throat ring, hollow ceramic shell, bare face, crown
+spikes, evidence-void ground, broken halo. Dominant idea (body opened to reveal sealed
+internals) is primary and clearly distinct from the locked 1503 radial-witness direction.
+
+Exact changes required for the FINAL 2048×2048 production render:
+1. **Resolution:** deliver at exactly **2048×2048** (currently 1254²). Re-render at target
+   size — no local upscale-and-call-final.
+2. Preserve everything else — composition, opened doors, spine, armillary core, silhouette,
+   material, frontal camera, text-free.
+3. **Optional polish** (not blockers): push the severed-halo more **asymmetric/shattered**
+   (currently leans radial) and make the **fractured optics** explicitly broken-lens rather
+   than glowing slits, to hit the brief exactly.
+4. Deliver as a single square opaque PNG → intake as candidate → then
+   `assets/scenes/legendary/2803__v001.png`.
+
+Both legendaries are now `DIRECTION_APPROVED_ONLY`. Neither is production-ready: both need
+final **2048×2048** single-scene deliveries. Status stays `BLOCKED_ON_AUTHORED_ART_TOOL`
+(also pending: the 31 fitted component layers).
