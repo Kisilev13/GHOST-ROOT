@@ -1,0 +1,830 @@
+{
+  "exact_duplicate_groups": {},
+  "exact_duplicate_count": 0,
+  "near_threshold_bits": 24,
+  "hash": "dhash-16x16-256bit (composited on black)",
+  "near_duplicate_pairs": [
+    {
+      "distance": 5,
+      "a": "entity__synthetic__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__ceramic__architecture__sealed__v001.png",
+      "a_key": "synthetic/biosynth/sealed",
+      "b_key": "synthetic/ceramic/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 5,
+      "a": "entity__synthetic__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__porcelain__architecture__sealed__v001.png",
+      "a_key": "synthetic/ceramic/sealed",
+      "b_key": "synthetic/porcelain/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 6,
+      "a": "entity__human__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__human__material__ceramic__architecture__sealed__v001.png",
+      "a_key": "human/biosynth/sealed",
+      "b_key": "human/ceramic/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 6,
+      "a": "entity__synthetic__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "synthetic/biosynth/sealed",
+      "b_key": "synthetic/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 7,
+      "a": "entity__hollow__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__ceramic__architecture__sealed__v001.png",
+      "a_key": "hollow/ceramic/double_plane",
+      "b_key": "hollow/ceramic/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 7,
+      "a": "entity__hollow__material__ceramic__architecture__inset__v001.png",
+      "b": "entity__hollow__material__ceramic__architecture__sealed__v001.png",
+      "a_key": "hollow/ceramic/inset",
+      "b_key": "hollow/ceramic/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 7,
+      "a": "entity__synthetic__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "synthetic/ceramic/sealed",
+      "b_key": "synthetic/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 8,
+      "a": "entity__hollow__material__ceramic__architecture__inset__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__inset__v001.png",
+      "a_key": "hollow/ceramic/inset",
+      "b_key": "hollow/porcelain/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 8,
+      "a": "entity__human__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__human__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "human/biosynth/sealed",
+      "b_key": "human/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 8,
+      "a": "entity__human__material__porcelain__architecture__sealed__v001.png",
+      "b": "entity__human__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "human/porcelain/sealed",
+      "b_key": "human/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 8,
+      "a": "entity__synthetic__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__porcelain__architecture__sealed__v001.png",
+      "a_key": "synthetic/biosynth/sealed",
+      "b_key": "synthetic/porcelain/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 8,
+      "a": "entity__synthetic__material__porcelain__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "synthetic/porcelain/sealed",
+      "b_key": "synthetic/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 9,
+      "a": "entity__synthetic__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__inset__v001.png",
+      "a_key": "synthetic/biosynth/sealed",
+      "b_key": "synthetic/reconstructed/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 10,
+      "a": "entity__hollow__material__porcelain__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__inset__v001.png",
+      "a_key": "hollow/porcelain/double_plane",
+      "b_key": "hollow/porcelain/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 10,
+      "a": "entity__human__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__human__material__porcelain__architecture__sealed__v001.png",
+      "a_key": "human/biosynth/sealed",
+      "b_key": "human/porcelain/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 10,
+      "a": "entity__human__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__human__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "human/ceramic/sealed",
+      "b_key": "human/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 11,
+      "a": "entity__hollow__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__double_plane__v001.png",
+      "a_key": "hollow/ceramic/sealed",
+      "b_key": "hollow/porcelain/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 11,
+      "a": "entity__synthetic__material__reconstructed__architecture__inset__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "synthetic/reconstructed/inset",
+      "b_key": "synthetic/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 12,
+      "a": "entity__hollow__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__ceramic__architecture__inset__v001.png",
+      "a_key": "hollow/ceramic/double_plane",
+      "b_key": "hollow/ceramic/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 12,
+      "a": "entity__hollow__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__double_plane__v001.png",
+      "a_key": "hollow/ceramic/double_plane",
+      "b_key": "hollow/porcelain/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 12,
+      "a": "entity__synthetic__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__inset__v001.png",
+      "a_key": "synthetic/ceramic/sealed",
+      "b_key": "synthetic/reconstructed/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 12,
+      "a": "entity__synthetic__material__reconstructed__architecture__double_plane__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__inset__v001.png",
+      "a_key": "synthetic/reconstructed/double_plane",
+      "b_key": "synthetic/reconstructed/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 13,
+      "a": "entity__hollow__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__inset__v001.png",
+      "a_key": "hollow/ceramic/sealed",
+      "b_key": "hollow/porcelain/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 13,
+      "a": "entity__hollow__material__porcelain__architecture__inset__v001.png",
+      "b": "entity__hollow__material__reconstructed__architecture__inset__v001.png",
+      "a_key": "hollow/porcelain/inset",
+      "b_key": "hollow/reconstructed/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 13,
+      "a": "entity__synthetic__material__porcelain__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__inset__v001.png",
+      "a_key": "synthetic/porcelain/sealed",
+      "b_key": "synthetic/reconstructed/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 14,
+      "a": "entity__hollow__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__inset__v001.png",
+      "a_key": "hollow/ceramic/double_plane",
+      "b_key": "hollow/porcelain/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 14,
+      "a": "entity__hollow__material__porcelain__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "hollow/porcelain/double_plane",
+      "b_key": "hollow/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 14,
+      "a": "entity__human__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__human__material__porcelain__architecture__sealed__v001.png",
+      "a_key": "human/ceramic/sealed",
+      "b_key": "human/porcelain/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 14,
+      "a": "entity__specter__material__carbon__architecture__double_plane__v001.png",
+      "b": "entity__specter__material__carbon__architecture__sealed__v001.png",
+      "a_key": "specter/carbon/double_plane",
+      "b_key": "specter/carbon/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 14,
+      "a": "entity__synthetic__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__porcelain__architecture__double_plane__v001.png",
+      "a_key": "synthetic/ceramic/sealed",
+      "b_key": "synthetic/porcelain/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 14,
+      "a": "entity__synthetic__material__porcelain__architecture__double_plane__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__double_plane__v001.png",
+      "a_key": "synthetic/porcelain/double_plane",
+      "b_key": "synthetic/reconstructed/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 14,
+      "a": "entity__synthetic__material__porcelain__architecture__double_plane__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__inset__v001.png",
+      "a_key": "synthetic/porcelain/double_plane",
+      "b_key": "synthetic/reconstructed/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 15,
+      "a": "entity__hollow__material__ceramic__architecture__inset__v001.png",
+      "b": "entity__hollow__material__reconstructed__architecture__inset__v001.png",
+      "a_key": "hollow/ceramic/inset",
+      "b_key": "hollow/reconstructed/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 15,
+      "a": "entity__hollow__material__porcelain__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__sealed__v001.png",
+      "a_key": "hollow/porcelain/double_plane",
+      "b_key": "hollow/porcelain/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 15,
+      "a": "entity__hollow__material__porcelain__architecture__inset__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__sealed__v001.png",
+      "a_key": "hollow/porcelain/inset",
+      "b_key": "hollow/porcelain/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 15,
+      "a": "entity__specter__material__phase_glass__architecture__sealed__v001.png",
+      "b": "entity__specter__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "specter/phase_glass/sealed",
+      "b_key": "specter/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 15,
+      "a": "entity__synthetic__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__porcelain__architecture__double_plane__v001.png",
+      "a_key": "synthetic/biosynth/sealed",
+      "b_key": "synthetic/porcelain/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 15,
+      "a": "entity__synthetic__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__double_plane__v001.png",
+      "a_key": "synthetic/biosynth/sealed",
+      "b_key": "synthetic/reconstructed/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 15,
+      "a": "entity__synthetic__material__porcelain__architecture__double_plane__v001.png",
+      "b": "entity__synthetic__material__porcelain__architecture__sealed__v001.png",
+      "a_key": "synthetic/porcelain/double_plane",
+      "b_key": "synthetic/porcelain/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 15,
+      "a": "entity__synthetic__material__reconstructed__architecture__double_plane__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "synthetic/reconstructed/double_plane",
+      "b_key": "synthetic/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 16,
+      "a": "entity__hollow__material__ceramic__architecture__inset__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__double_plane__v001.png",
+      "a_key": "hollow/ceramic/inset",
+      "b_key": "hollow/porcelain/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 16,
+      "a": "entity__hollow__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__sealed__v001.png",
+      "a_key": "hollow/ceramic/sealed",
+      "b_key": "hollow/porcelain/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 16,
+      "a": "entity__synthetic__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__double_plane__v001.png",
+      "a_key": "synthetic/ceramic/sealed",
+      "b_key": "synthetic/reconstructed/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 17,
+      "a": "entity__hollow__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__hollow__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "hollow/ceramic/sealed",
+      "b_key": "hollow/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 17,
+      "a": "entity__synthetic__material__porcelain__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__double_plane__v001.png",
+      "a_key": "synthetic/porcelain/sealed",
+      "b_key": "synthetic/reconstructed/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 18,
+      "a": "entity__hollow__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__hollow__material__reconstructed__architecture__inset__v001.png",
+      "a_key": "hollow/ceramic/sealed",
+      "b_key": "hollow/reconstructed/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 18,
+      "a": "entity__human__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__human__material__ceramic__architecture__sealed__v001.png",
+      "a_key": "human/ceramic/double_plane",
+      "b_key": "human/ceramic/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 18,
+      "a": "entity__human__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__specter__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "human/ceramic/sealed",
+      "b_key": "specter/reconstructed/sealed",
+      "same_entity": false
+    },
+    {
+      "distance": 18,
+      "a": "entity__human__material__porcelain__architecture__inset__v001.png",
+      "b": "entity__specter__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "human/porcelain/inset",
+      "b_key": "specter/reconstructed/sealed",
+      "same_entity": false
+    },
+    {
+      "distance": 18,
+      "a": "entity__human__material__reconstructed__architecture__sealed__v001.png",
+      "b": "entity__specter__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "human/reconstructed/sealed",
+      "b_key": "specter/reconstructed/sealed",
+      "same_entity": false
+    },
+    {
+      "distance": 19,
+      "a": "entity__hollow__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__sealed__v001.png",
+      "a_key": "hollow/ceramic/double_plane",
+      "b_key": "hollow/porcelain/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 19,
+      "a": "entity__hollow__material__ceramic__architecture__inset__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__sealed__v001.png",
+      "a_key": "hollow/ceramic/inset",
+      "b_key": "hollow/porcelain/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 19,
+      "a": "entity__synthetic__material__carbon__architecture__double_plane__v001.png",
+      "b": "entity__synthetic__material__carbon__architecture__sealed__v001.png",
+      "a_key": "synthetic/carbon/double_plane",
+      "b_key": "synthetic/carbon/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 19,
+      "a": "entity__synthetic__material__porcelain__architecture__double_plane__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "synthetic/porcelain/double_plane",
+      "b_key": "synthetic/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 20,
+      "a": "entity__hollow__material__carbon__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__carbon__architecture__sealed__v001.png",
+      "a_key": "hollow/carbon/double_plane",
+      "b_key": "hollow/carbon/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 20,
+      "a": "entity__hollow__material__porcelain__architecture__sealed__v001.png",
+      "b": "entity__hollow__material__reconstructed__architecture__inset__v001.png",
+      "a_key": "hollow/porcelain/sealed",
+      "b_key": "hollow/reconstructed/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 20,
+      "a": "entity__human__material__biosynth__architecture__double_plane__v001.png",
+      "b": "entity__human__material__porcelain__architecture__double_plane__v001.png",
+      "a_key": "human/biosynth/double_plane",
+      "b_key": "human/porcelain/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 20,
+      "a": "entity__human__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__human__material__ceramic__architecture__double_plane__v001.png",
+      "a_key": "human/biosynth/sealed",
+      "b_key": "human/ceramic/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 20,
+      "a": "entity__human__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__human__material__porcelain__architecture__inset__v001.png",
+      "a_key": "human/ceramic/sealed",
+      "b_key": "human/porcelain/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 20,
+      "a": "entity__human__material__reconstructed__architecture__double_plane__v001.png",
+      "b": "entity__specter__material__phase_glass__architecture__sealed__v001.png",
+      "a_key": "human/reconstructed/double_plane",
+      "b_key": "specter/phase_glass/sealed",
+      "same_entity": false
+    },
+    {
+      "distance": 20,
+      "a": "entity__synthetic__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__synthetic__material__porcelain__architecture__double_plane__v001.png",
+      "a_key": "synthetic/ceramic/double_plane",
+      "b_key": "synthetic/porcelain/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 21,
+      "a": "entity__hollow__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__reconstructed__architecture__inset__v001.png",
+      "a_key": "hollow/ceramic/double_plane",
+      "b_key": "hollow/reconstructed/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 21,
+      "a": "entity__hollow__material__porcelain__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__reconstructed__architecture__inset__v001.png",
+      "a_key": "hollow/porcelain/double_plane",
+      "b_key": "hollow/reconstructed/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 21,
+      "a": "entity__hollow__material__porcelain__architecture__sealed__v001.png",
+      "b": "entity__hollow__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "hollow/porcelain/sealed",
+      "b_key": "hollow/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 21,
+      "a": "entity__human__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__human__material__reconstructed__architecture__double_plane__v001.png",
+      "a_key": "human/biosynth/sealed",
+      "b_key": "human/reconstructed/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 21,
+      "a": "entity__human__material__carbon__architecture__sealed__v001.png",
+      "b": "entity__human__material__porcelain__architecture__sealed__v001.png",
+      "a_key": "human/carbon/sealed",
+      "b_key": "human/porcelain/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 21,
+      "a": "entity__human__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__specter__material__phase_glass__architecture__sealed__v001.png",
+      "a_key": "human/ceramic/sealed",
+      "b_key": "specter/phase_glass/sealed",
+      "same_entity": false
+    },
+    {
+      "distance": 21,
+      "a": "entity__human__material__porcelain__architecture__inset__v001.png",
+      "b": "entity__human__material__reconstructed__architecture__double_plane__v001.png",
+      "a_key": "human/porcelain/inset",
+      "b_key": "human/reconstructed/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 21,
+      "a": "entity__human__material__porcelain__architecture__inset__v001.png",
+      "b": "entity__specter__material__phase_glass__architecture__sealed__v001.png",
+      "a_key": "human/porcelain/inset",
+      "b_key": "specter/phase_glass/sealed",
+      "same_entity": false
+    },
+    {
+      "distance": 21,
+      "a": "entity__human__material__porcelain__architecture__sealed__v001.png",
+      "b": "entity__human__material__reconstructed__architecture__double_plane__v001.png",
+      "a_key": "human/porcelain/sealed",
+      "b_key": "human/reconstructed/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 21,
+      "a": "entity__human__material__reconstructed__architecture__double_plane__v001.png",
+      "b": "entity__human__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "human/reconstructed/double_plane",
+      "b_key": "human/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 21,
+      "a": "entity__specter__material__carbon__architecture__double_plane__v001.png",
+      "b": "entity__specter__material__phase_glass__architecture__sealed__v001.png",
+      "a_key": "specter/carbon/double_plane",
+      "b_key": "specter/phase_glass/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 22,
+      "a": "entity__hollow__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "hollow/ceramic/double_plane",
+      "b_key": "hollow/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 22,
+      "a": "entity__hollow__material__ceramic__architecture__inset__v001.png",
+      "b": "entity__hollow__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "hollow/ceramic/inset",
+      "b_key": "hollow/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 22,
+      "a": "entity__hollow__material__porcelain__architecture__inset__v001.png",
+      "b": "entity__hollow__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "hollow/porcelain/inset",
+      "b_key": "hollow/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 22,
+      "a": "entity__human__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__human__material__porcelain__architecture__inset__v001.png",
+      "a_key": "human/biosynth/sealed",
+      "b_key": "human/porcelain/inset",
+      "same_entity": true
+    },
+    {
+      "distance": 22,
+      "a": "entity__human__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__specter__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "human/biosynth/sealed",
+      "b_key": "specter/reconstructed/sealed",
+      "same_entity": false
+    },
+    {
+      "distance": 22,
+      "a": "entity__human__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__human__material__porcelain__architecture__sealed__v001.png",
+      "a_key": "human/ceramic/double_plane",
+      "b_key": "human/porcelain/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 22,
+      "a": "entity__human__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__human__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "human/ceramic/double_plane",
+      "b_key": "human/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 22,
+      "a": "entity__human__material__porcelain__architecture__inset__v001.png",
+      "b": "entity__human__material__porcelain__architecture__sealed__v001.png",
+      "a_key": "human/porcelain/inset",
+      "b_key": "human/porcelain/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 22,
+      "a": "entity__human__material__porcelain__architecture__inset__v001.png",
+      "b": "entity__human__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "human/porcelain/inset",
+      "b_key": "human/reconstructed/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 22,
+      "a": "entity__specter__material__carbon__architecture__double_plane__v001.png",
+      "b": "entity__specter__material__carbon__architecture__suspended_core__v001.png",
+      "a_key": "specter/carbon/double_plane",
+      "b_key": "specter/carbon/suspended_core",
+      "same_entity": true
+    },
+    {
+      "distance": 22,
+      "a": "entity__synthetic__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__synthetic__material__ceramic__architecture__sealed__v001.png",
+      "a_key": "synthetic/ceramic/double_plane",
+      "b_key": "synthetic/ceramic/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 23,
+      "a": "entity__human__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__human__material__reconstructed__architecture__double_plane__v001.png",
+      "a_key": "human/ceramic/sealed",
+      "b_key": "human/reconstructed/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 23,
+      "a": "entity__human__material__reconstructed__architecture__double_plane__v001.png",
+      "b": "entity__specter__material__carbon__architecture__double_plane__v001.png",
+      "a_key": "human/reconstructed/double_plane",
+      "b_key": "specter/carbon/double_plane",
+      "same_entity": false
+    },
+    {
+      "distance": 23,
+      "a": "entity__specter__material__reconstructed__architecture__sealed__v001.png",
+      "b": "entity__specter__material__reconstructed__architecture__suspended_core__v001.png",
+      "a_key": "specter/reconstructed/sealed",
+      "b_key": "specter/reconstructed/suspended_core",
+      "same_entity": true
+    },
+    {
+      "distance": 23,
+      "a": "entity__synthetic__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__ceramic__architecture__double_plane__v001.png",
+      "a_key": "synthetic/biosynth/sealed",
+      "b_key": "synthetic/ceramic/double_plane",
+      "same_entity": true
+    },
+    {
+      "distance": 23,
+      "a": "entity__synthetic__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__synthetic__material__porcelain__architecture__sealed__v001.png",
+      "a_key": "synthetic/ceramic/double_plane",
+      "b_key": "synthetic/porcelain/sealed",
+      "same_entity": true
+    },
+    {
+      "distance": 24,
+      "a": "entity__human__material__porcelain__architecture__sealed__v001.png",
+      "b": "entity__specter__material__reconstructed__architecture__sealed__v001.png",
+      "a_key": "human/porcelain/sealed",
+      "b_key": "specter/reconstructed/sealed",
+      "same_entity": false
+    },
+    {
+      "distance": 24,
+      "a": "entity__specter__material__phase_glass__architecture__sealed__v001.png",
+      "b": "entity__specter__material__reconstructed__architecture__suspended_core__v001.png",
+      "a_key": "specter/phase_glass/sealed",
+      "b_key": "specter/reconstructed/suspended_core",
+      "same_entity": true
+    }
+  ],
+  "closest_20": [
+    {
+      "distance": 5,
+      "a": "entity__synthetic__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__ceramic__architecture__sealed__v001.png"
+    },
+    {
+      "distance": 5,
+      "a": "entity__synthetic__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__porcelain__architecture__sealed__v001.png"
+    },
+    {
+      "distance": 6,
+      "a": "entity__human__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__human__material__ceramic__architecture__sealed__v001.png"
+    },
+    {
+      "distance": 6,
+      "a": "entity__synthetic__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__sealed__v001.png"
+    },
+    {
+      "distance": 7,
+      "a": "entity__hollow__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__ceramic__architecture__sealed__v001.png"
+    },
+    {
+      "distance": 7,
+      "a": "entity__hollow__material__ceramic__architecture__inset__v001.png",
+      "b": "entity__hollow__material__ceramic__architecture__sealed__v001.png"
+    },
+    {
+      "distance": 7,
+      "a": "entity__synthetic__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__sealed__v001.png"
+    },
+    {
+      "distance": 8,
+      "a": "entity__hollow__material__ceramic__architecture__inset__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__inset__v001.png"
+    },
+    {
+      "distance": 8,
+      "a": "entity__human__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__human__material__reconstructed__architecture__sealed__v001.png"
+    },
+    {
+      "distance": 8,
+      "a": "entity__human__material__porcelain__architecture__sealed__v001.png",
+      "b": "entity__human__material__reconstructed__architecture__sealed__v001.png"
+    },
+    {
+      "distance": 8,
+      "a": "entity__synthetic__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__porcelain__architecture__sealed__v001.png"
+    },
+    {
+      "distance": 8,
+      "a": "entity__synthetic__material__porcelain__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__sealed__v001.png"
+    },
+    {
+      "distance": 9,
+      "a": "entity__synthetic__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__inset__v001.png"
+    },
+    {
+      "distance": 10,
+      "a": "entity__hollow__material__porcelain__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__inset__v001.png"
+    },
+    {
+      "distance": 10,
+      "a": "entity__human__material__biosynth__architecture__sealed__v001.png",
+      "b": "entity__human__material__porcelain__architecture__sealed__v001.png"
+    },
+    {
+      "distance": 10,
+      "a": "entity__human__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__human__material__reconstructed__architecture__sealed__v001.png"
+    },
+    {
+      "distance": 11,
+      "a": "entity__hollow__material__ceramic__architecture__sealed__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__double_plane__v001.png"
+    },
+    {
+      "distance": 11,
+      "a": "entity__synthetic__material__reconstructed__architecture__inset__v001.png",
+      "b": "entity__synthetic__material__reconstructed__architecture__sealed__v001.png"
+    },
+    {
+      "distance": 12,
+      "a": "entity__hollow__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__ceramic__architecture__inset__v001.png"
+    },
+    {
+      "distance": 12,
+      "a": "entity__hollow__material__ceramic__architecture__double_plane__v001.png",
+      "b": "entity__hollow__material__porcelain__architecture__double_plane__v001.png"
+    }
+  ]
+}

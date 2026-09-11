@@ -1,0 +1,369 @@
+{
+  "reviewed": 68,
+  "pass": 68,
+  "regenerate": 0,
+  "review_flags": {
+    "human/reconstructed/inset": "\u2018inset\u2019 rendered as a rectangular carved relief frame rather than the oval aperture used elsewhere (stylistic; high quality, not malformed).",
+    "specter/reconstructed/inset": "same rectangular relief-frame interpretation of \u2018inset\u2019 (consistent with human/reconstructed/inset).",
+    "synthetic/biosynth/inset": "\u2018inset\u2019 rendered as a square ceramic box frame; confirm oval-aperture intent for overlay compatibility.",
+    "synthetic/biosynth/suspended_core": "material strongly red-tinted; confirm against \u2018restrained red/gold/violet accent\u2019 direction (no text/watermark \u2014 thumbnail \u2018glyphs\u2019 disproven at full res).",
+    "specter/phase_glass/suspended_core": "glass shards extend slightly beyond the bust envelope; verify overlay silhouette headroom.",
+    "hollow/carbon/suspended_core": "minor edge irregularity at lower-right shoulder; within silhouette, overlay-safe."
+  },
+  "method": "4 per-entity contact sheets at 460px tiles + full-res zoom on synthetic/biosynth/suspended_core",
+  "checks": [
+    "framing/head/shoulder/torso/eye-line consistency",
+    "lighting direction (upper-left)",
+    "material distinction",
+    "architecture visibility",
+    "malformed anatomy",
+    "baked text / fake typography",
+    "watermarks",
+    "clipping / accidental props",
+    "background contamination",
+    "style drift",
+    "overlay-hostile silhouette"
+  ],
+  "records": [
+    {
+      "key": "hollow/carbon/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "hollow/carbon/inset",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "hollow/carbon/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "hollow/carbon/suspended_core",
+      "verdict": "PASS",
+      "flag": "minor edge irregularity at lower-right shoulder; within silhouette, overlay-safe."
+    },
+    {
+      "key": "hollow/ceramic/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "hollow/ceramic/inset",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "hollow/ceramic/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "hollow/ceramic/suspended_core",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "hollow/porcelain/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "hollow/porcelain/inset",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "hollow/porcelain/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "hollow/porcelain/suspended_core",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "hollow/reconstructed/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "hollow/reconstructed/inset",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "hollow/reconstructed/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "hollow/reconstructed/suspended_core",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/biosynth/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/biosynth/inset",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/biosynth/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/biosynth/suspended_core",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/carbon/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/carbon/inset",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/carbon/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/carbon/suspended_core",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/ceramic/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/ceramic/inset",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/ceramic/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/ceramic/suspended_core",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/porcelain/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/porcelain/inset",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/porcelain/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/porcelain/suspended_core",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/reconstructed/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/reconstructed/inset",
+      "verdict": "PASS",
+      "flag": "\u2018inset\u2019 rendered as a rectangular carved relief frame rather than the oval aperture used elsewhere (stylistic; high quality, not malformed)."
+    },
+    {
+      "key": "human/reconstructed/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "human/reconstructed/suspended_core",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "specter/carbon/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "specter/carbon/inset",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "specter/carbon/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "specter/carbon/suspended_core",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "specter/phase_glass/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "specter/phase_glass/inset",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "specter/phase_glass/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "specter/phase_glass/suspended_core",
+      "verdict": "PASS",
+      "flag": "glass shards extend slightly beyond the bust envelope; verify overlay silhouette headroom."
+    },
+    {
+      "key": "specter/reconstructed/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "specter/reconstructed/inset",
+      "verdict": "PASS",
+      "flag": "same rectangular relief-frame interpretation of \u2018inset\u2019 (consistent with human/reconstructed/inset)."
+    },
+    {
+      "key": "specter/reconstructed/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "specter/reconstructed/suspended_core",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/biosynth/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/biosynth/inset",
+      "verdict": "PASS",
+      "flag": "\u2018inset\u2019 rendered as a square ceramic box frame; confirm oval-aperture intent for overlay compatibility."
+    },
+    {
+      "key": "synthetic/biosynth/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/biosynth/suspended_core",
+      "verdict": "PASS",
+      "flag": "material strongly red-tinted; confirm against \u2018restrained red/gold/violet accent\u2019 direction (no text/watermark \u2014 thumbnail \u2018glyphs\u2019 disproven at full res)."
+    },
+    {
+      "key": "synthetic/carbon/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/carbon/inset",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/carbon/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/carbon/suspended_core",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/ceramic/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/ceramic/inset",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/ceramic/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/ceramic/suspended_core",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/porcelain/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/porcelain/inset",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/porcelain/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/porcelain/suspended_core",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/reconstructed/double_plane",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/reconstructed/inset",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/reconstructed/sealed",
+      "verdict": "PASS",
+      "flag": null
+    },
+    {
+      "key": "synthetic/reconstructed/suspended_core",
+      "verdict": "PASS",
+      "flag": null
+    }
+  ]
+}

@@ -1,0 +1,614 @@
+{
+  "hollow/carbon/double_plane": {
+    "filename": "entity__hollow__material__carbon__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/carbon/double_plane",
+    "sha256": "8a253b0894171c2ef5e53d2bf8997a141636a9f8c425e2eaef4d435a8bbb13a0",
+    "size_bytes": 2867922,
+    "width": 2048
+  },
+  "hollow/carbon/inset": {
+    "filename": "entity__hollow__material__carbon__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/carbon/inset",
+    "sha256": "c1efad32fa46a19442e5ef8561f08c95f2cd4efc94f8e28247c0fe2226f3a6a4",
+    "size_bytes": 2430800,
+    "width": 2048
+  },
+  "hollow/carbon/sealed": {
+    "filename": "entity__hollow__material__carbon__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/carbon/sealed",
+    "sha256": "9d7de9424482d5cb6d7b233f43eaffd6024297b8cac428ace60ac80651c01330",
+    "size_bytes": 2786320,
+    "width": 2048
+  },
+  "hollow/carbon/suspended_core": {
+    "filename": "entity__hollow__material__carbon__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/carbon/suspended_core",
+    "sha256": "20bddfa2c5df944d031e58b4d2dcfc4d7f950a259ef93b6a38f7bd45aa7530e3",
+    "size_bytes": 1163550,
+    "width": 2048
+  },
+  "hollow/ceramic/double_plane": {
+    "filename": "entity__hollow__material__ceramic__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/ceramic/double_plane",
+    "sha256": "0b2dbc786ddf0fab45f15507252eb8a806ecec6b18a1c06acf7d3ef85f19c94e",
+    "size_bytes": 1835661,
+    "width": 2048
+  },
+  "hollow/ceramic/inset": {
+    "filename": "entity__hollow__material__ceramic__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/ceramic/inset",
+    "sha256": "1f637dfae0d710dba82d9123733691f026435dd6bed610ab6a03445e45d99082",
+    "size_bytes": 2051989,
+    "width": 2048
+  },
+  "hollow/ceramic/sealed": {
+    "filename": "entity__hollow__material__ceramic__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/ceramic/sealed",
+    "sha256": "a26c4ec160cee8c0fe7e081098be3e6afd7383e5b27213d9204c463d00d99333",
+    "size_bytes": 1727484,
+    "width": 2048
+  },
+  "hollow/ceramic/suspended_core": {
+    "filename": "entity__hollow__material__ceramic__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/ceramic/suspended_core",
+    "sha256": "de3d61943772b7534a118ab8619e7d8c735a2f0f1a966a95d0be23a6dc899250",
+    "size_bytes": 2647812,
+    "width": 2048
+  },
+  "hollow/porcelain/double_plane": {
+    "filename": "entity__hollow__material__porcelain__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/porcelain/double_plane",
+    "sha256": "0f37b6ec9d50bf6247e61e6ef4c436bba2fa39b7f4c70b9ac8cd76e8df1627ae",
+    "size_bytes": 2251017,
+    "width": 2048
+  },
+  "hollow/porcelain/inset": {
+    "filename": "entity__hollow__material__porcelain__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/porcelain/inset",
+    "sha256": "48ead4236e201f814d6e5c01d61258e631d1fb50b79eca5f31a860eeed90bab1",
+    "size_bytes": 2234544,
+    "width": 2048
+  },
+  "hollow/porcelain/sealed": {
+    "filename": "entity__hollow__material__porcelain__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/porcelain/sealed",
+    "sha256": "ad0c22dc8427a8300a08c332a1b8448043ef8759606478adf07489a6ffe40be1",
+    "size_bytes": 1284332,
+    "width": 2048
+  },
+  "hollow/porcelain/suspended_core": {
+    "filename": "entity__hollow__material__porcelain__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/porcelain/suspended_core",
+    "sha256": "6b3a7116f8eac33c8326f2601f7397887fd8aa0b0a440ffc1faa01f66a331da1",
+    "size_bytes": 2602474,
+    "width": 2048
+  },
+  "hollow/reconstructed/double_plane": {
+    "filename": "entity__hollow__material__reconstructed__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/reconstructed/double_plane",
+    "sha256": "fb48dcd697d77fd68cf08b16af959a8b2972624ee89ed0edb2fee1854b8abb7e",
+    "size_bytes": 2760723,
+    "width": 2048
+  },
+  "hollow/reconstructed/inset": {
+    "filename": "entity__hollow__material__reconstructed__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/reconstructed/inset",
+    "sha256": "2e02a9458cf01688a25a0af88c02ef1de13027de823a5c81cfa1a25b3a200996",
+    "size_bytes": 2647147,
+    "width": 2048
+  },
+  "hollow/reconstructed/sealed": {
+    "filename": "entity__hollow__material__reconstructed__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/reconstructed/sealed",
+    "sha256": "ea2da872f22daaac55d49a3447c662d108a9d24e89d33ecd56a105e3e4572416",
+    "size_bytes": 2707526,
+    "width": 2048
+  },
+  "hollow/reconstructed/suspended_core": {
+    "filename": "entity__hollow__material__reconstructed__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "hollow/reconstructed/suspended_core",
+    "sha256": "3ef3e66e818e1213e0d1034d9d971bb0dadd3fb407f9a3ede915dc4b4914ebce",
+    "size_bytes": 2949848,
+    "width": 2048
+  },
+  "human/biosynth/double_plane": {
+    "filename": "entity__human__material__biosynth__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/biosynth/double_plane",
+    "sha256": "6d8005db659d97f74ab1dd08119b23c448411218ffb3183c813670d01970ba90",
+    "size_bytes": 2006116,
+    "width": 2048
+  },
+  "human/biosynth/inset": {
+    "filename": "entity__human__material__biosynth__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/biosynth/inset",
+    "sha256": "c94ea2d60795d6d4c73668a20aa3908be918e359ea96000d48ac93a1bd736421",
+    "size_bytes": 3028652,
+    "width": 2048
+  },
+  "human/biosynth/sealed": {
+    "filename": "entity__human__material__biosynth__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/biosynth/sealed",
+    "sha256": "bb50e2da1c23d295b4b1c40f685512606ca417c0cd836d21d9015b3896464ecb",
+    "size_bytes": 2494453,
+    "width": 2048
+  },
+  "human/biosynth/suspended_core": {
+    "filename": "entity__human__material__biosynth__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/biosynth/suspended_core",
+    "sha256": "86bb254d9fc62f7b775d6090675fad7b9e3bd7b2b44767fd81235ec166b6b936",
+    "size_bytes": 2891710,
+    "width": 2048
+  },
+  "human/carbon/double_plane": {
+    "filename": "entity__human__material__carbon__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/carbon/double_plane",
+    "sha256": "2e4a1741d67ce4ce1a75aba4bafcbc9a5dfd00b1a82004275eee17dde05a641e",
+    "size_bytes": 2753416,
+    "width": 2048
+  },
+  "human/carbon/inset": {
+    "filename": "entity__human__material__carbon__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/carbon/inset",
+    "sha256": "13b64c51a2cb09317f106548d45b4e0c8c29b04db0c4890f65a3aaa623a59f6e",
+    "size_bytes": 2990362,
+    "width": 2048
+  },
+  "human/carbon/sealed": {
+    "filename": "entity__human__material__carbon__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/carbon/sealed",
+    "sha256": "89bbbcf4c5d2c6465cd7a67ed2e90de72d98dee5324bff08a07da0ccc0d6bdf6",
+    "size_bytes": 2905253,
+    "width": 2048
+  },
+  "human/carbon/suspended_core": {
+    "filename": "entity__human__material__carbon__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/carbon/suspended_core",
+    "sha256": "bc318a0541643dfcc5d318777fa15944df2c5668e48464171b15cac2a10199d6",
+    "size_bytes": 2657830,
+    "width": 2048
+  },
+  "human/ceramic/double_plane": {
+    "filename": "entity__human__material__ceramic__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/ceramic/double_plane",
+    "sha256": "73f9bcb3b89a1254f4b84302602108d48b87eedbe0e71c673ecff5285803dcbf",
+    "size_bytes": 2421125,
+    "width": 2048
+  },
+  "human/ceramic/inset": {
+    "filename": "entity__human__material__ceramic__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/ceramic/inset",
+    "sha256": "7ef5eaa825a38f80afdb6ffa2e4163d3266fca7da280305633b89c548828e577",
+    "size_bytes": 2793231,
+    "width": 2048
+  },
+  "human/ceramic/sealed": {
+    "filename": "entity__human__material__ceramic__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/ceramic/sealed",
+    "sha256": "fa751e6e2f2c583d94272b410e4a4d9a44eedca3865e9cac28898c7f4f4f86f3",
+    "size_bytes": 2174482,
+    "width": 2048
+  },
+  "human/ceramic/suspended_core": {
+    "filename": "entity__human__material__ceramic__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/ceramic/suspended_core",
+    "sha256": "dae7a5d9b0509dc8b7a09af55150a4ca72031abf69168dd83f783469628f3025",
+    "size_bytes": 2317889,
+    "width": 2048
+  },
+  "human/porcelain/double_plane": {
+    "filename": "entity__human__material__porcelain__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/porcelain/double_plane",
+    "sha256": "51f48b70aefce5f8a5f624363beba27abee70999682326d418d23fdf0f516022",
+    "size_bytes": 2400637,
+    "width": 2048
+  },
+  "human/porcelain/inset": {
+    "filename": "entity__human__material__porcelain__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/porcelain/inset",
+    "sha256": "d7b512e3500a50a331f3f0451c63db4e4a41f65593670c9e6ca6cbb4c248265a",
+    "size_bytes": 2703149,
+    "width": 2048
+  },
+  "human/porcelain/sealed": {
+    "filename": "entity__human__material__porcelain__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/porcelain/sealed",
+    "sha256": "09e05dfca3955b1dd03fa8f4a7eb06e02cdb44142e999caa837e478b1822cc66",
+    "size_bytes": 1664784,
+    "width": 2048
+  },
+  "human/porcelain/suspended_core": {
+    "filename": "entity__human__material__porcelain__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/porcelain/suspended_core",
+    "sha256": "155963c48e5d241eff0fd9fab0a87fa6d5e44de577a064cbf0f6f0858e360b54",
+    "size_bytes": 2550180,
+    "width": 2048
+  },
+  "human/reconstructed/double_plane": {
+    "filename": "entity__human__material__reconstructed__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/reconstructed/double_plane",
+    "sha256": "56ca0229d7deaa4667ecc57d26b9afbab86c1a72fe4f24c3a956806ac41b1372",
+    "size_bytes": 2690114,
+    "width": 2048
+  },
+  "human/reconstructed/inset": {
+    "filename": "entity__human__material__reconstructed__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/reconstructed/inset",
+    "sha256": "8959eb90189e000304edfaa02c19b6b54d9063c4b17878e875e5e410b9c8b10e",
+    "size_bytes": 4027456,
+    "width": 2048
+  },
+  "human/reconstructed/sealed": {
+    "filename": "entity__human__material__reconstructed__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/reconstructed/sealed",
+    "sha256": "88be3bfb3f7540a1b12286cbb2617d6980d80e9cc46d7fb6e03dd36e0a06c871",
+    "size_bytes": 2560552,
+    "width": 2048
+  },
+  "human/reconstructed/suspended_core": {
+    "filename": "entity__human__material__reconstructed__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "human/reconstructed/suspended_core",
+    "sha256": "eb75c0774c798d6bc4094d44d8e3f188f500fa1f1ae77cdbd73409229e2fb7c3",
+    "size_bytes": 2876955,
+    "width": 2048
+  },
+  "specter/carbon/double_plane": {
+    "filename": "entity__specter__material__carbon__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "specter/carbon/double_plane",
+    "sha256": "055f641ee6580de77566755c267b102435c99792e33e15f794787b69824222e0",
+    "size_bytes": 2765366,
+    "width": 2048
+  },
+  "specter/carbon/inset": {
+    "filename": "entity__specter__material__carbon__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "specter/carbon/inset",
+    "sha256": "2106f46a29198ac532eb12bb0d60f7ac6d3e6f00c67311972a00aef80373cfb6",
+    "size_bytes": 2747213,
+    "width": 2048
+  },
+  "specter/carbon/sealed": {
+    "filename": "entity__specter__material__carbon__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "specter/carbon/sealed",
+    "sha256": "cfd49bf993112b01e2b75b3f556b9d01aba6efd9067e9261cd1ea0ad6d14a366",
+    "size_bytes": 2535780,
+    "width": 2048
+  },
+  "specter/carbon/suspended_core": {
+    "filename": "entity__specter__material__carbon__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "specter/carbon/suspended_core",
+    "sha256": "3a6af466f958b9c44872633b1d1958eaa1c76584c928528e460ee626b4d35e2c",
+    "size_bytes": 2705245,
+    "width": 2048
+  },
+  "specter/phase_glass/double_plane": {
+    "filename": "entity__specter__material__phase_glass__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "specter/phase_glass/double_plane",
+    "sha256": "a9bef60eda88b8e801cd9b950cb0cc7b0e21c4d1bba31e76620c78e08ec328db",
+    "size_bytes": 2659858,
+    "width": 2048
+  },
+  "specter/phase_glass/inset": {
+    "filename": "entity__specter__material__phase_glass__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "specter/phase_glass/inset",
+    "sha256": "2f1da229deb668ece0da7f8e7da24e8e4b4af7c096d28aa3bafce7d4680e8bcc",
+    "size_bytes": 1915176,
+    "width": 2048
+  },
+  "specter/phase_glass/sealed": {
+    "filename": "entity__specter__material__phase_glass__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "specter/phase_glass/sealed",
+    "sha256": "66a1902b87e3ecf12dba9466a8f417f1b3803d182fa27d57e018629062814b32",
+    "size_bytes": 1891052,
+    "width": 2048
+  },
+  "specter/phase_glass/suspended_core": {
+    "filename": "entity__specter__material__phase_glass__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "specter/phase_glass/suspended_core",
+    "sha256": "5ed642d1c8bdddb33b466446b4cc45dee4c485798c33b6f547e285ecee23d061",
+    "size_bytes": 2397911,
+    "width": 2048
+  },
+  "specter/reconstructed/double_plane": {
+    "filename": "entity__specter__material__reconstructed__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "specter/reconstructed/double_plane",
+    "sha256": "fb2fc4b1f9957663a1e177c57de1706f97399fc4c62c6ea3fc1d8eb52ee4a2fc",
+    "size_bytes": 1919803,
+    "width": 2048
+  },
+  "specter/reconstructed/inset": {
+    "filename": "entity__specter__material__reconstructed__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "specter/reconstructed/inset",
+    "sha256": "438e7f3949bfb6d43283cb5ac116a0d36d37fa87fe5a57481232bcf4cc8c4fd4",
+    "size_bytes": 4669822,
+    "width": 2048
+  },
+  "specter/reconstructed/sealed": {
+    "filename": "entity__specter__material__reconstructed__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "specter/reconstructed/sealed",
+    "sha256": "ef4c92ca36635c7a8d26e6e7e0ba9409a5184dd4a92fa06eff8cedbf01ddf247",
+    "size_bytes": 2797722,
+    "width": 2048
+  },
+  "specter/reconstructed/suspended_core": {
+    "filename": "entity__specter__material__reconstructed__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "specter/reconstructed/suspended_core",
+    "sha256": "96aa62a2cb4ff76d994ae46d9a963258f7ba1a939a0612a8469a3a3fd298a612",
+    "size_bytes": 2892647,
+    "width": 2048
+  },
+  "synthetic/biosynth/double_plane": {
+    "filename": "entity__synthetic__material__biosynth__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/biosynth/double_plane",
+    "sha256": "99e5fe8f1f972a71a103f925b430db866acd2c5cd076de0897586a274ed30a7d",
+    "size_bytes": 2751848,
+    "width": 2048
+  },
+  "synthetic/biosynth/inset": {
+    "filename": "entity__synthetic__material__biosynth__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/biosynth/inset",
+    "sha256": "ec8b4f02f4e70eb537e75d8cdbcacbdbddf8ca096c466b44c3a1f26b061bc30e",
+    "size_bytes": 3591965,
+    "width": 2048
+  },
+  "synthetic/biosynth/sealed": {
+    "filename": "entity__synthetic__material__biosynth__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/biosynth/sealed",
+    "sha256": "cf91a82b06cda83e1d377b6d0d55100b032288589336837b246bb1dfcc01415e",
+    "size_bytes": 2278519,
+    "width": 2048
+  },
+  "synthetic/biosynth/suspended_core": {
+    "filename": "entity__synthetic__material__biosynth__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/biosynth/suspended_core",
+    "sha256": "7d70516bf317da929db2ee5f42200695ae0c3cb827ebc437ea72022063b94c90",
+    "size_bytes": 3427825,
+    "width": 2048
+  },
+  "synthetic/carbon/double_plane": {
+    "filename": "entity__synthetic__material__carbon__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/carbon/double_plane",
+    "sha256": "8522b5e98b94f52e052f6d7fe8bde516014a64be218a5198f4f1136a507d69a8",
+    "size_bytes": 2882923,
+    "width": 2048
+  },
+  "synthetic/carbon/inset": {
+    "filename": "entity__synthetic__material__carbon__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/carbon/inset",
+    "sha256": "4cd4eef35d3a21cbe5f4c15b99606068b9aa3da767da49f49069aad0734557d2",
+    "size_bytes": 2948078,
+    "width": 2048
+  },
+  "synthetic/carbon/sealed": {
+    "filename": "entity__synthetic__material__carbon__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/carbon/sealed",
+    "sha256": "0ba60cef57eb5c1afa8c34b30a72fa6bac6b60c7e0ff041597980df0f1e9e49d",
+    "size_bytes": 2510627,
+    "width": 2048
+  },
+  "synthetic/carbon/suspended_core": {
+    "filename": "entity__synthetic__material__carbon__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/carbon/suspended_core",
+    "sha256": "2a9172262ad91de909b45ead3f52819e142f2475273633ca284cc73456fcf7e1",
+    "size_bytes": 2949678,
+    "width": 2048
+  },
+  "synthetic/ceramic/double_plane": {
+    "filename": "entity__synthetic__material__ceramic__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/ceramic/double_plane",
+    "sha256": "d0bcdf76787abf04a6c7ae8c4a14c947dc417f4a1147f8025b07a1a80020ffc2",
+    "size_bytes": 2206731,
+    "width": 2048
+  },
+  "synthetic/ceramic/inset": {
+    "filename": "entity__synthetic__material__ceramic__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/ceramic/inset",
+    "sha256": "4823a6fbbf1822fcebeb21b5f5a2f3be66372e282c3e77aa4ae92cf5c5db8aba",
+    "size_bytes": 2681241,
+    "width": 2048
+  },
+  "synthetic/ceramic/sealed": {
+    "filename": "entity__synthetic__material__ceramic__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/ceramic/sealed",
+    "sha256": "7a6cf2ac1cc1493610b1644da78d7ec972cf74dec4dda8ec3f78dd8f141d3412",
+    "size_bytes": 1674242,
+    "width": 2048
+  },
+  "synthetic/ceramic/suspended_core": {
+    "filename": "entity__synthetic__material__ceramic__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/ceramic/suspended_core",
+    "sha256": "6a8ab3aa4f5d7657d78e2b539cb56c9e5e353ed19d469c09fad283f74191e4cd",
+    "size_bytes": 2159032,
+    "width": 2048
+  },
+  "synthetic/porcelain/double_plane": {
+    "filename": "entity__synthetic__material__porcelain__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/porcelain/double_plane",
+    "sha256": "8c28c5fdb49828728454fe09e1ba4ebd9b40b2dc574dab439dbc702e2a1e9c78",
+    "size_bytes": 2450202,
+    "width": 2048
+  },
+  "synthetic/porcelain/inset": {
+    "filename": "entity__synthetic__material__porcelain__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/porcelain/inset",
+    "sha256": "af073f038689de0155627ab8c53cb1e6a0c5fb027e644079e39c349ccbe28c04",
+    "size_bytes": 2804411,
+    "width": 2048
+  },
+  "synthetic/porcelain/sealed": {
+    "filename": "entity__synthetic__material__porcelain__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/porcelain/sealed",
+    "sha256": "b0f241769e9bcad2119edf1f269f88f540aa1ff97399c37ff5fbeb59c7f63ee7",
+    "size_bytes": 2336145,
+    "width": 2048
+  },
+  "synthetic/porcelain/suspended_core": {
+    "filename": "entity__synthetic__material__porcelain__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/porcelain/suspended_core",
+    "sha256": "37dc469d0bf7ea3a5459b44af3af90abbd32fca7537b28b01bb8db4e6db41ebc",
+    "size_bytes": 2955711,
+    "width": 2048
+  },
+  "synthetic/reconstructed/double_plane": {
+    "filename": "entity__synthetic__material__reconstructed__architecture__double_plane__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/reconstructed/double_plane",
+    "sha256": "5c290f529730818055f3affe3d08fbf1bd51becb3493ef4323a3b44e3b521c99",
+    "size_bytes": 2681241,
+    "width": 2048
+  },
+  "synthetic/reconstructed/inset": {
+    "filename": "entity__synthetic__material__reconstructed__architecture__inset__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/reconstructed/inset",
+    "sha256": "6281a0546d1fe6adbb289a171cf8cc34d0019fc193d4598632f9dbd83cda90e1",
+    "size_bytes": 1769915,
+    "width": 2048
+  },
+  "synthetic/reconstructed/sealed": {
+    "filename": "entity__synthetic__material__reconstructed__architecture__sealed__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/reconstructed/sealed",
+    "sha256": "93132ed88c66337498aa4e8a5e070ca9ecf37532d74d000d4c3fa125dbac11f6",
+    "size_bytes": 2673265,
+    "width": 2048
+  },
+  "synthetic/reconstructed/suspended_core": {
+    "filename": "entity__synthetic__material__reconstructed__architecture__suspended_core__v001.png",
+    "format": "PNG",
+    "height": 2048,
+    "key": "synthetic/reconstructed/suspended_core",
+    "sha256": "056d123d7d880330f5be9ea96a4590022a662df37ff5a720e8fd9f38a77a5241",
+    "size_bytes": 3203254,
+    "width": 2048
+  }
+}
