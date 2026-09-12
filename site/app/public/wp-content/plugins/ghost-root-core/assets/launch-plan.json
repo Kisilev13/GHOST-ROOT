@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "source_sha256": "d6ceb3306ffff1ea9b8f7459c101f7e060a52c51b8ecff3ae14ea976c8b0245a",
+  "state": "PREPARED_NOT_DEPLOYED",
+  "collection": "ECfe4r3Xp66qe6dAGgdnc4QAMikdDHHvrGfWPDqkrE1p",
+  "canary": "GUhpsP3cHvtJ5JJzKDnfcr83tvHJPn3kA2ib17MtM9B4",
+  "last_verified_at": "2026-09-11T12:55:32Z",
+  "verification_scope": "Collection and one pre-release canary; public mint not deployed.",
+  "inventory": 3332,
+  "excluded_canary_id": 1,
+  "royalty_percent": 5,
+  "wallet_limit": {
+    "per_phase_max": 5,
+    "scope": "per_phase_independent",
+    "early_counter_id": 1,
+    "public_counter_id": 2,
+    "combined_max": 10,
+    "enforcement_status": "PDA_VERIFIED_PROGRAM_UNTESTED",
+    "mechanism": "Two independent on-chain Mint Limit counters. MintCounter PDA seeds (verified from installed mpl-core-candy-machine@0.3.0 source: ['mint_limit', id(u8), user, candyGuard, candyMachine]) include the mintLimit id, so early (id 1) and public (id 2) resolve to DIFFERENT counter PDAs for the same wallet under the fixed Candy Guard + Candy Machine. Each phase independently allows up to 5 mints (10 combined). Runtime enforcement (group-required routing, per-counter decrement/reject-sixth) is a Candy Guard program behavior and remains untested offline this phase."
+  },
+  "phases": {
+    "early": {
+      "price_sol": 0.1,
+      "max_per_wallet": 5,
+      "mint_limit_id": 1,
+      "start_date": null,
+      "status": "NOT_SCHEDULED"
+    },
+    "public": {
+      "price_sol": 0.15,
+      "max_per_wallet": 5,
+      "mint_limit_id": 2,
+      "start_date": null,
+      "status": "NOT_SCHEDULED"
+    }
+  }
+}

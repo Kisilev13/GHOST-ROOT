@@ -52,6 +52,12 @@ final class Config {
 	 *
 	 * @return array<string,mixed>
 	 */
+	public static function launch_plan(): array {
+		$path = dirname( __DIR__, 2 ) . "/assets/launch-plan.json";
+		$data = is_readable( $path ) ? json_decode( file_get_contents( $path ), true ) : [];
+		return is_array( $data ) ? $data : [];
+	}
+
 	public static function mint_config(): array {
 		return [
 			'network'      => 'solana',
@@ -63,6 +69,9 @@ final class Config {
 			'maxPerWallet' => (int) self::get( 'mint_max_per_wallet' ),
 			'state'        => (string) self::get( 'mint_state' ),
 			'supply'       => Vocab::SUPPLY,
+			'launchPlan'   => self::launch_plan(),
+			'walletLimitScope' => 'per_phase_independent',
+			'combinedMaxPerWallet' => 10,
 			'deployed'     => (bool) (self::get('collection_address') && self::get('candy_machine_address') && self::get('treasury_address') && self::get('contract_verified')),
 		];
 	}
