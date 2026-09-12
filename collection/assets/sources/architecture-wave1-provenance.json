@@ -1,0 +1,93 @@
+[
+  {
+    "path": "collection/assets/layers/70_architecture/architecture__double_plane__entity__hollow__v001.png",
+    "kind": "double_plane",
+    "entity": "hollow",
+    "sha256": "f7124eae733ea6ec4b237e078783e06c62534321989dcc58f164fd11bddb6be5",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "procedural schematic architecture_layer + deterministic per-entity accent",
+    "source": "collection/scripts/build_wave1_architecture.py"
+  },
+  {
+    "path": "collection/assets/layers/70_architecture/architecture__double_plane__entity__synthetic__v001.png",
+    "kind": "double_plane",
+    "entity": "synthetic",
+    "sha256": "2718f54b4500dcac6481465ffe753911e3df560f0b530eece7fbcf700382fce1",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "procedural schematic architecture_layer + deterministic per-entity accent",
+    "source": "collection/scripts/build_wave1_architecture.py"
+  },
+  {
+    "path": "collection/assets/layers/70_architecture/architecture__inset__entity__hollow__v001.png",
+    "kind": "inset",
+    "entity": "hollow",
+    "sha256": "0327a12bfbb58dd0376fcae07274b601decdc2a2a3619926b77bb3af4086e790",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "procedural schematic architecture_layer + deterministic per-entity accent",
+    "source": "collection/scripts/build_wave1_architecture.py"
+  },
+  {
+    "path": "collection/assets/layers/70_architecture/architecture__inset__entity__human__v001.png",
+    "kind": "inset",
+    "entity": "human",
+    "sha256": "65e21188fc7acd7190f50b2ab8b69ca9694feb43d5fd6a11571ecbd36d9b95c9",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "procedural schematic architecture_layer + deterministic per-entity accent",
+    "source": "collection/scripts/build_wave1_architecture.py"
+  },
+  {
+    "path": "collection/assets/layers/70_architecture/architecture__sealed__entity__synthetic__v001.png",
+    "kind": "sealed",
+    "entity": "synthetic",
+    "sha256": "1a9f6711ffdaf3ae93ea55749890f905fc869b101fb75748e95a0f409334fedb",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "procedural schematic architecture_layer + deterministic per-entity accent",
+    "source": "collection/scripts/build_wave1_architecture.py"
+  },
+  {
+    "path": "collection/assets/layers/70_architecture/architecture__suspended_core__entity__human__v001.png",
+    "kind": "suspended_core",
+    "entity": "human",
+    "sha256": "012d3841a29cca413ceb018b2791e7ce0bd64524b1977dea9ecd0d4a3c58a5ae",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "procedural schematic architecture_layer + deterministic per-entity accent",
+    "source": "collection/scripts/build_wave1_architecture.py"
+  },
+  {
+    "path": "collection/assets/layers/70_architecture/architecture__suspended_core__entity__synthetic__v001.png",
+    "kind": "suspended_core",
+    "entity": "synthetic",
+    "sha256": "fdaed6d495dd58301ac475e85016734986ea38cc2e9259f7a59d192fdf87114e",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "procedural schematic architecture_layer + deterministic per-entity accent",
+    "source": "collection/scripts/build_wave1_architecture.py"
+  }
+]
