@@ -1,0 +1,33 @@
+# Wave-3 authored-scene validation
+
+- New scenes: 26
+- Technical failures: 0
+- Exact duplicate groups (all 33): 0
+- Perceptual pairs (<= 10 bits): 0
+
+- 0403: OK
+- 0503: OK
+- 0603: OK
+- 0703: OK
+- 0903: OK
+- 1003: OK
+- 1103: OK
+- 1203: OK
+- 1303: OK
+- 1403: OK
+- 1603: OK
+- 1703: OK
+- 1803: OK
+- 1903: OK
+- 2003: OK
+- 2103: OK
+- 2203: OK
+- 2303: OK
+- 2403: OK
+- 2503: OK
+- 2603: OK
+- 2703: OK
+- 2903: OK
+- 3003: OK
+- 3103: OK
+- 3203: OK

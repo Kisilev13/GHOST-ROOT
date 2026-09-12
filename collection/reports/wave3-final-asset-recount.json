@@ -1,0 +1,62 @@
+{
+  "total_required": 226,
+  "total_present": 226,
+  "total_missing": 0,
+  "by_slot": {
+    "background": {
+      "required": 7,
+      "present": 7,
+      "missing": 0
+    },
+    "architecture": {
+      "required": 16,
+      "present": 16,
+      "missing": 0
+    },
+    "entity_base": {
+      "required": 68,
+      "present": 68,
+      "missing": 0
+    },
+    "eyes": {
+      "required": 7,
+      "present": 7,
+      "missing": 0
+    },
+    "mantle": {
+      "required": 21,
+      "present": 21,
+      "missing": 0
+    },
+    "implant_front": {
+      "required": 20,
+      "present": 20,
+      "missing": 0
+    },
+    "rear_anatomy": {
+      "required": 20,
+      "present": 20,
+      "missing": 0
+    },
+    "interface": {
+      "required": 15,
+      "present": 15,
+      "missing": 0
+    },
+    "corruption": {
+      "required": 18,
+      "present": 18,
+      "missing": 0
+    },
+    "authored_scene": {
+      "required": 33,
+      "present": 33,
+      "missing": 0
+    },
+    "witness_seam": {
+      "required": 1,
+      "present": 1,
+      "missing": 0
+    }
+  }
+}

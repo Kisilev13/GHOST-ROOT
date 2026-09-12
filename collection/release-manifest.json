@@ -1,10 +1,20 @@
 {
   "schema_version": "1.0",
   "release_version": "0.2.0",
-  "status": "VISUAL_SYSTEM_APPROVED_FOR_FULL_RENDER",
+  "status": "PRODUCTION_ASSET_SYSTEM_COMPLETE_PENDING_FULL_3333_RENDER_QA",
   "date": "2026-09-07",
-  "updated": "2026-09-10",
+  "updated": "2026-09-12",
   "changelog": [
+    {
+      "date": "2026-09-12",
+      "summary": "All 226 production assets complete (Waves 1-3): 68 entity bases, 7 backgrounds, 16 architecture, 7 eyes, 21 mantle, 20 implant_front, 20 rear_anatomy, 15 interface, 18 corruption, 1 witness_seam, and 33/33 authored scenes (3 genesis + 30 legendary). Wave 3 authored 26 missing legendary scenes via Gemini (native 2048, opaque), preserving the existing 7. QA: 0 technical failures, 0 exact duplicates, 0 near-duplicates (closest 88/256), trait-fidelity 26/26 PASS, authored-scene resolution audit 0 problems/0 cross-application, validate_design PASS, selftest 9/9, test-batch renders 20/20. This is the production ASSET-SYSTEM-complete checkpoint only; the full 3,333 render and collection-wide render/visual QA remain the next phase. NOT mint-ready; NOT full-collection-art-approved.",
+      "files_changed_this_pass": [
+        "collection/assets/scenes/legendary/*.png (26 authored)",
+        "collection/scripts/build_wave3_scenes.py",
+        "collection/scripts/wave3_qa.py",
+        "collection/reports/wave3-*.{json,md,png}"
+      ]
+    },
     {
       "date": "2026-09-10",
       "summary": "Chain migrated Base/ERC-721 -> Solana/Metaplex Core (production config only; trait/rarity design witness below is unchanged). Deterministic layer-compositing generator built and self-tested. 20-identity test batch selected; metadata generated and validated. Zero images rendered: zero layer assets exist to composite from (collection/reports/production-art-audit.md). Not mint-ready.",
