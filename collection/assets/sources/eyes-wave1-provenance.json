@@ -1,0 +1,86 @@
+[
+  {
+    "path": "collection/assets/layers/50_eyes/eyes__biometric__entity__synthetic__v001.png",
+    "filename": "eyes__biometric__entity__synthetic__v001.png",
+    "sha256": "e29858b45cc5fa55ba7a91cf2b59b01b5fb0a7e7bb040c40f269597fb591fab5",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "format": "PNG",
+    "mode": "RGBA",
+    "opaque_pct": 1.96,
+    "bbox": [
+      773,
+      602,
+      1330,
+      859
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "gemini-3-pro-image img2img on flattened entity base + delta-extract + socket-anchored cleanup",
+    "source": "collection/scripts/build_wave1_via_gemini.py"
+  },
+  {
+    "path": "collection/assets/layers/50_eyes/eyes__optical_array__entity__hollow__v001.png",
+    "filename": "eyes__optical_array__entity__hollow__v001.png",
+    "sha256": "180dc7dffae568066a170b4a4145412053f799835c9a5f15e2028537e11cdcc9",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "format": "PNG",
+    "mode": "RGBA",
+    "opaque_pct": 3.64,
+    "bbox": [
+      726,
+      433,
+      1331,
+      980
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "gemini-3-pro-image img2img on flattened entity base + delta-extract + socket-anchored cleanup",
+    "source": "collection/scripts/build_wave1_via_gemini.py"
+  },
+  {
+    "path": "collection/assets/layers/50_eyes/eyes__signal_burn__entity__specter__v001.png",
+    "filename": "eyes__signal_burn__entity__specter__v001.png",
+    "sha256": "48859961ee0c694e11264d1a09b234cd1d3a889769434e832b1309ba671d5844",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "format": "PNG",
+    "mode": "RGBA",
+    "opaque_pct": 3.11,
+    "bbox": [
+      642,
+      363,
+      1327,
+      787
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "gemini-3-pro-image img2img on flattened entity base + delta-extract + socket-anchored cleanup",
+    "source": "collection/scripts/build_wave1_via_gemini.py"
+  },
+  {
+    "path": "collection/assets/layers/50_eyes/eyes__thermal__entity__synthetic__v001.png",
+    "filename": "eyes__thermal__entity__synthetic__v001.png",
+    "sha256": "642964d3a5c388e3f22cd19ca3bdf11314df97779cc0c2506c479422634a05ce",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "format": "PNG",
+    "mode": "RGBA",
+    "opaque_pct": 1.22,
+    "bbox": [
+      777,
+      624,
+      1315,
+      795
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "gemini-3-pro-image img2img on flattened entity base + delta-extract + socket-anchored cleanup",
+    "source": "collection/scripts/build_wave1_via_gemini.py"
+  }
+]

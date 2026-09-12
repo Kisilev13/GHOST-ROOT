@@ -1,5 +1,22 @@
 [
   {
+    "path": "collection/assets/layers/00_background/background__anechoic_room__v001.png",
+    "trait_id": "background.anechoic_room",
+    "sha256": "3fedb4faa633814ca84eb9c652af3812c90a62fad61f3469bb6e7dd1721ad2af",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "original deterministic procedural environment",
+    "source": "collection/scripts/build_environment_layers.py",
+    "source_sha256": "c825be2c597eda816392d9f235512baa7a360b44cd47589feb29c14e3144b06d",
+    "external_textures": false,
+    "python": "3.14.7",
+    "pillow": "12.3.0",
+    "generation_settings": "native 2048 geometry; continuous key; fixed material grain; no token seed"
+  },
+  {
     "path": "collection/assets/layers/00_background/background__cold_storage__v001.png",
     "trait_id": "background.cold_storage",
     "sha256": "3b53fff829c58089a2d2806c136ee5ad9f233c237dd9dbf6050d281f5d793ae8",
@@ -10,7 +27,7 @@
     "status": "CREATED_UNREVIEWED",
     "technique": "original deterministic procedural environment",
     "source": "collection/scripts/build_environment_layers.py",
-    "source_sha256": "8d6ca592079eb3f4ceec88affea8f988a241cf5b86b14061059041a8eb86d099",
+    "source_sha256": "c825be2c597eda816392d9f235512baa7a360b44cd47589feb29c14e3144b06d",
     "external_textures": false,
     "python": "3.14.7",
     "pillow": "12.3.0",
@@ -27,7 +44,7 @@
     "status": "CREATED_UNREVIEWED",
     "technique": "original deterministic procedural environment",
     "source": "collection/scripts/build_environment_layers.py",
-    "source_sha256": "8d6ca592079eb3f4ceec88affea8f988a241cf5b86b14061059041a8eb86d099",
+    "source_sha256": "c825be2c597eda816392d9f235512baa7a360b44cd47589feb29c14e3144b06d",
     "external_textures": false,
     "python": "3.14.7",
     "pillow": "12.3.0",
@@ -44,7 +61,7 @@
     "status": "CREATED_UNREVIEWED",
     "technique": "original deterministic procedural environment",
     "source": "collection/scripts/build_environment_layers.py",
-    "source_sha256": "8d6ca592079eb3f4ceec88affea8f988a241cf5b86b14061059041a8eb86d099",
+    "source_sha256": "c825be2c597eda816392d9f235512baa7a360b44cd47589feb29c14e3144b06d",
     "external_textures": false,
     "python": "3.14.7",
     "pillow": "12.3.0",
@@ -61,7 +78,41 @@
     "status": "CREATED_UNREVIEWED",
     "technique": "original deterministic procedural environment",
     "source": "collection/scripts/build_environment_layers.py",
-    "source_sha256": "8d6ca592079eb3f4ceec88affea8f988a241cf5b86b14061059041a8eb86d099",
+    "source_sha256": "c825be2c597eda816392d9f235512baa7a360b44cd47589feb29c14e3144b06d",
+    "external_textures": false,
+    "python": "3.14.7",
+    "pillow": "12.3.0",
+    "generation_settings": "native 2048 geometry; continuous key; fixed material grain; no token seed"
+  },
+  {
+    "path": "collection/assets/layers/00_background/background__service_tunnel__v001.png",
+    "trait_id": "background.service_tunnel",
+    "sha256": "4c5fdf7b8f2e6073d1e481174222bd7b6f4a01d210fd99fdd270157d176535e7",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "original deterministic procedural environment",
+    "source": "collection/scripts/build_environment_layers.py",
+    "source_sha256": "c825be2c597eda816392d9f235512baa7a360b44cd47589feb29c14e3144b06d",
+    "external_textures": false,
+    "python": "3.14.7",
+    "pillow": "12.3.0",
+    "generation_settings": "native 2048 geometry; continuous key; fixed material grain; no token seed"
+  },
+  {
+    "path": "collection/assets/layers/00_background/background__uplink_black__v001.png",
+    "trait_id": "background.uplink_black",
+    "sha256": "57f9370d77478e1d6558cc4a0b3252db791bfe936d186d0a514e927e3eda9290",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "status": "CREATED_UNREVIEWED",
+    "technique": "original deterministic procedural environment",
+    "source": "collection/scripts/build_environment_layers.py",
+    "source_sha256": "c825be2c597eda816392d9f235512baa7a360b44cd47589feb29c14e3144b06d",
     "external_textures": false,
     "python": "3.14.7",
     "pillow": "12.3.0",
