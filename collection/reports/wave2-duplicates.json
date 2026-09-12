@@ -1,0 +1,18 @@
+{
+  "exact_by_slot": {
+    "mantle": {},
+    "implant_front": {},
+    "rear_anatomy": {},
+    "interface": {},
+    "corruption": {}
+  },
+  "exact_total_groups": 0,
+  "perceptual_threshold_bits": 12,
+  "perceptual_by_slot": {
+    "mantle": [],
+    "implant_front": [],
+    "rear_anatomy": [],
+    "interface": [],
+    "corruption": []
+  }
+}

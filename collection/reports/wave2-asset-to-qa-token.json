@@ -1,0 +1,223 @@
+{
+  "new_assets": 55,
+  "rendered_tokens": [
+    1,
+    2,
+    3,
+    4,
+    10,
+    19,
+    24,
+    49,
+    62,
+    97,
+    112,
+    129,
+    166,
+    192,
+    199,
+    206,
+    303,
+    366,
+    449,
+    493,
+    619,
+    662,
+    803,
+    836,
+    1018,
+    1077,
+    1086,
+    1096,
+    1378,
+    1503,
+    1765,
+    1842,
+    2440,
+    2803,
+    2848,
+    3274,
+    3280,
+    3333
+  ],
+  "rendered_count": 38,
+  "covered": 55,
+  "uncovered": [],
+  "asset_to_qa_token": {
+    "entity__hollow__implant__memory_spindle__v001.png": [
+      1018
+    ],
+    "entity__hollow__implant__neural_cable__v001.png": [
+      1086,
+      1096
+    ],
+    "entity__human__implant__memory_spindle__v001.png": [
+      129,
+      1378
+    ],
+    "entity__human__implant__root_port__v001.png": [
+      199
+    ],
+    "entity__human__implant__spinal_bus__v001.png": [
+      24
+    ],
+    "entity__specter__implant__antenna__v001.png": [
+      662,
+      1765
+    ],
+    "entity__specter__implant__memory_spindle__v001.png": [
+      3274
+    ],
+    "entity__synthetic__implant__antenna__v001.png": [
+      19
+    ],
+    "entity__synthetic__implant__neural_cable__v001.png": [
+      619,
+      2440
+    ],
+    "entity__synthetic__implant__root_port__v001.png": [
+      1077
+    ],
+    "entity__synthetic__implant__spinal_bus__v001.png": [
+      206
+    ],
+    "mantle__archive_coat__entity__specter__v001.png": [
+      662
+    ],
+    "mantle__cable_shroud__entity__hollow__v001.png": [
+      1018
+    ],
+    "mantle__cable_shroud__entity__synthetic__v001.png": [
+      1077
+    ],
+    "mantle__ceramic_mantle__entity__human__v001.png": [
+      24
+    ],
+    "mantle__ceramic_mantle__entity__specter__v001.png": [
+      2848,
+      3274
+    ],
+    "mantle__ceramic_mantle__entity__synthetic__v001.png": [
+      19
+    ],
+    "mantle__field_collar__entity__human__v001.png": [
+      129
+    ],
+    "mantle__field_collar__entity__specter__v001.png": [
+      1765
+    ],
+    "mantle__field_collar__entity__synthetic__v001.png": [
+      619
+    ],
+    "mantle__split_shell__entity__hollow__v001.png": [
+      1096
+    ],
+    "mantle__split_shell__entity__human__v001.png": [
+      1378
+    ],
+    "mantle__split_shell__entity__specter__v001.png": [
+      62
+    ],
+    "mantle__split_shell__entity__synthetic__v001.png": [
+      206
+    ],
+    "implant__antenna__entity__specter__v001.png": [
+      662,
+      1765
+    ],
+    "implant__antenna__entity__synthetic__v001.png": [
+      19
+    ],
+    "implant__memory_spindle__entity__hollow__v001.png": [
+      1018
+    ],
+    "implant__memory_spindle__entity__human__v001.png": [
+      129,
+      1378
+    ],
+    "implant__memory_spindle__entity__specter__v001.png": [
+      3274
+    ],
+    "implant__neural_cable__entity__hollow__v001.png": [
+      1086,
+      1096
+    ],
+    "implant__neural_cable__entity__synthetic__v001.png": [
+      619,
+      2440
+    ],
+    "implant__root_port__entity__human__v001.png": [
+      199
+    ],
+    "implant__root_port__entity__synthetic__v001.png": [
+      1077
+    ],
+    "implant__spinal_bus__entity__human__v001.png": [
+      24
+    ],
+    "implant__spinal_bus__entity__synthetic__v001.png": [
+      206
+    ],
+    "interface__forensic_plate__entity__human__v001.png": [
+      24
+    ],
+    "interface__neural_veil__entity__hollow__v001.png": [
+      1096
+    ],
+    "interface__neural_veil__entity__synthetic__v001.png": [
+      19
+    ],
+    "interface__null_mask__entity__hollow__v001.png": [
+      1018
+    ],
+    "interface__null_mask__entity__specter__v001.png": [
+      2848
+    ],
+    "interface__null_mask__entity__synthetic__v001.png": [
+      2440
+    ],
+    "interface__respirator__entity__synthetic__v001.png": [
+      206,
+      619
+    ],
+    "interface__skeletal_interface__entity__specter__v001.png": [
+      62
+    ],
+    "corruption__checksum_burn__entity__hollow__v001.png": [
+      1096
+    ],
+    "corruption__checksum_burn__entity__specter__v001.png": [
+      662
+    ],
+    "corruption__checksum_burn__entity__synthetic__v001.png": [
+      1077
+    ],
+    "corruption__memory_bleed__entity__hollow__v001.png": [
+      1086
+    ],
+    "corruption__memory_bleed__entity__human__v001.png": [
+      24
+    ],
+    "corruption__memory_bleed__entity__specter__v001.png": [
+      3280
+    ],
+    "corruption__memory_bleed__entity__synthetic__v001.png": [
+      2440
+    ],
+    "corruption__packet_ghosting__entity__human__v001.png": [
+      199
+    ],
+    "corruption__packet_ghosting__entity__specter__v001.png": [
+      2848
+    ],
+    "corruption__packet_ghosting__entity__synthetic__v001.png": [
+      619
+    ],
+    "corruption__scan_shear__entity__hollow__v001.png": [
+      1018
+    ],
+    "corruption__scan_shear__entity__synthetic__v001.png": [
+      19
+    ]
+  }
+}
