@@ -1,0 +1,332 @@
+{
+  "0001": {
+    "token_id": 1,
+    "filename": "0001__v001.png",
+    "sha256": "9b4691634e8567798411335abd0df0f409ae36aeb3e23124a7f4e71512d65239",
+    "bytes": 2494725,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGBA",
+    "format": "PNG"
+  },
+  "0002": {
+    "token_id": 2,
+    "filename": "0002__v001.png",
+    "sha256": "d0844280a6a1a9c9933de2abdae5599cf69ae830d6d1090e7db5601ff0ddfd43",
+    "bytes": 3336332,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGBA",
+    "format": "PNG"
+  },
+  "0003": {
+    "token_id": 3,
+    "filename": "0003__v001.png",
+    "sha256": "d21ad524e50b46030eacef41ea7eab996e3e1e4b77e1a3ae69c73a764c18b706",
+    "bytes": 3963002,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGBA",
+    "format": "PNG"
+  },
+  "0303": {
+    "token_id": 303,
+    "filename": "0303__v001.png",
+    "sha256": "a6feb1de1b23d565d3058531e9f8f2beeb0e17dd07f0adf32f92e52208de95d3",
+    "bytes": 4493141,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGBA",
+    "format": "PNG"
+  },
+  "0403": {
+    "token_id": 403,
+    "filename": "0403__v001.png",
+    "sha256": "01dd4dc0e0eb4e7837674434b00a082ea405a1448d0a0fed113f651cb5247e95",
+    "bytes": 5300328,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "0503": {
+    "token_id": 503,
+    "filename": "0503__v001.png",
+    "sha256": "05ee58a5820bd310e33b4dc7a9d1a60f8f0999663460bf7e3416cf6043cf8176",
+    "bytes": 4628676,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "0603": {
+    "token_id": 603,
+    "filename": "0603__v001.png",
+    "sha256": "ff636bf2e313b2898ac6d389fffa7f77bbf18287ae5c1d5a8350ab7a3f269a9a",
+    "bytes": 4778479,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "0703": {
+    "token_id": 703,
+    "filename": "0703__v001.png",
+    "sha256": "54f9145f32f5ee91dd56e30a13bff8ba528f24b52cbf397b7466bfc9e2f311eb",
+    "bytes": 4164472,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "0803": {
+    "token_id": 803,
+    "filename": "0803__v001.png",
+    "sha256": "84dea27b1f8306d4c1d2cb358caa9e4458656df7cabdcb06136ab8411a681bc2",
+    "bytes": 4690112,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGBA",
+    "format": "PNG"
+  },
+  "0903": {
+    "token_id": 903,
+    "filename": "0903__v001.png",
+    "sha256": "d00662db28ff19d079860ac726c69abdb848b0492ce41451318b3212f344baea",
+    "bytes": 4359375,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "1003": {
+    "token_id": 1003,
+    "filename": "1003__v001.png",
+    "sha256": "9778257c6081caa429b6db73ca10671c7a69bc1ead814e2947cdcd741c225225",
+    "bytes": 4195403,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "1103": {
+    "token_id": 1103,
+    "filename": "1103__v001.png",
+    "sha256": "cc4112a93e944e8b9a7626e09ccafc754f34530a27a7c7c4138c4ab12c611862",
+    "bytes": 4667382,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "1203": {
+    "token_id": 1203,
+    "filename": "1203__v001.png",
+    "sha256": "84e27dd95d97c3ea359e79f04826447cc5343405f43bf7bc13b7102319aa3043",
+    "bytes": 4455405,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "1303": {
+    "token_id": 1303,
+    "filename": "1303__v001.png",
+    "sha256": "d9fdac899bb0660a5f5ea1d46ceeca62134c4351687643520830ff93cd115b79",
+    "bytes": 4721252,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "1403": {
+    "token_id": 1403,
+    "filename": "1403__v001.png",
+    "sha256": "88d6e42987e3a218d984d814198c2454eec2ba78c75daed2c754ec6fcecc9d97",
+    "bytes": 3836741,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "1503": {
+    "token_id": 1503,
+    "filename": "1503__v001.png",
+    "sha256": "18f5ca3df770850143d6efcc4024d23625d7d625f061bc76e742f1bf46c24380",
+    "bytes": 5546031,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "1603": {
+    "token_id": 1603,
+    "filename": "1603__v001.png",
+    "sha256": "7432c3ad07790e172591d991d3652313282722bb4ad4afcc21432046b489186b",
+    "bytes": 4813412,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "1703": {
+    "token_id": 1703,
+    "filename": "1703__v001.png",
+    "sha256": "0158cb1c0f6cebf3bc9603d5bf569b07e854973137f79c174abad7a5e28c142a",
+    "bytes": 4665602,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "1803": {
+    "token_id": 1803,
+    "filename": "1803__v001.png",
+    "sha256": "1b4bdac8b79569bc0bfe547681e67880435889c4a78097e5abbd121bb4fa2fbb",
+    "bytes": 5042926,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "1903": {
+    "token_id": 1903,
+    "filename": "1903__v001.png",
+    "sha256": "592a14941480fa4167fb48562fab67d1e664650da527528150c1358e35ff4233",
+    "bytes": 4731196,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "2003": {
+    "token_id": 2003,
+    "filename": "2003__v001.png",
+    "sha256": "f6fe99298935e9ef43461b6113269d0586b105d9fb3a26e6ad6a94a16288359f",
+    "bytes": 4179145,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "2103": {
+    "token_id": 2103,
+    "filename": "2103__v001.png",
+    "sha256": "06219015fdfc197b222fb3a7f547c08b2a87c0d845a854e899991de7c66e6acb",
+    "bytes": 4599263,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "2203": {
+    "token_id": 2203,
+    "filename": "2203__v001.png",
+    "sha256": "fbfed8a28b1e63d274abef9941dacda1bf6fc1570e315f50c63c5760d96e4641",
+    "bytes": 4379035,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "2303": {
+    "token_id": 2303,
+    "filename": "2303__v001.png",
+    "sha256": "1c08d5c0d6858b8f22a453b3b405155175d4546f60a6d5eacf1856587daf0dee",
+    "bytes": 4585765,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "2403": {
+    "token_id": 2403,
+    "filename": "2403__v001.png",
+    "sha256": "d7930d3a669917d945a74005e8c82c18392a071d64a4ade194067b6fcb9a302e",
+    "bytes": 4761041,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "2503": {
+    "token_id": 2503,
+    "filename": "2503__v001.png",
+    "sha256": "0a52b30ac1a1a0a952b16cf041a30571ebff7e7e231041a35c090911fb438f0d",
+    "bytes": 4148901,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "2603": {
+    "token_id": 2603,
+    "filename": "2603__v001.png",
+    "sha256": "e327c762a3dace0fe5222ec06de6ffcca740645237cb50c5ddf89a05efe690ab",
+    "bytes": 4033526,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "2703": {
+    "token_id": 2703,
+    "filename": "2703__v001.png",
+    "sha256": "5c1989a281216246f86eae1e98302a7af56686ff7860fd58f3db710c5e04881d",
+    "bytes": 4836717,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "2803": {
+    "token_id": 2803,
+    "filename": "2803__v001.png",
+    "sha256": "62e23864c170c6e670744b595585d1ce5e75f0aba3a6c3e5340747bb14932637",
+    "bytes": 6309105,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "2903": {
+    "token_id": 2903,
+    "filename": "2903__v001.png",
+    "sha256": "4b1a3f06ecb5bc9701be8078db47f308b29def55d00e2f55580469850153d95f",
+    "bytes": 4454242,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "3003": {
+    "token_id": 3003,
+    "filename": "3003__v001.png",
+    "sha256": "5d58381ec74c074f027ae8353cc2267b58cfff84212e56d00cbbebcf2151ff18",
+    "bytes": 4676655,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "3103": {
+    "token_id": 3103,
+    "filename": "3103__v001.png",
+    "sha256": "ce8af73946575e9653c56fcca0ad297025b92e134437ae9063429b86f1d2d242",
+    "bytes": 5535802,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "3203": {
+    "token_id": 3203,
+    "filename": "3203__v001.png",
+    "sha256": "c80dc9d9b54854bd5925a0896fee6e8830434a62ae932a8d4415666fcb5d5f0a",
+    "bytes": 5545221,
+    "width": 2048,
+    "height": 2048,
+    "mode": "RGB",
+    "format": "PNG"
+  }
+}

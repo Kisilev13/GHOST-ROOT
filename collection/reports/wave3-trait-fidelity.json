@@ -1,0 +1,449 @@
+{
+  "reviewed": 26,
+  "pass": 26,
+  "regenerate": 0,
+  "scenes": [
+    {
+      "token_id": 403,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "synthetic",
+        "material": "biosynth",
+        "eyes": "biometric",
+        "interface": "none",
+        "implant": "root_port",
+        "mantle": "archive_coat",
+        "corruption": "packet_ghosting",
+        "background": "cold_storage",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 503,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "human",
+        "material": "porcelain",
+        "eyes": "biometric",
+        "interface": "none",
+        "implant": "signal_crown",
+        "mantle": "cable_shroud",
+        "corruption": "intact",
+        "background": "service_tunnel",
+        "signal": "carrier_echo"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 603,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "synthetic",
+        "material": "carbon",
+        "eyes": "thermal",
+        "interface": "forensic_plate",
+        "implant": "signal_crown",
+        "mantle": "archive_coat",
+        "corruption": "checksum_burn",
+        "background": "evidence_void",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 703,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "human",
+        "material": "carbon",
+        "eyes": "thermal",
+        "interface": "null_mask",
+        "implant": "signal_crown",
+        "mantle": "archive_coat",
+        "corruption": "scan_shear",
+        "background": "evidence_void",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 903,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "synthetic",
+        "material": "porcelain",
+        "eyes": "biometric",
+        "interface": "neural_veil",
+        "implant": "signal_crown",
+        "mantle": "ceramic_mantle",
+        "corruption": "intact",
+        "background": "relay_well",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 1003,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "human",
+        "material": "porcelain",
+        "eyes": "thermal",
+        "interface": "respirator",
+        "implant": "signal_crown",
+        "mantle": "cable_shroud",
+        "corruption": "intact",
+        "background": "evidence_void",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 1103,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "human",
+        "material": "carbon",
+        "eyes": "fractured",
+        "interface": "respirator",
+        "implant": "signal_crown",
+        "mantle": "ceramic_mantle",
+        "corruption": "intact",
+        "background": "relay_well",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 1203,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "synthetic",
+        "material": "carbon",
+        "eyes": "void",
+        "interface": "none",
+        "implant": "signal_crown",
+        "mantle": "archive_coat",
+        "corruption": "checksum_burn",
+        "background": "evidence_void",
+        "signal": "carrier_echo"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 1303,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "synthetic",
+        "material": "biosynth",
+        "eyes": "fractured",
+        "interface": "forensic_plate",
+        "implant": "signal_crown",
+        "mantle": "field_collar",
+        "corruption": "checksum_burn",
+        "background": "evidence_void",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 1403,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "human",
+        "material": "ceramic",
+        "eyes": "biometric",
+        "interface": "null_mask",
+        "implant": "signal_crown",
+        "mantle": "ceramic_mantle",
+        "corruption": "checksum_burn",
+        "background": "cold_storage",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 1603,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "hollow",
+        "material": "porcelain",
+        "eyes": "fractured",
+        "interface": "none",
+        "implant": "signal_crown",
+        "mantle": "ceramic_mantle",
+        "corruption": "checksum_burn",
+        "background": "cold_storage",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 1703,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "synthetic",
+        "material": "biosynth",
+        "eyes": "optical_array",
+        "interface": "forensic_plate",
+        "implant": "signal_crown",
+        "mantle": "archive_coat",
+        "corruption": "intact",
+        "background": "cold_storage",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 1803,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "human",
+        "material": "biosynth",
+        "eyes": "thermal",
+        "interface": "forensic_plate",
+        "implant": "signal_crown",
+        "mantle": "ceramic_mantle",
+        "corruption": "checksum_burn",
+        "background": "evidence_void",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 1903,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "hollow",
+        "material": "porcelain",
+        "eyes": "void",
+        "interface": "none",
+        "implant": "signal_crown",
+        "mantle": "field_collar",
+        "corruption": "intact",
+        "background": "cold_storage",
+        "signal": "silent"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 2003,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "synthetic",
+        "material": "biosynth",
+        "eyes": "biometric",
+        "interface": "none",
+        "implant": "signal_crown",
+        "mantle": "archive_coat",
+        "corruption": "intact",
+        "background": "service_tunnel",
+        "signal": "carrier_echo"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 2103,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "human",
+        "material": "biosynth",
+        "eyes": "fractured",
+        "interface": "forensic_plate",
+        "implant": "signal_crown",
+        "mantle": "ceramic_mantle",
+        "corruption": "intact",
+        "background": "service_tunnel",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 2203,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "human",
+        "material": "carbon",
+        "eyes": "void",
+        "interface": "respirator",
+        "implant": "signal_crown",
+        "mantle": "archive_coat",
+        "corruption": "intact",
+        "background": "relay_well",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 2303,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "synthetic",
+        "material": "ceramic",
+        "eyes": "fractured",
+        "interface": "neural_veil",
+        "implant": "signal_crown",
+        "mantle": "cable_shroud",
+        "corruption": "intact",
+        "background": "evidence_void",
+        "signal": "carrier_echo"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 2403,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "human",
+        "material": "biosynth",
+        "eyes": "void",
+        "interface": "none",
+        "implant": "signal_crown",
+        "mantle": "ceramic_mantle",
+        "corruption": "intact",
+        "background": "anechoic_room",
+        "signal": "intermittent"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 2503,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "human",
+        "material": "ceramic",
+        "eyes": "thermal",
+        "interface": "respirator",
+        "implant": "signal_crown",
+        "mantle": "ceramic_mantle",
+        "corruption": "intact",
+        "background": "cold_storage",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 2603,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "synthetic",
+        "material": "carbon",
+        "eyes": "thermal",
+        "interface": "forensic_plate",
+        "implant": "signal_crown",
+        "mantle": "cable_shroud",
+        "corruption": "intact",
+        "background": "cold_storage",
+        "signal": "carrier_echo"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 2703,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "specter",
+        "material": "reconstructed",
+        "eyes": "void",
+        "interface": "none",
+        "implant": "signal_crown",
+        "mantle": "cable_shroud",
+        "corruption": "intact",
+        "background": "rack_shadow",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 2903,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "human",
+        "material": "porcelain",
+        "eyes": "fractured",
+        "interface": "none",
+        "implant": "signal_crown",
+        "mantle": "cable_shroud",
+        "corruption": "intact",
+        "background": "cold_storage",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 3003,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "human",
+        "material": "biosynth",
+        "eyes": "biometric",
+        "interface": "none",
+        "implant": "signal_crown",
+        "mantle": "cable_shroud",
+        "corruption": "scan_shear",
+        "background": "rack_shadow",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 3103,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "synthetic",
+        "material": "biosynth",
+        "eyes": "biometric",
+        "interface": "neural_veil",
+        "implant": "signal_crown",
+        "mantle": "archive_coat",
+        "corruption": "intact",
+        "background": "evidence_void",
+        "signal": "locked"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    },
+    {
+      "token_id": 3203,
+      "verdict": "PASS",
+      "human_reviewed": true,
+      "canonical": {
+        "entity": "human",
+        "material": "biosynth",
+        "eyes": "void",
+        "interface": "forensic_plate",
+        "implant": "signal_crown",
+        "mantle": "cable_shroud",
+        "corruption": "scan_shear",
+        "background": "anechoic_room",
+        "signal": "intermittent"
+      },
+      "note": "visually confirmed against canonical traits in wave3 contact sheets; distinct severed_halo composition"
+    }
+  ]
+}
