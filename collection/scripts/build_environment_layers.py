@@ -68,6 +68,44 @@ def plate(kind):
             d.arc((box[0]+12,box[1]+12,box[2]-12,box[3]-12),180,358,fill=(0,0,0,115),width=16)
         for x in (170,310,1770,1900):
             d.line([(x,0),(x*.87+132,2048)],fill=(31,35,39,125),width=9)
+    elif kind == 'anechoic_room':
+        # Absorptive wedge walls (left + right) recede toward a quiet center head field.
+        for left in (True, False):
+            sign = 1 if left else -1
+            base = 0 if left else N
+            vanish = 470 if left else 1578
+            for row in range(11):
+                t = row / 10.0
+                x0 = base + sign * int((vanish - base) * t)
+                x1 = base + sign * int((vanish - base) * (t + 0.14))
+                cell = int(150 - 96 * t)
+                for y in range(-cell, N + cell, cell):
+                    tip = (x1, y + cell // 2)
+                    d.polygon([(x0, y), (x1, y + cell // 3), (x0, y + cell)], fill=(10 + int(16 * t), 13 + int(17 * t), 16 + int(19 * t), 210))
+                    d.line([(x0, y), tip], fill=(30 + int(16 * t), 34 + int(16 * t), 38 + int(16 * t), 120), width=2)
+            d.line([(vanish, 0), (vanish, N)], fill=(26, 30, 34, 90), width=5)
+    elif kind == 'service_tunnel':
+        # Concentric receding rectangular frames + wall conduits; vanishing slightly right.
+        vx, vy = 1120, 980
+        for i in range(9):
+            t = i / 8.0
+            l = int(60 + (vx - 60) * (1 - t))
+            r = int(vx + (N - 60 - vx) * (1 - t))
+            top = int(vy - (vy - 40) * (1 - t))
+            bot = int(vy + (N - 40 - vy) * (1 - t))
+            shade = 6 + int(22 * (1 - t))
+            d.rectangle((l, top, r, bot), outline=(shade, shade + 4, shade + 7, 170), width=max(3, int(9 * (1 - t))))
+        for cx2, col in ((150, (34, 38, 42, 120)), (1898, (30, 34, 38, 120))):
+            d.line([(cx2, 0), (int(cx2 * 0.55 + vx * 0.45), vy)], fill=col, width=7)
+            for y in range(60, N, 150):
+                d.line([(cx2, y), (int(cx2 * 0.7 + vx * 0.3), int(y * 0.6 + vy * 0.4))], fill=(0, 0, 0, 110), width=4)
+    elif kind == 'uplink_black':
+        # Near-black null field: a single faint vertical uplink shaft + quiet signal ticks.
+        for dx, a in ((-3, 40), (0, 70), (3, 40)):
+            d.line([(1004 + dx, 120), (1004 + dx, 1980)], fill=(120, 128, 150, a), width=6 - abs(dx))
+        d.ellipse((904, 60, 1104, 260), outline=(70, 78, 96, 60), width=4)
+        for y in range(320, 1900, 214):
+            d.line([(968, y), (1040, y)], fill=(90, 98, 120, 55), width=3)
     elif kind != 'evidence_void':
         raise ValueError(kind)
     im = Image.alpha_composite(im.convert('RGBA'), geometry.filter(ImageFilter.GaussianBlur(3.2))).convert('RGB')
@@ -79,13 +117,21 @@ def plate(kind):
 
 
 def main():
-    plan=json.loads((COLLECTION/'manifests/test-batch-required-assets.json').read_text())
+    # Drive from the full production resolver so every required background is authored,
+    # not only the ones referenced by the 20-token test batch. Kind is taken from the
+    # canonical filename (background__<kind>__vNNN) so it never disagrees with the path.
+    plan=json.loads((COLLECTION/'manifests/collection-required-assets.json').read_text())
+    assets=plan.get('assets') or plan.get('paths')
     records=[]
-    for asset in plan['assets']:
+    seen=set()
+    for asset in assets:
         if asset['slot']!='background':
             continue
         path=ROOT/asset['path']
-        kind=asset['trait_ids'][0].split('.')[1]
+        if str(path) in seen:
+            continue
+        seen.add(str(path))
+        kind=Path(asset['path']).name.split('__')[1]
         im=plate(kind)
         info=PngInfo();info.add(b'sRGB',b'\x00')
         import io
@@ -94,7 +140,7 @@ def main():
         if path.exists() and path.read_bytes()!=data:
             raise SystemExit(f'Refusing to overwrite a different asset: {path}')
         path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(data)
-        records.append({'path':asset['path'],'trait_id':asset['trait_ids'][0],
+        records.append({'path':asset['path'],'trait_id':asset.get('trait_ids',[f'background.{kind}'])[0],
             'sha256':hashlib.sha256(data).hexdigest(),'dimensions':[N,N],
             'status':'CREATED_UNREVIEWED','technique':'original deterministic procedural environment',
             'source':'collection/scripts/build_environment_layers.py',
