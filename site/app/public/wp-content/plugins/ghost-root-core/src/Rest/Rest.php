@@ -297,8 +297,8 @@ final class Rest {
 
 	public function mint_config(): \WP_REST_Response {
 		$cfg = Config::mint_config();
-		if ( empty( $cfg['collection'] ) ) {
-			$cfg['notice'] = 'NOT YET DEPLOYED';
+		if ( empty( $cfg['deployed'] ) ) {
+			$cfg['notice'] = 'PUBLIC MINT NOT DEPLOYED';
 		}
 		$res = new \WP_REST_Response( $cfg );
 		$res->header( 'Cache-Control', 'public, max-age=30' );

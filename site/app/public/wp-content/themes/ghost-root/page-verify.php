@@ -7,7 +7,7 @@ $published = count(array_filter($fields));
 <section class="gr-section gr-section--fill">
 <?php gr_page_head('SOURCE VERIFICATION / PUBLIC RECORD','TRUST NOTHING.','Check the source. Verify the addresses. Initialization remains closed until deployment is complete.'); ?>
 <div class="gr-verification-panel">
-    <div class="gr-window-bar"><span>DEPLOYMENT STATUS</span><span>NOT YET DEPLOYED</span></div>
+    <div class="gr-window-bar"><span>DEPLOYMENT STATUS</span><span>PUBLIC MINT CLOSED</span></div>
     <dl class="gr-verification">
     <?php foreach($fields as $key => $value): $pending = str_ends_with($key, '_hash'); ?>
         <div>
@@ -20,7 +20,7 @@ $published = count(array_filter($fields));
     <div class="gr-verification-summary"><strong><?php echo $published ? esc_html($published . ' / ' . count($fields) . ' PUBLISHED') : '0 / ' . count($fields) . ' VERIFIED'; ?></strong><span><?php echo $published ? 'Published values require independent verification.' : 'AWAITING DEPLOYMENT EVIDENCE'; ?></span></div>
 </div>
 <p class="gr-mono" data-copy-status role="status" aria-atomic="true"></p>
-<div class="gr-notice"><strong>BLOCKCHAIN STATUS: NOT YET DEPLOYED</strong><p>Collection, Candy Machine, treasury, permanent storage and authorities have not been verified. No production mint is available.</p></div>
+<div class="gr-notice"><strong>COLLECTION + CANARY RECORDED · PUBLIC MINT CLOSED</strong><p>The project verification dated 11 September 2026 confirmed the Solana collection and one GHOST//0001 canary. These published records are a dated snapshot, not a live blockchain check.</p><dl class="gr-verification"><div><dt>GHOST//0001 CANARY</dt><dd><code><?php echo esc_html(\GhostRoot\Settings\Config::launch_plan()['canary'] ?? 'PENDING'); ?></code></dd></div></dl><p>Canary artwork is pre-release and mutable. The Candy Machine and Candy Guards are not deployed; final collection artwork, permanent metadata, the allowlist, launch dates and on-chain mint enforcement tests remain pending. No production mint is available.</p></div>
 <?php if (class_exists('\\GhostRoot\\OpenSea\\Verification')):
     $osv = \GhostRoot\OpenSea\Verification::report();
     $state_copy = [

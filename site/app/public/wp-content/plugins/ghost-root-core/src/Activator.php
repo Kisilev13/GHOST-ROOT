@@ -99,7 +99,7 @@ final class Activator {
 			'network_status'        => 'DEGRADED',
 			'mint_state'            => 'PRE_MINT',
 			'mint_price_sol'        => 0.15,
-			'mint_max_per_wallet'   => 2,
+			'mint_max_per_wallet'   => 5,
 			'collection_address'    => '',
 			'candy_machine_address' => '',
 			'update_authority'      => '',

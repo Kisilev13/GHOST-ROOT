@@ -79,7 +79,7 @@ final class Verification {
 			return self::scaffold(
 				Config::STATE_NOT_INDEXED,
 				null,
-				[ 'No verified OpenSea slug is configured for this collection. Run the operator discovery tool once minted.' ]
+				[ 'No verified OpenSea collection link is configured. Marketplace indexing has not been confirmed.' ]
 			);
 		}
 
