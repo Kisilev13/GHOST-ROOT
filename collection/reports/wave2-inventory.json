@@ -1,0 +1,160 @@
+{
+  "slots": {
+    "mantle": {
+      "required": 21,
+      "present": 8,
+      "missing": 13,
+      "missing_files": [
+        "mantle__archive_coat__entity__specter__v001.png",
+        "mantle__cable_shroud__entity__hollow__v001.png",
+        "mantle__cable_shroud__entity__synthetic__v001.png",
+        "mantle__ceramic_mantle__entity__human__v001.png",
+        "mantle__ceramic_mantle__entity__specter__v001.png",
+        "mantle__ceramic_mantle__entity__synthetic__v001.png",
+        "mantle__field_collar__entity__human__v001.png",
+        "mantle__field_collar__entity__specter__v001.png",
+        "mantle__field_collar__entity__synthetic__v001.png",
+        "mantle__split_shell__entity__hollow__v001.png",
+        "mantle__split_shell__entity__human__v001.png",
+        "mantle__split_shell__entity__specter__v001.png",
+        "mantle__split_shell__entity__synthetic__v001.png"
+      ],
+      "missing_paths": [
+        "collection/assets/layers/30_mantle/mantle__archive_coat__entity__specter__v001.png",
+        "collection/assets/layers/30_mantle/mantle__cable_shroud__entity__hollow__v001.png",
+        "collection/assets/layers/30_mantle/mantle__cable_shroud__entity__synthetic__v001.png",
+        "collection/assets/layers/30_mantle/mantle__ceramic_mantle__entity__human__v001.png",
+        "collection/assets/layers/30_mantle/mantle__ceramic_mantle__entity__specter__v001.png",
+        "collection/assets/layers/30_mantle/mantle__ceramic_mantle__entity__synthetic__v001.png",
+        "collection/assets/layers/30_mantle/mantle__field_collar__entity__human__v001.png",
+        "collection/assets/layers/30_mantle/mantle__field_collar__entity__specter__v001.png",
+        "collection/assets/layers/30_mantle/mantle__field_collar__entity__synthetic__v001.png",
+        "collection/assets/layers/30_mantle/mantle__split_shell__entity__hollow__v001.png",
+        "collection/assets/layers/30_mantle/mantle__split_shell__entity__human__v001.png",
+        "collection/assets/layers/30_mantle/mantle__split_shell__entity__specter__v001.png",
+        "collection/assets/layers/30_mantle/mantle__split_shell__entity__synthetic__v001.png"
+      ]
+    },
+    "implant_front": {
+      "required": 20,
+      "present": 9,
+      "missing": 11,
+      "missing_files": [
+        "implant__antenna__entity__specter__v001.png",
+        "implant__antenna__entity__synthetic__v001.png",
+        "implant__memory_spindle__entity__hollow__v001.png",
+        "implant__memory_spindle__entity__human__v001.png",
+        "implant__memory_spindle__entity__specter__v001.png",
+        "implant__neural_cable__entity__hollow__v001.png",
+        "implant__neural_cable__entity__synthetic__v001.png",
+        "implant__root_port__entity__human__v001.png",
+        "implant__root_port__entity__synthetic__v001.png",
+        "implant__spinal_bus__entity__human__v001.png",
+        "implant__spinal_bus__entity__synthetic__v001.png"
+      ],
+      "missing_paths": [
+        "collection/assets/layers/60_implant_front/implant__antenna__entity__specter__v001.png",
+        "collection/assets/layers/60_implant_front/implant__antenna__entity__synthetic__v001.png",
+        "collection/assets/layers/60_implant_front/implant__memory_spindle__entity__hollow__v001.png",
+        "collection/assets/layers/60_implant_front/implant__memory_spindle__entity__human__v001.png",
+        "collection/assets/layers/60_implant_front/implant__memory_spindle__entity__specter__v001.png",
+        "collection/assets/layers/60_implant_front/implant__neural_cable__entity__hollow__v001.png",
+        "collection/assets/layers/60_implant_front/implant__neural_cable__entity__synthetic__v001.png",
+        "collection/assets/layers/60_implant_front/implant__root_port__entity__human__v001.png",
+        "collection/assets/layers/60_implant_front/implant__root_port__entity__synthetic__v001.png",
+        "collection/assets/layers/60_implant_front/implant__spinal_bus__entity__human__v001.png",
+        "collection/assets/layers/60_implant_front/implant__spinal_bus__entity__synthetic__v001.png"
+      ]
+    },
+    "rear_anatomy": {
+      "required": 20,
+      "present": 9,
+      "missing": 11,
+      "missing_files": [
+        "entity__hollow__implant__memory_spindle__v001.png",
+        "entity__hollow__implant__neural_cable__v001.png",
+        "entity__human__implant__memory_spindle__v001.png",
+        "entity__human__implant__root_port__v001.png",
+        "entity__human__implant__spinal_bus__v001.png",
+        "entity__specter__implant__antenna__v001.png",
+        "entity__specter__implant__memory_spindle__v001.png",
+        "entity__synthetic__implant__antenna__v001.png",
+        "entity__synthetic__implant__neural_cable__v001.png",
+        "entity__synthetic__implant__root_port__v001.png",
+        "entity__synthetic__implant__spinal_bus__v001.png"
+      ],
+      "missing_paths": [
+        "collection/assets/layers/20_rear_anatomy/entity__hollow__implant__memory_spindle__v001.png",
+        "collection/assets/layers/20_rear_anatomy/entity__hollow__implant__neural_cable__v001.png",
+        "collection/assets/layers/20_rear_anatomy/entity__human__implant__memory_spindle__v001.png",
+        "collection/assets/layers/20_rear_anatomy/entity__human__implant__root_port__v001.png",
+        "collection/assets/layers/20_rear_anatomy/entity__human__implant__spinal_bus__v001.png",
+        "collection/assets/layers/20_rear_anatomy/entity__specter__implant__antenna__v001.png",
+        "collection/assets/layers/20_rear_anatomy/entity__specter__implant__memory_spindle__v001.png",
+        "collection/assets/layers/20_rear_anatomy/entity__synthetic__implant__antenna__v001.png",
+        "collection/assets/layers/20_rear_anatomy/entity__synthetic__implant__neural_cable__v001.png",
+        "collection/assets/layers/20_rear_anatomy/entity__synthetic__implant__root_port__v001.png",
+        "collection/assets/layers/20_rear_anatomy/entity__synthetic__implant__spinal_bus__v001.png"
+      ]
+    },
+    "interface": {
+      "required": 15,
+      "present": 7,
+      "missing": 8,
+      "missing_files": [
+        "interface__forensic_plate__entity__human__v001.png",
+        "interface__neural_veil__entity__hollow__v001.png",
+        "interface__neural_veil__entity__synthetic__v001.png",
+        "interface__null_mask__entity__hollow__v001.png",
+        "interface__null_mask__entity__specter__v001.png",
+        "interface__null_mask__entity__synthetic__v001.png",
+        "interface__respirator__entity__synthetic__v001.png",
+        "interface__skeletal_interface__entity__specter__v001.png"
+      ],
+      "missing_paths": [
+        "collection/assets/layers/60_interface/interface__forensic_plate__entity__human__v001.png",
+        "collection/assets/layers/60_interface/interface__neural_veil__entity__hollow__v001.png",
+        "collection/assets/layers/60_interface/interface__neural_veil__entity__synthetic__v001.png",
+        "collection/assets/layers/60_interface/interface__null_mask__entity__hollow__v001.png",
+        "collection/assets/layers/60_interface/interface__null_mask__entity__specter__v001.png",
+        "collection/assets/layers/60_interface/interface__null_mask__entity__synthetic__v001.png",
+        "collection/assets/layers/60_interface/interface__respirator__entity__synthetic__v001.png",
+        "collection/assets/layers/60_interface/interface__skeletal_interface__entity__specter__v001.png"
+      ]
+    },
+    "corruption": {
+      "required": 18,
+      "present": 6,
+      "missing": 12,
+      "missing_files": [
+        "corruption__checksum_burn__entity__hollow__v001.png",
+        "corruption__checksum_burn__entity__specter__v001.png",
+        "corruption__checksum_burn__entity__synthetic__v001.png",
+        "corruption__memory_bleed__entity__hollow__v001.png",
+        "corruption__memory_bleed__entity__human__v001.png",
+        "corruption__memory_bleed__entity__specter__v001.png",
+        "corruption__memory_bleed__entity__synthetic__v001.png",
+        "corruption__packet_ghosting__entity__human__v001.png",
+        "corruption__packet_ghosting__entity__specter__v001.png",
+        "corruption__packet_ghosting__entity__synthetic__v001.png",
+        "corruption__scan_shear__entity__hollow__v001.png",
+        "corruption__scan_shear__entity__synthetic__v001.png"
+      ],
+      "missing_paths": [
+        "collection/assets/layers/80_corruption/corruption__checksum_burn__entity__hollow__v001.png",
+        "collection/assets/layers/80_corruption/corruption__checksum_burn__entity__specter__v001.png",
+        "collection/assets/layers/80_corruption/corruption__checksum_burn__entity__synthetic__v001.png",
+        "collection/assets/layers/80_corruption/corruption__memory_bleed__entity__hollow__v001.png",
+        "collection/assets/layers/80_corruption/corruption__memory_bleed__entity__human__v001.png",
+        "collection/assets/layers/80_corruption/corruption__memory_bleed__entity__specter__v001.png",
+        "collection/assets/layers/80_corruption/corruption__memory_bleed__entity__synthetic__v001.png",
+        "collection/assets/layers/80_corruption/corruption__packet_ghosting__entity__human__v001.png",
+        "collection/assets/layers/80_corruption/corruption__packet_ghosting__entity__specter__v001.png",
+        "collection/assets/layers/80_corruption/corruption__packet_ghosting__entity__synthetic__v001.png",
+        "collection/assets/layers/80_corruption/corruption__scan_shear__entity__hollow__v001.png",
+        "collection/assets/layers/80_corruption/corruption__scan_shear__entity__synthetic__v001.png"
+      ]
+    }
+  },
+  "total_missing": 55
+}
