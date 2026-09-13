@@ -1,0 +1,11 @@
+{
+  "name": "ghostroot-social",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "GHOST//ROOT — social account setup runbook, on-brand copy, and a read-only link verifier. No runtime dependencies.",
+  "engines": { "node": ">=22.6" },
+  "scripts": {
+    "social:verify": "node --experimental-strip-types scripts/social-verify.ts"
+  }
+}
